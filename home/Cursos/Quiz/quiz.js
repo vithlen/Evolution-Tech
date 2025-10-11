@@ -1,8 +1,7 @@
-
 const questions = document.querySelectorAll('.question');
 let currentQuestion = 0;
 let score = 0;
-
+let respondido = false; 
 
 const hoverSound = document.getElementById("hover-sound");
 const correctSound = document.getElementById("correct-sound");
@@ -17,8 +16,8 @@ function showQuestion(index) {
     q.classList.remove('active');
     if (i === index) q.classList.add('active');
   });
+  respondido = false; 
 }
-
 
 function launchConfetti() {
   const duration = 4 * 1000;
@@ -41,9 +40,8 @@ function launchConfetti() {
     if (Date.now() < end) {
       requestAnimationFrame(frame);
     }
-  }());
+  })();
 }
-
 
 const allOptions = document.querySelectorAll('.option');
 
@@ -54,19 +52,19 @@ allOptions.forEach(option => {
     hoverSound.play();
   });
 
-  
   option.addEventListener('click', () => {
+    if (respondido) return; // 🚫 impede múltiplos cliques rápidos
+    respondido = true; // trava até mudar de pergunta
+
     const parentQuestion = option.closest('.question');
     const feedback = parentQuestion.querySelector('.feedback');
     const correct = option.dataset.correct === "true";
 
-  
     parentQuestion.querySelectorAll('.option').forEach(o => o.classList.remove('correct', 'wrong'));
     option.classList.add(correct ? 'correct' : 'wrong');
 
     feedback.textContent = correct ? "✅ Correto!" : "❌ Errado!";
 
-    
     if (correct) {
       correctSound.currentTime = 0;
       correctSound.play();
@@ -76,7 +74,6 @@ allOptions.forEach(option => {
       wrongSound.play();
     }
 
-    
     setTimeout(() => {
       currentQuestion++;
       if (currentQuestion < questions.length - 1) {
@@ -84,14 +81,11 @@ allOptions.forEach(option => {
       } else {
         showQuestion(questions.length - 1);
         document.getElementById('final-score').textContent = `Você acertou ${score} de ${questions.length - 1} perguntas!`;
-
-        // Som de celebração e confete
         celebrationSound.play();
         launchConfetti();
       }
     }, 1000);
   });
 });
-
 
 showQuestion(0);
