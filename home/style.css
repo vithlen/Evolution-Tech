@@ -1,80 +1,80 @@
 body {
-font-family: Arial, sans-serif;
- margin: 0;
- padding: 0;
- background-color: #fff;
- color: #000;
- transition: 0.3s;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s;
 }
 
 .main-content-wrapper {
- margin: 0 auto;    
-position:  relative;
+    margin: 0 auto;    
+    position: relative;
 }
 
 header {
-background-color: #f57c00;
-color: white;
- padding: 10px 0;
-text-align: center;
-position: relative;
- display: flex;
- flex-direction: column;
- align-items: center;
-width: 100%;
+    background-color: #f57c00;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 header h1,
 header nav {
-max-width: 1200px;
-width: 100%;
-padding: 0 20px;
- box-sizing: border-box;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 nav {
-padding-top: 10px;
-display: flex;
- justify-content: center;
- flex-wrap: wrap;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav a {
-color: white;
- margin: 0 10px;
- text-decoration: none;
-font-size: 16px;
-white-space: nowrap;
-padding: 5px 0;
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 16px;
+    white-space: nowrap;
+    padding: 5px 0;
 }
 
 nav a:hover {
- text-decoration: underline;
+    text-decoration: underline;
 }
 
 .logo-esq,
 .logo-dir {
-position: absolute;
-top: 50%;
- transform: translateY(-50%);
- max-width: 80px;
- height: auto;
- z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 80px;
+    height: auto;
+    z-index: 10;
 }
 
 .logo-esq {
-left: 10px;
+    left: 10px;
 }
 
 .logo-dir {
-right: 100px;
+    right: 100px;
 }
 
 .logo-esq img,
 .logo-dir img {
- width: 100%;
-height: auto;
- display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .header-btns {
@@ -123,157 +123,140 @@ height: auto;
     border-color: white;
 }
 
-.slide-container {
- width: 100%;
- position: relative;
- margin: auto;
- overflow: hidden;
- border-radius: 0;
- box-shadow: none;
- height: 1000px;
+.imagem-abaixo-header {
+    min-height: 150px; 
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
 
-.mySlides {
- display: none;
- height: 100%;
-}
-
-.mySlides img {
- vertical-align: middle;
-  width: 100%;
- height: 100%;
- object-fit: cover;
- object-position: top;
-}
-
-.fade {
- animation-name: fade;
- animation-duration: 1.5s;
-}
-
-@keyframes fade {
-from {
- opacity: 0.4;
-}
- to {
- opacity: 1;
- }
+.imagem-abaixo-header img {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+    display: block;
+    margin: 0; 
 }
 
 .dot-container {
- text-align: center;
- padding: 10px;
- background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
 }
 
 .dot {
- cursor: pointer;
- height: 12px;
- width: 12px;
- margin: 0 2px;
- background-color: #bbb;
- border-radius: 50%;
- display: inline-block;
- transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
 .active,
 .dot:hover {
- background-color: #f57c00;
+    background-color: #f57c00;
 }
 
 .hero-bottom {
- background-color: white;
- padding: 30px 20px;
- text-align: center;
+    background-color: white;
+    padding: 30px 20px;
+    text-align: center;
 }
 
 .hero-conteudo {
-max-width: 800px;
- margin: 0 auto;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero-bottom h1 {
- font-size: 3em;
- color: #000;
- margin-bottom: 10px;
- white-space: nowrap;
- display: inline-block;
+    font-size: 3em;
+    color: #000;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .hero-bottom p {
- color: #555;
- font-size: 1.2em;
- margin-top: 15px;
- margin-bottom: 30px;
+    color: #555;
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 30px;
 }
 
 .btn {
- background-color: #f57c00;
- color: white;
- padding: 15px 30px;
- font-size: 18px;
- border: none;
- border-radius: 5px;
- cursor: pointer;
- font-weight: bold;
- text-decoration: none;
- display: inline-block;
- margin-right: 15px;
+    background-color: #f57c00;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 15px;
 }
 
 .btn:hover {
- background-color: #e65100;
+    background-color: #e65100;
 }
 
 .btn-secundario-laranja {
- background-color: transparent;
- color: #f57c00;
- padding: 15px 30px;
- font-size: 18px;
- border: 1px solid #f57c00;
- border-radius: 5px;
- cursor: pointer;
- font-weight: bold;
- text-decoration: none;
- display: inline-block;
+    background-color: transparent;
+    color: #f57c00;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: 1px solid #f57c00;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-secundario-laranja:hover {
- background-color: #fff3e0;
+    background-color: #fff3e0;
 }
 
 .beneficios {
- display: flex;
- justify-content: center;
- padding: 30px 10px;
- background-color: #ffebd2;
- margin-top: 0;
- flex-wrap: wrap;
- gap: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px; 
+    background-color: #ffebd2;
+    margin-top: 0;
+    flex-wrap: wrap;
+    gap: 15px; 
 }
 
 .card {
- background: white;
- padding: 20px;
- border-radius: 10px;
- width: 280px;
- text-align: center;
- box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
- color: #333;
- flex-shrink: 0;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+    flex-shrink: 0;
 }
 
 .card h3 {
- color: #f57c00;
+    color: #f57c00;
 }
 
 footer {
- background-color: #f57c00;
- color: white;
- text-align: center;
- padding: 20px;
- width: auto;
+    background-color: #f57c00;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: auto;
 }
 
 @media (max-width: 768px) {
@@ -302,10 +285,6 @@ footer {
     header h1 {
         font-size: 2.2em;
         white-space: normal;
-    }
-
-    .slide-container {
-        height: 250px;
     }
 
     .hero-bottom h1 {
@@ -338,10 +317,6 @@ footer {
         width: 100%;
         max-width: 250px;
         margin: 5px auto;
-    }
-
-    .slide-container {
-        height: 200px;
     }
 
     .hero-bottom h1 {
