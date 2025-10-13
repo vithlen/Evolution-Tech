@@ -63,7 +63,9 @@ nav a:hover {
 }
 
 .logo-esq {
-    left: 10px;
+    left: 45px;
+    height: 72px;
+    width: 150px;
 }
 
 .logo-dir {
@@ -123,7 +125,7 @@ nav a:hover {
     border-color: white;
 }
 
-.imagem-abaixo-header {
+.imagem-header {
     min-height: 150px; 
     width: 100%;
     padding: 0;
@@ -135,7 +137,7 @@ nav a:hover {
     align-items: center; 
 }
 
-.imagem-abaixo-header img {
+.imagem-header img {
     width: 100%; 
     height: auto; 
     object-fit: contain; 
