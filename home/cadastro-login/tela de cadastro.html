@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro | Tech Para Todos</title>
+<link rel="stylesheet" href=cadastro_css.css>
+</head>
+<body>
+ <div class="container-cadastro-simples">
+    <div class="card-cadastro">
+        <h2>Crie a sua conta e aprenda informática!</h2>
+        <p>Preencha o campos abaixo com as seguintes informações:</p>
+
+        <form class="form-cadastro">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Insira um e-mail válido" required>
+
+            <label for="data">Data de nascimento</label>
+           <input type="date" name="data" id="data" required>
+           
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf"  placeholder="Digite o CPF" max="11" required>
+
+            <label>CEP:
+                <input type="text" id="cep" maxlength="9" oninput="mascaraCEP(this)" placeholder="Digite o CEP"/>
+              </label>
+               
+              <label for="endereco">Endereço</label>
+              <input type="text" name="endereco" id="endereco" placeholder="Endereço"  required>
+
+              <label for="cidade">Cidade</label>
+              <input type="text" placeholder="Cidade">
+              
+              <label for="bairro">Bairro</label>
+              <input type="text" placeholder="Bairro">
+              
+              <label for="cidade">UF</label>
+               <input type="text" placeholder="Cidade">
+
+               <label for="numero">Número</label>
+               <input type="number" placeholder="Número" max="2" required>
+
+               <label for="complemento">Complemento</label>
+               <input type="text" placeholder="Complemento">
+              
+               
+
+              
+              <label for="cel">Celular:</label>
+            <input type="tel" id="cel" name="cel" placeholder="Insira seu DDD + seu número de celular" required>
+
+            <label for="username">Nome de usuário:</label>
+            <input type="text" id="username" name="usuario" placeholder="Insira seu nome de usuário" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Crie uma senha com até 8 caracteres" required>
+
+            <label for="confirma-senha">Confirme a Senha:</label>
+            <input type="password" id="confirma-senha" name="confirma-senha" placeholder="Repita sua senha" required>
+
+            <button type="submit" class="botao-cadastro">Cadastrar</button>
+        </form>
+
+        <div class="links-rodape">
+            <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a>
+        </div>
+        
+    </div>
+
+</div>
+</body>
+</html>

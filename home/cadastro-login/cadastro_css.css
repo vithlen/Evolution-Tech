@@ -1,0 +1,107 @@
+body {
+    background-image: url(img/fundo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #f0f2f5; 
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+z
+.container-cadastro-simples {
+    width: 100%;
+    max-width: 100vh;
+    padding: 25px;
+}
+
+.card-cadastro {
+    background-color: #ffffff;
+    font-size: 18px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.card-cadastro h2 {
+    font-size: 30px;
+    color: #d27b08;
+    margin-bottom: 10px;
+}
+
+.card-cadastro p {
+    color: #353535;
+    margin-bottom: 30px;
+}
+
+.form-cadastro label {
+    display: block;
+    text-align: left;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.form-cadastro input {
+    width: 100%;
+    font-size: 17px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; 
+}
+
+.botao-cadastro {
+    width: 100%;
+    padding: 20px;
+    background-color: #ff8c00; 
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-cadastro:hover {
+    background-color: #e67e00;
+}
+
+.links-rodape {
+    margin-top: 25px;
+    font-size: 0.9;
+}
+
+.links-rodape a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.links-rodape a:hover {
+    text-decoration: underline;
+}
+
+.logo-cadastro {
+    max-width: 190px; 
+}
+.butao_cep{
+
+    width: 100%;
+    padding: 20px;
+    background-color: #ff8c00; 
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: orange
+
+}
