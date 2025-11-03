@@ -5,6 +5,7 @@ body {
     background-color: #fff;
     color: #000;
     transition: 0.3s;
+    flexbox: 1;
 }
 
 .main-content-wrapper {
@@ -76,7 +77,7 @@ nav a:hover {
 .logo-dir img {
     width: 100%;
     height: auto;
-    display: block;
+    display: none;
 }
 
 .header-btns {
@@ -105,6 +106,8 @@ nav a:hover {
     color: white;
     border: 2px solid #f57c00;
     white-space: normal;
+    display: flex;
+    flex-wrap: unset;
 }
 
 .btn-header:hover {
@@ -349,21 +352,24 @@ footer {
    MEDIA QUERIES - TELAS MÉDIAS (TABLETS E CELULARES GRANDES)
    ------------------------------------------- */
 @media (max-width: 992px) {
-    /* Reorganização do cabeçalho para telas médias */
-    header {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 15px 10px;
+    .logo-esq,
+    .logo-dir,
+    .header-btns {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100%;
+        max-width: none;
     }
     
     .logo-esq {
-        margin: 0 auto 10px auto;
-        order: 1;
-        width: 100%; 
-        text-align: center;
-        max-width: 150px;
-        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        margin: 0 0 10px 0;
+        height: auto;
+        width: 150px;;
     }
     
     header h1 {
@@ -389,7 +395,7 @@ footer {
     /* Mostrar o botão hambúrguer */
     .menu-toggle {
         display: block;
-        position: absolute;
+        position: absolute;@media
         top: 25px;
         right: 15px;
     }
