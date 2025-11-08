@@ -6,7 +6,11 @@ body {
     color: #000;
     transition: 0.3s;
     flexbox: 1;
+    display: flex;
+    flex-direction: column;
 }
+
+
 
 .main-content-wrapper {
     margin: 0 auto;    
@@ -75,10 +79,14 @@ nav a:hover {
 
 .logo-esq img,
 .logo-dir img {
-    width: 100%;
+    display: block;       /* mostrar no desktop */
+    width: auto;
+    max-width: 140px;     /* ajusta conforme necessidade */
+    max-height: 72px;
     height: auto;
-    display: none;
+    object-fit: contain;
 }
+
 
 .header-btns {
     position: absolute;
@@ -289,6 +297,11 @@ nav a:hover {
 
 .hero-bottom h2 {
     font-size: 1.8em;
+  background: transparent; /* evita fundo branco no container que esconda o texto */
+    color: #bbbbbb;
+    margin-bottom: 20px;
+    white-space: normal; 
+    display: block;
 }
 
 .hero-bottom p {
@@ -338,14 +351,77 @@ nav a:hover {
     background-color: #fff3e0;
 }
 
-/* Rodapé */
 footer {
-    background-color: #f57c00;
+    position: relative; /* necessário para posicionamento absoluto interno */
+    background-color: #1f1f1f;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     width: 100%;
     box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Instagram no canto inferior esquerdo */
+footer .social-media {
+    position: absolute;
+    left: 16px;
+    bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* garante que o link e ícone fiquem alinhados */
+footer .social-media .social-link {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* tamanho do ícone do instagram */
+footer .social-media img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+/* Logo da empresa no canto inferior direito */
+footer .footer-logo {
+    position: absolute;
+    right: 16px;
+    bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+/* tamanho da logo da empresa */
+footer .footer-logo img {
+    width: 120px;
+    height: auto;
+    display: block;
+}
+
+/* evita sobreposição em telas pequenas: empilha tudo e centraliza */
+@media (max-width: 480px) {
+    footer .social-media,
+    footer .footer-logo {
+        position: static;
+        margin: 8px 0;
+        justify-content: center;
+    }
+
+    footer {
+        padding-bottom: 18px;
+    }
+
+    /* reduz a logo da empresa em telas muito pequenas */
+    footer .footer-logo img {
+        width: 96px;
+    }
 }
 
 /* -------------------------------------------
@@ -388,82 +464,206 @@ footer {
         order: 4;
     }
 }
+/* ============================
+   RESPONSIVO & MENU HAMBURGUER
+   ============================ */
 
-
-@media (max-width: 768px) {
-    
-    /* Mostrar o botão hambúrguer */
-    .menu-toggle {
-        display: block;
-        position: absolute;@media
-        top: 25px;
-        right: 15px;
-    }
-    
-    header {
-        align-items: flex-start; /* Ajuste para o menu-toggle */
-        padding: 15px 10px;
-    }
-    
-    header h1 {
-        font-size: 1.5em;
-        text-align: center;
-    }
-    
-    /* Menu Colapsável - Escondido por padrão (nav-hidden) */
-    nav {
-        width: 100%;
-        margin-top: 0;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        background-color: #e65100;
-        padding-bottom: 10px;
-    }
-
-    nav a {
-        padding: 10px 0;
-        width: 90%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    /* Botões do Hero e Hero Bottom se tornam blocos */
-    .btn, .btn-secundario-laranja {
-        font-size: 16px;
-        padding: 12px 20px;
-        margin-bottom: 10px;
-        margin-right: 0; 
-        display: block; 
-        width: 100%;
-        max-width: 350px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+/* 1) botão hamburguer - escondido em desktop */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.15);
+  color: white;
+  font-size: 1.4rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 20;
 }
 
-/* -------------------------------------------
-   MEDIA QUERIES - TELAS PEQUENAS (CELULARES)
-   ------------------------------------------- */
-@media (max-width: 480px) {
-    
-    header h1 {
-        font-size: 1.3em;
-    }
+/* 2) nav padrão (desktop) - mantém o comportamento atual */
+nav {
+  display: flex;
+  gap: 10px;
+}
 
-    /* Cards de Benefícios em Largura Total */
-    .card {
-        width: 95%; 
-        max-width: none;
-    }
-    
-    /* Botões do header (CADASTRE-SE e JÁ SOU ALUNO) */
-    .header-btns {
-        flex-direction: column;
-        gap: 5px;
-    }
-    
-    .header-btns .btn-header {
-        width: 100%;
-        max-width: 200px;
-    }
+/* 3) regras para telas pequenas */
+@media (max-width: 768px) {
+
+  /* tornamos header empilhado e removemos posicionamentos absolutos */
+  .logo-esq, .logo-dir, .header-btns {
+    position: static !important;
+    transform: none !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    width: 100%;
+    max-width: none;
+  }
+
+  /* mostra o botao hamburguer */
+  .menu-toggle {
+    display: inline-block;
+    position: absolute;
+    left: 16px;       /* ajustar conforme layout */
+    top: 18px;
+    color: #fff;
+  }
+
+  /* header layout no mobile */
+  header {
+    padding: 18px 12px 12px 12px;
+    align-items: center;
+  }
+
+  /* h1 menor no mobile */
+  header h1 {
+    font-size: 1.1rem;
+    margin: 8px 0 10px 0;
+    text-align: center;
+    padding-left: 44px; /* evita ficar embaixo do botão */
+    padding-right: 44px;
+  }
+
+  /* NAV escondido por padrão no mobile (abrirá com a classe menu-aberto no body) */
+  nav {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(245,124,0,0.95); /* mesma cor do header */
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+    z-index: 15;
+  }
+
+  nav a {
+    width: 90%;
+    padding: 12px 10px;
+    margin: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* quando o menu estiver aberto (a gente adiciona/removerá essa classe via JS) */
+  body.menu-aberto nav {
+    display: flex;
+  }
+
+  /* empurra o conteúdo principal para não ficar escondido atrás do header */
+  .imagem-header {
+    margin-top: 0; /* definimos um espaçamento controlado abaixo */
+  }
+
+  /* garante que a imagem hero não seja coberta: reduz sua altura máxima */
+  .imagem-header img {
+    max-height: 260px;
+    object-fit: cover;
+  }
+
+  /* garante que os logos apareçam (se estavam com display:none) */
+  .logo-esq img, .logo-dir img { display: block; max-width: 140px; height: auto; }
+
+  /* header buttons ficam em linha/baixo do h1 em mobile */
+  .header-btns { margin-top: 8px; display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
+}
+
+
+.modo-escuro {
+    display: flex;
+    align-items: center;
+}
+
+/* Esconde o checkbox */
+#toggle {
+    display: none;
+}
+
+/* Trilho */
+.trilho {
+    width: 45px;
+    height: 22px;
+    background: #ccc;
+    border-radius: 25px;
+    position: relative;
+    margin-left: 7px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Bolinha */
+.bola {
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+/* Quando ativo */
+#toggle:checked + .trilho {
+    background: #4ea8ff;
+}
+
+#toggle:checked + .trilho .bola {
+    transform: translateX(23px);
+}
+
+/* --- Tema escuro aplicado ao body --- */
+body.escuro {
+    background-color: #000000;
+    color: #f1f1f1;
+}
+
+/* Ajusta cores no modo escuro */
+body.escuro header {
+    background-color: #000000;
+}
+
+body.escuro .btn-header,
+body.escuro .btn {
+      color: #f57c00;
+    color: #fff;
+    border-color: #000000;
+}
+
+body.escuro .card {
+    background-color: #000000;
+    color: #ddd;
+}
+
+body.escuro footer {
+    background-color: #000000;
+}
+.h2 {
+    color: #fff;
+}
+.social-link {
+  display: inline-flex; /* Alinha o ícone e o texto na mesma linha */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 8px; /* Espaço entre o ícone e o texto */
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: white;
+  transition: transform 0.3s ease;
+}
+.social-link:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.social-media img {
+  width: 30px; /* Tamanho do ícone */
+  height: 30px;
+  vertical-align: middle; /* Alinha o ícone com o texto */
+}
+
+.footer-logo img {
+  width: 120px; /* Ajuste o tamanho da logo conforme necessário */
+  height: auto;
+}
+footer p {
+  margin: 0;
 }
