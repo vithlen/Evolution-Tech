@@ -1,68 +1,92 @@
-// Espera o conteúdo da página carregar completamente antes de executar o script
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("iformulario");
-  const idadeInput = document.getElementById("idade");
-  const valorIdadeSpan = document.getElementById("valorIdade");
-  const btnEnviar = document.getElementById("ienviar");
+  const form = document.getElementById("contactForm");
+  const nomeInput = document.getElementById("nome");
+  const emailInput = document.getElementById("iemail");
+  const telefoneInput = document.getElementById("telefone");
+  const mensagemInput = document.getElementById("mensagem");
 
-  // Função para atualizar o valor da idade exibido na tela
-  function mudaIdade() {
-    valorIdadeSpan.textContent = idadeInput.value;
+  // Função para exibir mensagem de erro
+  function showError(input, message) {
+    const formGroup = input.parentElement;
+    const errorSpan = formGroup.querySelector(".error-message");
+    errorSpan.textContent = message;
+    input.style.borderColor = "red";
   }
 
-  // Função de validação do formulário
-  function valida(event) {
-    // Previne o envio padrão do formulário para podermos validar primeiro
+  // Função para limpar mensagem de erro
+  function clearError(input) {
+    const formGroup = input.parentElement;
+    const errorSpan = formGroup.querySelector(".error-message");
+    errorSpan.textContent = "";
+    input.style.borderColor = "#f28705";
+  }
+
+  // Função para validar o formulário
+  function validateForm(event) {
     event.preventDefault();
+    let isValid = true;
 
-    const nome = form.nome;
-    const idade = form.idade;
-    const endereco = form.endereco;
-    const formacao = form.formacao;
-    const login = form.login;
-    const senha = form.senha;
-    const confirmaSenha = form.confirmaSenha;
-    let mensagemErro = "";
+    // Limpa erros anteriores
+    clearError(nomeInput);
+    clearError(emailInput);
+    clearError(telefoneInput);
+    clearError(mensagemInput);
 
-    if (nome.value.trim() === "") {
-      mensagemErro += "Por favor, preencha o campo nome\n";
+    // Regex para validação
+    const nomeRegex = /^[a-zA-Z\s]{3,}$/; // Pelo menos 3 letras e espaços
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const telefoneRegex = /^\(\d{2}\)\s\d{5}-\d{4}$/; // Formato (xx) xxxxx-xxxx
+
+    // Validação do Nome
+    if (nomeInput.value.trim() === "") {
+      showError(nomeInput, "Por favor, preencha o campo nome.");
+      isValid = false;
+    } else if (!nomeRegex.test(nomeInput.value)) {
+      showError(nomeInput, "Por favor, insira um nome válido (apenas letras).");
+      isValid = false;
     }
 
-    if (idade.value === "0") {
-      mensagemErro += "Por favor, selecione uma idade válida\n";
+    // Validação do E-mail
+    if (emailInput.value.trim() === "") {
+      showError(emailInput, "Por favor, preencha o campo e-mail.");
+      isValid = false;
+    } else if (!emailRegex.test(emailInput.value)) {
+      showError(emailInput, "Por favor, insira um e-mail válido.");
+      isValid = false;
     }
 
-    if (endereco.value.trim() === "") {
-      mensagemErro += "Por favor, preencha o campo endereço\n";
+    // Validação do Telefone
+    if (telefoneInput.value.trim() === "") {
+      showError(telefoneInput, "Por favor, preencha o campo telefone.");
+      isValid = false;
+    } else if (!telefoneRegex.test(telefoneInput.value)) {
+      showError(
+        telefoneInput,
+        "Formato de telefone inválido. Use (xx) xxxxx-xxxx."
+      );
+      isValid = false;
     }
 
-    if (login.value.trim() === "") {
-      mensagemErro += "Por favor, preencha o campo login\n";
-    } else if (login.value.length !== 5) {
-      mensagemErro += "O campo login deve ter 5 caracteres\n";
+    // Validação da Mensagem
+    if (mensagemInput.value.trim() === "") {
+      showError(mensagemInput, "Por favor, digite sua mensagem.");
+      isValid = false;
     }
 
-    if (senha.value === "") {
-      mensagemErro += "Por favor, preencha o campo senha\n";
-    }
-
-    if (senha.value !== confirmaSenha.value) {
-      mensagemErro += "Os campos senha e confirma senha devem ser iguais\n";
-    }
-
-    if (formacao.value === "") {
-      mensagemErro += "Por favor, preencha o campo formação\n";
-    }
-
-    if (mensagemErro !== "") {
-      alert(mensagemErro);
-    } else {
-      alert("Formulário enviado com sucesso!"); // Mensagem de sucesso
-      form.submit(); // Envia o formulário
+    if (isValid) {
+      alert("Formulário enviado com sucesso!");
+      form.submit();
     }
   }
 
-  // Adiciona os "escutadores" de eventos aos elementos
-  idadeInput.addEventListener("input", mudaIdade);
-  btnEnviar.addEventListener("click", valida);
+  // Máscara para o campo de telefone
+  telefoneInput.addEventListener("input", function (e) {
+    let value = e.target.value.replace(/\D/g, "");
+    value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
+    value = value.replace(/(\d{5})(\d)/, "$1-$2");
+    e.target.value = value.slice(0, 15);
+  });
+
+  // Adiciona o "escutador" de evento ao formulário
+  form.addEventListener("submit", validateForm);
 });

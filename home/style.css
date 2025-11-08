@@ -13,68 +13,61 @@ body {
 
 
 .main-content-wrapper {
-    margin: 0 auto;    
-    position: relative;
+  margin: 0 auto;
+  position: relative;
 }
 
 header {
-    background-color: #f57c00;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  background-color: #f57c00;
+  color: white;
+  padding: 15px 0; /* Aumenta o padding vertical do header */
+  display: flex;
+  flex-direction: row; /* Alinha itens lado a lado */
+  justify-content: space-between; /* Distribui o espaço */
+  align-items: center;
+  width: 100%;
+  padding: 0 20px; /* Padding vertical mínimo para o header */
+  box-sizing: border-box;
+  position: relative; /* Mantém a referência para itens posicionados dentro */
 }
 
-header h1,
-header nav {
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
+header h1 {
+  font-size: 1.2em; /* Título ainda menor */
+  margin: 0; /* Remove margens padrão */
+  margin-bottom: 0;
+  margin-top: 15px; /* Adiciona margem superior para empurrar o título para baixo */
 }
 
 nav {
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center; /* Centraliza os links da navegação */
+  flex-wrap: wrap;
+  padding-bottom: 0; /* Remove padding inferior da navegação */
 }
 
 nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 16px;
-    white-space: normal;
-    padding: 5px 0;
+  color: white;
+  margin: 0 15px; /* Aumenta o espaçamento entre os links */
+  text-decoration: none;
+  font-size: 14px; /* Links ainda menores */
+  white-space: normal;
+  padding: 5px 0;
 }
 
 nav a:hover {
-    text-decoration: underline;
-}
-
-.logo-esq,
-.logo-dir {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 80px;
-    height: auto;
-    z-index: 10;
+  text-decoration: underline;
 }
 
 .logo-esq {
-    left: 45px;
-    height: 72px;
-    width: 150px;
+  /* O logo agora é um item flex, não mais posicionado absolutamente */
+  width: 120px; /* Logo ainda menor */
+  flex-shrink: 0; /* Impede que o logo encolha */
 }
 
-.logo-dir {
-    right: 100px;
+.logo-esq img {
+  width: 100%;
+  height: auto;
+  display: block; /* Torna o logo visível */
 }
 
 .logo-esq img,
@@ -89,210 +82,146 @@ nav a:hover {
 
 
 .header-btns {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    box-sizing: border-box;
-    z-index: 10;
-    flex-wrap: nowrap;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0; /* Impede que os botões encolham */
 }
 
 .btn-header {
-    padding: 8px 12px;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    font-weight: bold;
-    line-height: 1;
-    background-color: #f57c00;
-    color: white;
-    border: 2px solid #f57c00;
-    white-space: normal;
-    display: flex;
-    flex-wrap: unset;
+  padding: 4px 8px; /* Botões ainda mais finos */
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  font-weight: bold;
+  line-height: 1;
+  background-color: #f57c00;
+  color: white;
+  border: 2px solid #f57c00;
+  white-space: normal;
+  display: flex;
+  flex-wrap: unset;
 }
 
 .btn-header:hover {
-    background-color: white;
-    color: #f57c00;
-    border-color: white;
+  background-color: white;
+  color: #f57c00;
+  border-color: white;
 }
 
 .btn-aluno {
-    background-color: transparent;
-    border-color: white;
-    color: white;
+  background-color: transparent;
+  border-color: white;
+  color: white;
 }
 
 .btn-aluno:hover {
-    background-color: white;
-    color: #f57c00;
-    border-color: white;
+  background-color: white;
+  color: #f57c00;
+  border-color: white;
 }
 
 .imagem-header {
-    min-height: 150px; 
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    overflow: hidden; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
+  height: 350px; /* Altura reduzida para os cards ficarem mais visíveis */
+  width: 100%;
+  overflow: hidden; /* Esconde as partes da imagem que são cortadas */
 }
 
 .imagem-header img {
-    width: 100%; 
-    height: auto; 
-    object-fit: contain; 
-    display: block;
-    margin: 0; 
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* Preenche o espaço, mantendo a proporção e cortando o excesso */
+  object-position: center 25%; /* Centraliza a imagem um pouco abaixo do topo, mantendo o rosto visível */
 }
 
 .dot-container {
-    text-align: center;
-    padding: 10px;
-    background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
 }
 
 .dot {
-    cursor: pointer;
-    height: 12px;
-    width: 12px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
 .active,
 .dot:hover {
-    background-color: #f57c00;
-}
-
-.hero-bottom {
-    background-color: white;
-    padding: 30px 20px;
-    text-align: center;
-}
-
-.hero-conteudo {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero-bottom h1 {
-    font-size: 3em;
-    color: #000;
-    margin-bottom: 10px;
-    white-space: normal;
-    display: inline-block;
-}
-
-.hero-bottom p {
-    color: #555;
-    font-size: 1.2em;
-    margin-top: 15px;
-    margin-bottom: 30px;
-}
-
-.btn {
-    background-color: #f57c00;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    margin-right: 15px;
-}
-
-.btn:hover {
-    background-color: #e65100;
-}
-
-.btn-secundario-laranja {
-    background-color: transparent;
-    color: #f57c00;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: 1px solid #f57c00;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.btn-secundario-laranja:hover {
-    background-color: #fff3e0;
+  background-color: #f57c00;
 }
 
 .beneficios {
-    display: flex;
-    justify-content: center;
-    padding: 10px 10px; 
-    background-color: #ffebd2;
-    margin-top: 0;
-    flex-wrap: wrap;
-    gap: 15px; 
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+  background-image: radial-gradient(
+    circle at center,
+    #ff8c2b 0%,
+    /* Laranja vibrante no centro*/ #ffc499 50%,
+    /* Laranja mais claro na metade (para uma transição)*/ #ffffff 100%
+      /* Branco nas bordas */
+  );
+  /*aq q muda o fundo dos cards*/
+  margin-top: 0;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 280px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    color: #333;
-    flex-shrink: 0;
-    
-    /* HOVER - Transição suave para os efeitos */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  background: white;
+  padding: 20px;
+  border-radius: 10px; /* Mantém o raio da borda */
+  flex-basis: 280px; /* Largura base para o card */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+  flex-shrink: 0;
+
+  /* HOVER - Transição suave para os efeitos */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    /* O CARD SE LEVANTA LIGEIRAMENTE */
-    transform: translateY(-5px); 
-    /* A SOMBRA FICA MAIS PROEMINENTE */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
-    cursor: pointer; 
+  /* O CARD SE LEVANTA LIGEIRAMENTE */
+  transform: translateY(-5px);
+  /* A SOMBRA FICA MAIS PROEMINENTE */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .card h3 {
-    color: #f57c00;
+  color: #f57c00;
+  font-weight: normal; /* Garante que o título não fique em negrito */
 }
 
 /* Seção Hero Bottom (Conteúdo Principal) */
 .hero-bottom {
-    background-color: white;
-    padding: 30px 20px;
-    text-align: center;
+  background-color: rgb(255, 255, 255); /*fundo dos cards */
+  padding: 30px 20px;
+  text-align: center;
 }
 
 .hero-conteudo {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero-bottom h1 {
-    font-size: 3em;
-    color: #000;
-    margin-bottom: 10px;
-    white-space: normal; 
-    display: block;
+  font-size: 3em;
+  color: #000;
+  margin-bottom: 10px;
+  white-space: normal;
+  display: block;
 }
 
 .hero-bottom h2 {
@@ -305,50 +234,51 @@ nav a:hover {
 }
 
 .hero-bottom p {
-    color: #555;
-    font-size: 1.2em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-align: left; 
+  color: #555;
+  font-size: 1.2em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
 .btn {
-    background-color: #f57c00;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    margin-right: 15px;
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Transição para o hover */
+  background-color: #f57c00;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 15px;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Transição para o hover */
 }
 
 .btn:hover {
-    background-color: #e65100;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-    transform: translateY(-2px);
+  background-color: #e65100; /* Laranja mais escuro */
+  transform: translateY(-2px); /* Levanta o botão */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
 }
 
 .btn-secundario-laranja {
-    background-color: transparent;
-    color: #f57c00;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: 1px solid #f57c00;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s, color 0.3s;
+  background-color: transparent;
+  color: #f57c00;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: 1px solid #f57c00;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-secundario-laranja:hover {
-    background-color: #fff3e0;
+  background-color: #f57c00;
+  color: white;
 }
 
 footer {
