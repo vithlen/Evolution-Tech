@@ -1,0 +1,242 @@
+/* Reset básico pra zerar as margens e paddings que os navegadores colocam por padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos gerais do corpo da página */
+body {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  transition: 0.3s; /* Transição suave para o modo escuro */
+}
+
+/* Estilização do cabeçalho */
+header {
+  background-color: #f57c00;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  /* Organiza os itens do header em coluna */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+h1 {
+  margin-top: 25px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+/*ESTILOS DO CARD DE INFORMAÇÕES DO CURSO */
+
+.course-card {
+  width: 90%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Conteúdo dentro do card (imagem, texto, botão) */
+.card-content {
+  align-items: center;
+  background: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+  max-width: 900px;
+  width: 150%;
+  gap: 20px;
+}
+
+/* Imagem/ícone do curso */
+.course-Icon {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Container para as informações do curso (duração, descrição) */
+.card-info {
+  flex: 1;
+  text-align: left;
+}
+
+/* Estilo do título do curso */
+.texto {
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Estilo do parágrafo de descrição e duração */
+.card-info p {
+  font-size: large;
+  margin: 10px 0;
+  color: black;
+  line-height: 1.5;
+  font-weight: normal;
+}
+/* Centraliza o botão dentro do seu container */
+.card-info button {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* garante que o botão se alinhe ao centro do bloco */
+}
+
+/* Reset do estilo padrão do botão */
+button {
+  background: none;
+  border: none;
+  margin-top: 0.5rem;
+}
+
+button a {
+  display: inline-block;
+  text-decoration: none;
+  background: #f57c00;
+  color: white;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito hover para o botão */
+button a:hover {
+  background: #ff8f00;
+  transform: scale(1.05);
+}
+
+/* Ajustes de responsividade para o card em telas menores */
+@media (max-width: 768px) {
+  .card-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .course-Icon {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .card-info {
+    text-align: center;
+  }
+}
+
+/* --- ESTILOS GERAIS DO HEADER E FOOTER (REPETIDOS DE OUTROS ARQUIVOS) --- */
+/* Isso aqui parece ser um estilo mais antigo do header, talvez possa ser removido depois */
+
+header h1,
+header nav {
+  max-width: 1800px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Estilos da barra de navegação */
+nav {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Links da navegação */
+nav a {
+  color: white;
+  margin: 0 10px;
+  font-size: 16px;
+  white-space: nowrap;
+  padding-top: 50px;
+  margin-bottom: 5px;
+}
+
+/* Efeito hover para os links da navegação */
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Logo da esquerda no cabeçalho */
+.logo-esq {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  left: 60px;
+  height: 72px;
+  width: 150px;
+}
+
+.logo-esq img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container dos botões da direita (cadastro, login) */
+.header-btns {
+  position: absolute;
+  top: 40%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Estilo geral dos botões do cabeçalho */
+.btn-header {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #f57c00;
+  color: white;
+  border: 2px solid #f57c00;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Efeito hover para os botões do cabeçalho */
+.btn-header:hover {
+  background-color: white;
+  color: #f57c00;
+  border-color: white;
+}
+
+/* Estilização do rodapé */
+footer {
+  background-color: #f57c00;
+  color: white;
+  text-align: center;
+  padding: 35px;
+  width: auto;
+}
+
+/* Truque para fazer o rodapé ficar sempre no final da página, mesmo com pouco conteúdo */
+html,
+body {
+  height: 100%; /* ocupa toda a altura da tela */
+}
+
+body {
+  display: flex; /* ativa o flexbox */
+  flex-direction: column; /* organiza tudo em coluna (header → conteúdo → footer) */
+}
+
+main {
+  flex: 1; /* ocupa o espaço restante, empurrando o footer pra baixo */
+}

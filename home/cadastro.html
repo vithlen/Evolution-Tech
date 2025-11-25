@@ -1,0 +1,164 @@
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma da página como Português do Brasil -->
+
+<head>
+  <!-- Configurações de metadados da página -->
+  <meta charset="UTF-8"> <!-- Garante a codificação de caracteres correta (acentos, etc.) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Adapta a página para dispositivos móveis -->
+  <link rel="icon" href="logo-oficial1.png" type="image/png"> <!-- Ícone da página (favicon) -->
+  <link rel="apple-touch-icon" href="img/tech-para-todos-logo-32.png"> <!-- Ícone para dispositivos Apple -->
+  <script src="cadastro.js" defer></script> <!-- Script para a lógica da página, 'defer' carrega depois do HTML -->
+
+  <title>Cadastro | Tech para todos </title> <!-- Título que aparece na aba do navegador -->
+  <link rel="stylesheet" href="cadastro.css"> <!-- Folha de estilos principal -->
+  <!-- Estilos CSS embutidos na página -->
+  <style>
+    /* --- ESTILOS DO MODO ESCURO --- */
+    body.escuro {
+      background-color: #121212;
+      /* Fundo geral mais escuro */
+      background-image: none;
+      /* Remove a imagem de fundo no modo escuro */
+    }
+
+    body.escuro .form {
+      background-color: #1e1e1e;
+      /* Cinza escuro para o formulário */
+      border: 2px solid #f28705;
+      box-shadow: 0 0 20px rgba(242, 135, 5, 0.3);
+    }
+
+    body.escuro h2 {
+      color: #f28705;
+      /* Título em laranja */
+    }
+
+    body.escuro label {
+      color: #ccc;
+      /* Labels em cinza claro */
+    }
+
+    body.escuro input {
+      background-color: #3a3a3a;
+      color: #f0f0f0;
+      border: 1px solid #555;
+    }
+
+    /* --- ESTILOS DO FOOTER (Rodapé) --- */
+    /* Obs: O elemento <footer> não está no HTML, mas os estilos estão prontos aqui. */
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+      color: #555;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-media a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .social-media img {
+      width: 24px;
+      height: 24px;
+    }
+
+    body.escuro footer,
+    body.escuro .social-media a {
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Conteúdo principal da página de cadastro -->
+  <main>
+    <!-- Formulário de cadastro -->
+    <form class="form">
+      <!-- Botão de Modo Escuro -->
+      <label class="modo-escuro">
+        <input type="checkbox" id="toggle"> <!-- O checkbox que controla o estado (ligado/desligado) -->
+        <span class="trilho"><span class="bola"></span></span>
+        <!-- Elementos visuais para criar o botão de alternância -->
+      </label>
+      <h2>Crie a sua conta e aprenda informática!</h2>
+      <p id="mensagem-erro" class="mensagem-erro"></p> <!-- Parágrafo para exibir mensagens de erro de validação -->
+
+      <!-- Container que organiza os campos do formulário em um grid -->
+      <div class="grid-container">
+        <!-- Coluna Esquerda: Dados pessoais e de acesso -->
+        <div class="coluna">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+          <!-- 'required' torna o campo obrigatório -->
+
+          <label for="cpf">CPF:</label>
+          <input type="text" pattern="[0-9]*" id="cpf" name="cpf" minlength="11" maxlength="11"
+            placeholder="Digite o CPF" required>
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="Insira um e-mail válido" required>
+
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" minlength="6" maxlength="10" placeholder="Digite a senha"
+            required>
+
+          <label for="senha">Confirme sua senha:</label>
+          <input type="password" id="confsenha" name="confsenha" minlength="6" maxlength="10"
+            placeholder="Confirme a sua senha" required>
+
+        </div>
+
+        <!-- Coluna Direita: Dados de endereço (preenchidos via API de CEP) -->
+        <div class="coluna">
+          <label>CEP:</label>
+          <input type="text" id="cep" name="cep" placeholder="Digite o seu CEP">
+
+          <label>Endereço:</label>
+          <input type="text" id="endereco" name="endereco">
+
+          <!-- Linha para agrupar campos menores (Bairro e Número) -->
+          <div class="linha">
+            <div class="campo">
+              <label for="bairro">Bairro:</label>
+              <input type="text" id="bairro" name="bairro" placeholder="Digite o seu bairro">
+            </div>
+
+            <div class="campo">
+              <label for="numero">Número:</label>
+              <input type="text" id="numero" name="numero" placeholder="Nº">
+            </div>
+          </div>
+
+          <label>Cidade:</label>
+          <input type="text" id="cidade" name="cidade">
+
+          <label>Estado:</label>
+          <input type="text" id="estado" name="estado">
+
+        </div>
+      </div>
+      <!-- Botão para enviar o formulário -->
+      <button type="submit" id="botao">Cadastrar</button>
+
+      <!-- Container para o logo no final do formulário -->
+      <div class="logo-container">
+        <img src="logo-oficial1.png" alt="Logo Tech para Todos">
+      </div>
+    </form>
+  </main>
+
+</body>
+
+</html>

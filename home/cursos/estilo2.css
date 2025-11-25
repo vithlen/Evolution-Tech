@@ -1,0 +1,322 @@
+/* Reset básico pra zerar as margens e paddings que os navegadores colocam por padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos gerais do corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+  transition: 0.3s;
+  background: white;
+  color: #fff;
+  text-align: right;
+}
+
+/* Estilização do cabeçalho */
+header {
+  background-color: #f57c00;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilo do link geral, pra garantir que fique branco e sem sublinhado */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  margin-top: 25px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+/* Container que segura todos os cards de curso */
+.course-card {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Layout responsivo em grid */
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Estilo de cada card individual (o <figure>) */
+.course-card figure {
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem;
+}
+
+/* Efeito de 'levantar' o card quando passo o mouse por cima */
+.course-card figure:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* A imagem do curso dentro do card */
+.course-Icon {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Estilo do texto (título e duração) dentro do card */
+.texto {
+  text-align: left;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0.8rem 0;
+  color: black;
+}
+
+/* Estilização do botão 'Clique aqui' */
+button {
+  background: none;
+  border: none;
+  margin-top: 0.5rem;
+}
+
+button a {
+  display: inline-block;
+  text-decoration: none;
+  background: #f57c00;
+  color: white;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button a:hover {
+  background: #f57c00;
+  transform: scale(1.05);
+}
+
+/* Garantindo que o título e a navegação do cabeçalho ocupem a largura certa */
+header h1,
+header nav {
+  max-width: 1800px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Estilos da barra de navegação (Início, Sobre Nós, etc.) */
+nav {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 16px;
+  white-space: nowrap;
+  padding-top: 50px;
+  margin-bottom: 5px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Posicionamento do logo à esquerda do cabeçalho */
+.logo-esq {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  left: 60px;
+  height: 72px;
+  width: 150px;
+}
+
+.logo-esq img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container dos botões da direita (cadastro, login) */
+.header-btns {
+  position: absolute;
+  top: 40%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 10;
+  flex-wrap: nowrap;
+}
+
+/* Estilo geral dos botões do cabeçalho */
+.btn-header {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  font-weight: bold;
+  line-height: 1;
+  background-color: #f57c00;
+  color: white;
+  border: 2px solid #f57c00;
+  white-space: nowrap;
+}
+
+.btn-header:hover {
+  background-color: white;
+  color: #f57c00;
+  border-color: white;
+}
+
+/* Estilo específico para o botão 'JÁ SOU ALUNO(A)' */
+.btn-aluno {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+.btn-aluno:hover {
+  background-color: white;
+  color: #f57c00;
+  border-color: white;
+}
+
+/* Seção da imagem principal do header */
+.imagem-header {
+  min-height: 150px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem-header img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+}
+/* Estilização do rodapé */
+footer {
+  background-color: #f57c00;
+  color: white;
+  text-align: center;
+  padding: 35px;
+  width: auto;
+}
+
+/*AJUSTES DE RESPONSIVIDADE*/
+
+/* Para telas de tablets */
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logo-esq {
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+  }
+
+  .header-btns {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  nav a {
+    padding-top: 0;
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+/* Para telas de celulares */
+@media (max-width: 600px) {
+  header {
+    padding: 15px;
+  }
+
+  .logo-esq img {
+    width: 120px;
+  }
+
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  .header-btns {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .course-card {
+    width: 95%;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .course-card figure {
+    padding: 0.8rem;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 20px;
+  }
+}

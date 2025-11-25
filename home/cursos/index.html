@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Configurações do cabeçalho da página -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Importação das fontes do Google Fonts que eu uso no site -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Ícone que aparece na aba do navegador -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../logo-oficial1.png">
+  <title>Cursos de Informática</title>
+  <!-- Link para o arquivo de estilo CSS desta página -->
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+  <!-- Cabeçalho da página, padrão em todo o site -->
+  <header>
+    <div class="header-top">
+      <!-- Botão do menu hamburguer para telas menores -->
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+      <!-- Logo que fica no canto superior esquerdo -->
+      <div class="logo-esq">
+        <img src="img/tech-para-todos.png" alt="Logo Tech Para Todos">
+      </div>
+
+      <!-- Área central do cabeçalho com o título e os links de navegação -->
+      <div class="center-area">
+        <h1>Cursos de Informática Básica Para melhor Idade</h1>
+        <div class="sub-nav-links">
+          <!-- Links de navegação principais -->
+          <a href="../index.html">Início</a>
+          <a href="../sobrenos.html">Sobre Nós</a>
+          <a href="../cursos/index.html">Nossos Cursos</a>
+          <a href="../contato.html">Contato</a>
+        </div>
+      </div>
+      <!-- Botões de ação no canto superior direito -->
+      <div class="header-btns">
+        <!-- Botão para alternar o modo escuro -->
+        <label class="modo-escuro">
+          <input type="checkbox" id="toggle">
+          <span class="trilho"><span class="bola"></span></span>
+        </label>
+        <!-- Botões de cadastro e login -->
+        <a href="../cadastro.html" class="btn-header">CADASTRE-SE</a>
+        <a href="../login.html" class="btn-header btn-acao">JÁ SOU ALUNO(A)</a>
+      </div>
+    </div>
+
+  </header>
+  <!-- Espaçamento para não colar o conteúdo no header -->
+  <br>
+
+  <!-- Container principal que agrupa todos os cards de cursos -->
+  <div class="course-card">
+
+    <!-- Card do curso de Instagram -->
+    <figure>
+      <img src="img/instagram.webp" alt="Ícone do curso de Instagram" class="course-Icon">
+      <label class="texto">Torne-se um influencer famoso no Instagram</label><br>
+      <button><a href="pagina_insta.html" class="button">Clique aqui!</a></button>
+      <br>
+      <p class="texto" style="text-align: left;">1.5h</p> <!-- Duração do curso -->
+    </figure>
+
+    <!-- Card do curso de Canva -->
+    <figure>
+      <img src="img/canva.webp" alt="Ícone do curso de Canva" class="course-Icon">
+      <label class="texto">Conhecendo o Canva e suas funcionalidades</label><br>
+      <button><a href="pagina_canva.html" class="button">Clique aqui!</a></button>
+      <br>
+      <p class="texto" style="text-align: left;">1h</p>
+    </figure>
+
+    <!-- Card do curso de PIX -->
+    <figure>
+      <img
+        src="img/noticiasconcursos.com.br-novo-recorde-do-pix-1527-milhoes-de-transacoes-em-um-unico-dia-confira-pix.jpg"
+        alt="Ícone do curso de PIX" class="course-Icon">
+      <label class="texto">Pix Fácil: Do Zero à Prática</label><br>
+      <button><a href="pagina_powerbi.html" class="button">Clique aqui!</a></button>
+      <br>
+      <p class="texto" style="text-align: left;">1h</p>
+    </figure>
+
+    <!-- Card do curso de Word -->
+    <figure>
+      <img src="img/word.jpg" alt="Ícone do curso de Word" class="course-Icon">
+      <label class="texto">Word Básico</label><br>
+      <button><a href="pagina_word.html" class="button">Clique aqui!</a></button>
+      <br>
+      <p class="texto" style="text-align: left;">1h</p>
+    </figure>
+
+    <!-- Card do curso de PowerPoint -->
+    <figure>
+      <img src="img/power.jpeg" alt="Ícone do curso de PowerPoint" class="course-Icon">
+      <label class="texto">PowerPoint Básico</label><br>
+      <button><a href="pagina_power.html" class="button">Clique aqui!</a></button>
+      <br>
+      <p class="texto" style="text-align: left;">2.5h</p>
+    </figure>
+
+    <!-- Card do curso de Excel -->
+    <figure>
+      <img src="img/excel.webp" alt="Ícone do curso de Excel" class="course-Icon">
+      <label class="texto">Excel Básico</label><br>
+      <button><a href="pagina_excel.html" class="button">Clique aqui!</a></button>
+      <br>
+      <p class="texto" style="text-align: left;">3h</p>
+    </figure>
+
+  </div>
+  <!-- Espaçamento para não colar o conteúdo no footer -->
+  <br>
+  <!-- Rodapé da página, padrão em todo o site -->
+  <footer>
+    <!-- Seção de redes sociais -->
+    <div class="social-media">
+      <a href="https://www.instagram.com/evolutiontech__/" target="_blank" rel="noopener noreferrer"
+        title="Siga-nos no Instagram" class="social-link">
+        <img src="img/instagram3.png" alt="Ícone do Instagram">
+        <span><strong>evolutiontech_</strong></span>
+      </a>
+    </div>
+    <!-- Logo da empresa no rodapé -->
+    <div class="footer-logo">
+      <img src="img/logotipo empresa (2).png" alt="Logo da Empresa">
+    </div>
+
+    <!-- Direitos autorais -->
+    <p>&copy; 2025 Tech Para Todos - Evolution Tech. Todos os direitos reservados.</p>
+
+  </footer>
+  <!-- Link para o script JavaScript geral do site -->
+  <script src="../script.js"></script>
+  <!-- Script específico para esta página -->
+  <script>
+
+    // Lógica para o menu hamburguer
+    const menuBtn = document.querySelector('.menu-toggle');
+
+    menuBtn.addEventListener('click', () => {
+      // Adiciona ou remove a classe 'menu-aberto' no body para mostrar/esconder o menu
+      document.body.classList.toggle('menu-aberto');
+    });
+
+    // Fecha o menu se o usuário clicar em algum link de navegação
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.body.classList.remove('menu-aberto');
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

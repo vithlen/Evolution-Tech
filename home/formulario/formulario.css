@@ -1,0 +1,169 @@
+body {
+  font-family: Arial, sans-serif; /* Define a fonte padrão da página */
+  /* Define a cor de fundo caso o degradê não carregue (fallback) */
+  background-color: #ffffff; /* Branco */
+
+  /* Centraliza o formulário na tela e permite responsividade */
+  display: flex; /* Uso o flexbox pra alinhar as coisas */
+  justify-content: center; /* Centraliza o conteúdo na horizontal */
+  align-items: flex-start; /* Alinha o formulário no topo */
+  padding: 20px; /* Um respiro nas laterais */
+  box-sizing: border-box; /* Garante que o padding não bagunce o tamanho total */
+
+  /* Aplica o degradê radial */
+  background-image: radial-gradient(
+    circle at center,
+    #ff8c2b 0%,
+    /* Laranja vibrante no centro */ #ffc499 50%,
+    /* Laranja mais claro na metade (para uma transição) */ #ffffff 100%
+      /* Branco nas bordas */
+  );
+
+  /* Opcional: Garante que o fundo cubra toda a área de visualização */
+  min-height: 100vh; /* Altura mínima de 100% da tela */
+  margin: 0; /* Remove a margem padrão do body */
+}
+
+.form-container {
+  max-width: 800px; /* Formulário maior */
+  width: 100%; /* Ocupa 100% da largura disponível até o max-width */
+  margin: 20px auto; /* Margem pra dar um espaço em cima/baixo e centralizar */
+  background-color: #f6f6f6; /* Cor de fundo do container do formulário */
+  border: 1px solid #f28705; /* Borda laranja */
+  padding: 15px; /* Espaçamento interno */
+  border-radius: 1px; /* Cantos levemente arredondados */
+}
+
+.form-header {
+  text-align: center; /* Centraliza o texto dentro do cabeçalho */
+  display: flex; /* Torna o cabeçalho um container flexível */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  background-color: #f6f6f6; /* Mesma cor de fundo do container */
+  padding: 10px; /* Espaçamento interno do cabeçalho */
+  margin: -15px -15px 15px -15px; /* Margem negativa pra colar nas bordas do container */
+  border-top-left-radius: 6px; /* Arredonda os cantos superiores */
+  border-top-right-radius: 6px;
+}
+
+.header-title-area {
+  display: flex; /* Torna esta área flexível para logo e h1 */
+  align-items: center; /* Alinha verticalmente logo e h1 */
+  justify-content: center; /* Centraliza logo e h1 */
+  gap: 15px; /* Espacinho entre a logo e o título */
+  margin-bottom: 5px; /* Espaço entre o título e a legenda */
+}
+
+.form-logo {
+  width: 80px; /* Aumenta o tamanho da logo */
+  height: auto; /* Altura automática pra não distorcer */
+}
+.form-legend {
+  height: auto; /* Altura automática também */
+}
+
+.form-header h1 {
+  font-weight: 300; /* Fonte mais fina */
+  color: #f28705; /* Cor laranja pro título */
+  margin: 0; /* Remove margem padrão do h1 */
+  font-size: 2em; /* Tamanho da fonte do título */
+}
+
+.form-row {
+  display: flex; /* Coloca os campos lado a lado */
+  gap: 15px; /* Espaço entre os campos */
+  flex-wrap: wrap; /* Permite que os campos quebrem a linha em telas menores */
+}
+
+.form-row .form-group {
+  flex: 1; /* Faz com que cada grupo de formulário ocupe o espaço disponível igualmente */
+  min-width: 200px; /* Largura mínima para cada campo antes de quebrar a linha */
+  margin-bottom: 0; /* Remove a margem inferior para alinhar corretamente na linha */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Espaço abaixo de cada grupo de campo */
+  display: flex; /* Flexbox pra organizar label e input */
+  flex-wrap: wrap; /* Permite quebra de linha se necessário */
+  align-items: center; /* Alinha os itens verticalmente */
+}
+
+.form-group label {
+  flex-basis: 100%; /* Faz a label ocupar 100% da largura, ficando em cima do input */
+  text-align: left; /* Alinha o texto da label à esquerda */
+  margin-bottom: 5px; /* Espacinho entre a label e o campo */
+  font-weight: normal; /* Fonte normal, sem negrito */
+  color: #c05e00; /* Cor da label, um laranja mais escuro */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"],
+.form-group textarea,
+.form-group select {
+  width: 100%; /* Faz os campos ocuparem toda a largura disponível */
+  padding: 8px; /* Espaçamento interno dos campos */
+  border: 1px solid #f28705; /* Borda laranja */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+.form-group textarea {
+  resize: none; /* Impede o usuário de redimensionar a caixa de texto */
+}
+
+.error-message {
+  color: red; /* Cor vermelha para a mensagem de erro */
+  font-size: 0.8em; /* Fonte um pouco menor */
+  width: 100%; /* Ocupa toda a largura */
+  text-align: left; /* Alinha o texto à esquerda */
+  margin-top: 2px; /* Pequeno espaço acima da mensagem */
+  min-height: 1em; /* Evita que o layout "pule" */
+}
+
+.radio-group {
+  text-align: center; /* Centraliza as opções de radio */
+  flex: 3; /* Faz esse grupo ocupar mais espaço se estiver numa linha */
+}
+
+.form-footer {
+  text-align: center; /* Centraliza os botões */
+  background-color: #f6f6f6; /* Mesma cor de fundo do cabeçalho */
+  padding: 10px; /* Espaçamento interno */
+  margin: 15px -15px -15px -15px; /* Margem negativa pra colar nas bordas de baixo */
+  border-bottom-left-radius: 6px; /* Arredonda os cantos inferiores */
+  border-bottom-right-radius: 6px;
+}
+
+#btnEnviar,
+#btnLimpar,
+button[type="submit"] {
+  padding: 10px 20px; /* Espaçamento interno dos botões */
+  border: 1px solid #f28705; /* Borda laranja */
+  border-radius: 5px; /* Cantos arredondados */
+  cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
+  font-size: 16px; /* Tamanho da fonte */
+  transition: background-color 0.3s, color 0.3s; /* Efeito suave na mudança de cor */
+}
+
+#btnEnviar,
+button[type="submit"] {
+  background-color: #f28705; /* Fundo laranja para o botão de enviar */
+  color: white; /* Texto branco */
+}
+
+#btnEnviar:hover,
+button[type="submit"]:hover {
+  background-color: #e65100; /* Laranja mais escuro quando passa o mouse */
+}
+
+#btnLimpar {
+  background-color: transparent; /* Fundo transparente para o botão de limpar */
+  color: #f28705; /* Texto laranja */
+  margin-left: 10px; /* Espaço à esquerda do botão */
+}
+
+#btnLimpar:hover {
+  background-color: #f28705; /* Fica com fundo laranja ao passar o mouse */
+  color: #ffffff; /* E o texto fica branco */
+}

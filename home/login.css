@@ -1,0 +1,124 @@
+/* Estilos gerais para o corpo da página de login. */
+body {
+  /* Define a imagem de fundo correta */
+  background-image: url("melhor-idade.jpeg"); /* Imagem de fundo da página. */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container principal do formulário de login. */
+.tela-de-login {
+  background-color: rgba(233, 102, 3, 0.467);
+  padding: 60px;
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  position: relative; /* Necessário para posicionar o botão dentro da caixa */
+}
+
+/* Estilo para o link de cadastro dentro do formulário. */
+.tela-de-login a.link-cadastro {
+  color: #0a0a0a; /* Garante que o link seja preto no modo claro */
+}
+
+/* Estilo dos campos de input (usuário, senha). */
+input {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+  width: 90%;
+}
+
+/* Estilo do botão de login. */
+button {
+  background-color: rgba(43, 43, 39, 0.845);
+  border: none;
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Efeito visual quando o mouse passa por cima do botão. */
+button:hover {
+  background-color: rgb(247, 92, 36);
+  cursor: pointer;
+}
+
+/* --- ESTILOS MODO ESCURO --- */
+
+/* Container do switch para alternar entre modo claro e escuro. */
+.modo-escuro {
+  position: absolute;
+  top: 20px;
+  left: 20px; /* Alinha à esquerda */
+  cursor: pointer;
+}
+
+/* O checkbox real fica escondido, a mágica acontece no 'trilho' e na 'bola'. */
+.modo-escuro input {
+  display: none;
+}
+
+/* O "trilho" do switch. */
+.trilho {
+  display: block;
+  width: 50px;
+  height: 26px;
+  background-color: #ccc;
+  border-radius: 13px;
+  position: relative;
+}
+
+/* A "bolinha" que desliza no switch. */
+.bola {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+/* Quando o switch está ativado (modo escuro), muda a cor do trilho. */
+.modo-escuro input:checked + .trilho {
+  background-color: #ea7121; /* Laranja quando ativo */
+}
+
+/* Move a bolinha para a direita quando o modo escuro está ativo. */
+.modo-escuro input:checked + .trilho .bola {
+  transform: translateX(24px);
+}
+
+/* Aplica os estilos do tema escuro quando a classe .dark-mode está no body. */
+/* Estilos que mudam no modo escuro */
+.dark-mode .tela-de-login {
+  background: #000000; /* Fundo preto para o formulário */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode h1,
+/* Ajusta a cor dos textos para branco no modo escuro, para garantir a leitura. */
+.dark-mode label,
+.dark-mode p {
+  color: #f1f1f1; /* Texto mais claro */
+}
+
+/* Regra específica para o link no modo escuro */
+.dark-mode .tela-de-login a.link-cadastro {
+  color: #ffffff; /* Deixa o link branco */
+}

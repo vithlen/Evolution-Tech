@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Configurações do cabeçalho da página -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Importação das fontes do Google Fonts que eu uso no site -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Ícone que aparece na aba do navegador -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../logo-oficial1.png">
+  <title>Cursos de Informática</title>
+  <!-- Link para o arquivo de estilo CSS específico das páginas de curso -->
+  <link rel="stylesheet" href="estilo_paginas.css">
+</head>
+
+<body>
+  <!-- Conteúdo principal da página -->
+  <main>
+    <!-- Cabeçalho da página -->
+    <header>
+      <div class="header-top">
+        <!-- Botão do menu hamburguer para telas menores -->
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+        <!-- Logo que fica no canto superior esquerdo -->
+        <div class="logo-esq">
+          <img src="img/tech-para-todos.png" alt="Logo Tech Para Todos">
+        </div>
+
+        <!-- Área central do cabeçalho com o título e os links de navegação -->
+        <div class="center-area">
+          <h1>Cursos de Informática Básica Para melhor Idade</h1>
+          <div class="sub-nav-links">
+            <!-- Links de navegação principais -->
+            <a href="../index.html">Início</a>
+            <a href="../sobrenos.html">Sobre Nós</a>
+            <a href="./index.html">Nossos Cursos</a>
+            <a href="../contato.html">Contato</a>
+          </div>
+        </div>
+        <!-- Botões de ação no canto superior direito -->
+        <div class="header-btns">
+          <!-- Botão para alternar o modo escuro -->
+          <label class="modo-escuro">
+            <input type="checkbox" id="toggle">
+            <span class="trilho"><span class="bola"></span></span>
+          </label>
+          <!-- Botões de cadastro e login -->
+          <a href="../cadastro.html" class="btn-header">CADASTRE-SE</a>
+          <a href="../login.html" class="btn-header btn-acao">JÁ SOU ALUNO(A)</a>
+        </div>
+      </div>
+
+    </header>
+    <!-- Seção do card de informações do curso -->
+    <div class="course-card">
+      <div class="card-content">
+        <!-- Título do curso -->
+        <h2 class="texto">Torne-se um influencer famoso no Instagram</h2>
+        <!-- Imagem representativa do curso -->
+        <img src="img/instagram.webp" alt="Curso Instagram" class="course-Icon">
+
+        <!-- Informações detalhadas do curso -->
+        <div class="card-info">
+          <br>
+          <!-- Duração do curso -->
+          <p class="texto" style="text-align: left;">Duração: <strong>1.5h</strong></p>
+          <!-- Descrição do curso -->
+          <p class="texto" style="text-align: justify;">Descubra como usar o Instagram de forma estratégica e criativa!
+            Aprenda a criar conteúdos atraentes, utilizar recursos da plataforma, interagir com o público e desenvolver
+            um perfil de sucesso para fins pessoais ou profissionais.</p>
+
+          <!-- Botão para iniciar o curso -->
+          <button>
+            <a href="videos/video_insta.html" class="button">Clique aqui para iniciar</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé da página -->
+  <footer>
+    <!-- Seção de redes sociais -->
+    <div class="social-media">
+      <a href="https://www.instagram.com/evolutiontech__/" target="_blank" rel="noopener noreferrer"
+        title="Siga-nos no Instagram" class="social-link">
+        <img src="./img/instagram3.png" alt="Ícone do Instagram">
+        <span class="texto"><strong>evolutiontech_</strong></span>
+      </a>
+    </div>
+    <!-- Logo da empresa no rodapé -->
+    <div class="footer-logo">
+      <img src="img/logotipo empresa (2).png" alt="Logo da Empresa">
+    </div>
+
+
+    <!-- Direitos autorais -->
+    <p>&copy; 2025 Tech Para Todos - Evolution Tech. Todos os direitos reservados.</p>
+
+  </footer>
+  <!-- Link para o script JavaScript geral do site -->
+  <script src="../script.js"></script>
+  <!-- Script específico para esta página -->
+  <script>
+    // Executa o código quando o conteúdo da página for totalmente carregado
+    document.addEventListener('DOMContentLoaded', () => {
+      // Verifica se o usuário está logado, buscando a informação na sessionStorage
+      const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+      if (isLoggedIn !== 'true') {
+        // Se não estiver logado, pergunta se quer se cadastrar
+        const querCadastrar = confirm('Você precisa estar logado para acessar os cursos. Deseja criar uma nova conta?');
+        if (querCadastrar) {
+          window.location.href = '../cadastro.html'; // Redireciona para o cadastro
+        } else {
+          window.location.href = '../login.html'; // Redireciona para o login
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
