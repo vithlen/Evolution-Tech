@@ -1,156 +1,163 @@
-<!DOCTYPE html>
-<!-- Define o tipo de documento como HTML5 e o idioma principal como português do Brasil -->
-<html lang="pt-br">
+<!DOCTYPE html><!-- Define o tipo de documento como HTML5. -->
+<!-- Define o tipo de documento como HTML5 e o idioma principal como português do Brasil --><!-- Comentário original explicando a tag html abaixo. -->
+<html lang="pt-br"><!-- Início do documento HTML, com o idioma definido como português do Brasil. -->
 
-<head>
-  <!-- Seção de metadados e links do documento -->
-  <!-- Define a codificação de caracteres para UTF-8, que suporta a maioria dos caracteres -->
-  <meta charset="UTF-8">
-  <!-- Garante que a página se ajuste bem em diferentes tamanhos de tela (responsividade) -->
+<head><!-- Início da seção de cabeçalho do documento, que contém metadados e links. -->
+  <!-- Seção de metadados e links do documento --><!-- Comentário original sobre a seção head. -->
+  <!-- Define a codificação de caracteres para UTF-8, que suporta a maioria dos caracteres --><!-- Comentário original explicando a meta tag charset. -->
+  <meta charset="UTF-8"><!-- Define a codificação de caracteres do documento como UTF-8. -->
+  <!-- Garante que a página se ajuste bem em diferentes tamanhos de tela (responsividade) --><!-- Comentário original explicando a meta tag viewport. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Título da página que aparece na aba do navegador -->
-  <title>Sobre Nós | Tech para Todos</title>
-  <!-- Define o ícone (favicon) da página -->
-  <link rel="icon" type="image/png" sizes="32x32" href="logo-oficial1.png">
-  <!-- Link para o arquivo CSS que estiliza a página -->
-  <link rel="stylesheet" href="cursos/estilo.css">
-</head>
+  <!-- Configura a viewport para design responsivo. -->
+  <!-- Título da página que aparece na aba do navegador --><!-- Comentário original explicando a tag title. -->
+  <title>Sobre Nós | Tech para Todos</title><!-- Define o título da página. -->
+  <!-- Define o ícone (favicon) da página --><!-- Comentário original explicando a tag link para o ícone. -->
+  <link rel="icon" type="image/png" sizes="32x32" href="logo-oficial1.png"><!-- Define o favicon da página. -->
+  <!-- Link para o arquivo CSS que estiliza a página --><!-- Comentário original explicando a tag link para o CSS. -->
+  <link rel="stylesheet" href="cursos/estilo.css"><!-- Vincula a folha de estilo externa para estilizar a página. -->
+</head><!-- Fim da seção de cabeçalho. -->
 
-<body>
-  <!-- Corpo do documento, onde todo o conteúdo visível é colocado -->
-  <!--CABEÇALHO PADRÃO-->
-  <!-- O cabeçalho é o mesmo em todas as páginas do site -->
-  <header>
-    <!-- Div que agrupa os elementos do topo do cabeçalho -->
-    <div class="header-top">
-      <!-- Botão "hambúrguer" para abrir o menu em dispositivos móveis -->
-      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+<body><!-- Início do corpo do documento, onde o conteúdo visível é colocado. -->
+  <!-- Corpo do documento, onde todo o conteúdo visível é colocado --><!-- Comentário original sobre a seção body. -->
+  <!--CABEÇALHO PADRÃO--><!-- Comentário indicando o início do cabeçalho padrão. -->
+  <!-- O cabeçalho é o mesmo em todas as páginas do site --><!-- Comentário original sobre o cabeçalho. -->
+  <header><!-- Início da seção de cabeçalho do site. -->
+    <!-- Div que agrupa os elementos do topo do cabeçalho --><!-- Comentário original sobre a div header-top. -->
+    <div class="header-top"><!-- Contêiner para os elementos superiores do cabeçalho. -->
+      <!-- Botão "hambúrguer" para abrir o menu em dispositivos móveis --><!-- Comentário original sobre o botão de menu. -->
+      <button class="menu-toggle"
+        aria-label="Abrir menu">☰</button><!-- Botão para alternar o menu de navegação em telas pequenas. -->
 
-      <!-- Logo da empresa no canto esquerdo -->
-      <div class="logo-esq">
-        <img src="img/tech-para-todos.png" alt="Logo Tech Para Todos">
-      </div>
+      <!-- Logo da empresa no canto esquerdo --><!-- Comentário original sobre a logo. -->
+      <div class="logo-esq"><!-- Contêiner para o logotipo à esquerda. -->
+        <img src="img/tech-para-todos.png" alt="Logo Tech Para Todos"><!-- Imagem do logotipo com texto alternativo. -->
+      </div><!-- Fim do contêiner do logotipo. -->
 
-      <!-- Área central do cabeçalho -->
-      <div class="center-area">
-        <!-- Título principal do site -->
-        <h1>Cursos de Informática Básica Para melhor Idade</h1>
-        <!-- Links de navegação principais -->
-        <div class="sub-nav-links">
-          <a href="index.html">Início</a>
-          <a href="sobrenos.html">Sobre Nós</a>
-          <a href="cursos/index.html">Nossos Cursos</a>
-          <a href="contato.html">Contato</a>
-        </div>
-      </div>
+      <!-- Área central do cabeçalho --><!-- Comentário original sobre a área central. -->
+      <div class="center-area"><!-- Contêiner para a área central do cabeçalho. -->
+        <!-- Título principal do site --><!-- Comentário original sobre o título principal. -->
+        <h1>Cursos de Informática Básica Para melhor Idade</h1><!-- Título principal da página. -->
+        <!-- Links de navegação principais --><!-- Comentário original sobre os links de navegação. -->
+        <div class="sub-nav-links"><!-- Contêiner para os links de navegação. -->
+          <a href="index.html">Início</a><!-- Link para a página inicial. -->
+          <a href="sobrenos.html">Sobre Nós</a><!-- Link para a página "Sobre Nós". -->
+          <a href="cursos/index.html">Nossos Cursos</a><!-- Link para a página de cursos. -->
+          <a href="contato.html">Contato</a><!-- Link para a página de contato. -->
+        </div><!-- Fim do contêiner dos links de navegação. -->
+      </div><!-- Fim do contêiner da área central. -->
 
-      <!-- Container para os botões de ação no cabeçalho -->
-      <div class="header-btns">
-        <!-- Botão para alternar o modo escuro/claro -->
-        <label class="modo-escuro">
-          <input type="checkbox" id="toggle">
-          <span class="trilho"><span class="bola"></span></span>
-        </label>
-        <!-- Botão que leva para a página de cadastro -->
-        <a href="cadastro.html" class="btn-header">CADASTRE-SE</a>
-        <!-- Botão de login para alunos já cadastrados -->
-        <a href="login.html" class="btn-header btn-acao">JÁ SOU ALUNO(A)</a>
-      </div>
-    </div>
-  </header>
+      <!-- Container para os botões de ação no cabeçalho --><!-- Comentário original sobre os botões de ação. -->
+      <div class="header-btns"><!-- Contêiner para os botões de ação do cabeçalho. -->
+        <!-- Botão para alternar o modo escuro/claro --><!-- Comentário original sobre o botão de modo escuro. -->
+        <label class="modo-escuro"><!-- Rótulo para o controle de modo escuro. -->
+          <input type="checkbox" id="toggle"><!-- Caixa de seleção para alternar o modo. -->
+          <span class="trilho"><span class="bola"></span></span><!-- Elementos visuais para o interruptor. -->
+        </label><!-- Fim do rótulo do modo escuro. -->
+        <!-- Botão que leva para a página de cadastro --><!-- Comentário original sobre o botão de cadastro. -->
+        <a href="cadastro.html" class="btn-header">CADASTRE-SE</a><!-- Botão/link para a página de cadastro. -->
+        <!-- Botão de login para alunos já cadastrados --><!-- Comentário original sobre o botão de login. -->
+        <a href="login.html" class="btn-header btn-acao">JÁ SOU ALUNO(A)</a><!-- Botão/link para a página de login. -->
+      </div><!-- Fim do contêiner dos botões de ação. -->
+    </div><!-- Fim do contêiner header-top. -->
+  </header><!-- Fim da seção de cabeçalho. -->
 
-  <!--CONTEÚDO PRINCIPAL -->
-  <!-- Seção principal da página "Sobre Nós" -->
-  <main>
-    <section class="team-section">
-      <!-- Container que centraliza e organiza os cards da equipe -->
-      <div class="team-container">
-        <!-- Card individual para cada membro da equipe.-->
-        <div class="team-member">
-          <!-- Foto do membro -->
-          <img src="img/junia.jpeg" alt="Membro 1">
-          <!-- Nome do membro -->
-          <h3>Junia Farias</h3>
-          <!-- Cargo/função do membro -->
-          <p>Desenvolvedora Full-stack</p> <br>
-          <!-- Link para o perfil do LinkedIn -->
+  <!--CONTEÚDO PRINCIPAL --><!-- Comentário indicando o início do conteúdo principal. -->
+  <!-- Seção principal da página "Sobre Nós" --><!-- Comentário original sobre a seção main. -->
+  <main><!-- Início da seção de conteúdo principal da página. -->
+    <section class="team-section"><!-- Início da seção da equipe. -->
+      <!-- Container que centraliza e organiza os cards da equipe --><!-- Comentário original sobre o contêiner da equipe. -->
+      <div class="team-container"><!-- Contêiner para os membros da equipe. -->
+        <!-- Card individual para cada membro da equipe.--><!-- Comentário original sobre o card de membro. -->
+        <div class="team-member"><!-- Início do card de um membro da equipe. -->
+          <!-- Foto do membro --><!-- Comentário original sobre a foto. -->
+          <img src="img/junia.jpeg" alt="Membro 1"><!-- Imagem do membro da equipe com texto alternativo. -->
+          <!-- Nome do membro --><!-- Comentário original sobre o nome. -->
+          <h3>Junia Farias</h3><!-- Nome do membro da equipe. -->
+          <!-- Cargo/função do membro --><!-- Comentário original sobre o cargo. -->
+          <p>Desenvolvedora Full-stack</p> <br><!-- Cargo do membro e uma quebra de linha. -->
+          <!-- Link para o perfil do LinkedIn --><!-- Comentário original sobre o link do LinkedIn. -->
           <a href="https://www.linkedin.com/in/juniafarias/" target="_blank" class="linkedin-link"
-            style="color: #e65100;"> 🔗 LinkedIn</a>
-        </div>
+            style="color: #e65100;"> 🔗 LinkedIn</a><!-- Link para o perfil do LinkedIn, com estilo em linha. -->
+        </div><!-- Fim do card do membro da equipe. -->
 
-        <!-- Card do Lucas -->
-        <div class="team-member">
-          <img src="img/lucas.jpeg" alt="Membro 2">
-          <h3>Lucas Machado</h3>
-          <p>Administrador de Banco de Dados</p> <br>
+        <!-- Card do Lucas --><!-- Comentário indicando o card de Lucas. -->
+        <div class="team-member"><!-- Início do card de um membro da equipe. -->
+          <img src="img/lucas.jpeg" alt="Membro 2"><!-- Imagem do membro da equipe com texto alternativo. -->
+          <h3>Lucas Machado</h3><!-- Nome do membro da equipe. -->
+          <p>Administrador de Banco de Dados</p> <br><!-- Cargo do membro e uma quebra de linha. -->
           <a href="https://www.linkedin.com/in/lucas-machado-27b841303/" target="_blank" class="linkedin-link"
-            style="color: #e65100; "> 🔗 LinkedIn</a>
-        </div>
+            style="color: #e65100; "> 🔗 LinkedIn</a><!-- Link para o perfil do LinkedIn, com estilo em linha. -->
+        </div><!-- Fim do card do membro da equipe. -->
 
-        <!-- Card da Rayane -->
-        <div class="team-member">
-          <img src="img/rayane.jpeg" alt="Membro 3">
-          <h3>Rayane Ferreira</h3>
-          <p>Cybersegurança</p><br>
+        <!-- Card da Rayane --><!-- Comentário indicando o card de Rayane. -->
+        <div class="team-member"><!-- Início do card de um membro da equipe. -->
+          <img src="img/rayane.jpeg" alt="Membro 3"><!-- Imagem do membro da equipe com texto alternativo. -->
+          <h3>Rayane Ferreira</h3><!-- Nome do membro da equipe. -->
+          <p>Cybersegurança</p><br><!-- Cargo do membro e uma quebra de linha. -->
           <a href="https://www.linkedin.com/in/rayane-ferreira-5387232a6" target="_blank" class="linkedin-link"
-            style="color: #e65100;"> 🔗 LinkedIn</a>
-        </div>
+            style="color: #e65100;"> 🔗 LinkedIn</a><!-- Link para o perfil do LinkedIn, com estilo em linha. -->
+        </div><!-- Fim do card do membro da equipe. -->
 
-        <!-- Card do Samuel -->
-        <div class="team-member">
-          <img src="img/samuel.jpeg" alt="Membro 4">
-          <h3>Samuel Romero</h3>
-          <p>Engenheiro de Software</p><br>
+        <!-- Card do Samuel --><!-- Comentário indicando o card de Samuel. -->
+        <div class="team-member"><!-- Início do card de um membro da equipe. -->
+          <img src="img/samuel.jpeg" alt="Membro 4"><!-- Imagem do membro da equipe com texto alternativo. -->
+          <h3>Samuel Romero</h3><!-- Nome do membro da equipe. -->
+          <p>Engenheiro de Software</p><br><!-- Cargo do membro e uma quebra de linha. -->
           <a href="https://www.linkedin.com/in/samuelromerolopes-1108b62b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-            target="_blank" class="linkedin-link" style="color: #e65100;"> 🔗 LinkedIn</a>
-        </div>
+            target="_blank" class="linkedin-link" style="color: #e65100;"> 🔗
+            LinkedIn</a><!-- Link para o perfil do LinkedIn, com estilo em linha. -->
+        </div><!-- Fim do card do membro da equipe. -->
 
-        <!-- Card do Victor -->
-        <div class="team-member">
-          <img src="img/vitor.jpeg" alt="Membro 5">
-          <h3>Victor Acioli</h3>
-          <p>Desenvolvedor Back-end</p><br>
+        <!-- Card do Victor --><!-- Comentário indicando o card de Victor. -->
+        <div class="team-member"><!-- Início do card de um membro da equipe. -->
+          <img src="img/vitor.jpeg" alt="Membro 5"><!-- Imagem do membro da equipe com texto alternativo. -->
+          <h3>Victor Acioli</h3><!-- Nome do membro da equipe. -->
+          <p>Desenvolvedor Back-end</p><br><!-- Cargo do membro e uma quebra de linha. -->
           <a href="https://www.linkedin.com/in/victor-ribeiro-acioli-b56692303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            target="_blank" class="linkedin-link" style="color: #e65100;"> 🔗 LinkedIn</a>
-        </div>
+            target="_blank" class="linkedin-link" style="color: #e65100;"> 🔗
+            LinkedIn</a><!-- Link para o perfil do LinkedIn, com estilo em linha. -->
+        </div><!-- Fim do card do membro da equipe. -->
 
-        <!-- Card da Vitória -->
-        <div class="team-member">
-          <img src="img/vitoria.jpeg" alt="Membro 6">
-          <h3>Vitória Helen</h3>
-          <p>Analista de Dados</p><br>
+        <!-- Card da Vitória --><!-- Comentário indicando o card de Vitória. -->
+        <div class="team-member"><!-- Início do card de um membro da equipe. -->
+          <img src="img/vitoria.jpeg" alt="Membro 6"><!-- Imagem do membro da equipe com texto alternativo. -->
+          <h3>Vitória Helen</h3><!-- Nome do membro da equipe. -->
+          <p>Analista de Dados</p><br><!-- Cargo do membro e uma quebra de linha. -->
           <a href="https://br.linkedin.com/in/vit%C3%B3ria-helen-a81520210" target="_blank" class="linkedin-link"
-            style="color: rgb(199, 93, 0);"> 🔗 LinkedIn</a>
-        </div>
+            style="color: rgb(199, 93, 0);"> 🔗
+            LinkedIn</a><!-- Link para o perfil do LinkedIn, com estilo em linha. -->
+        </div><!-- Fim do card do membro da equipe. -->
 
-      </div>
-    </section>
-  </main>
+      </div><!-- Fim do contêiner da equipe. -->
+    </section><!-- Fim da seção da equipe. -->
+  </main><!-- Fim da seção de conteúdo principal. -->
 
-  <!--RODAPÉ-->
-  <!-- Rodapé do site, também padrão em todas as páginas -->
-  <footer>
-    <!-- Seção para mídias sociais -->
-    <div class="social-media">
-      <!-- Link para o perfil do Instagram, abre em nova aba -->
+  <!--RODAPÉ--><!-- Comentário indicando o início do rodapé. -->
+  <!-- Rodapé do site, também padrão em todas as páginas --><!-- Comentário original sobre o rodapé. -->
+  <footer><!-- Início da seção de rodapé do site. -->
+    <!-- Seção para mídias sociais --><!-- Comentário original sobre a seção de mídias sociais. -->
+    <div class="social-media"><!-- Contêiner para os links de mídias sociais. -->
+      <!-- Link para o perfil do Instagram, abre em nova aba --><!-- Comentário original sobre o link do Instagram. -->
       <a href="https://www.instagram.com/evolutiontech__/" target="_blank" rel="noopener noreferrer"
-        title="Siga-nos no Instagram" class="social-link">
-        <img src="img/instagram3.png" alt="Ícone do Instagram">
-        <span><strong>evolutiontech_</strong></span>
-      </a>
-    </div>
-    <!-- Logo da empresa no rodapé -->
-    <div class="footer-logo">
-      <img src="img/logotipo empresa (2).png" alt="Logo da Empresa">
-    </div>
+        title="Siga-nos no Instagram" class="social-link"><!-- Link para o Instagram. -->
+        <img src="img/instagram3.png" alt="Ícone do Instagram"><!-- Ícone do Instagram com texto alternativo. -->
+        <span><strong>evolutiontech__</strong></span><!-- Nome de usuário do Instagram em negrito. -->
+      </a><!-- Fim do link do Instagram. -->
+    </div><!-- Fim do contêiner de mídias sociais. -->
+    <!-- Logo da empresa no rodapé --><!-- Comentário original sobre o logotipo do rodapé. -->
+    <div class="footer-logo"><!-- Contêiner para o logotipo no rodapé. -->
+      <img src="img/logotipo empresa (2).png"
+        alt="Logo da Empresa"><!-- Imagem do logotipo da empresa com texto alternativo. -->
+    </div><!-- Fim do contêiner do logotipo do rodapé. -->
 
 
-    <!-- Informações de direitos autorais -->
+    <!-- Informações de direitos autorais --><!-- Comentário original sobre os direitos autorais. -->
     <p>&copy; 2025 Tech Para Todos - Evolution Tech. Todos os direitos reservados.</p>
+    <!-- Parágrafo de direitos autorais. -->
 
-  </footer>
-  <!-- Link para o arquivo JavaScript principal, geralmente colocado no final para otimizar o carregamento da página -->
-  <script src="script.js"></script>
-</body>
+  </footer><!-- Fim da seção de rodapé. -->
+  <!-- Link para o arquivo JavaScript principal, geralmente colocado no final para otimizar o carregamento da página --><!-- Comentário original sobre o script. -->
+  <script src="script.js"></script><!-- Vincula o arquivo JavaScript externo. -->
+</body><!-- Fim do corpo do documento. -->
 
-</html>
+</html><!-- Fim do documento HTML. -->

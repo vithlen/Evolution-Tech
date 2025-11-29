@@ -1,710 +1,1505 @@
-/*CORREÇÃO DO ESPAÇO EM CIMA E EMBAIXO*/
-/* Reset básico para remover margens e paddings que os navegadores colocam por padrão. */
 html,
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Remove as margens externas padrão que os navegadores aplicam. 
+Isso evita espaços em branco indesejados ao redor da página. */
+  padding: 0; /* Remove o preenchimento (espaçamento interno) padrão. */
+  box-sizing: border-box; /* Altera o cálculo do tamanho total do elemento. Com 'border-box', a largura (width) e 
+a altura (height) que você definir incluirão o preenchimento (padding) e a borda (border), 
+facilitando muito a criação de layouts.*/
 }
 /* Estilos gerais para o corpo da página. */
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  color: #000;
-  transition: 0.3s;
-  display: flex;
-  flex-direction: column;
-}
-/* Um wrapper para o conteúdo principal, só para garantir o alinhamento. */
-
-.main-content-wrapper {
-  margin: 0 auto;
-  position: relative;
+  font-family: var(--fonte-principal); /* "Poppins", sans-serif */
+  background-color: #ffffff; /* Define a cor de fundo da página como branco. */
+  color: var(
+    --cor-texto-principal
+  ); /* #333 (tom de cinza escuro pro alto constrate) */
+  transition: 0.3s; /* Adiciona uma transição suave de 0.3s para mudanças de propriedades (ex: modo escuro). */
+  display: flex; /* Ativa o layout Flexbox, tornando o body um container flexível. */
+  flex-direction: column; /* Organiza os filhos diretos do body (como header, main, footer) em uma coluna vertical. */
+  font-size: 18px; /* Tamanho de fonte base maior para facilitar a leitura */
+  line-height: 1.7; /* Espaçamento entre linhas mais generoso */
 }
 
 /* Configuração do cabeçalho principal. */
 /*HEADER*/
 header {
-  background-color: #f57c00;
-  color: white;
-  padding: 2px 0;
-  width: 100%;
-  margin: 0;
+  background-color: #f57c00; /* Define a cor de fundo do cabeçalho como laranja. */
+  color: white; /* Define a cor do texto padrão dentro do cabeçalho como branco. */
+  padding: 2px 0; /* Adiciona um preenchimento interno vertical de 2px e nenhum horizontal. */
+  width: 100%; /* Faz o cabeçalho ocupar toda a largura da tela. */
+  margin: 0; /* Remove qualquer margem externa do cabeçalho. */
   /* evita espaço em cima */
-  border: 0;
+  border: 0; /* Remove qualquer borda que possa existir. */
 }
 
 /* A parte de cima do cabeçalho, onde ficam os logos e botões. */
 /*HEADER TOPO*/
 .header-top {
-  padding: 5px 20px;
-  margin: 0;
+  padding: 5px 20px; /* Adiciona preenchimento interno: 5px em cima/baixo, 20px nos lados. */
+  margin: 0; /* Remove margens externas. */
   /* remove espaço acima */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* Ativa o layout Flexbox para alinhar os itens. */
+  justify-content: space-between; /* Distribui os itens com espaço máximo entre eles. */
+  align-items: center; /* Alinha os itens verticalmente ao centro. */
 }
 
 /* Estilização dos links de navegação (Home, Sobre, etc.). */
 /* --- ESTILOS DOS LINKS DE NAVEGAÇÃO --- */
 .sub-nav-links {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+  display: flex; /* Organiza os links em uma linha. */
+  gap: 10px; /* Cria um espaçamento de 10px entre cada link. */
+  align-items: center; /* Alinha os links verticalmente ao centro. */
 }
 
 /* Estilo de cada link individualmente. */
 .sub-nav-links a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  color: white; /* Define a cor do texto do link como branco. */
+  text-decoration: none; /* Remove o sublinhado padrão dos links. */
+  padding: 5px 10px; /* Adiciona preenchimento interno para criar uma área clicável maior. */
+  border-radius: 5px; /* Arredonda os cantos do link. */
+  transition: background-color 0.3s; /* Adiciona uma transição suave para a mudança da cor de fundo. */
 }
 
 /* Efeito visual quando o mouse passa por cima do link. */
 .sub-nav-links a:hover {
-  background-color: white;
+  background-color: white; /* Muda a cor de fundo para branco ao passar o mouse. */
   color: #f57c00; /* Cor do texto laranja para contraste */
-  font-weight: 600;
+  font-weight: 600; /* Deixa o texto do link um pouco mais grosso (semi-negrito). */
 }
 
 /* Marca o link da página atual com uma caixinha branca. */
 /* Estilo para o link ativo (caixinha branca) */
 .sub-nav-links a.active {
-  background-color: white;
+  background-color: white; /* Define o fundo como branco para o link da página atual. */
   color: #f57c00; /* Cor do texto laranja para contraste */
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-weight: 600;
+  padding: 5px 10px; /* Adiciona preenchimento interno. */
+  border-radius: 5px; /* Arredonda os cantos. */
+  font-weight: 600; /* Deixa o texto em semi-negrito. */
 }
 
 /* Logo do lado esquerdo do cabeçalho. */
 /* --- SEÇÃO DO LOGO ESQUERDO DO CABEÇALHO --- */
 .logo-esq {
-  width: auto;
+  width: auto; /* A largura se ajusta ao conteúdo (a imagem do logo). */
   flex-shrink: 0; /* Impede que o logo encolha */
 }
 
 /* Ajustes na imagem do logo esquerdo. */
 .logo-esq img {
-  height: 100px;
+  height: 100px; /* Define a altura da imagem do logo. */
   /* Diminui a altura do logo */
-  width: auto;
-  object-fit: contain;
-  height: auto;
-  display: block;
+  width: auto; /* A largura se ajusta automaticamente para manter a proporção. */
+  object-fit: contain; /* Garante que a imagem inteira seja visível, sem cortes. */
+  height: auto; /* Sobrescreve a altura anterior para se ajustar à proporção da largura. */
+  display: block; /* Remove espaços extras abaixo da imagem. */
 }
 
 /* Logo do lado direito (geralmente visível em telas maiores). */
 .logo-dir img {
   display: block; /* mostrar no desktop */
-  width: auto;
+  width: auto; /* Largura automática para manter a proporção. */
   max-width: 140px; /* ajusta conforme necessidade */
-  max-height: 72px;
-  height: auto;
-  object-fit: contain;
+  max-height: 72px; /* Define uma altura máxima para a imagem. */
+  height: auto; /* A altura se ajusta para manter a proporção. */
+  object-fit: contain; /* Garante que a imagem caiba no espaço sem distorcer. */
 }
 
 /* Um ajuste fino para empurrar o título principal um pouco para a direita. */
 /* Comando para ajustar a posição do título no cabeçalho */
 .center-area h1 {
   /* Para mover o título para a direita, aumente o valor abaixo. */
-  margin-left: 90px;
+  margin-left: 90px; /* Adiciona uma margem de 90px à esquerda do título. */
 }
 /* Container para os botões do cabeçalho (Login, Área do Aluno). */
 
 .header-btns {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: nowrap;
-  flex-shrink: 0;
+  display: flex; /* Organiza os botões em linha. */
+  gap: 10px; /* Cria um espaçamento de 10px entre os botões. */
+  align-items: center; /* Alinha os botões verticalmente ao centro. */
+  flex-wrap: nowrap; /* Impede que os botões quebrem para a linha de baixo. */
+  flex-shrink: 0; /* Impede que o container dos botões encolha. */
 }
 
 /* Estilo padrão para os botões no cabeçalho. */
 .btn-header {
-  padding: 4px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  font-weight: bold;
-  line-height: 1;
-  background-color: #f57c00;
-  color: white;
-  border: 2px solid #f57c00;
-  white-space: normal;
-  display: flex;
-  flex-wrap: unset;
+  padding: 4px 8px; /* Adiciona preenchimento interno ao botão. */
+  border-radius: 5px; /* Arredonda os cantos do botão. */
+  cursor: pointer; /* Mostra um cursor de mão ao passar o mouse sobre o botão. */
+  text-decoration: none; /* Remove o sublinhado do texto. */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Animação suave para as mudanças de cor. */
+  font-weight: bold; /* Deixa o texto do botão em negrito. */
+  line-height: 1; /* Define a altura da linha do texto. */
+  background-color: #f57c00; /* Define a cor de fundo como laranja. */
+  color: white; /* Define a cor do texto como branco. */
+  border: 2px solid #f57c00; /* Adiciona uma borda laranja de 2px. */
+  white-space: normal; /* Permite que o texto dentro do botão quebre a linha se necessário. */
+  display: flex; /* Ativa o Flexbox para o conteúdo do botão. */
+  flex-wrap: unset; /* Impede que o conteúdo interno do botão quebre a linha. */
 }
 
 /* Efeito hover para os botões do cabeçalho. */
 .btn-header:hover {
-  background-color: white;
-  color: #f57c00;
-  border-color: white;
+  background-color: white; /* Muda o fundo para branco ao passar o mouse. */
+  color: #f57c00; /* Muda a cor do texto para laranja. */
+  border-color: white; /* Muda a cor da borda para branco. */
 }
 
 /* Estilo específico para o botão "Área do Aluno", que é vazado. */
 .btn-aluno {
-  background-color: transparent;
-  border-color: white;
-  color: white;
+  background-color: transparent; /* Deixa o fundo do botão transparente. */
+  border-color: white; /* Define a cor da borda como branca. */
+  color: white; /* Define a cor do texto como branca. */
 }
 
 .btn-aluno:hover {
-  background-color: white;
-  color: #f57c00;
-  border-color: white;
+  background-color: white; /* Muda o fundo para branco no hover. */
+  color: #f57c00; /* Muda a cor do texto para laranja no hover. */
+  border-color: white; /* Mantém a cor da borda como branca no hover. */
 }
 
 /* Container da imagem grande que fica abaixo do menu. */
 .imagem-header {
-  height: 350px; /* Altura reduzida para os cards ficarem mais visíveis */
-  width: 100%;
+  height: 400px; /* Altura do banner */
+  width: 100%; /* Faz o container ocupar 100% da largura. */
   overflow: hidden; /* Esconde as partes da imagem que são cortadas */
+  margin-top: -1px; /* Remove pequenas lacunas entre o header e a imagem */
+  padding: 0;
+  font-size: 0; /* Remove espaço extra que navegadores adicionam abaixo de imagens */
+  height: auto; /* Remove a altura fixa de 350px para permitir o ajuste */
 }
 
 /* A imagem em si, configurada para preencher o espaço sem distorcer. */
 .imagem-header img {
-  width: 100%;
-  height: 100%;
-  display: block;
+  width: 100%; /* A imagem ocupa 100% da largura do seu container. */
+  height: 400px; /* Altura fixa para a imagem do banner */
+  display: block; /* Remove espaços extras abaixo da imagem. */
   object-fit: cover; /* Preenche o espaço, mantendo a proporção e cortando o excesso */
-  object-position: center 25%; /* Centraliza a imagem um pouco abaixo do topo, mantendo o rosto visível */
+  object-position: 50% 40%; /* Centraliza a imagem horizontalmente e um pouco acima do centro verticalmente */
+  max-height: 260px; /* Altura máxima de 260px */
+  object-fit: cover; /* Preenche o espaço cortando o excesso */
 }
 
 /* Container para as bolinhas de navegação do carrossel de imagens. */
 .dot-container {
-  text-align: center;
-  padding: 10px;
-  background-color: #f1f1f1;
+  text-align: center; /* Centraliza as bolinhas horizontalmente. */
+  padding: 10px; /* Adiciona um espaçamento interno. */
+  background-color: #f1f1f1; /* Define uma cor de fundo cinza claro. */
 }
 
 /* Estilo de cada bolinha do carrossel. */
 .dot {
-  cursor: pointer;
-  height: 12px;
-  width: 12px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+  cursor: pointer; /* Mostra um cursor de mão ao passar o mouse. */
+  height: 12px; /* Define a altura da bolinha. */
+  width: 12px; /* Define a largura da bolinha. */
+  margin: 0 2px; /* Adiciona uma pequena margem horizontal entre as bolinhas. */
+  background-color: #bbb; /* Define a cor de fundo padrão como cinza. */
+  border-radius: 50%; /* Torna o elemento perfeitamente redondo. */
+  display: inline-block; /* Permite que as bolinhas fiquem na mesma linha. */
+  transition: background-color 0.6s ease; /* Animação suave para a mudança de cor. */
 }
 
 /* Estilo da bolinha ativa (imagem atual) e no hover. */
 .active,
 .dot:hover {
-  background-color: #f57c00;
+  background-color: #f57c00; /* Define a cor de fundo como laranja para a bolinha ativa ou em hover. */
 }
 
 /* Seção "Benefícios", onde ficam os cards de vantagens. */
 .beneficios {
-  display: flex;
-  justify-content: center;
-  padding: 10px 10px;
+  display: flex; /* Ativa o layout Flexbox. */
+  justify-content: center; /* Centraliza os cards horizontalmente. */
+  padding: 10px 10px; /* Adiciona preenchimento interno. */
   background-image: radial-gradient(
     circle at center,
-    #ff8c2b 0%,
-    /* Laranja vibrante no centro*/ #ffc499 50%,
+    /* Define um gradiente de cor radial a partir do centro. */ #ff8c2b 0%,
+    /* A cor começa com um laranja vibrante no centro (0%). */
+      /* Laranja vibrante no centro*/ #ffc499 50%,
     /* Laranja mais claro na metade (para uma transição)*/ #ffffff 100%
       /* Branco nas bordas */
   );
   /*aq q muda o fundo dos cards*/
-  margin-top: 0;
+  margin-top: 0; /* Remove a margem superior */
   padding-top: 20px; /* Adiciona um espaçamento superior */
-  flex-wrap: wrap;
-  gap: 15px;
-}
+  flex-wrap: wrap; /* Permite a quebra de linha dos itens */
+  gap: 15px; /* Espaço entre os itens */
+} /* Fecha o bloco de regras para .beneficios */
 
 /* Estilo individual de cada card de benefício. */
 .card {
-  background: white;
-  padding: 15px;
+  /* Estiliza cada card de benefício */
+  background: white; /* Fundo branco */
+  padding: 15px; /* Preenchimento interno */
   border-radius: 10px; /* Mantém o raio da borda */
   flex-basis: 250px; /* Largura base para o card */
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  color: #333;
-  flex-shrink: 0;
+  text-align: center; /* Centraliza o texto */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+  color: #333; /* Cor do texto cinza escuro */
+  flex-shrink: 0; /* Impede que o card encolha */
 
   /* HOVER - Transição suave para os efeitos */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transform e sombra */
+} /* Fecha o bloco de regras para .card */
 
 /* Efeito de "levantar" o card quando o mouse passa por cima. */
 .card:hover {
+  /* Estiliza o card no estado hover */
   /* O CARD SE LEVANTA LIGEIRAMENTE */
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Move o card 5px para cima */
   /* A SOMBRA FICA MELHOR */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+  cursor: pointer; /* Cursor de mão */
+} /* Fecha o bloco de regras para .card:hover */
 
 /* Título dentro do card. */
 .card h3 {
-  color: #f57c00;
+  /* Estiliza o título dentro do card */
+  color: #f57c00; /* Cor do texto laranja */
   font-weight: normal; /* Garante que o título não fique em negrito */
-}
+} /* Fecha o bloco de regras para .card h3 */
 
 /* Seção principal de conteúdo, com os títulos e textos de chamada. */
 /* Seção Hero Bottom (Conteúdo Principal) */
 .hero-bottom {
+  /* Estiliza a seção de conteúdo principal */
   background-color: #ffffff; /*fundo dos cards */
-  padding: 30px 20px;
-  text-align: center;
-}
+  padding: 30px 20px; /* Preenchimento interno */
+  text-align: center; /* Centraliza o texto */
+} /* Fecha o bloco de regras para .hero-bottom */
 
 /* Container para centralizar o conteúdo da seção hero. */
 .hero-conteudo {
-  max-width: 800px;
-  margin: 0 auto;
-}
+  /* Estiliza o contêiner de conteúdo */
+  max-width: 800px; /* Largura máxima de 800px */
+  margin: 0 auto; /* Centraliza horizontalmente */
+} /* Fecha o bloco de regras para .hero-conteudo */
 
 /* Título principal da página. */
 .hero-bottom h1 {
-  font-size: 3em;
-  color: #000;
-  margin-bottom: 10px;
-  white-space: normal;
-  display: block;
-}
+  /* Estiliza o título principal */
+  font-size: 3em; /* Tamanho da fonte grande */
+  color: #000; /* Cor do texto preta */
+  margin-bottom: 10px; /* Margem inferior */
+  white-space: normal; /* Permite quebra de linha */
+  display: block; /* Comportamento de bloco */
+} /* Fecha o bloco de regras para .hero-bottom h1 */
 
 /* Subtítulo, geralmente com uma cor de destaque. */
 .hero-bottom h2 {
-  font-size: 1.8em;
+  /* Estiliza o subtítulo */
+  font-size: 1.8em; /* Tamanho da fonte */
   background: transparent; /* evita fundo branco no container que esconda o texto */
-  color: #ff0101;
-  margin-bottom: 20px;
-  white-space: normal;
-  display: block;
-}
+  color: #ff0101; /* Cor do texto vermelha */
+  margin-bottom: 20px; /* Margem inferior */
+  white-space: normal; /* Permite quebra de linha */
+  display: block; /* Comportamento de bloco */
+} /* Fecha o bloco de regras para .hero-bottom h2 */
 
 /* Parágrafos de texto da seção. */
 .hero-bottom p {
-  color: #555;
-  font-size: 1.2em;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  text-align: left;
-}
+  /* Estiliza os parágrafos */
+  color: #555; /* Cor do texto cinza */
+  font-size: 1.2em; /* Tamanho da fonte */
+  margin-top: 15px; /* Margem superior */
+  margin-bottom: 15px; /* Margem inferior */
+  text-align: left; /* Alinha o texto à esquerda */
+} /* Fecha o bloco de regras para .hero-bottom p */
 
 /* Estilo do botão de ação principal (CTA - Call to Action). */
 .btn {
-  background-color: #f57c00;
-  color: white;
-  padding: 15px 30px;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  margin-right: 15px;
+  /* Estiliza o botão de ação principal */
+  background-color: #f57c00; /* Fundo laranja */
+  color: white; /* Texto branco */
+  padding: 15px 30px; /* Preenchimento interno */
+  font-size: 18px; /* Tamanho da fonte */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Cantos arredondados */
+  cursor: pointer; /* Cursor de mão */
+  font-weight: bold; /* Texto em negrito */
+  text-decoration: none; /* Sem sublinhado */
+  display: inline-block; /* Exibição em linha */
+  margin-right: 15px; /* Margem à direita */
   transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Transição para o hover */
-}
+} /* Fecha o bloco de regras para .btn */
 
 /* Efeito hover para o botão principal. */
 .btn:hover {
+  /* Estiliza o botão principal no estado hover */
   background-color: #e65100; /* Laranja mais escuro */
   transform: translateY(-2px); /* Levanta o botão */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
-}
+} /* Fecha o bloco de regras para .btn:hover */
 
 /* Estilo para um botão secundário, com fundo transparente e borda laranja. */
 .btn-secundario-laranja {
-  background-color: transparent;
-  color: #f57c00;
-  padding: 15px 30px;
-  font-size: 18px;
-  border: 1px solid #f57c00;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s, color 0.3s;
-}
+  /* Estiliza o botão secundário */
+  background-color: transparent; /* Fundo transparente */
+  color: #f57c00; /* Texto laranja */
+  padding: 15px 30px; /* Preenchimento interno */
+  font-size: 18px; /* Tamanho da fonte */
+  border: 1px solid #f57c00; /* Borda laranja */
+  border-radius: 5px; /* Cantos arredondados */
+  cursor: pointer; /* Cursor de mão */
+  font-weight: bold; /* Texto em negrito */
+  text-decoration: none; /* Sem sublinhado */
+  display: inline-block; /* Exibição em linha */
+  transition: background-color 0.3s, color 0.3s; /* Transição suave */
+} /* Fecha o bloco de regras para .btn-secundario-laranja */
 
 /* Efeito hover para o botão secundário. */
 .btn-secundario-laranja:hover {
-  background-color: #f57c00;
-  color: white;
-}
+  /* Estiliza o botão secundário no estado hover */
+  background-color: #f57c00; /* Fundo laranja */
+  color: white; /* Texto branco */
+} /* Fecha o bloco de regras para .btn-secundario-laranja:hover */
 
 /* Estilização do rodapé da página. */
 footer {
-  background-color: #121215;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* Estiliza o rodapé */
+  background-color: #121215; /* Fundo cinza escuro */
+  color: white; /* Texto branco */
+  text-align: center; /* Centraliza o texto */
+  padding: 20px; /* Preenchimento interno */
+  width: 100%; /* Largura total */
+  box-sizing: border-box; /* Modelo de caixa de borda */
+  display: flex; /* Ativa o layout flexbox */
+  justify-content: space-between; /* Espaço entre os itens */
+  align-items: center; /* Alinha verticalmente ao centro */
   flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
   gap: 20px; /* Espaçamento entre os itens quando eles quebram a linha */
-}
+} /* Fecha o bloco de regras para o footer */
 
 /* Container para as mídias sociais no rodapé. */
 /* Instagram no canto inferior esquerdo */
 footer .social-media {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  /* Estiliza o contêiner de mídias sociais no rodapé */
+  display: flex; /* Ativa o layout flexbox */
+  align-items: center; /* Alinha verticalmente ao centro */
+  gap: 8px; /* Espaço entre os ícones */
   flex-shrink: 0; /* Impede que o item encolha */
-}
+} /* Fecha o bloco de regras para footer .social-media */
 
 /* Link da rede social (ícone + texto). */
 /* garante que o link e ícone fiquem alinhados */
 footer .social-media .social-link {
-  color: white;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
+  /* Estiliza o link de mídia social */
+  color: white; /* Texto branco */
+  text-decoration: none; /* Sem sublinhado */
+  display: inline-flex; /* Exibição flex em linha */
+  align-items: center; /* Alinha verticalmente ao centro */
+  gap: 8px; /* Espaço entre ícone e texto */
+} /* Fecha o bloco de regras para footer .social-media .social-link */
 
 /* Imagem do ícone da rede social. */
 .footer-left .social-link img {
-  width: 32px !important;
-  height: 32px !important;
-  object-fit: contain;
-  display: block;
-}
+  /* Estiliza a imagem do ícone social */
+  width: 32px !important; /* Largura de 32px (importante para sobrescrever outras regras) */
+  height: 32px !important; /* Altura de 32px (importante) */
+  object-fit: contain; /* Garante que a imagem caiba sem distorcer */
+  display: block; /* Comportamento de bloco */
+} /* Fecha o bloco de regras para .footer-left .social-link img */
 
 /* Logo da empresa no rodapé. */
 /* Logo da empresa no canto inferior direito */
 footer .footer-logo {
-  display: flex;
-  align-items: center;
+  /* Estiliza o contêiner do logo no rodapé */
+  display: flex; /* Ativa o layout flexbox */
+  align-items: center; /* Alinha verticalmente ao centro */
   flex-shrink: 0; /* Impede que o item encolha */
-}
+} /* Fecha o bloco de regras para footer .footer-logo */
 
 /* Texto de direitos autorais no centro do rodapé. */
 footer p {
+  /* Estiliza o parágrafo do rodapé */
   flex-grow: 1; /* Faz o parágrafo ocupar o espaço disponível */
-  margin: 0;
+  margin: 0; /* Remove margens */
   padding: 0 10px; /* Adiciona um respiro lateral */
-}
+} /* Fecha o bloco de regras para footer p */
 
 /* Imagem do logo no rodapé. */
 /* tamanho da logo da empresa */
 footer .footer-logo img {
-  width: 120px;
-  height: auto;
-  display: block;
-}
+  /* Estiliza a imagem do logo no rodapé */
+  width: 120px; /* Largura de 120px */
+  height: auto; /* Altura automática */
+  display: block; /* Comportamento de bloco */
+} /* Fecha o bloco de regras para footer .footer-logo img */
 /* Ajustes no rodapé para telas pequenas, para não quebrar o layout. */
 
 /* evita sobreposição em telas pequenas: empilha tudo e centraliza */
 @media (max-width: 680px) {
+  /* Inicia um bloco de media query para telas de até 680px */
   footer {
-    justify-content: center;
-  }
+    /* Estiliza o rodapé em telas pequenas */
+    justify-content: center; /* Centraliza os itens */
+  } /* Fecha a regra do footer */
 
   /* reduz a logo da empresa em telas muito pequenas */
   footer .footer-logo img {
-    width: 96px;
-  }
-}
+    /* Estiliza a imagem do logo no rodapé em telas pequenas */
+    width: 96px; /* Reduz a largura */
+  } /* Fecha a regra da imagem do logo */
+} /* Fecha a media query */
 
 /* Ajustes para telas de tamanho médio, como tablets. */
 /*MEDIA QUERIES - TELAS MÉDIAS (TABLETS E CELULARES GRANDES)*/
 @media (max-width: 992px) {
+  /* Inicia media query para telas de até 992px */
   .header-top {
-    flex-direction: column;
-    gap: 15px;
-  }
+    /* Estiliza o topo do cabeçalho */
+    flex-direction: column; /* Organiza os itens em coluna */
+    gap: 15px; /* Espaço entre os itens */
+  } /* Fecha a regra do .header-top */
   /* Reposiciona os elementos do cabeçalho para um layout vertical. */
-  .logo-dir,
+  .logo-dir, /* Seleciona o logo direito */
   .header-btns {
-    position: static !important;
-    top: auto !important;
-    right: auto !important;
-    left: auto !important;
-    transform: none !important;
-    width: 100%;
-    max-width: none;
-  }
+    /* Seleciona os botões do cabeçalho */
+    position: static !important; /* Posição estática (importante para sobrescrever) */
+    top: auto !important; /* Topo automático (importante) */
+    right: auto !important; /* Direita automática (importante) */
+    left: auto !important; /* Esquerda automática (importante) */
+    transform: none !important; /* Remove transformações (importante) */
+    width: 100%; /* Largura total */
+    max-width: none; /* Sem largura máxima */
+  } /* Fecha a regra para .logo-dir e .header-btns */
 
   /* Centraliza o logo principal. */
   .logo-esq {
-    display: flex;
+    /* Estiliza o logo esquerdo */
+    display: flex; /* Ativa flexbox */
     justify-content: center; /* Centraliza o logo */
     margin: 0 auto 10px; /* Centraliza e adiciona margem inferior */
-  }
+  } /* Fecha a regra do .logo-esq */
 
   /* Reorganiza a ordem dos elementos no cabeçalho. */
   header h1 {
-    font-size: 2em;
-    margin: 10px 0;
-    order: 2;
-  }
+    /* Estiliza o título do cabeçalho */
+    font-size: 2em; /* Tamanho da fonte */
+    margin: 10px 0; /* Margem vertical */
+    order: 2; /* Muda a ordem de exibição */
+  } /* Fecha a regra do header h1 */
 
   .header-btns {
-    margin-top: 15px;
-    order: 3;
-  }
+    /* Estiliza os botões do cabeçalho */
+    margin-top: 15px; /* Margem superior */
+    order: 3; /* Muda a ordem de exibição */
+  } /* Fecha a regra do .header-btns */
 
   /* Coloca a navegação por último. */
   /* Navegação (agora .sub-nav-links) */
   .sub-nav-links {
-    order: 4;
-  }
-}
+    /* Estiliza os links de navegação */
+    order: 4; /* Muda a ordem de exibição para o final */
+  } /* Fecha a regra do .sub-nav-links */
+} /* Fecha a media query */
 /* Ajustes para telas pequenas (celulares), ativando o menu hambúrguer. */
 
 /*RESPONSIVO*/
 @media (max-width: 768px) {
+  /* Inicia media query para telas de até 768px */
   /* Mostra o botão hambúrguer */
   .menu-toggle {
-    display: block;
-    font-size: 2em;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-  }
+    /* Estiliza o botão do menu hambúrguer */
+    display: block; /* Torna o botão visível */
+    font-size: 2em; /* Tamanho do ícone */
+    background: none; /* Sem fundo */
+    border: none; /* Sem borda */
+    color: #fff; /* Cor branca */
+    cursor: pointer; /* Cursor de mão */
+  } /* Fecha a regra do .menu-toggle */
 
   /* Esconde os links de navegação para mostrá-los dentro do menu lateral. */
   /* Esconde os links no modo normal, pois serão exibidos via JS no menu lateral */
   .sub-nav-links {
+    /* Estiliza os links de navegação no menu lateral */
     display: none;
     /* Escondido por padrão, ativado via JS */
-    flex-direction: column;
-    position: absolute;
+    flex-direction: column; /* Organiza em coluna */
+    position: absolute; /* Posição absoluta */
     top: 90px;
     /* Ajuste conforme a altura do seu header */
-    left: 0;
-    width: 100%;
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Largura total */
     background-color: #f57c00;
     /* Fundo laranja no modo claro */
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    align-items: center;
-    gap: 10px;
-  }
+    padding: 20px 0; /* Preenchimento vertical */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    z-index: 1000; /* Garante que fique sobre outros elementos */
+    align-items: center; /* Centraliza os itens */
+    gap: 10px; /* Espaço entre os links */
+  } /* Fecha a regra do .sub-nav-links */
 
   /* Estilo dos links dentro do menu lateral. */
   .sub-nav-links a {
+    /* Estiliza cada link no menu lateral */
     background-color: #f57c00;
     /* Fundo laranja no modo claro */
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 20px;
-    width: 70%;
-    max-width: 300px;
-  }
+    color: #fff; /* Texto branco */
+    padding: 10px 20px; /* Preenchimento */
+    text-align: center; /* Texto centralizado */
+    text-decoration: none; /* Sem sublinhado */
+    border-radius: 20px; /* Cantos arredondados */
+    width: 70%; /* Largura de 70% */
+    max-width: 300px; /* Largura máxima */
+  } /* Fecha a regra do .sub-nav-links a */
 
   /* Ajusta a área central do cabeçalho em telas menores. */
   /* Ajuste para o título do header em telas menores */
   .center-area {
-    order: 3;
-    width: 100%;
-    align-items: flex-start;
-  }
+    /* Estiliza a área central */
+    order: 3; /* Muda a ordem de exibição */
+    width: 100%; /* Largura total */
+    align-items: flex-start; /* Alinha itens ao início */
+  } /* Fecha a regra do .center-area */
 
   /* Alinha o título à esquerda e remove margens desnecessárias. */
   .center-area h1 {
-    text-align: left;
-    padding-left: 20px;
+    /* Estiliza o título na área central */
+    text-align: left; /* Alinha texto à esquerda */
+    padding-left: 20px; /* Preenchimento à esquerda */
     margin-left: 0; /* Remove o margin-left de 90px para telas pequenas */
-  }
+  } /* Fecha a regra do .center-area h1 */
   /* Estilos específicos para o menu lateral quando o modo escuro está ativo. */
 
   /* Estilos para o menu lateral no modo escuro (se você usar a classe body.escuro) */
-  body.escuro .sub-nav-links,
+  body.escuro .sub-nav-links, /* Seleciona o menu no modo escuro */
   body.escuro .sub-nav-links a {
-    background-color: #121215;
-  }
+    /* Seleciona os links do menu no modo escuro */
+    background-color: #121215; /* Fundo cinza escuro */
+  } /* Fecha a regra do modo escuro */
 
   /* Garante que o conteúdo não fique escondido atrás do header. */
   /* empurra o conteúdo principal para não ficar escondido atrás do header */
   .imagem-header {
+    /* Estiliza a imagem do cabeçalho */
     margin-top: 0; /* definimos um espaçamento controlado abaixo */
-  }
+  } /* Fecha a regra do .imagem-header */
   /* Reduz a altura da imagem principal em telas pequenas. */
 
   /* garante que a imagem hero não seja coberta: reduz sua altura máxima */
   .imagem-header img {
-    max-height: 260px;
-    object-fit: cover;
-  }
-}
+    /* Estiliza a imagem do cabeçalho */
+    max-height: 260px; /* Altura máxima de 260px */
+    object-fit: cover; /* Preenche o espaço cortando o excesso */
+  } /* Fecha a regra do .imagem-header img */
+} /* Fecha a media query */
 /* Em telas maiores, o menu hambúrguer não é necessário. */
 
 /* Esconde o botão hambúrguer em telas maiores */
 @media (min-width: 769px) {
+  /* Inicia media query para telas a partir de 769px */
   .menu-toggle {
-    display: none;
-  }
-}
+    /* Estiliza o botão do menu */
+    display: none; /* Esconde o botão */
+  } /* Fecha a regra do .menu-toggle */
+} /* Fecha a media query */
 /* Permite que a altura da imagem do cabeçalho se ajuste automaticamente. */
 
 /* Adicione esta regra para a seção, para garantir que ela não force uma altura fixa */
 .imagem-header {
+  /* Estiliza a imagem do cabeçalho */
   height: auto; /* Remove a altura fixa de 350px para permitir o ajuste */
-}
+} /* Fecha a regra do .imagem-header */
 /* Garante que o logo da direita seja exibido. */
 
 /* garante que os logos apareçam (se estavam com display:none) */
 .logo-dir img {
-  display: block;
+  /* Estiliza a imagem do logo direito */
+  display: block; /* Torna a imagem visível */
   max-width: 140px; /* Mantém a limitação apenas para o logo da direita */
-  height: auto;
-}
+  height: auto; /* Altura automática */
+} /* Fecha a regra do .logo-dir img */
 /* Ajusta os botões do cabeçalho em telas mobile para ficarem centralizados. */
 
 /* header buttons ficam em linha/baixo do h1 em mobile */
 .header-btns {
-  margin-top: 8px;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  /* Estiliza os botões do cabeçalho */
+  margin-top: 8px; /* Margem superior */
+  display: flex; /* Ativa flexbox */
+  gap: 8px; /* Espaço entre os botões */
+  flex-wrap: wrap; /* Permite quebra de linha */
+  justify-content: center; /* Centraliza os botões */
+} /* Fecha a regra do .header-btns */
 
 /* Container do switch de modo escuro. */
 .modo-escuro {
-  display: flex;
-  align-items: center;
-}
+  /* Estiliza o contêiner do switch de modo escuro */
+  display: flex; /* Ativa flexbox */
+  align-items: center; /* Alinha verticalmente ao centro */
+} /* Fecha a regra do .modo-escuro */
 body.escuro .hero-bottom h1 {
+  /* Estiliza o h1 no modo escuro */
   /* Correção para o título no modo escuro, para garantir a legibilidade. */
-  background-color: #fff;
-}
+  background-color: #fff; /* Fundo branco */
+} /* Fecha a regra do body.escuro .hero-bottom h1 */
 /* Esconde o checkbox */
 #toggle {
-  display: none;
-}
+  /* Seleciona o input checkbox do switch */
+  display: none; /* Esconde o checkbox */
+} /* Fecha a regra do #toggle */
 
 /* O "trilho" do switch. */
 /* Trilho */
 .trilho {
-  width: 45px;
-  height: 22px;
-  background: #ccc;
-  border-radius: 25px;
-  position: relative;
-  margin-left: 7px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
+  /* Estiliza o trilho do switch */
+  width: 45px; /* Largura */
+  height: 22px; /* Altura */
+  background: #ccc; /* Fundo cinza */
+  border-radius: 25px; /* Cantos arredondados */
+  position: relative; /* Posição relativa */
+  margin-left: 7px; /* Margem à esquerda */
+  cursor: pointer; /* Cursor de mão */
+  transition: background 0.3s; /* Transição suave para o fundo */
+} /* Fecha a regra do .trilho */
 
 /* A "bolinha" que desliza no switch. */
 /* Bolinha */
 .bola {
-  width: 18px;
-  height: 18px;
-  background: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  transition: transform 0.3s;
-}
+  /* Estiliza a bola do switch */
+  width: 18px; /* Largura */
+  height: 18px; /* Altura */
+  background: white; /* Fundo branco */
+  border-radius: 50%; /* Forma circular */
+  position: absolute; /* Posição absoluta */
+  top: 2px; /* Distância do topo */
+  left: 2px; /* Distância da esquerda */
+  transition: transform 0.3s; /* Transição suave para a posição */
+} /* Fecha a regra do .bola */
 
 /* Estilo do switch quando está ativado (modo escuro). */
 /* Quando ativo */
 #toggle:checked + .trilho {
-  background: #4ea8ff;
-}
+  /* Estiliza o trilho quando o switch está ativo */
+  background: #4ea8ff; /* Fundo azul */
+} /* Fecha a regra do #toggle:checked + .trilho */
 
 #toggle:checked + .trilho .bola {
-  transform: translateX(23px);
-}
+  /* Estiliza a bola quando o switch está ativo */
+  transform: translateX(23px); /* Move a bola para a direita */
+} /* Fecha a regra do #toggle:checked + .trilho .bola */
 
 /* Aplica os estilos do tema escuro quando a classe .escuro está no body. */
 /*Tema escuro aplicado ao body*/
 body.escuro {
-  background-color: #000000;
-  color: #f1f1f1;
-}
+  /* Estiliza o body no modo escuro */
+  background-color: #000000; /* Fundo preto */
+  color: #f1f1f1; /* Texto branco acinzentado */
+} /* Fecha a regra do body.escuro */
 
 /* Ajusta a cor do header no modo escuro. */
 /* Ajusta cores no modo escuro */
 body.escuro header {
-  background-color: #121215;
-}
+  /* Estiliza o header no modo escuro */
+  background-color: #121215; /* Fundo cinza escuro */
+} /* Fecha a regra do body.escuro header */
 
-body.escuro .btn-header,
+body.escuro .btn-header, /* Seleciona o botão do header no modo escuro */
 /* Ajusta a cor dos botões no modo escuro. */
 body.escuro .btn {
-  color: #f57c00;
-  color: #fff;
-  border-color: #000;
-}
+  /* Seleciona o botão principal no modo escuro */
+  color: #f57c00; /* Cor do texto laranja (sobrescrito pela próxima linha) */
+  color: #fff; /* Cor do texto branca */
+  border-color: #000; /* Cor da borda preta */
+} /* Fecha a regra do modo escuro para botões */
 
 /* Ajusta a cor dos cards no modo escuro. */
 body.escuro .card {
-  background-color: #303030;
-  color: #ddd;
-}
+  /* Estiliza os cards no modo escuro */
+  background-color: #303030; /* Fundo cinza escuro */
+  color: #ddd; /* Texto cinza claro */
+} /* Fecha a regra do body.escuro .card */
 
 /* Ajusta o fundo da seção de benefícios no modo escuro. */
 body.escuro .beneficios {
+  /* Estiliza a seção de benefícios no modo escuro */
   background-image: radial-gradient(
     circle at center,
     #333333 0%,
     #555555 50%,
     #000000 100%
   );
-}
+} /* Fecha a regra do body.escuro .beneficios */
 /* Ajusta o fundo da seção hero no modo escuro. */
 body.escuro .hero-bottom {
-  background-color: #303030;
-}
+  /* Estiliza a seção hero no modo escuro */
+  background-color: #303030; /* Fundo cinza escuro */
+} /* Fecha a regra do body.escuro .hero-bottom */
 /* Ajusta o fundo do rodapé no modo escuro. */
 body.escuro footer {
-  background-color: #121215;
-}
+  /* Estiliza o rodapé no modo escuro */
+  background-color: #121215; /* Fundo cinza bem escuro */
+} /* Fecha a regra do body.escuro footer */
 
 /* Estilo dos cards de curso no modo escuro (se houver). */
 body.escuro .curso-card {
+  /* Estiliza os cards de curso no modo escuro */
   background-color: #222; /* Fundo escuro para os cards no modo escuro */
-  border-color: #444;
-}
+  border-color: #444; /* Cor da borda cinza escuro */
+} /* Fecha a regra do body.escuro .curso-card */
 /* Garante que o H2 tenha a cor correta (pode ser um ajuste específico). */
 .h2 {
-  color: #fff;
-}
+  /* Estiliza elementos com a classe .h2 */
+  color: #fff; /* Cor do texto branca */
+} /* Fecha a regra do .h2 */
 
 /* Estilo geral para os links de redes sociais. */
 .social-link {
+  /* Estiliza os links de redes sociais */
   display: inline-flex; /* Alinha o ícone e o texto na mesma linha */
   align-items: center; /* Centraliza verticalmente */
   gap: 8px; /* Espaço entre o ícone e o texto */
   text-decoration: none; /* Remove o sublinhado do link */
-  color: white;
-  transition: transform 0.3s ease;
-}
+  color: white; /* Cor do texto branca */
+  transition: transform 0.3s ease; /* Transição suave para transformações */
+} /* Fecha a regra do .social-link */
 /* Efeito hover para os links de redes sociais. */
 .social-link:hover {
+  /* Estiliza o link social no estado hover */
   text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-}
+} /* Fecha a regra do .social-link:hover */
 
 /* Imagem dentro do link de rede social. */
 .social-media img {
+  /* Estiliza a imagem dentro do contêiner de mídia social */
   width: 30px; /* Tamanho do ícone */
-  height: 30px;
+  height: 30px; /* Altura do ícone */
   vertical-align: middle; /* Alinha o ícone com o texto */
-}
+} /* Fecha a regra do .social-media img */
 
 /* Logo no rodapé. */
 .footer-logo img {
+  /* Estiliza a imagem do logo no rodapé */
   width: 120px; /* Ajuste o tamanho da logo conforme necessário */
-  height: auto;
-}
+  height: auto; /* Altura automática */
+} /* Fecha a regra do .footer-logo img */
 /* Reset de margem para o parágrafo do rodapé. */
 footer p {
+  /* Estiliza o parágrafo do rodapé */
+  margin: 0; /* Remove margens */
+} /* Fecha a regra do footer p */
+
+/*VARIÁVEIS DE CORES E FONTES (CSS Custom Properties) O seletor :root aponta para o elemento raiz do documento (a tag <html>).É o local ideal para declarar variáveis CSS globais (Custom Properties) que serão usadas em todo o site para manter consistência e facilitar a manutenção.
+*/
+/* 
+  O seletor :root aponta para o elemento raiz do documento (a tag <html>).
+  É o local ideal para declarar variáveis CSS globais (Custom Properties)
+  que serão usadas em todo o site para manter consistência e facilitar a manutenção.
+*/
+:root {
+  /* Define variáveis CSS globais */
+  /* 
+    Define a variável '--cor-primaria'. 
+    Esta será a cor principal do seu design, usada em botões, links e destaques.
+  */
+  --cor-primaria: #ff9900;
+
+  /*
+    Define a variável '--cor-primaria-hover'.
+    Esta cor será usada quando o mouse passar por cima de elementos que usam a cor primária.
+  */
+  --cor-primaria-hover: #e68a00;
+
+  /*
+    Define a variável '--cor-fundo-secao'.
+    Esta cor  é usada para o fundo de seções específicas,
+    ajudando a separá-las visualmente do fundo principal da página.*/
+  --cor-fundo-secao: #fffaf0;
+
+  /*Define a variável '--cor-texto-principal'.*/
+  --cor-texto-principal: #333;
+  /* Cinza escuro para alto contraste */
+
+  /*
+    Define a variável '--cor-borda'.com cor ideal para bordas sutis em elementos como cards ou inputs,
+    sem chamar muita atenção.*/
+  --cor-borda: #ddd;
+
+  /*Define a variável '--fonte-principal'.
+Aqui você estabelece a família de fontes principal do site. O navegador tentará usar "Poppins" primeiro.
+Se não estiver disponível, ele usará uma fonte padrão "sans-serif" do sistema do usuário.
+*/
+  --fonte-principal: "Poppins", sans-serif;
+} /* Fecha o bloco de variáveis :root */
+
+/*CONFIGURAÇÕES GERAIS E FOCO EM ACESSIBILIDADE*/
+html {
+  /* Estiliza o elemento html */
+  scroll-behavior: smooth;
+  /* Rolagem suave na página */
+} /* Fecha a regra do html */
+/*ESTILOS DO CABEÇALHO*/
+/* Define o posicionamento e a camada do cabeçalho */
+header {
+  /* Estiliza o cabeçalho */
+  position: relative;
+  /* Necessário para o posicionamento absoluto do menu */
+  z-index: 1001;
+  /* Garante que o header fique acima de outros elementos */
+} /* Fecha a regra do header,Ao dar ao cabeçalho um z-index alto como 1001, você garante que ele (e qualquer menu que ele contenha) sempre ficará por cima de todos os outros conteúdos da página, como imagens, textos e seções. Isso evita que outras partes do site cubram ou se sobreponham ao seu menu de navegação. */
+
+/* Container principal do cabeçalho */
+.header-top {
+  /* Estiliza o topo do cabeçalho */
+  display: flex; /* Ativa flexbox */
+  flex-wrap: wrap; /* Permite quebra de linha */
+  justify-content: space-between; /* Espaço entre os itens */
+  align-items: center;
+  /* Centraliza os itens verticalmente */
+  padding: 5px 20px;
+  /* Reduzi o padding vertical de 10px para 5px */
+  gap: 15px;
+  /* Adiciona um espaçamento entre os elementos do header */
+} /* Fecha a regra do .header-top */
+
+/* Estilo da imagem do logo */
+.logo-esq img {
+  /* Estiliza a imagem do logo esquerdo */
+  height: 80px;
+  /* Você pode ajustar este valor para o tamanho que desejar */
+  width: auto;
+  /* Faz a largura se ajustar para não amassar a imagem */
+  object-fit: contain;
+  /* Garante que a imagem caiba sem distorcer */
+} /* Fecha a regra do .logo-esq img */
+
+/* Área central do cabeçalho, que agrupa título e navegação */
+.center-area {
+  /* Estiliza a área central do cabeçalho */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  /* Coloca o h1 e os links um sobre o outro */
+  align-items: center;
+  justify-content: center;
+  /* Centraliza o título */
+  gap: 15px;
+  /* Remove o gap para o novo layout */
+  gap: 5px;
+} /* Fecha a regra do .center-area */
+
+/* Garante que o logo venha antes do título em certas disposições */
+.center-area .logo-esq {
+  /* Estiliza o logo esquerdo dentro da área central */
+  order: -1;
+  /* Garante que o logo venha antes do título */
+} /* Fecha a regra do .center-area .logo-esq */
+
+/* Título principal no cabeçalho */
+.center-area h1 {
+  /* Estiliza o título na área central */
   margin: 0;
+  /* Remove margens padrão */
+  text-align: center;
+  /* Centraliza o texto */
+  font-size: 1.5em;
+  /* Ajuste de tamanho opcional */
+} /* Fecha a regra do .center-area h1 */
+
+/*ESTILOS PARA A SEÇÃO DE BENEFÍCIOS*/
+/* Container da seção de benefícios */
+.beneficios {
+  /* Estiliza a seção de benefícios */
+  display: flex; /* Ativa flexbox */
+  justify-content: space-around; /* Distribui os itens com espaço ao redor */
+  gap: 20px; /* Espaço entre os itens */
+  flex-wrap: wrap; /* Permite quebra de linha */
+  padding: 0 20px 40px 20px; /* Preenchimento */
+  background-color: #f8f9fa; /* Fundo cinza claro */
+} /* Fecha a regra do .beneficios */
+
+/* Card individual da seção de benefícios */
+.card {
+  /* Estiliza os cards */
+  flex: 1; /* Permite que o card cresça */
+  background-color: #fff; /* Fundo branco */
+  padding: 25px; /* Preenchimento */
+  border-radius: 12px; /* Cantos arredondados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+  text-align: center; /* Texto centralizado */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+  min-width: 280px;
+  /* Garante que os cards não fiquem muito espremidos */
+  margin: 10px; /* Margem externa */
+} /* Fecha a regra do .card */
+
+/* Título dentro do card de benefício */
+.card h3 {
+  font-size: 1.3em;
+  color: var(--cor-primaria);
+}
+
+/* Efeito ao passar o mouse sobre o card */
+.card:hover {
+  /* Estiliza o card no estado hover */
+  transform: translateY(-5px);
+  /* Efeito sutil de elevação */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* Sombra mais forte */
+} /* Fecha a regra do .card:hover */
+
+/*ESTILOS PARA O RODAPÉ*/
+/* Container principal do rodapé */
+footer {
+  /* Estiliza o rodapé */
+  display: flex; /* Ativa flexbox */
+  flex-wrap: wrap; /* Permite quebra de linha */
+  justify-content: space-between; /* Espaço entre os itens */
+  align-items: center; /* Alinha verticalmente ao centro */
+  padding: 20px; /* Preenchimento */
+  text-align: center; /* Texto centralizado */
+  gap: 20px; /* Espaço entre os itens */
+} /* Fecha a regra do footer */
+
+/*AJUSTES PARA DISPOSITIVOS MÓVEIS (RESPONSIVIDADE)*/
+/* Media Query para telas com largura máxima de 768px (tablets e celulares) */
+@media (max-width: 768px) {
+  /* Inicia media query para telas de até 768px */
+  .header-top {
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: space-between; /* Espaço entre os itens */
+  }
+  /* Seções de benefícios e rodapé em coluna */
+  .beneficios, /* Seleciona a seção de benefícios */
+  footer {
+    /* Seleciona o rodapé */
+    flex-direction: column; /* Organiza em coluna */
+    align-items: center; /* Centraliza os itens */
+    gap: 25px; /* Espaço entre os itens */
+  } /* Fecha a regra para .beneficios e footer */
+
+  /* Organiza a área central em coluna e alinha à esquerda */
+  .center-area {
+    flex-direction: column; /* Volta a ser coluna no mobile */
+    justify-content: flex-start; /* Alinha itens à esquerda no mobile */
+    padding-left: 0; /* Reseta o padding */
+    order: 3; /* Garante que venha depois do logo e do hamburguer */
+    width: 100%; /* Largura total */
+    align-items: flex-start; /* Alinha itens à esquerda */
+  }
+
+  /* Posiciona os botões do cabeçalho */
+  .header-btns {
+    order: 2;
+    /* Coloca os botões ao lado do hamburguer */
+    margin-left: auto;
+    /* Empurra para a direita */
+  } /* Fecha a regra do .header-btns */
+
+  /* Ajusta o título no layout mobile */
+  .center-area h1 {
+    /* Estiliza o título na área central */
+    order: 0;
+    /* Garante que o h1 venha depois do logo */
+    text-align: left; /* Alinha texto à esquerda */
+    padding-left: 20px; /* Preenchimento à esquerda */
+  } /* Fecha a regra do .center-area h1 */
+} /* Fecha a media query */
+
+/*SEÇÃO DE CURSOS EM DESTAQUE*/
+/* Container da seção */
+.cursos-destaque {
+  /* Estiliza a seção de cursos em destaque */
+  padding: 40px 20px; /* Preenchimento */
+  text-align: center; /* Texto centralizado */
+  background-color: var(--cor-fundo-secao); /* Cor de fundo da variável */
+} /* Fecha a regra do .cursos-destaque */
+
+.cursos-destaque h2 {
+  /* Estiliza o título da seção de cursos */
+  /* Estilo do título da seção */
+  font-size: 2.2em; /* Tamanho da fonte */
+  font-weight: 700; /* Peso da fonte (negrito) */
+  margin-bottom: 10px; /* Margem inferior */
+  color: inherit; /* Herda a cor do texto do pai */
+  margin-top: 0; /* Remove margem superior */
+  /* Detalhe visual para o título */
+  position: relative; /* Posição relativa */
+  display: inline-block; /* Exibição em linha */
+} /* Fecha a regra do .cursos-destaque h2 */
+
+/* Container que segura os cards e permite rolagem horizontal */
+.cards-container {
+  /* Estiliza o contêiner dos cards */
+  display: flex;
+  overflow-x: auto;
+  /* Habilita a rolagem horizontal */
+  gap: 20px; /* Espaço entre os cards */
+  padding: 20px 10px;
+  /* Padding para a sombra do card não ser cortada */
+  align-items: stretch;
+  /* Garante que todos os cards tenham a mesma altura */
+  justify-content: flex-start;
+  /* Alinha os cards à esquerda */
+}
+
+/* Estilizando a barra de rolagem horizontal (para navegadores baseados em WebKit) */
+.cards-container::-webkit-scrollbar {
+  /* Estiliza a barra de rolagem */
+  height: 8px; /* Altura da barra */
+} /* Fecha a regra da barra de rolagem */
+
+.cards-container::-webkit-scrollbar-track {
+  /* Estiliza o trilho da barra de rolagem */
+  background: #f1f1f1; /* Fundo cinza claro */
+  border-radius: 10px; /* Cantos arredondados */
+} /* Fecha a regra do trilho */
+
+.cards-container::-webkit-scrollbar-thumb {
+  /* Estiliza o "polegar" da barra de rolagem */
+  background: var(--cor-primaria); /* Cor da variável primária */
+  border-radius: 10px; /* Cantos arredondados */
+} /* Fecha a regra do polegar */
+
+.cards-container::-webkit-scrollbar-thumb:hover {
+  /* Estiliza o polegar no estado hover */
+  background: var(--cor-primaria-hover); /* Cor da variável primária hover */
+} /* Fecha a regra do polegar hover */
+
+/* Card individual de curso */
+.curso-card {
+  /* Estiliza o card de curso */
+  flex: 0 0 300px;
+  /* Base de 300px, não cresce, não encolhe */
+  border: 1px solid #ddd; /* Borda cinza claro */
+  border-radius: 10px; /* Cantos arredondados */
+  overflow: hidden; /* Esconde conteúdo que transborda */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+  background-color: #fff; /* Fundo branco */
+  display: flex; /* Ativa flexbox */
+  flex-direction: column; /* Organiza em coluna */
+} /* Fecha a regra do .curso-card */
+
+.curso-card:hover {
+  /* Estiliza o card de curso no estado hover */
+  transform: translateY(-10px);
+  /* Efeito de levantar o card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Sombra mais forte no hover */
+} /* Fecha a regra do .curso-card:hover */
+
+/* Imagem dentro do card de curso */
+.curso-card img {
+  /* Estiliza a imagem do card de curso */
+  width: 100%; /* Largura total */
+  height: 180px; /* Altura fixa */
+  object-fit: cover; /* Preenche o espaço cortando o excesso */
+} /* Fecha a regra do .curso-card img */
+
+/* Conteúdo de texto dentro do card de curso */
+.curso-card-conteudo {
+  /* Estiliza o conteúdo do card de curso */
+  padding: 15px; /* Preenchimento */
+  display: flex; /* Ativa flexbox */
+  flex-direction: column; /* Organiza em coluna */
+  flex-grow: 1;
+  /* Faz este elemento crescer para preencher o espaço */
+  justify-content: space-between;
+  /* Empurra o botão para baixo */
+} /* Fecha a regra do .curso-card-conteudo */
+
+/* --- ESTILOS DO POP-UP DE BOAS-VINDAS --- */
+/* Camada de fundo escura que cobre a tela */
+.popup-overlay {
+  /* Estiliza a sobreposição do pop-up */
+  position: fixed; /* Posição fixa na tela */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo preto semitransparente */
+  display: flex; /* Ativa flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  z-index: 2000;
+  /* Garante que fique sobre tudo */
+} /* Fecha a regra do .popup-overlay */
+
+/* Conteúdo do pop-up */
+.popup-content {
+  /* Estiliza o conteúdo do pop-up */
+  background-color: #fff; /* Fundo branco */
+  padding: 30px 40px; /* Preenchimento */
+  border-radius: 10px; /* Cantos arredondados */
+  text-align: center; /* Texto centralizado */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+  position: relative; /* Posição relativa */
+  max-width: 90%; /* Largura máxima de 90% da tela */
+  width: 400px; /* Largura fixa de 400px */
+} /* Fecha a regra do .popup-content */
+
+/* Botão de fechar o pop-up */
+.popup-close {
+  /* Estiliza o botão de fechar do pop-up */
+  position: absolute; /* Posição absoluta */
+  top: 10px; /* Distância do topo */
+  right: 15px; /* Distância da direita */
+  font-size: 28px; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  color: #888; /* Cor cinza */
+  background: none; /* Sem fundo */
+  border: none; /* Sem borda */
+  cursor: pointer; /* Cursor de mão */
+} /* Fecha a regra do .popup-close */
+
+/* Container dos links de navegação do cabeçalho */
+.sub-nav-links {
+  /* Estiliza o contêiner dos links de navegação */
+  /* Organiza os links de navegação em linha */
+  display: flex; /* Ativa flexbox */
+} /* Fecha a regra do .sub-nav-links */
+
+/*ESTILOS DO MENU HAMBÚRGUER (PARA TELAS MENORES)*/
+/* Media Query para telas com largura máxima de 768px */
+@media (max-width: 768px) {
+  /* Inicia media query para telas de até 768px */
+  .sub-nav-links {
+    /* Estiliza os links de navegação */
+    display: none;
+    /* Escondido por padrão, ativado via JS. */
+    flex-direction: column; /* Organiza em coluna */
+    position: absolute; /* Posição absoluta */
+    top: 100%;
+    /* Posiciona logo abaixo do header */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Largura total */
+    background-color: #f57c00;
+    /* Fundo laranja no modo claro */
+    padding: 20px 0; /* Preenchimento vertical */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    z-index: 1000; /* Garante que fique sobre outros elementos */
+    align-items: center;
+    /* Centraliza os links horizontalmente */
+    gap: 10px;
+    /* Espaçamento entre os links */
+  } /* Fecha a regra do .sub-nav-links */
+
+  /* Classe 'menu-aberto' para exibir o menu de navegação */
+  .sub-nav-links.menu-aberto {
+    /* Estiliza o menu quando está aberto */
+    display: flex; /* Torna o menu visível */
+  } /* Fecha a regra do .sub-nav-links.menu-aberto */
+
+  /* Estilo dos links dentro do menu hambúrguer */
+  .sub-nav-links a {
+    /* Estiliza os links dentro do menu */
+    background-color: #f57c00;
+    /* Fundo laranja no modo claro */
+    color: #fff; /* Texto branco */
+    padding: 10px 20px; /* Preenchimento */
+    text-align: center; /* Texto centralizado */
+    text-decoration: none; /* Sem sublinhado */
+    border-radius: 20px; /* Cantos arredondados */
+    width: 70%;
+    /* Define uma largura para os botões */
+    max-width: 300px;
+    /* Largura máxima para os botões */
+    margin: 0;
+    /* Remove margens laterais desnecessárias */
+    transition: background-color 0.3s; /* Transição suave para o fundo */
+  } /* Fecha a regra do .sub-nav-links a */
+
+  /* Estilo do botão do menu hambúrguer (ícone) */
+  .menu-toggle {
+    /* Estiliza o botão do menu */
+    display: block;
+    /* Garante que o botão seja visível */
+    font-size: 2em; /* Tamanho do ícone */
+    background: none; /* Sem fundo */
+    border: none; /* Sem borda */
+    color: #fff;
+    /* Alterado para branco em ambos os modos */
+    cursor: pointer; /* Cursor de mão */
+  } /* Fecha a regra do .menu-toggle */
+
+  /*MODO ESCURO PARA O MENU HAMBÚRGUER*/
+  /* Cor do ícone do menu no modo escuro */
+  body.escuro .menu-toggle {
+    /* Estiliza o botão do menu no modo escuro */
+    color: #fff; /* Cor branca */
+  } /* Fecha a regra do body.escuro .menu-toggle */
+
+  /* Estilos do menu de navegação no modo escuro */
+  body.escuro .sub-nav-links {
+    /* Estiliza o menu no modo escuro */
+    background-color: #121215; /* Fundo cinza escuro */
+  } /* Fecha a regra do body.escuro .sub-nav-links */
+
+  body.escuro .sub-nav-links a {
+    /* Estiliza os links do menu no modo escuro */
+    background-color: #121215; /* Fundo cinza escuro */
+  } /* Fecha a regra do body.escuro .sub-nav-links a */
+} /* Fecha a media query */
+
+/* Esconde o conteúdo principal do header quando o menu está aberto em telas pequenas */
+/* Isso evita sobreposição de conteúdo quando o menu hambúrguer está ativo */
+@media (max-width: 768px) {
+  /* Inicia media query para telas de até 768px */
+  body.menu-aberto .header-content-wrapper {
+    /* Seleciona o wrapper do conteúdo quando o menu está aberto */
+    display: none; /* Esconde o conteúdo */
+  } /* Fecha a regra */
+} /* Fecha a media query */
+
+/*ESTILOS PARA TELAS MAIORES (DESKTOP)*/
+@media (min-width: 769px) {
+  /* Inicia media query para telas a partir de 769px */
+  .menu-toggle {
+    /* Estiliza o botão do menu */
+    display: none; /* Esconde o botão */
+  } /* Fecha a regra do .menu-toggle */
+
+  .sub-nav-links {
+    /* Estiliza os links de navegação */
+    display: flex; /* Ativa flexbox */
+    position: static;
+    /* Garante o comportamento padrão em telas grandes */
+    flex-direction: row; /* Organiza em linha */
+    /* Garante que os links fiquem em linha */
+    background-color: transparent;
+    /* Remove o fundo do menu mobile */
+    padding: 0;
+    /* Remove o padding do menu mobile */
+    box-shadow: none;
+    /* Remove a sombra do menu mobile */
+  } /* Fecha a regra do .sub-nav-links */
+} /* Fecha a media query */
+
+/*MODO ESCURO PARA O POP-UP*/
+/* Fundo e cor do texto do pop-up no modo escuro */
+body.escuro .popup-content {
+  /* Estiliza o conteúdo do pop-up no modo escuro */
+  background-color: #3a3a3a; /* Fundo cinza escuro */
+  color: #f0f0f0; /* Texto cinza claro */
+} /* Fecha a regra do body.escuro .popup-content */
+
+/* Cor do título do pop-up no modo escuro */
+body.escuro .popup-content h2 {
+  /* Estiliza o título do pop-up no modo escuro */
+  color: #f28705; /* Cor laranja */
+} /* Fecha a regra do body.escuro .popup-content h2 */
+
+/* Cor do botão de fechar no modo escuro */
+body.escuro .popup-close {
+  /* Estiliza o botão de fechar no modo escuro */
+  color: #ccc; /* Cor cinza claro */
+} /* Fecha a regra do body.escuro .popup-close */
+
+/* Ajuste de cor para o título da seção de cursos no modo escuro */
+body.escuro .cursos-destaque h2 {
+  /* Estiliza o título dos cursos no modo escuro */
+  color: #000;
+  /* Garante que o texto seja preto */
+} /* Fecha a regra do body.escuro .cursos-destaque h2 */
+
+/* Remove o sublinhado padrão dos links nos cards de curso */
+.curso-card-link {
+  /* Estiliza o link do card de curso */
+  text-decoration: none; /* Remove sublinhado */
+  color: inherit; /* Herda a cor do pai */
+} /* Fecha a regra do .curso-card-link */
+
+/* Ajuste de cor para o parágrafo no modo escuro */
+body.escuro .hero-bottom p {
+  /* Estiliza o parágrafo da seção hero no modo escuro */
+  color: #fff; /* Cor do texto branca */
+} /* Fecha a regra do body.escuro .hero-bottom p */
+
+/* --- Estilos do Formulário de Contato --- */
+
+.form-logo {
+    height: 60px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+/* Container principal do formulário */
+.form-container {
+    max-width: 800px;
+    /* Largura máxima do formulário */
+    margin: 20px auto;
+    /* antes 40px (criava espaço embaixo do footer) */
+    background-color: #fff;
+    border: 2px solid #ff9900;
+    border-radius: 8px;
+}
+
+/* Cabeçalho do formulário com imagem de fundo */
+.form-header {
+    background-image: url('formulario-contato.png');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 20px;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Título e legenda do cabeçalho do formulário */
+.form-header h1,
+.form-header .form-legend {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Corpo do formulário onde ficam os campos */
+.form-body {
+    padding: 30px;
+}
+
+/* Linha para agrupar campos lado a lado (ex: Nome e E-mail) */
+.form-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+/* Grupo de campo (label + input) */
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Rótulo (label) do campo */
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #f57c00;
+}
+
+/* Campos de entrada, seleção e área de texto */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    /* Ocupa toda a largura do contêiner pai (.form-group) */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    resize: none;
+}
+
+/* Efeito de foco nos campos do formulário */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff9900;
+    box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.25);
+}
+
+/* Rodapé do formulário com os botões */
+.form-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    /* Espaço acima dos botões */
+}
+
+/* Estilo geral dos botões do formulário */
+.form-footer button,
+.form-footer input[type="reset"] {
+    padding: 14px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #ff9900;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Botão de Enviar */
+#btnEnviar {
+    background-color: #ff9900;
+    color: white;
+}
+
+#btnEnviar:hover {
+    background-color: #e68a00;
+    transform: translateY(-2px);
+}
+
+/* Botão de Limpar/Cancelar */
+#btnLimpar {
+    background-color: transparent;
+    color: #ff9900;
+}
+
+/* --- Ajustes para Dispositivos Móveis (Responsividade) --- */
+@media (max-width: 768px) {
+    .form-container {
+        margin: 15px;
+    }
+
+    .form-header {
+        padding: 20px 15px;
+    }
+
+    .form-body {
+        padding: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* --- Modo Escuro para o Formulário --- */
+body.escuro .form-container {
+    background-color: #2c2c2c;
+    /* Fundo escuro para o container */
+    border-color: #555;
+}
+
+body.escuro .form-group label {
+    color: #f28705;
+    /* Laranja para os labels */
+}
+
+body.escuro .form-group input,
+body.escuro .form-group select,
+body.escuro .form-group textarea {
+    background-color: #3a3a3a;
+    /* Fundo dos inputs */
+    color: #f0f0f0;
+    /* Texto dos inputs */
+    border-color: #555;
+}
+
+/* Cor do placeholder no modo escuro */
+body.escuro .form-group input::placeholder,
+body.escuro .form-group textarea::placeholder {
+    color: #aaa;
+}
+
+body.escuro #btnLimpar {
+    color: #f28705;
+    border-color: #f28705;
+}
+
+/* Ajuste de posição vertical da barra de navegação */
+.sub-nav-links {
+    /* Comando para subir a navegação em 20px */
+    margin-top: -30px;
+}
+
+/* Ajuste de posição horizontal dos links de navegação */
+.nav-links-container {
+    /* Para mover os botões para a direita, aumente o valor de margin-left. */
+    /* Exemplo: margin-left: 40px; */
+    /* Para centralizar, remova ou comente a linha abaixo. */
+    margin-left: -190px;
 }

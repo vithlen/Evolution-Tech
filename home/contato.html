@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Adapta a página para dispositivos móveis -->
     <!-- Ícones (favicon) e título -->
-    <link rel="shortcut icon" href="img/tech-para-todos-logo.png" type="image/x-icon">
-    <!-- Ícone para navegadores mais antigos -->
-    <link rel="icon" type="image/png" href="img/logo-oficial.png?v=2"> <!-- Ícone padrão da página -->
+    <link rel="icon" type="image/png" href="logo-oficial1.png"> <!-- Ícone padrão da página -->
     <title>Contato | Evolution Tech</title>
     <!-- Folha de estilos e fontes do Google -->
     <link rel="stylesheet" href="style.css">
@@ -167,6 +165,14 @@
             outline: none;
             border-color: #ff9900;
             box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.25);
+        }
+
+        /* Estilo para as mensagens de erro de validação */
+        .error-message {
+            color: #d93025; /* Cor vermelha para indicar erro */
+            font-size: 0.875em; /* Tamanho de fonte um pouco menor */
+            margin-top: 6px; /* Espaço entre o campo e a mensagem de erro */
+            display: block; /* Garante que a mensagem ocupe sua própria linha */
         }
 
         /* Rodapé do formulário com os botões */
@@ -453,13 +459,13 @@
         <div class="sub-nav-links nav-links-container" style="justify-content: center; padding-bottom: 10px;">
             <a href="index.html">Início</a>
             <a href="sobrenos.html">Sobre Nós</a>
-            <a href="../home/cursos/index.html">Nossos Cursos</a>
+            <a href="cursos/index.html">Nossos Cursos</a>
             <a href="contato.html" class="active">Contato</a>
         </div>
     </header>
 
     <!--FORMULÁRIO DE CONTATO-->
-    <form id="contactForm" class="form-container" novalidate>
+    <form id="contactForm" class="form-container" method="post" novalidate>
         <!-- 'novalidate' desativa a validação padrão do navegador para usarmos a nossa via JS -->
         <div class="form-header">
             <img src="img/tech-para-todos.png" alt="Logo Tech Para Todos" class="form-logo">
@@ -533,13 +539,13 @@
         <div class="social-media">
             <a href="https://www.instagram.com/evolutiontech__/" target="_blank" rel="noopener noreferrer"
                 title="Siga-nos no Instagram" class="social-link">
-                <img src="instagram3.png" alt="Ícone do Instagram">
-                <span><strong>evolutiontech_</strong></span>
+                <img src="img/instagram3.png" alt="Ícone do Instagram">
+                <span><strong>evolutiontech__</strong></span>
             </a>
         </div>
         <p>&copy; 2025 Tech Para Todos - Evolution Tech. Todos os direitos reservados.</p>
         <div class="footer-logo">
-            <img src="logotipo empresa (2).png" alt="Logo da Empresa">
+            <img src="img/logotipo empresa (2).png" alt="Logo da Empresa">
         </div>
     </footer>
 

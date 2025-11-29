@@ -1,203 +1,234 @@
-/*ESTILO GERAL DO CONTEÚDO*/
-/* Configurações básicas para o corpo da página. */
+/*ESTILO GERAL DO CONTEÚDO*/ /* Comentário de seção para o estilo geral. */
+/* Configurações básicas para o corpo da página. */ /* Comentário explicando o seletor body. */
 body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #fff3e0;
-  color: #333;
-}
-/* Estilo do cabeçalho principal. */
+  /* Início do bloco de regras para o elemento body. */
+  margin: 0; /* Remove a margem padrão do corpo da página. */
+  font-family: "Poppins", sans-serif; /* Define a família de fontes principal. */
+  background-color: #fff3e0; /* Define uma cor de fundo creme claro. */
+  color: #333; /* Define a cor do texto padrão como cinza escuro. */
+} /* Fim do bloco de regras para o body. */
+/* Estilo do cabeçalho principal. */ /* Comentário explicando o seletor header. */
 header {
-  background-color: #f57c00;
-  color: white;
-  padding: 15px 0; /* Aumenta o padding vertical do header */
-}
-/* Container superior do cabeçalho, onde ficam os logos e navegação. */
+  /* Início do bloco de regras para o elemento header. */
+  background-color: #f57c00; /* Define a cor de fundo do cabeçalho como laranja. */
+  color: white; /* Define a cor do texto dentro do cabeçalho como branco. */
+  padding: 15px 0; /* Aumenta o padding vertical do header */ /* Adiciona preenchimento vertical de 15px e horizontal de 0. */
+} /* Fim do bloco de regras para o header. */
+/* Container superior do cabeçalho, onde ficam os logos e navegação. */ /* Comentário explicando a classe .header-top. */
 .header-top {
-  padding: 0 20px;
-  box-sizing: border-box;
-  position: relative;
-  display: flex;
-  align-items: center; /* Alinha verticalmente */
-  width: 100%;
-}
-/* Título principal dentro do cabeçalho. */
+  /* Início do bloco de regras para a classe .header-top. */
+  padding: 0 20px; /* Adiciona preenchimento horizontal de 20px. */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total. */
+  position: relative; /* Define um contexto de posicionamento para elementos filhos. */
+  display: flex; /* Ativa o layout flexbox para alinhar os itens. */
+  align-items: center; /* Alinha verticalmente */ /* Alinha os itens flex verticalmente ao centro. */
+  width: 100%; /* Faz o container ocupar toda a largura disponível. */
+} /* Fim do bloco de regras para .header-top. */
+/* Título principal dentro do cabeçalho. */ /* Comentário explicando o seletor header h1. */
 header h1 {
-  font-size: 1.8em;
-  margin: 0;
-  margin-bottom: 5px;
-}
-/* Área central do cabeçalho, para o título e a navegação. */
+  /* Início do bloco de regras para h1 dentro de header. */
+  font-size: 1.8em; /* Define o tamanho da fonte como 1.8 vezes o tamanho padrão. */
+  margin: 0; /* Remove todas as margens. */
+  margin-bottom: 5px; /* Adiciona uma margem inferior de 5px. */
+} /* Fim do bloco de regras para header h1. */
+/* Área central do cabeçalho, para o título e a navegação. */ /* Comentário explicando a classe .center-area. */
 .center-area {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  left: -3px; /* Desloca o bloco para a direita. Ajuste o valor. */
-}
-/* Container para os links de navegação (Home, Sobre, etc.). */
+  /* Início do bloco de regras para a classe .center-area. */
+  flex-grow: 1; /* Permite que a área central cresça para ocupar o espaço disponível. */
+  display: flex; /* Ativa o layout flexbox. */
+  flex-direction: column; /* Organiza os itens filhos em uma coluna. */
+  align-items: center; /* Centraliza os itens filhos horizontalmente. */
+  position: absolute; /* Define o posicionamento absoluto em relação ao pai (.header-top). */
+  left: -3px; /* Desloca o bloco para a direita. Ajuste o valor. */ /* Desloca o elemento 3px para a esquerda. */
+} /* Fim do bloco de regras para .center-area. */
+/* Container para os links de navegação (Home, Sobre, etc.). */ /* Comentário explicando a classe .sub-nav-links. */
 .sub-nav-links {
-  display: flex;
-  justify-content: center; /* Centraliza os links da navegação */
-  flex-wrap: wrap;
-}
-/* Estilo individual de cada link de navegação. */
+  /* Início do bloco de regras para a classe .sub-nav-links. */
+  display: flex; /* Ativa o layout flexbox. */
+  justify-content: center; /* Centraliza os links da navegação */ /* Centraliza os itens filhos horizontalmente. */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço. */
+} /* Fim do bloco de regras para .sub-nav-links. */
+/* Estilo individual de cada link de navegação. */ /* Comentário explicando o seletor .sub-nav-links a. */
 .sub-nav-links a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 5px 0;
-  font-weight: 500; /* Deixa a fonte um pouco mais encorpada */
-}
-/* Efeito ao passar o mouse sobre o link. */
+  /* Início do bloco de regras para links dentro de .sub-nav-links. */
+  color: white; /* Define a cor do texto como branco. */
+  margin: 0 15px; /* Adiciona margem horizontal de 15px. */
+  text-decoration: none; /* Remove o sublinhado padrão dos links. */
+  font-size: 18px; /* Define o tamanho da fonte como 18 pixels. */
+  padding: 5px 0; /* Adiciona preenchimento vertical de 5px. */
+  font-weight: 500; /* Deixa a fonte um pouco mais encorpada */ /* Define o peso da fonte como 500 (semi-negrito). */
+} /* Fim do bloco de regras para .sub-nav-links a. */
+/* Efeito ao passar o mouse sobre o link. */ /* Comentário explicando o pseudo-seletor :hover. */
 .sub-nav-links a:hover {
-  text-decoration: underline;
-}
+  /* Início do bloco de regras para o estado hover do link. */
+  text-decoration: underline; /* Adiciona um sublinhado ao texto quando o mouse está sobre ele. */
+} /* Fim do bloco de regras para .sub-nav-links a:hover. */
 
-/*SEÇÃO DO LOGO ESQUERDO DO CABEÇALHO*/
-/* Container do logo do lado esquerdo. */
+/*SEÇÃO DO LOGO ESQUERDO DO CABEÇALHO*/ /* Comentário de seção para o logo esquerdo. */
+/* Container do logo do lado esquerdo. */ /* Comentário explicando a classe .logo-esq. */
 .logo-esq {
-  width: 120px;
-  flex-shrink: 0; /* Impede que o logo encolha */
-}
-/* Imagem do logo esquerdo. */
+  /* Início do bloco de regras para a classe .logo-esq. */
+  width: 120px; /* Define a largura do container do logo como 120 pixels. */
+  flex-shrink: 0; /* Impede que o logo encolha */ /* Impede que o item flexível encolha. */
+} /* Fim do bloco de regras para .logo-esq. */
+/* Imagem do logo esquerdo. */ /* Comentário explicando o seletor .logo-esq img. */
 .logo-esq img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-/* Imagem do logo do lado direito. */
+  /* Início do bloco de regras para a imagem dentro de .logo-esq. */
+  width: 100%; /* Faz a imagem ocupar 100% da largura do seu container. */
+  height: auto; /* Ajusta a altura automaticamente para manter a proporção. */
+  display: block; /* Remove espaços extras abaixo da imagem. */
+} /* Fim do bloco de regras para .logo-esq img. */
+/* Imagem do logo do lado direito. */ /* Comentário explicando o seletor .logo-dir img. */
 .logo-dir img {
-  display: block; /* mostrar no desktop */
-  width: auto;
-  max-width: 140px; /* ajusta conforme necessidade */
-  max-height: 72px;
-  height: auto;
-  object-fit: contain; /* ajuste a imagem para caber inteira dentro da caixa */
-}
-/* Container para os botões do cabeçalho (Login, etc.). */
+  /* Início do bloco de regras para a imagem dentro de .logo-dir. */
+  display: block; /* mostrar no desktop */ /* Garante que a imagem seja exibida como um bloco. */
+  width: auto; /* Ajusta a largura automaticamente. */
+  max-width: 140px; /* ajusta conforme necessidade */ /* Define a largura máxima da imagem. */
+  max-height: 72px; /* Define a altura máxima da imagem. */
+  height: auto; /* Ajusta a altura automaticamente. */
+  object-fit: contain; /* ajuste a imagem para caber inteira dentro da caixa */ /* Garante que a imagem inteira seja visível, sem cortes. */
+} /* Fim do bloco de regras para .logo-dir img. */
+/* Container para os botões do cabeçalho (Login, etc.). */ /* Comentário explicando a classe .header-btns. */
 .header-btns {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: nowrap; /* permite que todos os itens fiquem compactuados na mesma linha */
-  flex-shrink: 0; /* impede que o item flex encolha */
-}
-/* Estilo padrão para os botões no cabeçalho. */
+  /* Início do bloco de regras para a classe .header-btns. */
+  display: flex; /* Ativa o layout flexbox. */
+  gap: 10px; /* Cria um espaçamento de 10px entre os botões. */
+  align-items: center; /* Alinha os botões verticalmente ao centro. */
+  flex-wrap: nowrap; /* permite que todos os itens fiquem compactuados na mesma linha */ /* Impede que os botões quebrem para a linha de baixo. */
+  flex-shrink: 0; /* impede que o item flex encolha */ /* Impede que o container dos botões encolha. */
+} /* Fim do bloco de regras para .header-btns. */
+/* Estilo padrão para os botões no cabeçalho. */ /* Comentário explicando a classe .btn-header. */
 .btn-header {
-  padding: 4px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  font-weight: bold;
-  line-height: 1; /* a altura da linha ficará a mesma do tamanho da fonte */
-  background-color: #f57c00;
-  color: white;
-  border: 2px solid #f57c00;
-  white-space: normal; /* permite quebra de texto para caber no botão */
-  display: flex;
-  flex-wrap: unset;
-}
-/* Efeito hover para os botões do cabeçalho. */
+  /* Início do bloco de regras para a classe .btn-header. */
+  padding: 4px 8px; /* Adiciona preenchimento interno ao botão. */
+  border-radius: 5px; /* Arredonda os cantos do botão. */
+  cursor: pointer; /* Mostra um cursor de mão ao passar o mouse. */
+  text-decoration: none; /* Remove o sublinhado do texto. */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Animação suave para as mudanças de cor. */
+  font-weight: bold; /* Deixa o texto do botão em negrito. */
+  line-height: 1; /* a altura da linha ficará a mesma do tamanho da fonte */ /* Define a altura da linha do texto. */
+  background-color: #f57c00; /* Define a cor de fundo como laranja. */
+  color: white; /* Define a cor do texto como branco. */
+  border: 2px solid #f57c00; /* Adiciona uma borda laranja de 2px. */
+  white-space: normal; /* permite quebra de texto para caber no botão */ /* Permite que o texto quebre a linha se necessário. */
+  display: flex; /* Ativa o Flexbox para o conteúdo do botão. */
+  flex-wrap: unset; /* Impede que o conteúdo interno do botão quebre a linha. */
+} /* Fim do bloco de regras para .btn-header. */
+/* Efeito hover para os botões do cabeçalho. */ /* Comentário explicando o estado :hover. */
 .btn-header:hover {
-  background-color: white;
-  color: #f57c00;
-  border-color: white;
-}
-/* Estilo específico para o botão "Área do Aluno", que é vazado. */
+  /* Início do bloco de regras para o estado hover de .btn-header. */
+  background-color: white; /* Muda o fundo para branco ao passar o mouse. */
+  color: #f57c00; /* Muda a cor do texto para laranja. */
+  border-color: white; /* Muda a cor da borda para branco. */
+} /* Fim do bloco de regras para .btn-header:hover. */
+/* Estilo específico para o botão "Área do Aluno", que é vazado. */ /* Comentário explicando a classe .btn-aluno. */
 .btn-aluno {
-  background-color: transparent;
-  border-color: white;
-  color: white;
-}
-/* Efeito hover para o botão "Área do Aluno". */
+  /* Início do bloco de regras para a classe .btn-aluno. */
+  background-color: transparent; /* Deixa o fundo do botão transparente. */
+  border-color: white; /* Define a cor da borda como branca. */
+  color: white; /* Define a cor do texto como branca. */
+} /* Fim do bloco de regras para .btn-aluno. */
+/* Efeito hover para o botão "Área do Aluno". */ /* Comentário explicando o estado :hover. */
 .btn-aluno:hover {
-  background-color: white;
-  color: #f57c00;
-  border-color: white;
-}
+  /* Início do bloco de regras para o estado hover de .btn-aluno. */
+  background-color: white; /* Muda o fundo para branco no hover. */
+  color: #f57c00; /* Muda a cor do texto para laranja no hover. */
+  border-color: white; /* Mantém a cor da borda como branca no hover. */
+} /* Fim do bloco de regras para .btn-aluno:hover. */
 
-/*SEÇÃO*/
-/* Container principal da seção*/
+/*SEÇÃO*/ /* Comentário de seção. */
+/* Container principal da seção*/ /* Comentário explicando a classe .team-section. */
 .team-section {
-  display: flex;
-  justify-content: center;
-  padding: 60px 20px 100px;
-}
-/* Botão do menu hambúrguer para telas menores. */
+  /* Início do bloco de regras para a classe .team-section. */
+  display: flex; /* Ativa o layout flexbox. */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente. */
+  padding: 60px 20px 100px; /* Adiciona preenchimento (topo, lados, fundo). */
+} /* Fim do bloco de regras para .team-section. */
+/* Botão do menu hambúrguer para telas menores. */ /* Comentário explicando a classe .menu-toggle. */
 .menu-toggle {
-  display: none;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  color: white;
-  font-size: 1.4rem;
-  padding: 6px 10px;
-  border-radius: 6px; /* Arredondamento de campos */
-  cursor: pointer;
-  z-index: 20; /* Controla a ordem de sobreposição */
-}
-/* Grid que organiza os cards dos membros */
+  /* Início do bloco de regras para a classe .menu-toggle. */
+  display: none; /* Esconde o botão por padrão. */
+  background: transparent; /* Define o fundo como transparente. */
+  border: 2px solid rgba(255, 255, 255, 0.15); /* Adiciona uma borda branca semitransparente. */
+  color: white; /* Define a cor do ícone como branco. */
+  font-size: 1.4rem; /* Define o tamanho da fonte do ícone. */
+  padding: 6px 10px; /* Adiciona preenchimento interno. */
+  border-radius: 6px; /* Arredondamento de campos */ /* Arredonda os cantos do botão. */
+  cursor: pointer; /* Mostra um cursor de mão ao passar o mouse. */
+  z-index: 20; /* Controla a ordem de sobreposição */ /* Garante que o botão fique sobre outros elementos. */
+} /* Fim do bloco de regras para .menu-toggle. */
+/* Grid que organiza os cards dos membros */ /* Comentário explicando a classe .team-container. */
 .team-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px 80px;
-  max-width: 1100px;
-  width: 100%;
-}
-/* Estilo individual para cada card de membro */
+  /* Início do bloco de regras para a classe .team-container. */
+  display: grid; /* Ativa o layout de grade (grid). */
+  grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de largura igual. */
+  gap: 50px 80px; /* Define o espaçamento entre as linhas (50px) e colunas (80px). */
+  max-width: 1100px; /* Define a largura máxima do container. */
+  width: 100%; /* Faz o container ocupar 100% da largura disponível. */
+} /* Fim do bloco de regras para .team-container. */
+/* Estilo individual para cada card de membro */ /* Comentário explicando a classe .team-member. */
 .team-member {
-  background: #ffe0b2;
-  border-radius: 14px;
-  text-align: center;
-  padding: 25px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-/* Efeito de "levantar" o card ao passar o mouse */
+  /* Início do bloco de regras para a classe .team-member. */
+  background: #ffe0b2; /* Define uma cor de fundo pêssego claro. */
+  border-radius: 14px; /* Arredonda os cantos do card. */
+  text-align: center; /* Centraliza o texto dentro do card. */
+  padding: 25px; /* Adiciona preenchimento interno de 25px. */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil. */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave para transformações e sombra. */
+} /* Fim do bloco de regras para .team-member. */
+/* Efeito de "levantar" o card ao passar o mouse */ /* Comentário explicando o estado :hover. */
 .team-member:hover {
+  /* Início do bloco de regras para o estado hover de .team-member. */
   transform: translateY(
-    -5px
-  ); /* animação para levanta o card quando passa o mouse em cima */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-/* Foto do membro*/
+    /* Início da propriedade de transformação. */ -5px /* Move o card 5 pixels para cima. */
+  ); /* animação para levanta o card quando passa o mouse em cima */ /* Fim da propriedade de transformação. */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Aumenta a intensidade da sombra. */
+} /* Fim do bloco de regras para .team-member:hover. */
+/* Foto do membro*/ /* Comentário explicando o seletor .team-member img. */
 .team-member img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #ff8c00;
-  margin-bottom: 15px;
-}
-/* Nome do membro */
+  /* Início do bloco de regras para a imagem dentro de .team-member. */
+  width: 120px; /* Define a largura da imagem. */
+  height: 120px; /* Define a altura da imagem. */
+  border-radius: 50%; /* Torna a imagem perfeitamente redonda. */
+  object-fit: cover; /* Garante que a imagem preencha o espaço, cortando o excesso. */
+  border: 4px solid #ff8c00; /* Adiciona uma borda laranja de 4px. */
+  margin-bottom: 15px; /* Adiciona uma margem inferior de 15px. */
+} /* Fim do bloco de regras para .team-member img. */
+/* Nome do membro */ /* Comentário explicando o seletor .team-member h3. */
 .team-member h3 {
-  margin: 10px 0 5px;
-  color: #e65100;
-  font-size: 1.1rem;
-}
-/* Descrição ou cargo do membro*/
+  /* Início do bloco de regras para o h3 dentro de .team-member. */
+  margin: 10px 0 5px; /* Adiciona margem (topo, lados, fundo). */
+  color: #e65100; /* Define a cor do texto como um laranja mais escuro. */
+  font-size: 1.1rem; /* Define o tamanho da fonte. */
+} /* Fim do bloco de regras para .team-member h3. */
+/* Descrição ou cargo do membro*/ /* Comentário explicando o seletor .team-member p. */
 .team-member p {
-  font-size: 0.95rem;
-  color: #5d4037;
-}
+  /* Início do bloco de regras para o parágrafo dentro de .team-member. */
+  font-size: 0.95rem; /* Define o tamanho da fonte. */
+  color: #5d4037; /* Define a cor do texto como um tom de marrom. */
+} /* Fim do bloco de regras para .team-member p. */
 
-/*RESPONSIVO*/
-/* Ajustes para telas de tamanho médio, como tablets. */
+/*RESPONSIVO*/ /* Comentário de seção para responsividade. */
+/* Ajustes para telas de tamanho médio, como tablets. */ /* Comentário explicando a media query. */
 @media (max-width: 900px) {
-  /* Altera o grid para 2 colunas. */
+  /* Início do bloco de media query para telas até 900px de largura. */
+  /* Altera o grid para 2 colunas. */ /* Comentário explicando a regra. */
   .team-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
-}
-/* Ajustes para telas pequenas, como celulares. */
+    /* Início do bloco de regras para .team-container. */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Altera o layout para 2 colunas de largura igual. */
+    gap: 40px; /* Reduz o espaçamento entre os cards. */
+  } /* Fim do bloco de regras para .team-container. */
+} /* Fim do bloco de media query. */
+/* Ajustes para telas pequenas, como celulares. */ /* Comentário explicando a media query. */
 @media (max-width: 600px) {
-  /* Altera o grid para 1 coluna, empilhando os cards. */
+  /* Início do bloco de media query para telas até 600px de largura. */
+  /* Altera o grid para 1 coluna, empilhando os cards. */ /* Comentário explicando a regra. */
   .team-container {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-}
+    /* Início do bloco de regras para .team-container. */
+    grid-template-columns: 1fr; /* Altera o layout para uma única coluna. */
+    gap: 30px; /* Reduz o espaçamento entre os cards. */
+  } /* Fim do bloco de regras para .team-container. */
+} /* Fim do bloco de media query. */

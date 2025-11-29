@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // A função dentro do addEventListener será executada toda vez que o botão for clicado.
   botao.addEventListener("click", function (event) {
     // Verifica no armazenamento local do navegador se existe um item chamado "usuarioLogado".
-    const logado = localStorage.getItem("usuarioLogado");
+    const logado = sessionStorage.getItem("isLoggedIn");
 
     // Se o item "usuarioLogado" não existir (ou seja, o usuário não está logado).
     if (!logado) {
