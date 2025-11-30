@@ -1,318 +1,318 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+* { /* Seletor universal que aplica as regras a todos os elementos da página. */
+    margin: 0; /* Remove a margem externa padrão de todos os elementos. */
+    padding: 0; /* Remove o preenchimento interno padrão de todos os elementos. */
+    box-sizing: border-box; /* Altera o cálculo do tamanho total para incluir padding e borda. */
+    font-family: Arial, sans-serif; /* Define a família de fontes padrão. */
 }
 
-body {
-    background-color: #fff;
-    color: #000;
-    transition: 0.3s;
-    text-align: right;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+body { /* Estiliza o corpo (<body>) da página. */
+    background-color: #fff; /* Define a cor de fundo como branco. */
+    color: #000; /* Define a cor do texto como preto. */
+    transition: 0.3s; /* Adiciona uma transição suave para mudanças de propriedades. */
+    text-align: right; /* Alinha o texto à direita (pode ser um comportamento inesperado). */
+    font-family: Arial, sans-serif; /* Redefine a família de fontes (redundante). */
+    margin: 0; /* Remove a margem do corpo (redundante devido ao seletor '*'). */
+    padding: 0; /* Remove o preenchimento do corpo (redundante). */
+    display: flex; /* Ativa o layout flexbox. */
+    flex-direction: column; /* Organiza os filhos diretos do body em uma coluna. */
 }
 
-header {
-    background-color: #f57c00;
-    color: white;
-    padding: 15px 0; /* Aumenta o padding vertical do header */
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+header { /* Estiliza o cabeçalho (<header>) da página. */
+    background-color: #f57c00; /* Define a cor de fundo como laranja. */
+    color: white; /* Define a cor do texto como branco. */
+    padding: 15px 0; /* Aumenta o padding vertical do header */ /* Adiciona preenchimento vertical. */
+    text-align: center; /* Centraliza o texto. */
+    position: relative; /* Define um contexto de posicionamento para elementos filhos. */
+    display: flex; /* Ativa o layout flexbox. */
+    flex-direction: column; /* Organiza os itens do cabeçalho em coluna. */
+    align-items: center; /* Centraliza os itens horizontalmente. */
+    width: 100%; /* Faz o cabeçalho ocupar 100% da largura. */
 }
 
-.header-top {
-  padding: 0 20px; /* Padding vertical mínimo para o header */
-  box-sizing: border-box;
-  position: relative; /* Mantém a referência para itens posicionados dentro */
-  display: flex; /* Alinha itens lado a lado */
-  align-items: center; /* Alinha verticalmente */
-  width: 100%;
+.header-top { /* Estiliza o contêiner superior do cabeçalho. */
+  padding: 0 20px; /* Padding vertical mínimo para o header */ /* Adiciona preenchimento horizontal. */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura. */
+  position: relative; /* Mantém a referência para itens posicionados dentro */ /* Define contexto de posicionamento. */
+  display: flex; /* Alinha itens lado a lado */ /* Ativa o layout flexbox. */
+  align-items: center; /* Alinha verticalmente */ /* Alinha os itens verticalmente ao centro. */
+  width: 100%; /* Ocupa 100% da largura. */
 }
 
-a {
-    color: white;
-    text-decoration: none;
+a { /* Estiliza todos os links (<a>). */
+    color: white; /* Define a cor do texto do link como branco. */
+    text-decoration: none; /* Remove o sublinhado padrão dos links. */
 }
 
-h1 {
-    font-size: 30px;
-    letter-spacing: 2px;
-    color: white;
-    margin-top: 10px;
+h1 { /* Estiliza todos os títulos de nível 1 (<h1>). */
+    font-size: 30px; /* Define o tamanho da fonte. */
+    letter-spacing: 2px; /* Adiciona espaçamento entre as letras. */
+    color: white; /* Define a cor do texto como branco. */
+    margin-top: 10px; /* Adiciona uma margem no topo. */
 }
 
-.center-area {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative; /* Permite o ajuste fino da posição */
-  left: 1px; /* Desloca o bloco para a direita. Ajuste o valor. */
+.center-area { /* Estiliza a área central do cabeçalho. */
+  flex-grow: 1; /* Permite que a área cresça para ocupar o espaço disponível. */
+  display: flex; /* Ativa o layout flexbox. */
+  flex-direction: column; /* Organiza os itens internos em coluna. */
+  align-items: center; /* Centraliza os itens horizontalmente. */
+  position: relative; /* Permite o ajuste fino da posição */ /* Define contexto de posicionamento. */
+  left: 1px; /* Desloca o bloco para a direita. Ajuste o valor. */ /* Desloca o elemento 1px para a direita. */
 }
 
 /* Botão hamburguer padrão: escondido */
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  color: white;
-  font-size: 1.4rem;
-  padding: 6px 10px;
-  border-radius: 60px;
-  cursor: pointer;
-  z-index: 20;
+.menu-toggle { /* Estiliza o botão de menu hambúrguer. */
+  display: none; /* Esconde o botão por padrão. */
+  background: transparent; /* Define o fundo como transparente. */
+  border: 2px solid rgba(255, 255, 255, 0.15); /* Adiciona uma borda branca semitransparente. */
+  color: white; /* Define a cor do ícone como branco. */
+  font-size: 1.4rem; /* Define o tamanho da fonte do ícone. */
+  padding: 6px 10px; /* Adiciona preenchimento interno. */
+  border-radius: 60px; /* Arredonda os cantos, tornando-o circular. */
+  cursor: pointer; /* Mostra um cursor de mão ao passar o mouse. */
+  z-index: 20; /* Garante que o botão fique sobre outros elementos. */
 }
 
 /* Mostra o botão apenas em telas pequenas */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: inline-block;
-    position: absolute;
-    left: 16px;
-    top: 18px;
-    color: #fff;
+@media (max-width: 768px) { /* Aplica regras para telas com largura máxima de 768px. */
+  .menu-toggle { /* Estiliza o botão de menu em telas pequenas. */
+    display: inline-block; /* Torna o botão visível. */
+    position: absolute; /* Posiciona o botão em relação ao cabeçalho. */
+    left: 16px; /* Distância da borda esquerda. */
+    top: 18px; /* Distância do topo. */
+    color: #fff; /* Define a cor do ícone como branco. */
   }
 
   /* Oculta os links quando o menu está fechado */
-  .sub-nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background: #ff8c00;
-    position: absolute;
-    z-index: 9999;          /* POR CIMA DE TUDO */
-    top: 70px; /* abaixo do cabeçalho */
-    left: 0;
-    right: 0;
-    padding: 15px 0;
-    gap: 10px;
-    border-top: 1px solid rgba(255,255,255,0.2);
+  .sub-nav-links { /* Estiliza os links de navegação em telas pequenas. */
+    display: none; /* Esconde os links por padrão. */
+    flex-direction: column; /* Organiza os links em coluna. */
+    align-items: center; /* Centraliza os links horizontalmente. */
+    background: #ff8c00; /* Define um fundo laranja para o menu aberto. */
+    position: absolute; /* Posiciona o menu em relação à página. */
+    z-index: 9999;          /* POR CIMA DE TUDO */ /* Garante que o menu fique sobre todos os outros elementos. */
+    top: 70px; /* abaixo do cabeçalho */ /* Distância do topo. */
+    left: 0; /* Alinha à esquerda. */
+    right: 0; /* Alinha à direita, ocupando a largura total. */
+    padding: 15px 0; /* Adiciona preenchimento vertical. */
+    gap: 10px; /* Adiciona espaçamento entre os links. */
+    border-top: 1px solid rgba(255,255,255,0.2); /* Adiciona uma linha sutil no topo. */
   }
 
   /* Quando o menu está aberto, mostra os links */
-  body.menu-aberto .sub-nav-links {
-    display: flex;
+  body.menu-aberto .sub-nav-links { /* Estiliza os links quando o menu está aberto. */
+    display: flex; /* Torna os links visíveis. */
   }
 
-  .sub-nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+  .sub-nav-links a { /* Estiliza cada link dentro do menu aberto. */
+    color: white; /* Define a cor do texto como branco. */
+    text-decoration: none; /* Remove o sublinhado. */
+    font-size: 18px; /* Define o tamanho da fonte. */
   }
 
-  .sub-nav-links a:hover {
-    text-decoration: underline;
+  .sub-nav-links a:hover { /* Efeito ao passar o mouse sobre o link. */
+    text-decoration: underline; /* Adiciona um sublinhado. */
   }
 }
 
 /* Em telas grandes: os links ficam sempre visíveis e centralizados */
-@media (min-width: 769px) {
-  .sub-nav-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px; /* separa mais os links */
-    margin-top: 5px; /* desce um pouco da logo/título */
+@media (min-width: 769px) { /* Aplica regras para telas com largura mínima de 769px. */
+  .sub-nav-links { /* Estiliza os links de navegação em telas grandes. */
+    display: flex; /* Ativa o layout flexbox. */
+    justify-content: center; /* Centraliza os links horizontalmente. */
+    flex-wrap: wrap; /* Permite que os links quebrem para a próxima linha. */
+    gap: 40px; /* separa mais os links */ /* Adiciona um espaçamento grande entre os links. */
+    margin-top: 5px; /* desce um pouco da logo/título */ /* Adiciona uma pequena margem no topo. */
   }
 }
 
-.course-Icon {
-    width: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
+.course-Icon { /* Estiliza o ícone do curso (classe não usada no HTML fornecido). */
+    width: 50%; /* Define a largura como 50% do contêiner pai. */
+    object-fit: cover; /* Faz a imagem cobrir o espaço, cortando o excesso. */
+    margin-bottom: 1rem; /* Adiciona uma margem na parte inferior. */
 }
 
-button {
-    background: none;
-    border: none;
-    margin-top: 0.5rem;
+button { /* Estiliza todos os botões (<button>). */
+    background: none; /* Remove o fundo padrão. */
+    border: none; /* Remove a borda padrão. */
+    margin-top: 0.5rem; /* Adiciona uma margem no topo. */
 }
 
-header h1,
-header nav {
-    max-width: 1800px;
-    width: 100%;
-    padding: 5px 20px;
-    box-sizing: border-box;
+header h1, /* Aplica regras ao h1 do cabeçalho. */
+header nav { /* Aplica regras ao nav do cabeçalho. */
+    max-width: 1800px; /* Define a largura máxima. */
+    width: 100%; /* Ocupa 100% da largura disponível. */
+    padding: 5px 20px; /* Adiciona preenchimento interno. */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura. */
 }
 
-.logo-esq {
-    position: absolute;
-    top: 280%;
-    transform: translateY(-50%);
-    left: 60px;
-    width: 150px;
-    margin-top: 65px;
+.logo-esq { /* Estiliza o logotipo esquerdo. */
+    position: absolute; /* Posiciona o logotipo de forma absoluta. */
+    top: 280%; /* Posição vertical muito grande, provavelmente um erro. */
+    transform: translateY(-50%); /* Move o elemento 50% de sua altura para cima. */
+    left: 60px; /* Distância da borda esquerda. */
+    width: 150px; /* Define a largura. */
+    margin-top: 65px; /* Adiciona uma margem no topo. */
 }
 
-.logo-esq img {
-    width: 100%;
-    height: auto;
-    display: block;
+.logo-esq img { /* Estiliza a imagem dentro do logotipo esquerdo. */
+    width: 100%; /* A imagem ocupa 100% da largura do contêiner. */
+    height: auto; /* A altura se ajusta automaticamente. */
+    display: block; /* Remove espaços extras abaixo da imagem. */
 }
 
-.btn-header {
-    padding: 8px 12px;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    font-weight: bold;
-    line-height: 1;
-    background-color: #f57c00;
-    color: white;
-    border: 2px solid #f57c00;
-    white-space: nowrap;
+.btn-header { /* Estiliza os botões do cabeçalho. */
+    padding: 8px 12px; /* Adiciona preenchimento interno. */
+    font-size: 14px; /* Define o tamanho da fonte. */
+    border-radius: 5px; /* Arredonda os cantos. */
+    cursor: pointer; /* Mostra um cursor de mão. */
+    text-decoration: none; /* Remove o sublinhado. */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Animação suave para mudanças de cor. */
+    font-weight: bold; /* Deixa o texto em negrito. */
+    line-height: 1; /* Define a altura da linha. */
+    background-color: #f57c00; /* Define a cor de fundo como laranja. */
+    color: white; /* Define a cor do texto como branco. */
+    border: 2px solid #f57c00; /* Adiciona uma borda laranja. */
+    white-space: nowrap; /* Impede que o texto quebre a linha. */
 }
 
 /* ========== ESTILO GERAL ========== */
 
-body {
-    margin: 0;
-    padding: 0;
-    transition: background 0.3s ease, color 0.3s ease;
-    font-family: Arial, sans-serif;
+body { /* Redefine estilos para o body (algumas regras são redundantes). */
+    margin: 0; /* Remove a margem. */
+    padding: 0; /* Remove o preenchimento. */
+    transition: background 0.3s ease, color 0.3s ease; /* Animação suave para fundo e cor. */
+    font-family: Arial, sans-serif; /* Define a família de fontes. */
 }
 
 /* ===== LIGHT MODE ===== */
-body.light {
-    background: #ffffff;
-    color: #000000;
+body.light { /* Estilos para o modo claro. */
+    background: #ffffff; /* Fundo branco. */
+    color: #000000; /* Texto preto. */
 }
 
 /* ===== DARK MODE (estilo da primeira imagem) ===== */
-body.dark {
-    background: #2f2f2f;             /* fundo cinza escuro */
-    color: #e6e6e6;                  /* texto claro */
+body.dark { /* Estilos para o modo escuro. */
+    background: #2f2f2f;             /* fundo cinza escuro */ /* Fundo cinza escuro. */
+    color: #e6e6e6;                  /* texto claro */ /* Texto cinza claro. */
 }
 
 /* ========== TOGGLE DO MODO NOTURNO ========== */
 
-.toggle {
-    width: 70px;
-    height: 30px;
-    border-radius: 50px;
-    background: #f68a42;
-    cursor: pointer;
-    transition: background 0.4s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    user-select: none;
-    position: relative;
-    overflow: hidden;
+.toggle { /* Estiliza o contêiner do botão de alternância. */
+    width: 70px; /* Define a largura. */
+    height: 30px; /* Define a altura. */
+    border-radius: 50px; /* Arredonda os cantos para formar uma pílula. */
+    background: #f68a42; /* Define a cor de fundo como laranja claro. */
+    cursor: pointer; /* Mostra um cursor de mão. */
+    transition: background 0.4s ease; /* Animação suave para a cor de fundo. */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Adiciona uma sombra. */
+    user-select: none; /* Impede que o texto dentro seja selecionado. */
+    position: relative; /* Define um contexto de posicionamento. */
+    overflow: hidden; /* Esconde conteúdo que transborda. */
 }
 
 /* cor do botão no DARK MODE */
-.toggle.dark {
-    background: #1370ff; /* azul igual ao contorno dos cards */
+.toggle.dark { /* Estiliza o botão de alternância no modo escuro. */
+    background: #1370ff; /* azul igual ao contorno dos cards */ /* Define a cor de fundo como azul. */
 }
 
 /* ícones */
-.mode-icon {
-    position: absolute;
-    width: 25px;
-    transition: transform 0.35s ease;
-    pointer-events: none;
-    top: 50%;
-    transform: translateY(-50%);
+.mode-icon { /* Estiliza o ícone dentro do botão de alternância. */
+    position: absolute; /* Posiciona o ícone de forma absoluta. */
+    width: 25px; /* Define a largura. */
+    transition: transform 0.35s ease; /* Animação suave para a posição. */
+    pointer-events: none; /* Impede que o ícone receba eventos de mouse. */
+    top: 50%; /* Posiciona no meio verticalmente. */
+    transform: translateY(-50%); /* Ajusta a posição vertical para o centro exato. */
 
 }
 
-#final-score,
-.question-text,
-.answer-text * {
-  color: #000000 !important;   /* ou outra cor que você quiser */
+#final-score, /* Seleciona o elemento da pontuação final. */
+.question-text, /* Seleciona o texto da pergunta. */
+.answer-text * { /* Seleciona todos os filhos do texto da resposta. */
+  color: #000000 !important;   /* ou outra cor que você quiser */ /* Força a cor do texto para preto. */
 }
 
 /* bolinha deslizante */
-.slider {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: white;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    transition: transform 0.35s ease;
-    z-index: 5;
+.slider { /* Estiliza a bolinha do botão de alternância. */
+    position: absolute; /* Posiciona a bolinha de forma absoluta. */
+    width: 24px; /* Define a largura. */
+    height: 24px; /* Define a altura. */
+    border-radius: 50%; /* Torna a bolinha perfeitamente redonda. */
+    background: white; /* Define a cor de fundo como branco. */
+    top: 50%; /* Posiciona no meio verticalmente. */
+    left: 5px; /* Distância da borda esquerda. */
+    transform: translateY(-50%); /* Ajusta a posição vertical para o centro exato. */
+    transition: transform 0.35s ease; /* Animação suave para o movimento. */
+    z-index: 5; /* Garante que a bolinha fique sobre outros elementos internos. */
 }
 
 /* slider movendo no modo escuro */
-.toggle.dark .slider {
-    transform: translate(35px, -50%);
+.toggle.dark .slider { /* Estiliza a bolinha no modo escuro. */
+    transform: translate(35px, -50%); /* Move a bolinha para a direita. */
 }
 
 
 /* ========== ESTILOS DOS CARDS NO DARK MODE ========== */
 
 /* card do quiz */
-body.dark .quiz-card {
-    background: #0f0f0f;                     /* preto suave */
-    border-radius: 22px;
-    border: 4px solid rgba(19,112,255,0.35);  /* azul igual ao site */
-    box-shadow: 0 18px 30px rgba(0,0,0,0.6);
-    color: #e6e6e6;
+body.dark .quiz-card { /* Estiliza o card do quiz no modo escuro. */
+    background: #0f0f0f;                     /* preto suave */ /* Fundo preto suave. */
+    border-radius: 22px; /* Arredonda os cantos. */
+    border: 4px solid rgba(19,112,255,0.35);  /* azul igual ao site */ /* Borda azul semitransparente. */
+    box-shadow: 0 18px 30px rgba(0,0,0,0.6); /* Adiciona uma sombra. */
+    color: #e6e6e6; /* Define a cor do texto como cinza claro. */
 }
 /* menu hamburguer */
 
-@media (max-width: 1024px) {
-    body.dark .sub-nav-links {
-        background: #000000;
-        border-radius: 22px;
-        border: 4px solid rgba(19,112,255,0.35);
-        box-shadow: 0 18px 30px rgba(0,0,0,0.6);
-        color: #e6e6e6;
+@media (max-width: 1024px) { /* Aplica regras para telas com largura máxima de 1024px. */
+    body.dark .sub-nav-links { /* Estiliza os links de navegação no modo escuro em telas menores. */
+        background: #000000; /* Fundo preto. */
+        border-radius: 22px; /* Arredonda os cantos. */
+        border: 4px solid rgba(19,112,255,0.35); /* Borda azul semitransparente. */
+        box-shadow: 0 18px 30px rgba(0,0,0,0.6); /* Adiciona uma sombra. */
+        color: #e6e6e6; /* Define a cor do texto como cinza claro. */
     }
 }
 
 /* DESKTOP — NÃO mostra a borda azul */
-@media (min-width: 1025px) {
-    body.dark .sub-nav-links {
-        background: none;
-        border: none;
-        box-shadow: none;
+@media (min-width: 1025px) { /* Aplica regras para telas com largura mínima de 1025px. */
+    body.dark .sub-nav-links { /* Estiliza os links de navegação no modo escuro em telas grandes. */
+        background: none; /* Remove o fundo. */
+        border: none; /* Remove a borda. */
+        box-shadow: none; /* Remove a sombra. */
     }
 }
 
 /* opções */
-body.dark .quiz-option {
-    background: linear-gradient(180deg, #111111, #0b0b0b);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.6);
-    border: 2px solid rgba(255,255,255,0.05);
+body.dark .quiz-option { /* Estiliza as opções do quiz no modo escuro (classe não usada no HTML). */
+    background: linear-gradient(180deg, #111111, #0b0b0b); /* Fundo com gradiente de cinza escuro. */
+    box-shadow: 0 6px 14px rgba(0,0,0,0.6); /* Adiciona uma sombra. */
+    border: 2px solid rgba(255,255,255,0.05); /* Borda branca muito sutil. */
 }
 
 /* texto das opções */
-body.dark .quiz-option button {
-    color: #d1d1d1;
+body.dark .quiz-option button { /* Estiliza o botão dentro da opção no modo escuro. */
+    color: #d1d1d1; /* Define a cor do texto como cinza claro. */
 }
 
 /* hover */
-body.dark .quiz-option:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.6),
-                0 0 0 4px rgba(19,112,255,0.06);
+body.dark .quiz-option:hover { /* Efeito ao passar o mouse sobre a opção no modo escuro. */
+    transform: translateY(-2px); /* Move a opção levemente para cima. */
+    box-shadow: 0 14px 30px rgba(0,0,0,0.6), /* Aumenta a sombra. */
+                0 0 0 4px rgba(19,112,255,0.06); /* Adiciona um brilho azul sutil. */
 }
 
 /* duração (12h, 20h etc) */
-body.dark .duration {
-    color: #bdbdbd;
+body.dark .duration { /* Estiliza a duração no modo escuro (classe não usada). */
+    color: #bdbdbd; /* Define a cor do texto como cinza. */
 }
 
 /* badge flutuante (mascote) */
-body.dark .floating-badge {
-    background: linear-gradient(180deg, #06203a, #071224);
-    border: 4px solid rgba(19,112,255,0.3);
-    box-shadow: 0 6px 30px rgba(19,112,255,0.15),
+body.dark .floating-badge { /* Estiliza o mascote no modo escuro (classe não usada). */
+    background: linear-gradient(180deg, #06203a, #071224); /* Fundo com gradiente de azul escuro. */
+    border: 4px solid rgba(19,112,255,0.3); /* Borda azul semitransparente. */
+    box-shadow: 0 6px 30px rgba(19,112,255,0.15), /* Adiciona múltiplas sombras. */
                 0 18px 36px rgba(0,0,0,0.6);
 }
 
@@ -322,67 +322,67 @@ body.dark .floating-badge {
    =========================================== */
 
 /* 🌙 DARK MODE aplicado ao quiz-container */
-.toggle.dark .quiz-container {
-    background: #000 !important;   /* container preto */
+.toggle.dark .quiz-container { /* Estiliza o contêiner do quiz quando o botão de alternância está no modo escuro. */
+    background: #000 !important;   /* container preto */ /* Força o fundo para preto. */
    
 }
 
 /* mantém corretas e erradas intactas */
-.toggle.dark .quiz-container .option.correct {
-    background: #00ff6a !important;
-    color: #000 !important;
-    border: 2px solid #00ff6a !important;
+.toggle.dark .quiz-container .option.correct { /* Estiliza a opção correta no modo escuro. */
+    background: #00ff6a !important; /* Força o fundo para verde. */
+    color: #000 !important; /* Força a cor do texto para preto. */
+    border: 2px solid #00ff6a !important; /* Força a borda para verde. */
 }
 
 /* ===========================================
    HEADER NO DARK MODE
    =========================================== */
 
-body.dark header {
-    background: #13161d; /* preto suavemente acinzentado */
+body.dark header { /* Estiliza o cabeçalho no modo escuro. */
+    background: #13161d; /* preto suavemente acinzentado */ /* Fundo preto acinzentado. */
 }
 
 /* ===========================================
    CARDS DOS CURSOS
    =========================================== */
 
-.card {
-    background: #ffffff; /* modo claro */
-    transition: 0.4s;
+.card { /* Estiliza um card genérico. */
+    background: #ffffff; /* modo claro */ /* Fundo branco. */
+    transition: 0.4s; /* Animação suave para mudanças. */
 }
 
-body.dark .card {
-    background: #1b1e26; /* CINZA ESCURO bonito */
-    border: 1px solid #272b33;
+body.dark .card { /* Estiliza o card no modo escuro. */
+    background: #1b1e26; /* CINZA ESCURO bonito */ /* Fundo cinza escuro. */
+    border: 1px solid #272b33; /* Borda cinza mais escura. */
 }
 
-body.dark .card:hover {
-    background: #22262f; /* fica um pouco mais claro no hover */
+body.dark .card:hover { /* Efeito ao passar o mouse sobre o card no modo escuro. */
+    background: #22262f; /* fica um pouco mais claro no hover */ /* Fundo um pouco mais claro. */
 }
 
 /* Evitar que imagens do card escureçam */
-.card img {
-    filter: none !important;
+.card img { /* Estiliza a imagem dentro do card. */
+    filter: none !important; /* Força a remoção de qualquer filtro (como escurecimento). */
 }
 
 /* ===========================================
    BOTÕES
    =========================================== */
 
-button, .btn-header, .option {
-    transition: 0.3s;
+button, .btn-header, .option { /* Aplica a transição a vários elementos clicáveis. */
+    transition: 0.3s; /* Animação suave. */
 }
 
-body.dark button,
-body.dark .btn-header {
-    background: #20242d;
-    border-color: #303540;
-    color: white;
+body.dark button, /* Estiliza botões no modo escuro. */
+body.dark .btn-header { /* Estiliza botões do cabeçalho no modo escuro. */
+    background: #20242d; /* Fundo cinza escuro. */
+    border-color: #303540; /* Cor da borda mais escura. */
+    color: white; /* Cor do texto branca. */
 }
 
-body.dark button:hover,
-body.dark .btn-header:hover {
-    background: #2a2f3a;
+body.dark button:hover, /* Efeito ao passar o mouse sobre botões no modo escuro. */
+body.dark .btn-header:hover { /* Efeito ao passar o mouse sobre botões do cabeçalho no modo escuro. */
+    background: #2a2f3a; /* Fundo um pouco mais claro. */
 }
 
 /* ===========================================
@@ -390,370 +390,370 @@ body.dark .btn-header:hover {
    =========================================== */
 
 /* Verde do acerto */
-.option.correct {
-    background: #00ff6a !important;
-    color: #000 !important;
-    border: 2px solid #00ff6a !important;
-    box-shadow: 0 0 20px #00ff6a, 0 0 40px #00ff6a !important;
+.option.correct { /* Estiliza a opção correta. */
+    background: #00ff6a !important; /* Força o fundo para verde. */
+    color: #000 !important; /* Força a cor do texto para preto. */
+    border: 2px solid #00ff6a !important; /* Força a borda para verde. */
+    box-shadow: 0 0 20px #00ff6a, 0 0 40px #00ff6a !important; /* Adiciona um brilho verde. */
 }
 
 /* Vermelho do erro */
-.option.wrong {
-    background: #ff4d4d !important;
-    color: #000 !important;
-    border: 2px solid #ff4d4d !important;
-    box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d !important;
+.option.wrong { /* Estiliza a opção errada. */
+    background: #ff4d4d !important; /* Força o fundo para vermelho. */
+    color: #000 !important; /* Força a cor do texto para preto. */
+    border: 2px solid #ff4d4d !important; /* Força a borda para vermelho. */
+    box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d !important; /* Adiciona um brilho vermelho. */
 }
 
 /* Ícone do sol/lua NÃO deve ser afetado */
-.mode-icon {
-    filter: none !important;
+.mode-icon { /* Estiliza o ícone de modo. */
+    filter: none !important; /* Força a remoção de qualquer filtro. */
 }
 
 /* A bolinha do dark mode */
-body.dark .slider {
-    background: white !important;
+body.dark .slider { /* Estiliza a bolinha do botão de alternância no modo escuro. */
+    background: white !important; /* Força o fundo para branco. */
 }
 
 /* ===========================================
    TÍTULOS, TEXTOS E LINKS
    =========================================== */
 
-body.dark h1,
-body.dark h3,
-body.dark p,
-body.dark a {
-    color: white;
+body.dark h1, /* Estiliza h1 no modo escuro. */
+body.dark h3, /* Estiliza h3 no modo escuro. */
+body.dark p, /* Estiliza parágrafos no modo escuro. */
+body.dark a { /* Estiliza links no modo escuro. */
+    color: white; /* Define a cor do texto como branco. */
 }
 
-    .header-btns {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    .header-btns { /* Estiliza o contêiner dos botões do cabeçalho. */
+    display: flex; /* Ativa o layout flexbox. */
+    align-items: center; /* Alinha os itens verticalmente ao centro. */
+    gap: 15px; /* Adiciona espaçamento entre os botões. */
 
-    position: absolute;
-    right: 40px;
-    bottom: 90px;
+    position: absolute; /* Posiciona de forma absoluta. */
+    right: 40px; /* Distância da borda direita. */
+    bottom: 90px; /* Distância da borda inferior. */
 }
 
-@media (max-width: 768px) {
-    .header-btns {
-        position: static; /* não perde layout no mobile */
-        margin-top: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
+@media (max-width: 768px) { /* Aplica regras para telas com largura máxima de 768px. */
+    .header-btns { /* Estiliza os botões do cabeçalho em telas pequenas. */
+        position: static; /* não perde layout no mobile */ /* Remove o posicionamento absoluto. */
+        margin-top: 20px; /* Adiciona margem no topo. */
+        justify-content: center; /* Centraliza os botões horizontalmente. */
+        flex-wrap: wrap; /* Permite que os botões quebrem a linha. */
+        gap: 12px; /* Ajusta o espaçamento. */
     }
 
-    .toggle {
-        transform: scale(0.9); /* diminui um pouco no celular */
+    .toggle { /* Estiliza o botão de alternância em telas pequenas. */
+        transform: scale(0.9); /* diminui um pouco no celular */ /* Reduz o tamanho do botão. */
     }
 }
 
-.btn-header:hover {
-    background-color: white;
-    color: #f57c00;
-    border-color: white;
+.btn-header:hover { /* Efeito ao passar o mouse sobre o botão do cabeçalho. */
+    background-color: white; /* Fundo branco. */
+    color: #f57c00; /* Texto laranja. */
+    border-color: white; /* Borda branca. */
 }
 
- footer {
-      background-color: #000000da;
-      color: white;
-      text-align: center;
-      padding: 35px;
-      width: 100%;
-      margin-top: 40px;
+ footer { /* Estiliza o rodapé. */
+      background-color: #000000da; /* Fundo preto semitransparente. */
+      color: white; /* Texto branco. */
+      text-align: center; /* Centraliza o texto. */
+      padding: 35px; /* Adiciona preenchimento interno. */
+      width: 100%; /* Ocupa 100% da largura. */
+      margin-top: 40px; /* Adiciona margem no topo. */
     }
 /* Instagram no canto inferior esquerdo */
-footer .social-media {
-  position: static;
-  left: 16px;
-  margin-top: -45px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+footer .social-media { /* Estiliza o contêiner de mídias sociais no rodapé. */
+  position: static; /* Remove o posicionamento. */
+  left: 16px; /* (Não se aplica com position: static). */
+  margin-top: -45px; /* Move o contêiner para cima. */
+  display: flex; /* Ativa o layout flexbox. */
+  align-items: center; /* Alinha os itens verticalmente. */
+  gap: 8px; /* Adiciona espaçamento. */
 }
 
 /* garante que o link e ícone fiquem alinhados */
-footer .social-media .social-link {
-  color: white;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+footer .social-media .social-link { /* Estiliza o link de mídia social. */
+  color: white; /* Cor do texto branca. */
+  text-decoration: none; /* Remove o sublinhado. */
+  display: inline-flex; /* Ativa o layout flexbox em linha. */
+  align-items: center; /* Alinha os itens verticalmente. */
+  gap: 8px; /* Adiciona espaçamento. */
 }
 
 /* tamanho do ícone do instagram */
-footer .social-media img {
-  width: 60px;
-  height: 60px;
-  display: block;
+footer .social-media img { /* Estiliza o ícone do Instagram. */
+  width: 60px; /* Define a largura. */
+  height: 60px; /* Define a altura. */
+  display: block; /* Remove espaços extras. */
 }
 
 /* Logo da empresa no canto inferior direito */
-footer .footer-logo {
-  position: relative;
-  right: 16px;
-  margin-left: 1400px;
-  bottom: -45px;
-  display: flex;
-  align-items: center;
+footer .footer-logo { /* Estiliza o logotipo no rodapé. */
+  position: relative; /* Define um contexto de posicionamento. */
+  right: 16px; /* (Não se aplica com position: relative e sem left/top). */
+  margin-left: 1400px; /* Margem esquerda muito grande, empurra para a direita. */
+  bottom: -45px; /* Move o logotipo para baixo. */
+  display: flex; /* Ativa o layout flexbox. */
+  align-items: center; /* Alinha os itens verticalmente. */
 }
 
 /* tamanho da logo da empresa */
-footer .footer-logo img {
-  width: 200px;
-  height: auto;
-  display: block;
+footer .footer-logo img { /* Estiliza a imagem do logotipo. */
+  width: 200px; /* Define a largura. */
+  height: auto; /* A altura se ajusta automaticamente. */
+  display: block; /* Remove espaços extras. */
 }
 
 /* evita sobreposição em telas pequenas: empilha tudo e centraliza */
-@media (max-width: 480px) {
-  footer .social-media,
-  footer .footer-logo {
-    position: static;
-    margin: 8px 0;
-    justify-content: center;
+@media (max-width: 480px) { /* Aplica regras para telas com largura máxima de 480px. */
+  footer .social-media, /* Seleciona mídias sociais no rodapé. */
+  footer .footer-logo { /* Seleciona logotipo no rodapé. */
+    position: static; /* Remove o posicionamento. */
+    margin: 8px 0; /* Adiciona margem vertical. */
+    justify-content: center; /* Centraliza o conteúdo. */
   }
 
-  footer {
-    padding-bottom: 18px;
+  footer { /* Estiliza o rodapé em telas muito pequenas. */
+    padding-bottom: 18px; /* Ajusta o preenchimento inferior. */
   }
 
   /* reduz a logo da empresa em telas muito pequenas */
-  footer .footer-logo img {
-    width: 96px;
+  footer .footer-logo img { /* Estiliza a imagem do logotipo. */
+    width: 96px; /* Reduz a largura. */
   }
 }
-    .footer-logo img {
-  width: 200px; /* Ajuste o tamanho da logo conforme necessário */
-  height: auto;
+    .footer-logo img { /* Redefine o estilo da imagem do logotipo. */
+  width: 200px; /* Ajuste o tamanho da logo conforme necessário */ /* Define a largura. */
+  height: auto; /* A altura se ajusta automaticamente. */
 }
-footer p {
-  margin: 0;
+footer p { /* Estiliza o parágrafo no rodapé. */
+  margin: 0; /* Remove a margem. */
 }
 
 /* === RESPONSIVIDADE === */
-@media (max-width: 992px) {
-   .header-top {
-    flex-direction: column;
-    gap: 15px;
+@media (max-width: 992px) { /* Aplica regras para telas com largura máxima de 992px. */
+   .header-top { /* Estiliza o topo do cabeçalho. */
+    flex-direction: column; /* Organiza os itens em coluna. */
+    gap: 15px; /* Adiciona espaçamento. */
   }
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
+    header { /* Estiliza o cabeçalho. */
+        flex-direction: column; /* Organiza os itens em coluna. */
+        align-items: center; /* Centraliza os itens. */
+        text-align: center; /* Centraliza o texto. */
+        padding: 20px; /* Adiciona preenchimento. */
     }
 
-    .logo-esq {
-        position: static;
-        transform: none;
-        margin-bottom: 10px;
+    .logo-esq { /* Estiliza o logotipo esquerdo. */
+        position: static; /* Remove o posicionamento. */
+        transform: none; /* Remove a transformação. */
+        margin-bottom: 10px; /* Adiciona margem inferior. */
     }
-      .header-btns {
-        position: static;
-        transform: none;
-        margin-top: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-top: 20px;
+      .header-btns { /* Estiliza os botões do cabeçalho. */
+        position: static; /* Remove o posicionamento. */
+        transform: none; /* Remove a transformação. */
+        margin-top: 10px; /* Adiciona margem no topo. */
+        flex-wrap: wrap; /* Permite que os botões quebrem a linha. */
+        justify-content: center; /* Centraliza os botões. */
     }
 
-    nav a {
-        padding-top: 0;
-        font-size: 15px;
+    nav { /* Estiliza a navegação. */
+        flex-wrap: wrap; /* Permite que os links quebrem a linha. */
+        justify-content: center; /* Centraliza os links. */
+        padding-top: 20px; /* Adiciona preenchimento no topo. */
     }
 
-    h1 {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 600px) {
-    header {
-        padding: 15px;
+    nav a { /* Estiliza os links da navegação. */
+        padding-top: 0; /* Remove o preenchimento no topo. */
+        font-size: 15px; /* Ajusta o tamanho da fonte. */
     }
 
-    .logo-esq img {
-        width: 120px;
-    }
-
-    h1 {
-        font-size: 20px;
-        text-align: center;
-        margin-top: 15px;
-    }
-
-    nav a {
-        font-size: 14px;
-        margin: 5px;
-    }
-
-    footer {
-        font-size: 14px;
-        padding: 20px;
+    h1 { /* Estiliza o título h1. */
+        font-size: 24px; /* Ajusta o tamanho da fonte. */
     }
 }
 
- footer {
-      background-color: #000000cb;
-      color: white;
-      text-align: center;
-      padding: 35px;
-      width: 100%;
-      margin-top: 40px;
+@media (max-width: 600px) { /* Aplica regras para telas com largura máxima de 600px. */
+    header { /* Estiliza o cabeçalho. */
+        padding: 15px; /* Ajusta o preenchimento. */
     }
 
-   body {
-  background: linear-gradient(135deg, #00BFA5, #00947E);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  color: #FFFFFF;
-}
-
-.quiz-container {
-  width: 100%;
-  max-width: 700px;
-  font-size: 1.5rem;
-  background: #ffffff; 
-  border-radius: 30px;
-  padding: 50px 40px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); 
-  text-align: center;
-  color: #00947E; 
-  border: 5px solid #00BFA5;
-  margin: 40px auto;
-}
-
-.quiz-title {
-  font-size: 2.5rem;
-  color: #00BFA5;
-  margin-bottom: 30px;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
-}
-
-.quiz-container img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 30px;
-  border: 5px solid #00BFA5;
-  box-shadow: 0 0 20px rgba(0,191,165,0.6);
-}
-
-.option {
-  background: white; 
-  padding: 18px 25px;
-  margin: 12px 0;
-  border-radius: 12px; 
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 2rem;
-  border: 2px solid #00BFA5; 
-  color: #4A4A4A;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
-}
-
-.option:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-.option.correct {
-  background: #00BFA5;
-  color: #fff;
-  border: 2px solid #00BFA5;
-  box-shadow: 0 0 20px #00BFA5, 0 0 40px #00BFA5;
-  transform: scale(1.05);
-}
-
-.option.wrong {
-  background: #ff4d4d;
-  color: #fff;
-  border: 2px solid #ff4d4d;
-  box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d;
-  transform: scale(1.05);
-}
-
-.feedback {
-  margin-top: 25px;
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #00947E;
-}
-
-.question {
-  display: none;
-  opacity: 0;
-  transform: translateY(60px);
-  transition: all 0.5s ease;
-}
-
-.question.active {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.end h2 {
-  font-size: 2.4rem;
-  color: #00BFA5;
-  animation: pulse 1.2s infinite alternate;
-}
-
-
-    @keyframes pulse {
-      from { transform: scale(1); }
-      to { transform: scale(1.05); }
+    .logo-esq img { /* Estiliza a imagem do logotipo esquerdo. */
+        width: 120px; /* Ajusta a largura. */
     }
 
-    .mascote-container {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      cursor: pointer;
-      z-index: 1000; 
+    h1 { /* Estiliza o título h1. */
+        font-size: 20px; /* Ajusta o tamanho da fonte. */
+        text-align: center; /* Centraliza o texto. */
+        margin-top: 15px; /* Adiciona margem no topo. */
     }
 
-    .mascote {
-      width: 120px;
-      transition: transform 0.2s;
+    nav a { /* Estiliza os links da navegação. */
+        font-size: 14px; /* Ajusta o tamanho da fonte. */
+        margin: 5px; /* Adiciona margem. */
     }
 
-    .mascote:hover {
-      transform: scale(1.05);
+    footer { /* Estiliza o rodapé. */
+        font-size: 14px; /* Ajusta o tamanho da fonte. */
+        padding: 20px; /* Ajusta o preenchimento. */
+    }
+}
+
+ footer { /* Redefine o estilo do rodapé. */
+      background-color: #000000cb; /* Fundo preto semitransparente. */
+      color: white; /* Texto branco. */
+      text-align: center; /* Centraliza o texto. */
+      padding: 35px; /* Adiciona preenchimento. */
+      width: 100%; /* Ocupa 100% da largura. */
+      margin-top: 40px; /* Adiciona margem no topo. */
+    }
+
+   body { /* Redefine o estilo do body. */
+  background: linear-gradient(135deg, #00BFA5, #00947E); /* Fundo com gradiente de verde-azulado. */
+  min-height: 100vh; /* Altura mínima de 100% da altura da viewport. */
+  display: flex; /* Ativa o layout flexbox. */
+  flex-direction: column; /* Organiza os itens em coluna. */
+  justify-content: space-between; /* Distribui o espaço entre os itens. */
+  align-items: center; /* Centraliza os itens horizontalmente. */
+  color: #FFFFFF; /* Define a cor do texto como branco. */
+}
+
+.quiz-container { /* Estiliza o contêiner do quiz. */
+  width: 100%; /* Ocupa 100% da largura disponível. */
+  max-width: 700px; /* Define a largura máxima. */
+  font-size: 1.5rem; /* Define o tamanho da fonte base. */
+  background: #ffffff;  /* Fundo branco. */
+  border-radius: 30px; /* Arredonda os cantos. */
+  padding: 50px 40px; /* Adiciona preenchimento interno. */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);  /* Adiciona uma sombra. */
+  text-align: center; /* Centraliza o texto. */
+  color: #00947E;  /* Define a cor do texto como verde-azulado escuro. */
+  border: 5px solid #00BFA5; /* Adiciona uma borda verde-azulada. */
+  margin: 40px auto; /* Adiciona margem vertical e centraliza horizontalmente. */
+}
+
+.quiz-title { /* Estiliza o título do quiz. */
+  font-size: 2.5rem; /* Define o tamanho da fonte. */
+  color: #00BFA5; /* Define a cor do texto como verde-azulado. */
+  margin-bottom: 30px; /* Adiciona margem inferior. */
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.2); /* Adiciona uma sombra ao texto. */
+}
+
+.quiz-container img { /* Estiliza a imagem dentro do contêiner do quiz. */
+  width: 180px; /* Define a largura. */
+  height: 180px; /* Define a altura. */
+  object-fit: cover; /* Faz a imagem cobrir o espaço, cortando o excesso. */
+  border-radius: 50%; /* Torna a imagem redonda. */
+  margin-bottom: 30px; /* Adiciona margem inferior. */
+  border: 5px solid #00BFA5; /* Adiciona uma borda verde-azulada. */
+  box-shadow: 0 0 20px rgba(0,191,165,0.6); /* Adiciona um brilho verde-azulado. */
+}
+
+.option { /* Estiliza cada opção de resposta. */
+  background: white;  /* Fundo branco. */
+  padding: 18px 25px; /* Adiciona preenchimento interno. */
+  margin: 12px 0; /* Adiciona margem vertical. */
+  border-radius: 12px;  /* Arredonda os cantos. */
+  cursor: pointer; /* Mostra um cursor de mão. */
+  transition: all 0.3s ease; /* Animação suave para todas as propriedades. */
+  font-size: 2rem; /* Define o tamanho da fonte. */
+  border: 2px solid #00BFA5;  /* Adiciona uma borda verde-azulada. */
+  color: #4A4A4A; /* Define a cor do texto como cinza escuro. */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);  /* Adiciona uma sombra. */
+}
+
+.option:hover { /* Efeito ao passar o mouse sobre a opção. */
+  transform: translateY(-5px); /* Move a opção levemente para cima. */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Aumenta a sombra. */
+}
+
+.option.correct { /* Estiliza a opção quando está correta. */
+  background: #00BFA5; /* Fundo verde-azulado. */
+  color: #fff; /* Texto branco. */
+  border: 2px solid #00BFA5; /* Borda verde-azulada. */
+  box-shadow: 0 0 20px #00BFA5, 0 0 40px #00BFA5; /* Adiciona um brilho verde-azulado. */
+  transform: scale(1.05); /* Aumenta levemente o tamanho. */
+}
+
+.option.wrong { /* Estiliza a opção quando está errada. */
+  background: #ff4d4d; /* Fundo vermelho. */
+  color: #fff; /* Texto branco. */
+  border: 2px solid #ff4d4d; /* Borda vermelha. */
+  box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d; /* Adiciona um brilho vermelho. */
+  transform: scale(1.05); /* Aumenta levemente o tamanho. */
+}
+
+.feedback { /* Estiliza a área de feedback (correto/errado). */
+  margin-top: 25px; /* Adiciona margem no topo. */
+  font-size: 1.6rem; /* Define o tamanho da fonte. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+  color: #00947E; /* Define a cor do texto como verde-azulado escuro. */
+}
+
+.question { /* Estiliza o contêiner de cada pergunta. */
+  display: none; /* Esconde a pergunta por padrão. */
+  opacity: 0; /* Deixa a pergunta totalmente transparente. */
+  transform: translateY(60px); /* Move a pergunta para baixo. */
+  transition: all 0.5s ease; /* Animação suave para todas as propriedades. */
+}
+
+.question.active { /* Estiliza a pergunta ativa (visível). */
+  display: block; /* Torna a pergunta visível. */
+  opacity: 1; /* Torna a pergunta totalmente opaca. */
+  transform: translateY(0); /* Move a pergunta para sua posição original. */
+}
+
+.end h2 { /* Estiliza o título da tela final. */
+  font-size: 2.4rem; /* Define o tamanho da fonte. */
+  color: #00BFA5; /* Define a cor do texto como verde-azulado. */
+  animation: pulse 1.2s infinite alternate; /* Aplica uma animação de pulsação. */
+}
+
+
+    @keyframes pulse { /* Define a animação 'pulse'. */
+      from { transform: scale(1); } /* Estado inicial: tamanho normal. */
+      to { transform: scale(1.05); } /* Estado final: um pouco maior. */
+    }
+
+    .mascote-container { /* Estiliza o contêiner do mascote. */
+      position: fixed; /* Posição fixa na tela. */
+      bottom: 20px; /* Distância da borda inferior. */
+      right: 20px; /* Distância da borda direita. */
+      cursor: pointer; /* Mostra um cursor de mão. */
+      z-index: 1000;  /* Garante que fique sobre outros elementos. */
+    }
+
+    .mascote { /* Estiliza a imagem do mascote. */
+      width: 120px; /* Define a largura. */
+      transition: transform 0.2s; /* Animação suave para a transformação. */
+    }
+
+    .mascote:hover { /* Efeito ao passar o mouse sobre o mascote. */
+      transform: scale(1.05); /* Aumenta levemente o tamanho. */
     }
     /*IMPORTANTE*/
-    .fala {
-      position: absolute;
-      bottom: 140px; 
-      right: 0;
-      width: 450px;
-      height: 350px; 
-      background-image: url('../Mascote-IMG/fala.png'); 
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      display: none;
-      padding: 110px; 
-      box-sizing: border-box;
+    .fala { /* Estiliza o balão de fala do mascote. */
+      position: absolute; /* Posiciona de forma absoluta em relação ao contêiner pai. */
+      bottom: 140px;  /* Distância da borda inferior. */
+      right: 0; /* Alinha à direita. */
+      width: 450px; /* Define a largura. */
+      height: 350px;  /* Define a altura. */
+      background-image: url('../Mascote-IMG/fala.png');  /* Define a imagem de fundo do balão. */
+      background-size: contain; /* Faz a imagem caber inteiramente no espaço. */
+      background-repeat: no-repeat; /* Impede que a imagem se repita. */
+      background-position: center; /* Centraliza a imagem. */
+      display: none; /* Esconde o balão por padrão. */
+      padding: 110px;  /* Adiciona preenchimento interno (para posicionar o texto). */
+      box-sizing: border-box; /* Garante que o padding não aumente o tamanho total. */
     }
 
-    .texto-fala {
-      display: block;
-      text-align: center;  
-      font-size: 20px;
-      color: rgb(0, 0, 0);
-      overflow-wrap: break-word; 
+    .texto-fala { /* Estiliza o texto dentro do balão de fala. */
+      display: block; /* Faz o texto ocupar sua própria linha. */
+      text-align: center;   /* Centraliza o texto. */
+      font-size: 20px; /* Define o tamanho da fonte. */
+      color: rgb(0, 0, 0); /* Define a cor do texto como preto. */
+      overflow-wrap: break-word;  /* Permite que palavras longas quebrem a linha. */
     }
  

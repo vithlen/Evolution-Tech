@@ -1,136 +1,138 @@
 /* Reset básico pra zerar as margens e paddings que os navegadores colocam por padrão */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  margin: 0; /* Remove a margem externa de todos os elementos */
+  padding: 0; /* Remove o preenchimento interno de todos os elementos */
+  box-sizing: border-box; /* Faz com que padding e border não aumentem o tamanho final do elemento */
+  font-family: Arial, sans-serif; /* Define a família de fontes padrão para todos os elementos */
 }
 
 /* Estilos gerais do corpo da página */
 body {
-  background-color: #fff;
-  color: #000;
-  text-align: center;
+  background-color: #fff; /* Define a cor de fundo padrão como branco */
+  color: #000; /* Define a cor do texto padrão como preto */
+  text-align: center; /* Centraliza o texto dentro dos elementos */
   transition: 0.3s; /* Transição suave para o modo escuro */
 }
 
 /* Estilização do cabeçalho */
 header {
-  background-color: #f57c00;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
-  position: relative;
+  background-color: #f57c00; /* Define a cor de fundo do cabeçalho como laranja */
+  color: white; /* Define a cor do texto no cabeçalho como branco */
+  padding: 10px 0; /* Adiciona preenchimento vertical de 10px */
+  text-align: center; /* Centraliza o texto dentro do cabeçalho */
+  position: relative; /* Define o posicionamento como relativo para elementos filhos posicionados absolutamente */
   /* Organiza os itens do header em coluna */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  display: flex; /* Usa o modelo de layout flexbox */
+  flex-direction: column; /* Organiza os itens filhos em uma coluna */
+  align-items: center; /* Centraliza os itens filhos horizontalmente */
+  width: 100%; /* Faz o cabeçalho ocupar 100% da largura da tela */
 }
 
 h1 {
-  margin-top: 25px;
-  font-size: 30px;
-  letter-spacing: 2px;
-  color: white;
+  margin-top: 25px; /* Adiciona uma margem de 25px no topo */
+  font-size: 30px; /* Define o tamanho da fonte como 30 pixels */
+  letter-spacing: 2px; /* Aumenta o espaçamento entre as letras */
+  color: white; /* Define a cor do texto como branco */
 }
 
 /*ESTILOS DO CARD DE INFORMAÇÕES DO CURSO */
 
 .course-card {
-  width: 90%;
-  margin: 40px auto;
-  display: flex;
-  justify-content: center;
+  width: 90%; /* Define a largura do card como 90% do seu contêiner pai */
+  margin: 40px auto; /* Adiciona margem vertical de 40px e centraliza horizontalmente */
+  display: flex; /* Usa o modelo de layout flexbox */
+  justify-content: center; /* Centraliza o conteúdo do card horizontalmente */
 }
 
 /* Conteúdo dentro do card (imagem, texto, botão) */
 .card-content {
-  align-items: center;
-  background: white;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  padding: 1.5rem;
-  max-width: 900px;
-  width: 150%;
-  gap: 20px;
+  align-items: center; /* Alinha os itens filhos ao centro verticalmente */
+  background: white; /* Define a cor de fundo como branco */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Adiciona uma sombra para dar profundidade */
+  padding: 1.5rem; /* Adiciona preenchimento interno */
+  max-width: 900px; /* Define a largura máxima do conteúdo do card */
+  width: 150%; /* Define a largura (pode causar problemas de layout se for maior que 100%) */
+  gap: 20px; /* Adiciona um espaço entre os elementos filhos (se for um contêiner flex ou grid) */
 }
 
 /* Imagem/ícone do curso */
 .course-Icon {
-  width: 500px;
-  height: 300px;
-  object-fit: cover;
+  width: 500px; /* Define a largura da imagem do curso */
+  height: 300px; /* Define a altura da imagem do curso */
+  object-fit: cover; /* Faz a imagem cobrir o espaço definido sem distorcer */
 }
 
 /* Container para as informações do curso (duração, descrição) */
 .card-info {
-  flex: 1;
-  text-align: left;
+  flex: 1; /* Permite que este contêiner cresça para ocupar o espaço disponível */
+  text-align: left; /* Alinha o texto à esquerda */
 }
 
 /* Estilo do título do curso */
 .texto {
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  text-align: center;
+  padding: 10px; /* Adiciona preenchimento interno */
+  border-radius: 6px; /* Arredonda as bordas */
+  font-size: 1.5rem; /* Define o tamanho da fonte */
+  margin-bottom: 10px; /* Adiciona uma margem na parte inferior */
+  text-align: center; /* Centraliza o texto */
 }
 
 /* Estilo do parágrafo de descrição e duração */
 .card-info p {
-  font-size: large;
-  margin: 10px 0;
-  color: black;
-  line-height: 1.5;
-  font-weight: normal;
+  font-size: large; /* Define um tamanho de fonte grande */
+  margin: 10px 0; /* Adiciona margem vertical */
+  color: black; /* Define a cor do texto como preto */
+  line-height: 1.5; /* Aumenta a altura da linha para melhor legibilidade */
+  font-weight: normal; /* Define o peso da fonte como normal */
 }
 /* Centraliza o botão dentro do seu container */
 .card-info button {
-  display: flex;
-  justify-content: center;
+  display: flex; /* Usa o modelo de layout flexbox */
+  justify-content: center; /* Centraliza o botão horizontalmente */
   width: 100%; /* garante que o botão se alinhe ao centro do bloco */
 }
 
 /* Reset do estilo padrão do botão */
 button {
-  background: none;
-  border: none;
-  margin-top: 0.5rem;
+  background: none; /* Remove a cor de fundo padrão */
+  border: none; /* Remove a borda padrão */
+  margin-top: 0.5rem; /* Adiciona uma margem no topo */
 }
 
 button a {
-  display: inline-block;
-  text-decoration: none;
-  background: #f57c00;
-  color: white;
-  font-weight: bold;
-  padding: 0.6rem 1.2rem;
-  border-radius: 30px;
-  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block; /* Permite definir largura, altura, margem, etc. */
+  text-decoration: none; /* Remove o sublinhado do link */
+  background: #f57c00; /* Define a cor de fundo como laranja */
+  color: white; /* Define a cor do texto como branco */
+  font-weight: bold; /* Deixa o texto em negrito */
+  padding: 0.6rem 1.2rem; /* Adiciona preenchimento interno */
+  border-radius: 30px; /* Arredonda as bordas para criar um formato de pílula */
+  transition: background 0.3s ease, transform 0.2s ease; /* Adiciona transições suaves para efeitos de hover */
 }
 
 /* Efeito hover para o botão */
 button a:hover {
-  background: #ff8f00;
-  transform: scale(1.05);
+  background: #ff8f00; /* Muda a cor de fundo ao passar o mouse */
+  transform: scale(
+    1.05
+  ); /* Aumenta ligeiramente o tamanho do botão ao passar o mouse */
 }
 
 /* Ajustes de responsividade para o card em telas menores */
 @media (max-width: 768px) {
   .card-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Centraliza o texto */
   }
 
   .course-Icon {
-    width: 90%;
-    margin-bottom: 15px;
+    width: 90%; /* A imagem ocupa 90% da largura do card */
+    margin-bottom: 15px; /* Adiciona uma margem inferior */
   }
 
   .card-info {
-    text-align: center;
+    text-align: center; /* Centraliza o texto de informações */
   }
 }
 
@@ -139,104 +141,104 @@ button a:hover {
 
 header h1,
 header nav {
-  max-width: 1800px;
-  width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
+  max-width: 1800px; /* Define a largura máxima */
+  width: 100%; /* Ocupa 100% da largura disponível */
+  padding: 0 20px; /* Adiciona preenchimento horizontal */
+  box-sizing: border-box; /* Garante que o padding não afete a largura total */
 }
 
 /* Estilos da barra de navegação */
 nav {
-  padding-top: 50px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  padding-top: 50px; /* Adiciona preenchimento no topo */
+  display: flex; /* Usa o modelo de layout flexbox */
+  justify-content: center; /* Centraliza os links horizontalmente */
+  flex-wrap: wrap; /* Permite que os links quebrem para a próxima linha se não houver espaço */
 }
 
 /* Links da navegação */
 nav a {
-  color: white;
-  margin: 0 10px;
-  font-size: 16px;
-  white-space: nowrap;
-  padding-top: 50px;
-  margin-bottom: 5px;
+  color: white; /* Define a cor do texto como branco */
+  margin: 0 10px; /* Adiciona margem horizontal */
+  font-size: 16px; /* Define o tamanho da fonte */
+  white-space: nowrap; /* Impede que o texto do link quebre em várias linhas */
+  padding-top: 50px; /* Adiciona preenchimento no topo */
+  margin-bottom: 5px; /* Adiciona uma margem inferior */
 }
 
 /* Efeito hover para os links da navegação */
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
 }
 
 /* Logo da esquerda no cabeçalho */
 .logo-esq {
-  position: absolute;
-  top: 25%;
-  transform: translateY(-50%);
-  left: 60px;
-  height: 72px;
-  width: 150px;
+  position: absolute; /* Posiciona o logo de forma absoluta em relação ao header */
+  top: 25%; /* Posiciona a 25% do topo do header */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  left: 60px; /* Distância de 60px da esquerda */
+  height: 72px; /* Define a altura */
+  width: 150px; /* Define a largura */
 }
 
 .logo-esq img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100%; /* A imagem ocupa 100% da largura do seu contêiner */
+  height: auto; /* A altura se ajusta automaticamente para manter a proporção */
+  display: block; /* Remove espaços extras abaixo da imagem */
 }
 
 /* Container dos botões da direita (cadastro, login) */
 .header-btns {
-  position: absolute;
-  top: 40%;
-  right: 20px;
-  transform: translateY(-50%);
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  z-index: 10;
+  position: absolute; /* Posiciona de forma absoluta em relação ao header */
+  top: 40%; /* Posiciona a 40% do topo */
+  right: 20px; /* Distância de 20px da direita */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  display: flex; /* Usa o modelo de layout flexbox */
+  gap: 10px; /* Adiciona um espaço de 10px entre os botões */
+  align-items: center; /* Alinha os botões verticalmente */
+  z-index: 10; /* Garante que os botões fiquem acima de outros elementos */
 }
 
 /* Estilo geral dos botões do cabeçalho */
 .btn-header {
-  padding: 8px 12px;
-  font-size: 14px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-weight: bold;
-  background-color: #f57c00;
-  color: white;
-  border: 2px solid #f57c00;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  padding: 8px 12px; /* Adiciona preenchimento interno */
+  font-size: 14px; /* Define o tamanho da fonte */
+  border-radius: 5px; /* Arredonda as bordas */
+  cursor: pointer; /* Mostra o cursor de "mãozinha" */
+  text-decoration: none; /* Remove o sublinhado */
+  font-weight: bold; /* Deixa o texto em negrito */
+  background-color: #f57c00; /* Define a cor de fundo como laranja */
+  color: white; /* Define a cor do texto como branco */
+  border: 2px solid #f57c00; /* Adiciona uma borda laranja */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Adiciona transições suaves */
 }
 
 /* Efeito hover para os botões do cabeçalho */
 .btn-header:hover {
-  background-color: white;
-  color: #f57c00;
-  border-color: white;
+  background-color: white; /* Muda a cor de fundo para branco ao passar o mouse */
+  color: #f57c00; /* Muda a cor do texto para laranja ao passar o mouse */
+  border-color: white; /* Muda a cor da borda para branco ao passar o mouse */
 }
 
 /* Estilização do rodapé */
 footer {
-  background-color: #f57c00;
-  color: white;
-  text-align: center;
-  padding: 35px;
-  width: auto;
+  background-color: #f57c00; /* Define a cor de fundo como laranja */
+  color: white; /* Define a cor do texto como branco */
+  text-align: center; /* Centraliza o texto */
+  padding: 35px; /* Adiciona preenchimento interno */
+  width: auto; /* A largura se ajusta ao conteúdo */
 }
 
 /* Truque para fazer o rodapé ficar sempre no final da página, mesmo com pouco conteúdo */
 html,
 body {
-  height: 100%; /* ocupa toda a altura da tela */
+  height: 100%; /* Faz com que html e body ocupem 100% da altura da viewport */
 }
 
 body {
-  display: flex; /* ativa o flexbox */
-  flex-direction: column; /* organiza tudo em coluna (header → conteúdo → footer) */
+  display: flex; /* Ativa o layout flexbox para o body */
+  flex-direction: column; /* Organiza os filhos diretos (header, main, footer) em uma coluna */
 }
 
 main {
-  flex: 1; /* ocupa o espaço restante, empurrando o footer pra baixo */
+  flex: 1; /* Faz com que o elemento main cresça para ocupar todo o espaço vertical disponível, empurrando o footer para baixo */
 }

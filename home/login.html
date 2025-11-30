@@ -1,10 +1,11 @@
 <!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
 <html lang="pt-br"> <!-- Define o idioma da página como Português do Brasil -->
 
-<head>
+<head><!-- Início da seção de cabeçalho, que contém metadados e links. -->
   <!-- Configurações de metadados da página -->
   <meta charset="UTF-8"> <!-- Garante a codificação de caracteres correta (acentos, etc.) -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configura a viewport para que o site seja responsivo. -->
   <!-- Adapta a página para dispositivos móveis -->
   <title>Login | Tech para Todos</title> <!-- Título que aparece na aba do navegador -->
   <link rel="icon" type="image/png" sizes="32x32" href="logo-oficial1.png"> <!-- Ícone da página (favicon) -->
@@ -15,109 +16,151 @@
   <style>
     /* --- ESTILOS DO MODO ESCURO --- */
     body.escuro {
+      /* Estilo aplicado ao body quando a classe 'escuro' está presente. */
       background-color: #121212;
-      /* Fundo geral mais escuro */
+      /* Fundo geral mais escuro. */
     }
 
     body.escuro .tela-de-login {
+      /* Estilo para a tela de login no modo escuro. */
       background-color: #000000;
-      /* Fundo do formulário preto/cinza escuro */
+      /* Fundo do formulário preto/cinza escuro. */
       border: 2px solid #f28705;
+      /* Borda laranja para destaque. */
       box-shadow: 0 0 20px rgba(242, 135, 5, 0.3);
+      /* Sombra laranja sutil. */
     }
 
     body.escuro h1 {
+      /* Estilo para o título h1 no modo escuro. */
       color: #f28705;
-      /* Título em laranja */
+      /* Título em laranja. */
     }
 
     body.escuro label {
+      /* Estilo para os rótulos (labels) no modo escuro. */
       color: #ccc;
-      /* Labels em cinza claro */
+      /* Labels em cinza claro para contraste. */
     }
 
     body.escuro input[type="email"],
+    /* Estilo para o campo de e-mail no modo escuro. */
     body.escuro input[type="password"] {
+      /* Estilo para o campo de senha no modo escuro. */
       background-color: #333;
+      /* Fundo cinza escuro para os campos. */
       color: #fff;
+      /* Texto branco para os campos. */
       border-color: #555;
+      /* Borda cinza mais escura. */
     }
 
     body.escuro .link-cadastro {
+      /* Estilo para o link de cadastro no modo escuro. */
       color: #f28705;
+      /* Link em laranja. */
     }
 
     /* --- ESTILOS DO FOOTER (Rodapé) --- */
     /* Obs: O elemento <footer> não está no HTML, mas os estilos estão prontos aqui. */
     footer {
+      /* Estilos para um possível rodapé. */
       text-align: center;
+      /* Centraliza o texto. */
       padding: 20px;
+      /* Adiciona preenchimento interno. */
       margin-top: 30px;
+      /* Adiciona margem no topo. */
       color: #555;
+      /* Cor do texto cinza escuro. */
       font-size: 14px;
+      /* Tamanho da fonte. */
       display: flex;
+      /* Ativa o layout flexbox. */
       flex-direction: column;
+      /* Organiza os itens em coluna. */
       align-items: center;
+      /* Centraliza os itens horizontalmente. */
       gap: 10px;
+      /* Adiciona espaçamento entre os itens. */
     }
 
     .social-media a {
+      /* Estilo para os links de mídia social. */
       display: inline-flex;
+      /* Exibição flex em linha. */
       align-items: center;
+      /* Alinha os itens verticalmente. */
       gap: 8px;
+      /* Adiciona espaçamento entre ícone e texto. */
       text-decoration: none;
+      /* Remove o sublinhado. */
       color: #333;
+      /* Cor do texto cinza escuro. */
       font-weight: 500;
+      /* Peso da fonte semi-negrito. */
     }
 
     .social-media img {
+      /* Estilo para as imagens de mídia social. */
       width: 24px;
+      /* Largura da imagem. */
       height: 24px;
+      /* Altura da imagem. */
     }
 
     /* Estilos do rodapé para o modo escuro */
     body.escuro footer,
+    /* Estilo para o rodapé no modo escuro. */
     body.escuro .social-media a {
+      /* Estilo para os links de mídia social no modo escuro. */
       color: #ccc;
+      /* Cor do texto cinza claro. */
     }
-  </style>
-</head>
+  </style><!-- Fim do bloco de estilos CSS. -->
+</head><!-- Fim da seção de cabeçalho. -->
 
-<body>
+<body><!-- Início do corpo do documento. -->
   <!-- Container principal que centraliza o conteúdo de login -->
-  <div class="tela-de-login">
+  <div class="tela-de-login"><!-- Contêiner principal para a tela de login. -->
     <!-- Botão de Modo Escuro -->
-    <label class="modo-escuro">
+    <label class="modo-escuro"><!-- Rótulo que envolve o interruptor de modo escuro, tornando-o clicável. -->
       <input type="checkbox" id="toggle"> <!-- O checkbox que controla o estado (ligado/desligado) -->
-      <span class="trilho"><span class="bola"></span></span>
+      <span class="trilho"><span
+          class="bola"></span></span><!-- Elementos visuais para criar o botão de alternância (trilho e bola). -->
       <!-- Elementos visuais para criar o botão de alternância -->
-    </label>
+    </label><!-- Fim do rótulo do modo escuro. -->
     <!-- Fim do Botão -->
 
-    <h1 id="login-title" style="cursor: pointer;">Faça login</h1> <!-- Título principal da tela -->
-    <p id="mensagem-erro-login" class="mensagem-erro"></p> <!-- Parágrafo para exibir mensagens de erro no login -->
+    <h1 id="login-title" style="cursor: pointer;">Faça login</h1>
+    <!-- Título principal da tela, com cursor de ponteiro. -->
+    <p id="mensagem-erro-login" class="mensagem-erro"></p>
+    <!-- Parágrafo para exibir mensagens de erro no login, inicialmente vazio. -->
 
     <!-- Formulário de login -->
     <form id="loginForm" action="#" method="post"> <!-- 'action="#"' indica que o envio será tratado por JS -->
-      <label for="username">Insira seu e-mail:</label><br>
-      <input type="email" id="username" name="username" placeholder="Digite seu e-mail" required>
-      <br>
+      <label for="username">Insira seu e-mail:</label><br><!-- Rótulo para o campo de e-mail. -->
+      <input type="email" id="username" name="username" placeholder="Digite seu e-mail"
+        required><!-- Campo de entrada para o e-mail, obrigatório. -->
+      <br><!-- Quebra de linha para espaçamento. -->
 
-      <label for="password">Senha:</label><br>
-      <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-      <br>
+      <label for="password">Senha:</label><br><!-- Rótulo para o campo de senha. -->
+      <input type="password" id="password" name="password" placeholder="Digite sua senha"
+        required><!-- Campo de entrada para a senha, obrigatório. -->
+      <br><!-- Quebra de linha para espaçamento. -->
 
       <button type="submit" id="botaoLogin">OK</button> <!-- Botão para enviar o formulário -->
-    </form>
+    </form><!-- Fim do formulário de login. -->
 
     <!-- Link para a página de cadastro -->
-    <p>Não tem uma conta?
-      <a href="cadastro.html" class="link-cadastro" target="_blank">
-        Cadastre-se aqui
-      </a>
-    </p>
-  </div>
+    <p>Não tem uma conta?<!-- Parágrafo com texto informativo. -->
+      <a href="cadastro.html" class="link-cadastro"
+        target="_blank"><!-- Link para a página de cadastro, que abre em uma nova aba. -->
+        Cadastre-se aqui<!-- Texto do link. -->
+      </a><!-- Fim do link. -->
+    </p><!-- Fim do parágrafo. -->
+  </div><!-- Fim do contêiner da tela de login. -->
 
-</body>
+</body><!-- Fim do corpo do documento. -->
 
-</html>
+</html><!-- Fim do documento HTML. -->

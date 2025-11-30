@@ -1,5 +1,6 @@
 /* Reset básico */
 * {
+  /* Seletor universal que se aplica a todos os elementos da página. */
   margin: 0; /* Remove margens externas de todos os elementos */
   padding: 0; /* Remove preenchimento interno de todos os elementos */
   box-sizing: border-box; /* Faz com que padding e border não aumentem o tamanho final do elemento */
@@ -8,6 +9,7 @@
 
 /* Estilos gerais do corpo da página */
 body {
+  /* Estiliza o elemento <body>, que contém todo o conteúdo da página. */
   background-color: #fff; /* Fundo branco padrão */
   color: #000; /* Cor do texto preta padrão */
   text-align: center; /* Centraliza o texto em elementos de bloco */
@@ -16,6 +18,7 @@ body {
 
 /* Estilização do cabeçalho principal */
 header {
+  /* Estiliza o elemento <header> da página. */
   background-color: #f57c00; /* Cor de fundo laranja */
   color: white; /* Cor do texto branca */
   padding: 10px 0; /* Preenchimento vertical */
@@ -29,6 +32,7 @@ header {
 
 /* Estilo para o título principal da página */
 h1 {
+  /* Estiliza todos os elementos <h1>. */
   margin-top: 25px; /* Espaço acima do título */
   font-size: 30px; /* Tamanho da fonte */
   letter-spacing: 2px; /* Espaçamento entre as letras */
@@ -39,6 +43,7 @@ h1 {
 
 /* Container principal para o card do curso */
 .course-card {
+  /* Estiliza o contêiner que envolve o card do curso. */
   width: 90%; /* Largura do container */
   margin: 40px auto; /* Centraliza o card na página com margem vertical */
   display: flex; /* Ativa o flexbox */
@@ -47,17 +52,19 @@ h1 {
 
 /* O conteúdo visual do card, com sombra e padding */
 .card-content {
+  /* Estiliza a área de conteúdo dentro do card. */
   align-items: center; /* Alinha os itens verticalmente */
   background: white; /* Fundo branco */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Sombra para dar profundidade */
   padding: 1.5rem; /* Espaçamento interno */
   max-width: 900px; /* Largura máxima do card */
-  width: 150%; /* Largura relativa ao pai (.course-card) */
+  width: 150%; /* Largura relativa ao pai (.course-card) - pode causar overflow. */
   gap: 20px; /* Espaço entre a imagem e as informações */
 }
 
 /* Imagem ou ícone do curso dentro do card */
 .course-Icon {
+  /* Estiliza a imagem do curso. */
   width: 500px; /* Largura fixa da imagem */
   height: 300px; /* Altura fixa da imagem */
   object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
@@ -65,12 +72,14 @@ h1 {
 
 /* Bloco de informações do curso (título, descrição, botão) */
 .card-info {
+  /* Estiliza o contêiner de informações do card. */
   flex: 1; /* Permite que este bloco ocupe o espaço restante */
   text-align: left; /* Alinha o texto à esquerda */
 }
 
 /* Título do curso dentro do card */
 .texto {
+  /* Estiliza o título do curso. */
   padding: 10px; /* Espaçamento interno */
   border-radius: 6px; /* Bordas arredondadas */
   font-size: 1.5rem; /* Tamanho da fonte */
@@ -80,6 +89,7 @@ h1 {
 
 /* Parágrafo de descrição do curso */
 .card-info p {
+  /* Estiliza os parágrafos dentro das informações do card. */
   font-size: large; /* Tamanho da fonte um pouco maior */
   margin: 10px 0; /* Margem vertical */
   line-height: 1.5; /* Altura da linha para melhor legibilidade */
@@ -88,6 +98,7 @@ h1 {
 
 /* Container do botão para centralizá-lo */
 .card-info button {
+  /* Estiliza o contêiner do botão. */
   display: flex; /* Usa flexbox */
   justify-content: center; /* Centraliza o botão horizontalmente */
   width: 100%; /* Garante que o container do botão ocupe toda a largura disponível */
@@ -95,6 +106,7 @@ h1 {
 
 /* Reset para o elemento <button> para remover estilos padrão do navegador */
 button {
+  /* Estiliza todos os elementos <button>. */
   background: none; /* Sem fundo */
   border: none; /* Sem borda */
   margin-top: 0.5rem; /* Margem superior */
@@ -102,6 +114,7 @@ button {
 
 /* Estilização do link <a> dentro do botão para parecer um botão de verdade */
 button a {
+  /* Estiliza o link dentro de um botão. */
   display: inline-block; /* Permite definir padding e outras propriedades de bloco */
   text-decoration: none; /* Remove o sublinhado do link */
   background: #f57c00; /* Fundo laranja */
@@ -114,24 +127,29 @@ button a {
 
 /* Efeito ao passar o mouse sobre o botão */
 button a:hover {
+  /* Efeito ao passar o mouse sobre o link do botão. */
   background: #ff8f00; /* Laranja um pouco mais claro */
   transform: scale(1.05); /* Aumenta levemente o tamanho do botão */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
+  /* Aplica estilos para telas com largura máxima de 768px. */
   .card-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    /* Estiliza o conteúdo do card em telas menores. */
+    flex-direction: column; /* Empilha os itens verticalmente. */
+    align-items: center; /* Centraliza os itens horizontalmente. */
+    text-align: center; /* Centraliza o texto. */
   }
 
   .course-Icon {
+    /* Estiliza a imagem do curso em telas menores. */
     width: 90%; /* A imagem ocupa 90% da largura do card */
     margin-bottom: 15px; /* Espaço abaixo da imagem */
   }
 
   .card-info {
+    /* Estiliza as informações do card em telas menores. */
     text-align: center; /* Centraliza todo o texto de informação no mobile */
   }
 }
@@ -139,12 +157,14 @@ button a:hover {
 /*HEADER E FOOTER*/
 
 header {
-  background-color: #f57c00;
-  color: white;
+  /* Redefine alguns estilos do cabeçalho. */
+  background-color: #f57c00; /* Cor de fundo laranja. */
+  color: white; /* Cor do texto branca. */
   padding: 15px 0; /* Aumenta o preenchimento vertical do header */
 }
 
 .header-top {
+  /* Estiliza o topo do cabeçalho. */
   padding: 0 20px; /* Preenchimento horizontal para não colar nas bordas */
   box-sizing: border-box; /* Garante que o padding não afete a largura total */
   position: relative; /* Necessário para posicionar elementos filhos */
@@ -154,12 +174,14 @@ header {
 }
 
 header h1 {
+  /* Estiliza o h1 dentro do cabeçalho. */
   font-size: 1.8em; /* Título um pouco maior para mais destaque */
   margin: 0; /* Remove margens padrão que podem atrapalhar o alinhamento */
   margin-bottom: 5px; /* Adiciona um pequeno espaço abaixo do título, antes dos links de navegação */
 }
 
 .center-area {
+  /* Estiliza a área central do cabeçalho. */
   flex-grow: 1; /* Faz esta área central ocupar todo o espaço disponível entre os logos/botões */
   display: flex; /* Usa flexbox */
   flex-direction: column; /* Empilha o h1 e a navegação verticalmente */
@@ -169,12 +191,14 @@ header h1 {
 }
 
 .sub-nav-links {
+  /* Estiliza o contêiner dos links de navegação. */
   display: flex; /* Coloca os links de navegação em linha */
   justify-content: center; /* Centraliza os links da navegação */
   flex-wrap: wrap; /* Permite que os links quebrem para a próxima linha se não houver espaço */
 }
 
 .sub-nav-links a {
+  /* Estiliza cada link de navegação. */
   color: white; /* Cor do texto dos links */
   margin: 0 15px; /* Aumenta o espaçamento entre os links */
   text-decoration: none; /* Remove o sublinhado padrão */
@@ -184,22 +208,26 @@ header h1 {
 }
 
 .sub-nav-links a:hover {
+  /* Efeito ao passar o mouse sobre os links de navegação. */
   text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
 /* --- SEÇÃO DO LOGO ESQUERDO DO CABEÇALHO --- */
 .logo-esq {
+  /* Estiliza o contêiner do logo esquerdo. */
   width: 120px; /* Largura do logo da esquerda */
   flex-shrink: 0; /* Impede que o logo encolha */
 }
 
 .logo-esq img {
+  /* Estiliza a imagem do logo esquerdo. */
   width: 100%; /* Imagem ocupa toda a largura do container .logo-esq */
   height: auto; /* Altura se ajusta automaticamente para manter a proporção */
   display: block; /* Remove espaços extras que a imagem pode ter como elemento inline */
 }
 
 .logo-dir img {
+  /* Estiliza a imagem do logo direito. */
   display: block; /* Garante que a imagem seja um bloco */
   width: auto; /* Largura automática */
   max-width: 140px; /* Limita a largura máxima do logo */
@@ -209,6 +237,7 @@ header h1 {
 }
 
 .header-btns {
+  /* Estiliza o contêiner dos botões do cabeçalho. */
   display: flex; /* Alinha os botões em linha */
   gap: 10px; /* Espaço entre os botões */
   align-items: center; /* Alinha os botões verticalmente */
@@ -217,6 +246,7 @@ header h1 {
 }
 
 .btn-header {
+  /* Estiliza os botões do cabeçalho. */
   padding: 4px 8px; /* Preenchimento interno do botão */
   border-radius: 5px; /* Bordas arredondadas */
   cursor: pointer; /* Mostra a "mãozinha" ao passar o mouse */
@@ -233,30 +263,35 @@ header h1 {
 }
 
 .btn-header:hover {
+  /* Efeito ao passar o mouse sobre os botões do cabeçalho. */
   background-color: white; /* Fundo branco no hover */
   color: #f57c00; /* Texto laranja no hover */
   border-color: white; /* Borda branca no hover */
 }
 
 .btn-aluno {
+  /* Estiliza o botão de aluno. */
   background-color: transparent; /* Botão de aluno tem fundo transparente por padrão */
   border-color: white; /* Borda branca */
   color: white; /* Texto branco */
 }
 
 .btn-aluno:hover {
+  /* Efeito ao passar o mouse sobre o botão de aluno. */
   background-color: white; /* Fundo branco no hover */
   color: #f57c00; /* Texto laranja no hover */
   border-color: white; /* Borda branca no hover */
 }
 
 .imagem-header {
+  /* Estiliza a imagem do cabeçalho. */
   height: 350px; /* Altura da imagem principal do cabeçalho */
   width: 100%; /* Largura total */
   overflow: hidden; /* Esconde as partes da imagem que são cortadas */
 }
 
 .imagem-header img {
+  /* Estiliza a imagem dentro do contêiner. */
   width: 100%; /* Imagem ocupa toda a largura do container */
   height: 100%; /* Imagem ocupa toda a altura do container */
   display: block; /* Remove espaços extras */
@@ -265,55 +300,64 @@ header h1 {
 }
 
 @media (max-width: 992px) {
+  /* Aplica estilos para telas com largura máxima de 992px. */
   .header-top {
-    flex-direction: column;
+    /* Estiliza o topo do cabeçalho. */
+    flex-direction: column; /* Empilha os itens verticalmente. */
     gap: 15px; /* Espaço entre os elementos empilhados */
   }
 
   header {
+    /* Estiliza o cabeçalho. */
     /* Ajustes gerais do header para telas médias */
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+    flex-direction: column; /* Organiza em coluna. */
+    align-items: center; /* Centraliza horizontalmente. */
+    text-align: center; /* Centraliza o texto. */
+    padding: 20px; /* Adiciona preenchimento. */
   }
 
-  .logo-dir,
+  .logo-dir, /* Seleciona o logo direito. */
   .header-btns {
+    /* Seleciona os botões do cabeçalho. */
     /* Reseta o posicionamento para que fiquem no fluxo normal do documento */
-    position: static !important;
-    top: auto !important;
-    right: auto !important;
-    left: auto !important;
-    transform: none !important;
-    width: 100%;
-    max-width: none;
+    position: static !important; /* Remove o posicionamento absoluto. */
+    top: auto !important; /* Reseta a posição do topo. */
+    right: auto !important; /* Reseta a posição da direita. */
+    left: auto !important; /* Reseta a posição da esquerda. */
+    transform: none !important; /* Remove qualquer transformação. */
+    width: 100%; /* Ocupa 100% da largura. */
+    max-width: none; /* Remove a largura máxima. */
   }
 
   .logo-esq {
+    /* Estiliza o logo esquerdo. */
     display: flex; /* Usa flexbox para centralizar */
     justify-content: center; /* Centraliza o logo horizontalmente */
     margin: 0 auto 10px; /* Centraliza e adiciona margem inferior */
   }
 
   header h1 {
+    /* Estiliza o h1 do cabeçalho. */
     font-size: 2em; /* Aumenta um pouco o título */
     margin: 10px 0; /* Margem vertical */
     order: 2; /* Muda a ordem de exibição, colocando o h1 depois de outros elementos se necessário */
   }
   .header-btns {
+    /* Estiliza os botões do cabeçalho. */
     margin-top: 15px; /* Espaço acima dos botões */
     order: 3; /* Ordem de exibição */
   }
 
   /* A navegação (.sub-nav-links) vem por último */
   .sub-nav-links {
-    order: 4;
+    /* Estiliza os links de navegação. */
+    order: 4; /* Define a ordem de exibição. */
   }
 }
 
 .menu-toggle {
-  display: none;
+  /* Estiliza o botão de menu hambúrguer. */
+  display: none; /* Esconde o botão por padrão. */
   background: transparent; /* Fundo transparente */
   border: 2px solid rgba(255, 255, 255, 0.15); /* Borda sutil */
   color: white; /* Cor do ícone (se for fonte) ou do texto */
@@ -326,26 +370,30 @@ header h1 {
 
 /* 2) nav padrão (desktop) - mantém o comportamento atual */
 nav {
-  display: flex;
-  gap: 10px;
+  /* Estiliza a navegação. */
+  display: flex; /* Ativa o flexbox. */
+  gap: 10px; /* Adiciona espaçamento entre os itens. */
 }
 
 /* 3) regras para telas pequenas */
 @media (max-width: 768px) {
+  /* Aplica estilos para telas com largura máxima de 768px. */
   /* Removemos posicionamentos absolutos para que os elementos fiquem no fluxo normal */
-  .logo-dir,
+  .logo-dir, /* Seleciona o logo direito. */
   .header-btns {
-    position: static !important;
-    transform: none !important;
-    top: auto !important;
-    right: auto !important;
-    left: auto !important;
-    width: 100%;
-    max-width: none;
+    /* Seleciona os botões do cabeçalho. */
+    position: static !important; /* Remove o posicionamento. */
+    transform: none !important; /* Remove a transformação. */
+    top: auto !important; /* Reseta a posição do topo. */
+    right: auto !important; /* Reseta a posição da direita. */
+    left: auto !important; /* Reseta a posição da esquerda. */
+    width: 100%; /* Ocupa 100% da largura. */
+    max-width: none; /* Remove a largura máxima. */
   }
 
   /* Mostra o botão hamburguer em telas pequenas */
   .menu-toggle {
+    /* Estiliza o botão de menu. */
     display: inline-block; /* Torna o botão visível */
     position: absolute; /* Posiciona em relação ao header */
     left: 16px; /* Distância da esquerda */
@@ -355,25 +403,28 @@ nav {
 
   /* header layout no mobile */
   header {
+    /* Estiliza o cabeçalho em telas pequenas. */
     padding: 12px; /* Reduz o padding do header */
     align-items: center; /* Centraliza os itens */
   }
 
   /* .sub-nav-links escondido por padrão no mobile (abrirá com a classe menu-aberto no body) */
   .sub-nav-links {
+    /* Estiliza os links de navegação em telas pequenas. */
     display: none; /* Esconde o menu de navegação por padrão */
     width: 100%; /* Ocupa toda a largura */
-    margin-top: 10px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: #303030;
-    padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-    z-index: 15;
+    margin-top: 10px; /* Adiciona margem no topo. */
+    flex-direction: column; /* Organiza em coluna. */
+    align-items: center; /* Centraliza horizontalmente. */
+    text-align: center; /* Centraliza o texto. */
+    background-color: #303030; /* Fundo cinza escuro. */
+    padding: 10px 0; /* Adiciona preenchimento vertical. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* Adiciona uma sombra. */
+    z-index: 15; /* Define a ordem de empilhamento. */
   }
 
   .sub-nav-links a {
+    /* Estiliza os links dentro do menu. */
     width: 90%; /* Links ocupam 90% da largura do menu */
     padding: 12px 10px; /* Espaçamento interno maior para facilitar o toque */
     margin: 6px 0; /* Margem vertical entre os links */
@@ -382,129 +433,149 @@ nav {
 
   /* quando o menu estiver aberto (a gente adiciona/removerá essa classe via JS) */
   body.menu-aberto .sub-nav-links {
+    /* Mostra o menu quando o body tem a classe 'menu-aberto'. */
     display: flex; /* Mostra o menu quando o body tiver a classe 'menu-aberto' */
   }
 
   /* empurra o conteúdo principal para não ficar escondido atrás do header */
   .imagem-header {
+    /* Estiliza a imagem do cabeçalho. */
     margin-top: 0; /* definimos um espaçamento controlado abaixo */
   }
 
   /* garante que a imagem hero não seja coberta: reduz sua altura máxima */
   .imagem-header img {
-    max-height: 260px;
-    object-fit: cover;
+    /* Estiliza a imagem dentro do contêiner. */
+    max-height: 260px; /* Define a altura máxima. */
+    object-fit: cover; /* Faz a imagem cobrir o espaço. */
   }
 
   /* garante que os logos apareçam (se estavam com display:none) */
   .logo-dir img {
+    /* Estiliza a imagem do logo direito. */
     display: block; /* Garante que o logo da direita seja exibido */
     max-width: 140px; /* Mantém a limitação apenas para o logo da direita */
-    height: auto;
+    height: auto; /* Altura automática. */
   }
 
   /* header buttons ficam em linha/baixo do h1 em mobile */
   .header-btns {
+    /* Estiliza os botões do cabeçalho. */
     margin-top: 8px; /* Espaço acima dos botões */
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex; /* Ativa o flexbox. */
+    gap: 8px; /* Adiciona espaçamento. */
+    flex-wrap: wrap; /* Permite que os botões quebrem a linha. */
+    justify-content: center; /* Centraliza os botões. */
   }
 }
 
 /* Container do switch de modo escuro */
 .modo-escuro {
-  display: flex;
-  align-items: center;
+  /* Estiliza o contêiner do modo escuro. */
+  display: flex; /* Ativa o flexbox. */
+  align-items: center; /* Alinha os itens verticalmente. */
 }
 
 /* Esconde o checkbox */
 #toggle {
-  display: none;
+  /* Seleciona o checkbox do modo escuro. */
+  display: none; /* Esconde o checkbox. */
 }
 
 /* Trilho */
 /* O "caminho" por onde a bolinha do switch desliza */
 .trilho {
-  width: 45px;
-  height: 22px;
-  background: #ccc;
-  border-radius: 25px;
-  position: relative;
-  margin-left: 7px;
-  cursor: pointer;
-  transition: background 0.3s;
+  /* Estiliza o trilho do switch. */
+  width: 45px; /* Largura do trilho. */
+  height: 22px; /* Altura do trilho. */
+  background: #ccc; /* Cor de fundo cinza. */
+  border-radius: 25px; /* Arredonda os cantos. */
+  position: relative; /* Define um contexto de posicionamento. */
+  margin-left: 7px; /* Adiciona margem à esquerda. */
+  cursor: pointer; /* Muda o cursor para uma mão. */
+  transition: background 0.3s; /* Animação suave para a cor de fundo. */
 }
 
 /* Bolinha */
 /* A parte redonda e móvel do switch */
 .bola {
-  width: 18px;
-  height: 18px;
-  background: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  transition: transform 0.3s;
+  /* Estiliza a bolinha do switch. */
+  width: 18px; /* Largura da bolinha. */
+  height: 18px; /* Altura da bolinha. */
+  background: white; /* Fundo branco. */
+  border-radius: 50%; /* Torna a bolinha redonda. */
+  position: absolute; /* Posiciona de forma absoluta. */
+  top: 2px; /* Distância do topo. */
+  left: 2px; /* Distância da esquerda. */
+  transition: transform 0.3s; /* Animação suave para o movimento. */
 }
 
 /* Quando ativo */
 #toggle:checked + .trilho {
+  /* Estiliza o trilho quando o switch está ativo. */
   background: #4ea8ff; /* Muda a cor do trilho quando o checkbox está marcado */
 }
 
 #toggle:checked + .trilho .bola {
+  /* Estiliza a bolinha quando o switch está ativo. */
   transform: translateX(23px); /* Move a bolinha para a direita */
 }
 
 /*Tema escuro aplicado ao body*/
 body.escuro {
-  background-color: #303030;
-  color: #f1f1f1;
+  /* Estiliza o body no modo escuro. */
+  background-color: #303030; /* Fundo cinza escuro. */
+  color: #f1f1f1; /* Texto cinza claro. */
 }
 
 /* Ajusta cores no modo escuro */
 /* Cor do header no modo escuro */
 body.escuro header {
-  background-color: #121215;
+  /* Estiliza o cabeçalho no modo escuro. */
+  background-color: #121215; /* Fundo cinza bem escuro. */
 }
 
 /* Cor dos botões no modo escuro */
-body.escuro .btn-header,
+body.escuro .btn-header, /* Seleciona botões do cabeçalho no modo escuro. */
 body.escuro .btn {
-  background-color: #303030;
-  color: #fff;
-  border-color: #000000;
+  /* Seleciona botões genéricos no modo escuro. */
+  background-color: #303030; /* Fundo cinza escuro. */
+  color: #fff; /* Texto branco. */
+  border-color: #000000; /* Borda preta. */
 }
 
 /* Cor do conteúdo do card no modo escuro */
 body.escuro .card-content {
-  background-color: #121215;
+  /* Estiliza o conteúdo do card no modo escuro. */
+  background-color: #121215; /* Fundo cinza bem escuro. */
 }
 
 /* Cor do botão dentro do card no modo escuro */
 body.escuro .button {
-  background: #303030;
+  /* Estiliza o botão dentro do card no modo escuro. */
+  background: #303030; /* Fundo cinza escuro. */
 }
 
 /* Cor do texto do título do card no modo escuro */
 body.escuro .texto {
-  color: white;
+  /* Estiliza o texto do título no modo escuro. */
+  color: white; /* Texto branco. */
 }
 
 /* Estilos genéricos de card para modo escuro (se houver outros cards) */
 body.escuro .card {
-  background-color: #000000;
-  color: #ddd;
+  /* Estiliza cards genéricos no modo escuro. */
+  background-color: #000000; /* Fundo preto. */
+  color: #ddd; /* Texto cinza claro. */
 }
 
 /* Cor do rodapé no modo escuro */
 body.escuro footer {
-  background-color: #121215;
+  /* Estiliza o rodapé no modo escuro. */
+  background-color: #121215; /* Fundo cinza bem escuro. */
 }
 .social-link {
+  /* Estiliza os links de mídia social. */
   display: inline-flex; /* Alinha o ícone e o texto na mesma linha */
   align-items: center; /* Centraliza verticalmente */
   gap: 8px; /* Espaço entre o ícone e o texto (se houver) */
@@ -513,101 +584,119 @@ body.escuro footer {
   transition: transform 0.3s ease; /* Transição suave */
 }
 .social-link:hover {
+  /* Efeito ao passar o mouse sobre os links de mídia social. */
   text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
 .social-media img {
+  /* Estiliza as imagens de mídia social. */
   width: 30px; /* Tamanho do ícone */
-  height: 30px;
+  height: 30px; /* Altura do ícone. */
   vertical-align: middle; /* Alinha o ícone com o texto */
 }
 
 /*RESPONSIVIDADE */
 /* Ajustes para telas médias/tablets */
 @media (max-width: 992px) {
+  /* Aplica estilos para telas com largura máxima de 992px. */
   header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+    /* Estiliza o cabeçalho. */
+    flex-direction: column; /* Organiza em coluna. */
+    align-items: center; /* Centraliza horizontalmente. */
+    text-align: center; /* Centraliza o texto. */
+    padding: 20px; /* Adiciona preenchimento. */
   }
 
   .logo-esq {
+    /* Estiliza o logo esquerdo. */
     position: static; /* Remove posicionamento absoluto/relativo */
     transform: none; /* Remove qualquer transformação */
     margin-bottom: 10px; /* Adiciona margem inferior */
   }
 
   nav {
+    /* Estiliza a navegação. */
     /* Ajusta a navegação principal */
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 20px;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha. */
+    justify-content: center; /* Centraliza os itens. */
+    padding-top: 20px; /* Adiciona preenchimento no topo. */
   }
 
   nav a {
-    padding-top: 0;
-    font-size: 15px;
+    /* Estiliza os links da navegação. */
+    padding-top: 0; /* Remove o preenchimento do topo. */
+    font-size: 15px; /* Ajusta o tamanho da fonte. */
   }
 
   h1 {
-    font-size: 24px;
+    /* Estiliza o h1. */
+    font-size: 24px; /* Ajusta o tamanho da fonte. */
   }
 }
 
 /* Ajustes para telas pequenas/celulares */
 @media (max-width: 600px) {
+  /* Aplica estilos para telas com largura máxima de 600px. */
   header {
-    padding: 15px;
+    /* Estiliza o cabeçalho. */
+    padding: 15px; /* Ajusta o preenchimento. */
   }
 
   .logo-esq img {
-    width: 120px;
+    /* Estiliza a imagem do logo esquerdo. */
+    width: 120px; /* Ajusta a largura. */
   }
 
   h1 {
-    font-size: 20px;
-    text-align: center;
-    margin-top: 15px;
+    /* Estiliza o h1. */
+    font-size: 20px; /* Ajusta o tamanho da fonte. */
+    text-align: center; /* Centraliza o texto. */
+    margin-top: 15px; /* Adiciona margem no topo. */
   }
 
   nav a {
-    font-size: 14px;
-    margin: 5px;
+    /* Estiliza os links da navegação. */
+    font-size: 14px; /* Ajusta o tamanho da fonte. */
+    margin: 5px; /* Adiciona margem. */
   }
 
   .course-card {
+    /* Estiliza o card do curso. */
     width: 95%; /* Card ocupa quase toda a largura */
     grid-template-columns: 1fr; /* Garante uma única coluna (se estivesse usando grid) */
     gap: 1rem; /* Espaçamento */
   }
 
   .course-card figure {
+    /* Estiliza a figura dentro do card. */
     /* Ajuste para a imagem/figura dentro do card */
-    padding: 0.8rem;
+    padding: 0.8rem; /* Ajusta o preenchimento. */
   }
 
   footer {
-    font-size: 14px;
-    padding: 20px;
+    /* Estiliza o rodapé. */
+    font-size: 14px; /* Ajusta o tamanho da fonte. */
+    padding: 20px; /* Ajusta o preenchimento. */
   }
 }
 
 footer {
+  /* Estiliza o rodapé. */
   /* Estilos do rodapé */
   position: relative; /* necessário para posicionamento absoluto interno */
-  background-color: #121215;
-  color: white;
-  text-align: center;
-  padding: 30px;
-  width: 100%;
-  box-sizing: border-box;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #121215; /* Fundo cinza bem escuro. */
+  color: white; /* Texto branco. */
+  text-align: center; /* Centraliza o texto. */
+  padding: 30px; /* Adiciona preenchimento. */
+  width: 100%; /* Ocupa 100% da largura. */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura. */
+  justify-content: space-between; /* Distribui o espaço entre os itens. */
+  align-items: center; /* Alinha os itens verticalmente. */
 }
 
 /* Instagram no canto inferior esquerdo */
 footer .social-media {
+  /* Estiliza o contêiner de mídias sociais no rodapé. */
   position: absolute; /* Posicionamento absoluto em relação ao footer */
   left: 16px; /* Distância da esquerda */
   bottom: 25px; /* Distância de baixo */
@@ -618,22 +707,25 @@ footer .social-media {
 
 /* garante que o link e ícone fiquem alinhados */
 footer .social-media .social-link {
-  color: white;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  /* Estiliza o link de mídia social. */
+  color: white; /* Cor do texto branca. */
+  text-decoration: none; /* Remove o sublinhado. */
+  display: inline-flex; /* Ativa o flexbox em linha. */
+  align-items: center; /* Alinha verticalmente. */
+  gap: 8px; /* Adiciona espaçamento. */
 }
 
 /* tamanho do ícone do instagram */
 footer .social-media img {
-  width: 30px;
-  height: 30px;
-  display: block;
+  /* Estiliza a imagem de mídia social. */
+  width: 30px; /* Define a largura. */
+  height: 30px; /* Define a altura. */
+  display: block; /* Remove espaços extras. */
 }
 
 /* Logo da empresa no canto inferior direito */
 footer .footer-logo {
+  /* Estiliza o logo no rodapé. */
   position: absolute; /* Posicionamento absoluto em relação ao footer */
   right: 16px; /* Distância da direita */
   bottom: 25px; /* Distância de baixo */
@@ -643,22 +735,26 @@ footer .footer-logo {
 
 /* tamanho da logo da empresa */
 footer .footer-logo img {
-  width: 120px;
-  height: auto;
-  display: block;
+  /* Estiliza a imagem do logo. */
+  width: 120px; /* Define a largura. */
+  height: auto; /* Altura automática. */
+  display: block; /* Remove espaços extras. */
 }
 
 /* Truque para manter o rodapé sempre no final da página, mesmo com pouco conteúdo */
-html,
+html, /* Seleciona o elemento html. */
 body {
+  /* Seleciona o elemento body. */
   height: 100%; /* ocupa toda a altura da tela */
 }
 
 body {
+  /* Redefine o estilo do body. */
   display: flex; /* ativa o flexbox */
   flex-direction: column; /* organiza tudo em coluna (header → conteúdo → footer) */
 }
 
 main {
+  /* Estiliza o conteúdo principal. */
   flex: 1; /* ocupa o espaço restante, empurrando o footer pra baixo */
 }

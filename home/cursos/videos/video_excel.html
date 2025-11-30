@@ -1,100 +1,112 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-br"> <!-- Inicia o elemento raiz do HTML, definindo o idioma da página como português do Brasil -->
 
-<head>
-  <meta charset="UTF-8">
+<head> <!-- Contém metadados e links para recursos externos -->
+  <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8, para suportar acentos e símbolos -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Links para as fontes do Google Fonts -->
+  <!-- Configura a viewport para um design responsivo -->
+  <!-- Links para as fontes do Google Fonts --> <!-- Comentário informativo -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Pré-conecta ao servidor de fontes para otimizar o carregamento -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Pré-conecta ao servidor de arquivos estáticos de fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Importa a fonte 'Poppins' com diferentes pesos -->
   <link rel="icon" type="image/png" sizes="32x32" href="../logo-oficial1.png">
-  <title>Cursos de Informática</title>
+  <!-- Define o ícone (favicon) da página -->
+  <title>Cursos de Informática</title> <!-- Define o título que aparece na aba do navegador -->
   <link rel="stylesheet" href="../estilo_paginas.css">
-</head>
+  <!-- Linka a folha de estilos CSS externa para estilizar a página -->
+</head> <!-- Fim da seção head -->
 
-<body>
-  <main>
-    <header>
-      <div class="header-top">
-        <!-- botão hamburguer (esquerda) -->
+<body> <!-- Início do corpo do documento, onde o conteúdo visível é colocado -->
+  <main> <!-- Elemento principal que agrupa o conteúdo principal da página -->
+    <header> <!-- Seção do cabeçalho da página -->
+      <div class="header-top"> <!-- Div para a parte superior do cabeçalho -->
+        <!-- botão hamburguer (esquerda) --> <!-- Comentário informativo -->
         <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+        <!-- Botão para o menu responsivo (hambúrguer) -->
 
-        <div class="logo-esq">
-          <img src="../img/tech-para-todos.png" alt="Logo Tech Para Todos">
-        </div>
+        <div class="logo-esq"> <!-- Contêiner para o logo no lado esquerdo -->
+          <img src="../img/tech-para-todos.png" alt="Logo Tech Para Todos"> <!-- Imagem do logo -->
+        </div> <!-- Fim do contêiner do logo -->
 
-        <!-- center-area: título + botões -->
-        <div class="center-area">
-          <h1>Cursos de Informática Básica Para melhor Idade</h1>
-          <div class="sub-nav-links">
-            <a href="../../index.html">Início</a>
-            <a href="../../sobrenos.html">Sobre Nós</a>
-            <a href="../index.html">Nossos Cursos</a>
-            <a href="../../contato.html">Contato</a>
-          </div>
-        </div>
-        <!-- botões à direita -->
-        <div class="header-btns">
-          <label class="modo-escuro">
-            <input type="checkbox" id="toggle">
-            <span class="trilho"><span class="bola"></span></span>
-          </label>
-          <a href="../../cadastro.html" class="btn-header">CADASTRE-SE</a>
+        <!-- center-area: título + botões --> <!-- Comentário informativo -->
+        <div class="center-area"> <!-- Área central do cabeçalho -->
+          <h1>Cursos de Informática Básica Para melhor Idade</h1> <!-- Título principal da página -->
+          <div class="sub-nav-links"> <!-- Contêiner para os links de navegação -->
+            <a href="../../index.html">Início</a> <!-- Link para a página inicial -->
+            <a href="../../sobrenos.html">Sobre Nós</a> <!-- Link para a página "Sobre Nós" -->
+            <a href="../index.html">Nossos Cursos</a> <!-- Link para a página de cursos -->
+            <a href="../../contato.html">Contato</a> <!-- Link para a página de contato -->
+          </div> <!-- Fim dos links de navegação -->
+        </div> <!-- Fim da área central -->
+        <!-- botões à direita --> <!-- Comentário informativo -->
+        <div class="header-btns"> <!-- Contêiner para os botões do cabeçalho -->
+          <label class="modo-escuro"> <!-- Rótulo para o botão de alternância de modo escuro -->
+            <input type="checkbox" id="toggle"> <!-- Checkbox para controlar o modo escuro -->
+            <span class="trilho"><span class="bola"></span></span> <!-- Elementos visuais para o botão toggle -->
+          </label> <!-- Fim do rótulo -->
+          <a href="../../cadastro.html" class="btn-header">CADASTRE-SE</a> <!-- Botão/link para a página de cadastro -->
           <a href="../../login.html" class="btn-header btn-acao">JÁ SOU ALUNO(A)</a>
-        </div>
-      </div>
+          <!-- Botão/link para a página de login -->
+        </div> <!-- Fim do contêiner de botões -->
+      </div> <!-- Fim da parte superior do cabeçalho -->
 
-    </header>
-    <!-- CARD DO CURSO -->
-    <div class="course-card"> <!-- ÁREA DO VÍDEO -->
-      <div class="card-content">
-        <h2 class="texto">Vídeo aula</h2>
-        <video width="854" height="480" controls> <!-- VÍDEO -->
+    </header> <!-- Fim do cabeçalho -->
+    <!-- CARD DO CURSO --> <!-- Comentário informativo -->
+    <div class="course-card"> <!-- ÁREA DO VÍDEO --> <!-- Contêiner para o card do curso -->
+      <div class="card-content"> <!-- Conteúdo dentro do card -->
+        <h2 class="texto">Vídeo aula</h2> <!-- Título da seção de vídeo -->
+        <video width="854" height="480" controls> <!-- VÍDEO --> <!-- Elemento de vídeo com controles de reprodução -->
           <source src="../img/videos/excel.mp4" type="video/mp4"> <!-- ORIGEM DO VÍDEO -->
-        </video>
-        <div class="card-info"> <!-- AVISO -->
+          <!-- Define a fonte do vídeo -->
+        </video> <!-- Fim do elemento de vídeo -->
+        <div class="card-info"> <!-- AVISO --> <!-- Contêiner para informações e ações -->
           <p>Preste atenção no conteúdo do vídeo. Ao término, caso esteja confiante de que entendeu o conteúdo
-            mencionado, inicie o questionário.</p>
-          <button> <!-- BOTÃO DO QUESTIONÁRIO -->
+            <!-- Parágrafo com instruções -->
+            mencionado, inicie o questionário.</p> <!-- Fim do parágrafo -->
+          <button> <!-- BOTÃO DO QUESTIONÁRIO --> <!-- Botão para iniciar o quiz -->
             <a href="../Quiz/quiz-excel/quiz-excel.html" class="button">Iniciar questionário</a>
-          </button>
-        </div>
-      </div>
-    </div>
-  </main>
+            <!-- Link dentro do botão que leva ao quiz -->
+          </button> <!-- Fim do botão -->
+        </div> <!-- Fim do contêiner de informações -->
+      </div> <!-- Fim do conteúdo do card -->
+    </div> <!-- Fim do card do curso -->
+  </main> <!-- Fim do conteúdo principal -->
 
-  <footer>
-    <div class="social-media">
+  <footer> <!-- Seção do rodapé da página -->
+    <div class="social-media"> <!-- Contêiner para links de mídias sociais -->
       <a href="https://www.instagram.com/evolutiontech__/" target="_blank" rel="noopener noreferrer"
         title="Siga-nos no Instagram" class="social-link">
-        <img src="../img/instagram3.png" alt="Ícone do Instagram">
-        <span><strong>evolutiontech_</strong></span>
-      </a>
-    </div>
-    <div class="footer-logo">
-      <img src="img/logotipo empresa (2).png" alt="Logo da Empresa">
-    </div>
+        <img src="../img/instagram3.png" alt="Ícone do Instagram"> <!-- Ícone do Instagram -->
+        <span><strong>evolutiontech__</strong></span> <!-- Nome de usuário do Instagram -->
+      </a> <!-- Fim do link do Instagram -->
+    </div> <!-- Fim do contêiner de mídias sociais -->
+    <div class="footer-logo"> <!-- Contêiner para o logo no rodapé -->
+      <img src="../../img/logotipo empresa (2).png" alt="Logo da Empresa"> <!-- Imagem do logo da empresa -->
+    </div> <!-- Fim do contêiner do logo do rodapé -->
 
 
     <p>&copy; 2025 Tech Para Todos - Evolution Tech. Todos os direitos reservados.</p>
+    <!-- Texto de direitos autorais -->
 
-  </footer>
-  <script src="../../script.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const isLoggedIn = sessionStorage.getItem('isLoggedIn');
-      if (isLoggedIn !== 'true') {
-        const querCadastrar = confirm('Você precisa estar logado para assistir aos vídeos. Deseja criar uma nova conta?');
-        if (querCadastrar) {
-          window.location.href = '../../cadastro.html'; // Redireciona para o cadastro
-        } else {
-          window.location.href = '../../login.html'; // Redireciona para o login
-        }
-      }
-    });
-  </script>
+  </footer> <!-- Fim do rodapé -->
+  <script src="../../script.js"></script> <!-- Linka um arquivo JavaScript global -->
+  <script> // Inicia um bloco de script inline
+    document.addEventListener('DOMContentLoaded', () => { // Executa o código quando o DOM da página estiver totalmente carregado
+      const isLoggedIn = sessionStorage.getItem('isLoggedIn'); // Verifica se o usuário está logado buscando um item no sessionStorage
+      if (isLoggedIn !== 'true') { // Se o usuário não estiver logado
+        const querCadastrar = confirm('Você precisa estar logado para assistir aos vídeos. Deseja criar uma nova conta?'); // Pergunta se o usuário quer se cadastrar
+        if (querCadastrar) { // Se o usuário clicar em "OK"
+          window.location.href = '../../cadastro.html'; // Redireciona para a página de cadastro
+        } else { // Se o usuário clicar em "Cancelar"
+          window.location.href = '../../login.html'; // Redireciona para a página de login
+        } // Fim do else
+      } // Fim do if
+    }); // Fim do event listener
+  </script> <!-- Fim do bloco de script -->
 
-</body>
+</body> <!-- Fim do corpo do documento -->
 
-</html>
+</html> <!-- Fim do documento HTML -->

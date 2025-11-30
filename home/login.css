@@ -1,124 +1,140 @@
 /* Estilos gerais para o corpo da página de login. */
 body {
   /* Define a imagem de fundo correta */
-  background-image: url("melhor-idade.jpeg"); /* Imagem de fundo da página. */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  font-family: Arial, sans-serif;
+  background-image: url("melhor-idade.jpeg"); /* Define a imagem de fundo da página. */
+  background-size: cover; /* Faz a imagem de fundo cobrir toda a área do corpo. */
+  background-position: center; /* Centraliza a imagem de fundo. */
+  background-repeat: no-repeat; /* Evita que a imagem de fundo se repita. */
+  background-attachment: fixed; /* Mantém a imagem de fundo fixa durante a rolagem. */
+  min-height: 100vh; /* Define a altura mínima como 100% da altura da viewport (tela). */
+  display: flex; /* Ativa o layout flexbox para o corpo. */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente. */
+  align-items: center; /* Centraliza o conteúdo verticalmente. */
+  margin: 0; /* Remove a margem padrão do corpo. */
+  font-family: Arial, sans-serif; /* Define a família da fonte para o texto. */
 }
 
 /* Container principal do formulário de login. */
 .tela-de-login {
-  background-color: rgba(233, 102, 3, 0.467);
-  padding: 60px;
-  border-radius: 10px;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  color: rgb(255, 255, 255);
-  font-size: 20px;
+  background-color: rgba(
+    233,
+    102,
+    3,
+    0.467
+  ); /* Define a cor de fundo com transparência. */
+  padding: 60px; /* Adiciona um espaçamento interno de 60 pixels. */
+  border-radius: 10px; /* Arredonda as bordas do container. */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para dar profundidade. */
+  color: rgb(255, 255, 255); /* Define a cor do texto como branco. */
+  font-size: 20px; /* Define o tamanho da fonte do texto. */
   position: relative; /* Necessário para posicionar o botão dentro da caixa */
 }
 
 /* Estilo para o link de cadastro dentro do formulário. */
 .tela-de-login a.link-cadastro {
-  color: #0a0a0a; /* Garante que o link seja preto no modo claro */
+  color: #0a0a0a; /* Define a cor do link como preto no modo claro. */
 }
 
 /* Estilo dos campos de input (usuário, senha). */
 input {
-  margin: 10px 0;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-  font-size: 20px;
-  width: 90%;
+  margin: 10px 0; /* Adiciona margem superior e inferior de 10px. */
+  padding: 10px; /* Adiciona espaçamento interno de 10px. */
+  border: none; /* Remove a borda padrão. */
+  border-radius: 5px; /* Arredonda as bordas do campo de input. */
+  outline: none; /* Remove a linha de contorno ao focar. */
+  font-size: 20px; /* Define o tamanho da fonte do texto dentro do input. */
+  width: 90%; /* Define a largura como 90% do container pai. */
 }
 
 /* Estilo do botão de login. */
 button {
-  background-color: rgba(43, 43, 39, 0.845);
-  border: none;
-  padding: 15px;
-  width: 100%;
-  border-radius: 10px;
-  color: white;
+  background-color: rgba(
+    43,
+    43,
+    39,
+    0.845
+  ); /* Define a cor de fundo do botão com transparência. */
+  border: none; /* Remove a borda do botão. */
+  padding: 15px; /* Adiciona espaçamento interno de 15px. */
+  width: 100%; /* Faz o botão ocupar 100% da largura do container. */
+  border-radius: 10px; /* Arredonda as bordas do botão. */
+  color: white; /* Define a cor do texto do botão como branco. */
 }
 
 /* Efeito visual quando o mouse passa por cima do botão. */
 button:hover {
-  background-color: rgb(247, 92, 36);
-  cursor: pointer;
+  background-color: rgb(
+    247,
+    92,
+    36
+  ); /* Muda a cor de fundo quando o mouse está sobre o botão. */
+  cursor: pointer; /* Muda o cursor para uma "mãozinha" para indicar que é clicável. */
 }
 
 /* --- ESTILOS MODO ESCURO --- */
 
 /* Container do switch para alternar entre modo claro e escuro. */
 .modo-escuro {
-  position: absolute;
-  top: 20px;
-  left: 20px; /* Alinha à esquerda */
-  cursor: pointer;
+  position: absolute; /* Define o posicionamento absoluto em relação ao elemento pai com `position: relative`. */
+  top: 20px; /* Posiciona 20px do topo. */
+  left: 20px; /* Posiciona 20px da esquerda. */
+  cursor: pointer; /* Muda o cursor para uma "mãozinha". */
 }
 
 /* O checkbox real fica escondido, a mágica acontece no 'trilho' e na 'bola'. */
 .modo-escuro input {
-  display: none;
+  display: none; /* Esconde o checkbox, pois usaremos uma estilização customizada. */
 }
 
 /* O "trilho" do switch. */
 .trilho {
-  display: block;
-  width: 50px;
-  height: 26px;
-  background-color: #ccc;
-  border-radius: 13px;
-  position: relative;
+  display: block; /* Faz o elemento se comportar como um bloco. */
+  width: 50px; /* Define a largura do trilho. */
+  height: 26px; /* Define a altura do trilho. */
+  background-color: #ccc; /* Define a cor de fundo cinza para o trilho. */
+  border-radius: 13px; /* Arredonda as bordas para formar uma pílula. */
+  position: relative; /* Necessário para posicionar a "bola" dentro dele. */
 }
 
 /* A "bolinha" que desliza no switch. */
 .bola {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border-radius: 50%;
-  transition: transform 0.3s;
+  position: absolute; /* Posicionamento absoluto em relação ao "trilho". */
+  top: 3px; /* Distância de 3px do topo do trilho. */
+  left: 3px; /* Distância de 3px da esquerda do trilho. */
+  width: 20px; /* Largura da bola. */
+  height: 20px; /* Altura da bola. */
+  background-color: white; /* Cor de fundo branca para a bola. */
+  border-radius: 50%; /* Faz o elemento ficar perfeitamente redondo. */
+  transition: transform 0.3s; /* Adiciona uma animação suave de 0.3s para a propriedade `transform`. */
 }
 
 /* Quando o switch está ativado (modo escuro), muda a cor do trilho. */
 .modo-escuro input:checked + .trilho {
-  background-color: #ea7121; /* Laranja quando ativo */
+  background-color: #ea7121; /* Muda a cor de fundo do trilho para laranja quando o input está marcado. */
 }
 
 /* Move a bolinha para a direita quando o modo escuro está ativo. */
 .modo-escuro input:checked + .trilho .bola {
-  transform: translateX(24px);
+  transform: translateX(
+    24px
+  ); /* Move a bola 24px para a direita na horizontal. */
 }
 
 /* Aplica os estilos do tema escuro quando a classe .dark-mode está no body. */
 /* Estilos que mudam no modo escuro */
 .dark-mode .tela-de-login {
-  background: #000000; /* Fundo preto para o formulário */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: #000000; /* Define o fundo do formulário como preto no modo escuro. */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra mais sutil para o modo escuro. */
 }
 
 .dark-mode h1,
 /* Ajusta a cor dos textos para branco no modo escuro, para garantir a leitura. */
 .dark-mode label,
 .dark-mode p {
-  color: #f1f1f1; /* Texto mais claro */
+  color: #f1f1f1; /* Define a cor do texto para um branco suave. */
 }
 
 /* Regra específica para o link no modo escuro */
 .dark-mode .tela-de-login a.link-cadastro {
-  color: #ffffff; /* Deixa o link branco */
+  color: #ffffff; /* Define a cor do link como branco no modo escuro. */
 }

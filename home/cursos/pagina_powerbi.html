@@ -1,129 +1,138 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><!-- Define o tipo de documento como HTML5. -->
+<html lang="pt-br"><!-- Início do documento HTML, com o idioma definido como Português do Brasil. -->
 
-<head>
+<head><!-- Início da seção de cabeçalho, que contém metadados e links. -->
   <!-- Configurações do cabeçalho da página -->
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"><!-- Define a codificação de caracteres como UTF-8 para suportar acentos e símbolos. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configura a viewport para que o site seja responsivo. -->
   <!-- Importação das fontes do Google Fonts que eu uso no site -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Pré-conecta ao servidor de fontes do Google para otimizar o carregamento. -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Pré-conecta ao domínio que armazena os arquivos de fonte. -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Importa a fonte 'Poppins' com diferentes pesos. -->
   <!-- Ícone que aparece na aba do navegador -->
   <link rel="icon" type="image/png" sizes="32x32" href="../logo-oficial1.png">
-  <title>Cursos de Informática</title>
+  <!-- Define o ícone (favicon) da página. -->
+  <title>Cursos de Informática</title><!-- Título da página que aparece na aba do navegador. -->
   <!-- Link para o arquivo de estilo CSS específico das páginas de curso -->
-  <link rel="stylesheet" href="estilo_paginas.css">
-</head>
+  <link rel="stylesheet" href="estilo_paginas.css"><!-- Link para a folha de estilos CSS desta página. -->
+</head><!-- Fim da seção de cabeçalho. -->
 
-<body>
+<body><!-- Início do corpo do documento, onde o conteúdo visível é colocado. -->
   <!-- Conteúdo principal da página -->
-  <main>
+  <main><!-- Início da seção de conteúdo principal. -->
     <!-- Cabeçalho da página -->
-    <header>
-      <div class="header-top">
+    <header><!-- Início da seção de cabeçalho do site. -->
+      <div class="header-top"><!-- Contêiner para os elementos superiores do cabeçalho. -->
         <!-- Botão do menu hamburguer para telas menores -->
-        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+        <button class="menu-toggle"
+          aria-label="Abrir menu">☰</button><!-- Botão para alternar o menu de navegação em telas pequenas. -->
 
         <!-- Logo que fica no canto superior esquerdo -->
-        <div class="logo-esq">
-          <img src="img/tech-para-todos.png" alt="Logo Tech Para Todos">
-        </div>
+        <div class="logo-esq"><!-- Contêiner para o logotipo à esquerda. -->
+          <img src="img/tech-para-todos.png"
+            alt="Logo Tech Para Todos"><!-- Imagem do logotipo com texto alternativo. -->
+        </div><!-- Fim do contêiner do logotipo. -->
 
         <!-- Área central do cabeçalho com o título e os links de navegação -->
-        <div class="center-area">
-          <h1>Cursos de Informática Básica Para melhor Idade</h1>
-          <div class="sub-nav-links">
+        <div class="center-area"><!-- Contêiner para a área central do cabeçalho. -->
+          <h1>Cursos de Informática Básica Para melhor Idade</h1><!-- Título principal da página. -->
+          <div class="sub-nav-links"><!-- Contêiner para os links de navegação. -->
             <!-- Links de navegação principais -->
-            <a href="../index.html">Início</a>
-            <a href="../sobrenos.html">Sobre Nós</a>
-            <a href="./index.html">Nossos Cursos</a>
-            <a href="../contato.html">Contato</a>
-          </div>
-        </div>
+            <a href="../index.html">Início</a><!-- Link para a página inicial. -->
+            <a href="../sobrenos.html">Sobre Nós</a><!-- Link para a página "Sobre Nós". -->
+            <a href="./index.html">Nossos Cursos</a><!-- Link para a página de cursos. -->
+            <a href="../contato.html">Contato</a><!-- Link para a página de contato. -->
+          </div><!-- Fim do contêiner dos links de navegação. -->
+        </div><!-- Fim do contêiner da área central. -->
         <!-- Botões de ação no canto superior direito -->
-        <div class="header-btns">
+        <div class="header-btns"><!-- Contêiner para os botões de ação do cabeçalho. -->
           <!-- Botão para alternar o modo escuro -->
-          <label class="modo-escuro">
-            <input type="checkbox" id="toggle">
-            <span class="trilho"><span class="bola"></span></span>
-          </label>
+          <label class="modo-escuro"><!-- Rótulo para o controle de modo escuro. -->
+            <input type="checkbox" id="toggle"><!-- Caixa de seleção para alternar o modo. -->
+            <span class="trilho"><span class="bola"></span></span><!-- Elementos visuais para o interruptor. -->
+          </label><!-- Fim do rótulo do modo escuro. -->
           <!-- Botões de cadastro e login -->
-          <a href="../cadastro.html" class="btn-header">CADASTRE-SE</a>
-          <a href="../login.html" class="btn-header btn-acao">JÁ SOU ALUNO(A)</a>
-        </div>
-      </div>
+          <a href="../cadastro.html" class="btn-header">CADASTRE-SE</a><!-- Botão/link para a página de cadastro. -->
+          <a href="../login.html" class="btn-header btn-acao">JÁ SOU
+            ALUNO(A)</a><!-- Botão/link para a página de login. -->
+        </div><!-- Fim do contêiner dos botões de ação. -->
+      </div><!-- Fim do contêiner header-top. -->
 
-    </header>
+    </header><!-- Fim da seção de cabeçalho. -->
     <!-- Seção do card de informações do curso -->
-    <div class="course-card">
-      <div class="card-content">
+    <div class="course-card"><!-- Contêiner principal para o card do curso. -->
+      <div class="card-content"><!-- Contêiner para o conteúdo dentro do card. -->
         <!-- Título do curso -->
-        <h2 class="texto">Pix Fácil: Do Zero à Prática</h2>
+        <h2 class="texto">Power BI Básico</h2><!-- Título do curso. -->
         <!-- Imagem representativa do curso -->
-        <img
-          src="img/noticiasconcursos.com.br-novo-recorde-do-pix-1527-milhoes-de-transacoes-em-um-unico-dia-confira-pix.jpg"
-          alt="Curso Pix" class="course-Icon">
+        <img src="img/powerbi.png" alt="Curso Power BI" class="course-Icon">
 
         <!-- Informações detalhadas do curso -->
-        <div class="card-info">
-          <br>
+        <div class="card-info"><!-- Contêiner para as informações do curso. -->
+          <br><!-- Quebra de linha para espaçamento. -->
           <!-- Duração do curso -->
-          <p class="texto" style="text-align: left;">Duração: <strong>1h</strong></p>
+          <p class="texto" style="text-align: left;">Duração: <strong>2h</strong></p>
+          <!-- Parágrafo com a duração do curso, com o tempo em negrito. -->
           <!-- Descrição do curso -->
-          <p class="texto" style="text-align: justify;">Aprenda a utilizar o Pix de forma simples, segura e eficiente!
-            Neste curso, você entende como fazer e receber pagamentos, usar QR Codes, configurar limites e garantir a
-            segurança das suas transações no dia a dia.</p>
+          <p class="texto" style="text-align: justify;">Transforme dados em relatórios interativos e visualmente
+            atraentes. Aprenda a usar o Power BI para analisar informações, criar dashboards e tomar decisões
+            inteligentes.</p><!-- Fim do parágrafo de descrição. -->
 
           <!-- Botão para iniciar o curso -->
-          <button>
-            <a href="videos/video_powerbi.html" class="button">Clique aqui para iniciar</a>
-          </button>
-        </div>
-      </div>
-    </div>
-  </main>
+          <button><!-- Elemento de botão. -->
+            <a href="videos/video_powerbi.html" class="button">Clique aqui para
+              iniciar</a><!-- Link que leva para a página do vídeo do curso. -->
+          </button><!-- Fim do botão. -->
+        </div><!-- Fim do contêiner de informações. -->
+      </div><!-- Fim do contêiner de conteúdo do card. -->
+    </div><!-- Fim do contêiner do card do curso. -->
+  </main><!-- Fim da seção de conteúdo principal. -->
 
   <!-- Rodapé da página -->
-  <footer>
+  <footer><!-- Início da seção de rodapé. -->
     <!-- Seção de redes sociais -->
-    <div class="social-media">
+    <div class="social-media"><!-- Contêiner para os links de mídias sociais. -->
       <a href="https://www.instagram.com/evolutiontech__/" target="_blank" rel="noopener noreferrer"
-        title="Siga-nos no Instagram" class="social-link">
-        <img src="./img/instagram3.png" alt="Ícone do Instagram">
-        <span><strong>evolutiontech__</strong></span>
-      </a>
-    </div>
+        title="Siga-nos no Instagram" class="social-link"><!-- Link para o Instagram, que abre em uma nova aba. -->
+        <img src="./img/instagram3.png" alt="Ícone do Instagram"><!-- Ícone do Instagram. -->
+        <span><strong>evolutiontech__</strong></span><!-- Nome de usuário do Instagram. -->
+      </a><!-- Fim do link do Instagram. -->
+    </div><!-- Fim do contêiner de mídias sociais. -->
     <!-- Logo da empresa no rodapé -->
-    <div class="footer-logo">
-      <img src="img/logotipo empresa (2).png" alt="Logo da Empresa">
-    </div>
+    <div class="footer-logo"><!-- Contêiner para o logotipo no rodapé. -->
+      <img src="img/logotipo empresa (2).png" alt="Logo da Empresa"><!-- Imagem do logotipo da empresa. -->
+    </div><!-- Fim do contêiner do logotipo. -->
 
 
     <!-- Direitos autorais -->
     <p>&copy; 2025 Tech Para Todos - Evolution Tech. Todos os direitos reservados.</p>
+    <!-- Parágrafo de direitos autorais. -->
 
-  </footer>
+  </footer><!-- Fim da seção de rodapé. -->
   <!-- Link para o script JavaScript geral do site -->
-  <script src="../script.js"></script>
+  <script src="../script.js"></script><!-- Inclui o script geral do site. -->
   <!-- Script específico para esta página -->
-  <script>
+  <script><!-- Início do bloco de script embutido. -->
     // Executa o código quando o conteúdo da página for totalmente carregado
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => { // Adiciona um ouvinte de evento que espera o HTML ser carregado.
       // Verifica se o usuário está logado, buscando a informação na sessionStorage
-      const isLoggedIn = sessionStorage.getItem('isLoggedIn');
-      if (isLoggedIn !== 'true') {
+      const isLoggedIn = sessionStorage.getItem('isLoggedIn'); // Pega o valor da chave 'isLoggedIn' do armazenamento da sessão.
+      if (isLoggedIn !== 'true') { // Se o valor não for estritamente 'true'...
         // Se não estiver logado, pergunta se quer se cadastrar
-        const querCadastrar = confirm('Você precisa estar logado para acessar os cursos. Deseja criar uma nova conta?');
-        if (querCadastrar) {
-          window.location.href = '../cadastro.html'; // Redireciona para o cadastro
-        } else {
-          window.location.href = '../login.html'; // Redireciona para o login
-        }
-      }
-    });
-  </script>
+        const querCadastrar = confirm('Você precisa estar logado para acessar os cursos. Deseja criar uma nova conta?'); // Mostra uma caixa de diálogo de confirmação.
+        if (querCadastrar) { // Se o usuário clicou em "OK"...
+          window.location.href = '../cadastro.html'; // Redireciona para a página de cadastro.
+        } else { // Se o usuário clicou em "Cancelar"...
+          window.location.href = '../login.html'; // Redireciona para a página de login.
+        } // Fim do bloco else.
+      } // Fim do bloco if.
+    }); // Fim do ouvinte de evento.
+  </script><!-- Fim do bloco de script. -->
 
-</body>
+</body><!-- Fim do corpo do documento. -->
 
-</html>
+</html><!-- Fim do documento HTML. -->

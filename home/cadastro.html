@@ -1,164 +1,256 @@
 <!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
 <html lang="pt-br"> <!-- Define o idioma da página como Português do Brasil -->
 
-<head>
-  <!-- Configurações de metadados da página -->
+<head><!-- Início da seção de cabeçalho, que contém metadados e links para recursos. -->
+  <!-- Configurações de metadados da página --> <!-- Comentário existente sobre metadados. -->
   <meta charset="UTF-8"> <!-- Garante a codificação de caracteres correta (acentos, etc.) -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Adapta a página para dispositivos móveis -->
+  <!-- Adapta a página para dispositivos móveis --> <!-- Comentário existente sobre a viewport. -->
   <link rel="icon" href="logo-oficial1.png" type="image/png"> <!-- Ícone da página (favicon) -->
   <link rel="apple-touch-icon" href="img/tech-para-todos-logo-32.png"> <!-- Ícone para dispositivos Apple -->
   <script src="cadastro.js" defer></script> <!-- Script para a lógica da página, 'defer' carrega depois do HTML -->
 
   <title>Cadastro | Tech para todos </title> <!-- Título que aparece na aba do navegador -->
   <link rel="stylesheet" href="cadastro.css"> <!-- Folha de estilos principal -->
-  <!-- Estilos CSS embutidos na página -->
+  <!-- Estilos CSS embutidos na página --> <!-- Comentário existente sobre estilos embutidos. -->
   <style>
-    /* --- ESTILOS DO MODO ESCURO --- */
-    body.escuro {
-      background-color: #121212;
-      /* Fundo geral mais escuro */
-      background-image: none;
-      /* Remove a imagem de fundo no modo escuro */
+    /*
+    ---
+    ESTILOS
+    DO
+    MODO
+    ESCURO
+    ---
+    */
+    /*
+    Comentário
+    CSS
+    para
+    a
+    seção
+    de
+    modo
+    escuro.
+    */
+    body.escuro
+    {
+    background-color:
+    #121212;
+    /*
+    Fundo
+    geral
+    mais
+    escuro
+    */
+    background-image:
+    none;
+    /*
+    Remove
+    a
+    imagem
+    de
+    fundo
+    no
+    modo
+    escuro
+    */
     }
-
-    body.escuro .form {
-      background-color: #1e1e1e;
-      /* Cinza escuro para o formulário */
-      border: 2px solid #f28705;
-      box-shadow: 0 0 20px rgba(242, 135, 5, 0.3);
+    body.escuro
+    .form
+    {
+    background-color:
+    #1e1e1e;
+    /*
+    Cinza
+    escuro
+    para
+    o
+    formulário
+    */
+    border:
+    2px
+    solid
+    #f28705;
+    box-shadow:
+    0
+    0
+    20px
+    rgba(242,
+    135,
+    5,
+    0.3);
     }
-
-    body.escuro h2 {
-      color: #f28705;
-      /* Título em laranja */
+    body.escuro
+    h2
+    {
+    color:
+    #f28705;
+    /*
+    Título
+    em
+    laranja
+    */
     }
-
-    body.escuro label {
-      color: #ccc;
-      /* Labels em cinza claro */
+    body.escuro
+    label
+    {
+    color:
+    #ccc;
+    /*
+    Labels
+    em
+    cinza
+    claro
+    */
     }
-
-    body.escuro input {
-      background-color: #3a3a3a;
-      color: #f0f0f0;
-      border: 1px solid #555;
+    body.escuro
+    input
+    {
+    background-color:
+    #3a3a3a;
+    color:
+    #f0f0f0;
+    border:
+    1px
+    solid
+    #555;
     }
-
-    /* --- ESTILOS DO FOOTER (Rodapé) --- */
-    /* Obs: O elemento <footer> não está no HTML, mas os estilos estão prontos aqui. */
+    /*
+    ---
+    ESTILOS
+    DO
+    FOOTER
+    (Rodapé)
+    ---
+    */
+    /*
+    Obs:
+    O
+    elemento
+  <footer> não está no HTML, mas os estilos estão prontos aqui. */
     footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 20px;
-      color: #555;
-      font-size: 14px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    color: #555;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     }
 
     .social-media a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
     }
 
     .social-media img {
-      width: 24px;
-      height: 24px;
+    width: 24px;
+    height: 24px;
     }
 
     body.escuro footer,
     body.escuro .social-media a {
-      color: #ccc;
+    color: #ccc;
     }
-  </style>
-</head>
+  </style><!-- Fim do bloco de estilos CSS embutidos. -->
+</head><!-- Fim da seção de cabeçalho. -->
 
-<body>
+<body><!-- Início do corpo do documento, onde o conteúdo visível é colocado. -->
 
-  <!-- Conteúdo principal da página de cadastro -->
-  <main>
-    <!-- Formulário de cadastro -->
-    <form class="form">
-      <!-- Botão de Modo Escuro -->
-      <label class="modo-escuro">
+  <!-- Conteúdo principal da página de cadastro --> <!-- Comentário existente sobre o conteúdo principal. -->
+  <main><!-- Elemento principal que contém o conteúdo central da página. -->
+    <!-- Formulário de cadastro --> <!-- Comentário existente sobre o formulário. -->
+    <form class="form"><!-- Início do formulário de cadastro, com a classe 'form' para estilização. -->
+      <!-- Botão de Modo Escuro --> <!-- Comentário existente sobre o botão de modo escuro. -->
+      <label class="modo-escuro"><!-- Rótulo para o interruptor de modo escuro, tornando a área clicável. -->
         <input type="checkbox" id="toggle"> <!-- O checkbox que controla o estado (ligado/desligado) -->
-        <span class="trilho"><span class="bola"></span></span>
+        <span class="trilho"><span
+            class="bola"></span></span><!-- Elementos visuais (trilho e bola) para criar o botão de alternância. -->
         <!-- Elementos visuais para criar o botão de alternância -->
-      </label>
-      <h2>Crie a sua conta e aprenda informática!</h2>
+        <!-- Comentário existente sobre os elementos visuais. -->
+      </label><!-- Fim do rótulo do modo escuro. -->
+      <h2>Crie a sua conta e aprenda informática!</h2><!-- Título principal do formulário de cadastro. -->
       <p id="mensagem-erro" class="mensagem-erro"></p> <!-- Parágrafo para exibir mensagens de erro de validação -->
 
-      <!-- Container que organiza os campos do formulário em um grid -->
-      <div class="grid-container">
-        <!-- Coluna Esquerda: Dados pessoais e de acesso -->
-        <div class="coluna">
-          <label for="nome">Nome Completo:</label>
-          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+      <!-- Container que organiza os campos do formulário em um grid --> <!-- Comentário existente sobre o grid. -->
+      <div class="grid-container"><!-- Container que organiza os campos do formulário em um layout de grade. -->
+        <!-- Coluna Esquerda: Dados pessoais e de acesso --> <!-- Comentário existente sobre a coluna esquerda. -->
+        <div class="coluna"><!-- Início da coluna para dados pessoais e de acesso. -->
+          <label for="nome">Nome Completo:</label><!-- Rótulo para o campo de nome completo. -->
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo"
+            required><!-- Campo de texto para o nome. -->
           <!-- 'required' torna o campo obrigatório -->
 
-          <label for="cpf">CPF:</label>
+          <label for="cpf">CPF:</label><!-- Rótulo para o campo de CPF. -->
           <input type="text" pattern="[0-9]*" id="cpf" name="cpf" minlength="11" maxlength="11"
-            placeholder="Digite o CPF" required>
+            placeholder="Digite o CPF" required><!-- Campo de texto para o CPF, com validações. -->
 
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" placeholder="Insira um e-mail válido" required>
+          <label for="email">E-mail:</label><!-- Rótulo para o campo de e-mail. -->
+          <input type="email" id="email" name="email" placeholder="Insira um e-mail válido"
+            required><!-- Campo de e-mail. -->
 
-          <label for="senha">Senha:</label>
-          <input type="password" id="senha" name="senha" minlength="6" maxlength="10" placeholder="Digite a senha"
-            required>
+          <label for="senha">Senha:</label><!-- Rótulo para o campo de senha. -->
+          <input type="password" id="senha" name="senha" minlength="8" maxlength="8"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{3,}$"
+            placeholder="Insira até 8 dígitos, com maiúscula, minúscula e número"
+            required><!-- Campo de senha com requisitos de complexidade. -->
 
-          <label for="senha">Confirme sua senha:</label>
-          <input type="password" id="confsenha" name="confsenha" minlength="6" maxlength="10"
-            placeholder="Confirme a sua senha" required>
+          <label for="senha">Confirme sua senha:</label><!-- Rótulo para o campo de confirmação de senha. -->
+          <input type="password" id="confsenha" name="confsenha" minlength="8" maxlength="8"
+            placeholder="Confirme a sua senha" required><!-- Campo para confirmar a senha digitada anteriormente. -->
 
-        </div>
+        </div><!-- Fim da coluna esquerda. -->
 
         <!-- Coluna Direita: Dados de endereço (preenchidos via API de CEP) -->
-        <div class="coluna">
-          <label>CEP:</label>
-          <input type="text" id="cep" name="cep" placeholder="Digite o seu CEP">
+        <!-- Comentário existente sobre a coluna direita. -->
+        <div class="coluna"><!-- Início da coluna para dados de endereço. -->
+          <label>CEP:</label><!-- Rótulo para o campo de CEP. -->
+          <input type="text" id="cep" name="cep" placeholder="Digite o seu CEP"><!-- Campo de texto para o CEP. -->
 
-          <label>Endereço:</label>
-          <input type="text" id="endereco" name="endereco">
+          <label>Endereço:</label><!-- Rótulo para o campo de endereço. -->
+          <input type="text" id="endereco"
+            name="endereco"><!-- Campo de texto para o endereço (será preenchido pela API). -->
 
           <!-- Linha para agrupar campos menores (Bairro e Número) -->
-          <div class="linha">
-            <div class="campo">
-              <label for="bairro">Bairro:</label>
-              <input type="text" id="bairro" name="bairro" placeholder="Digite o seu bairro">
-            </div>
+          <!-- Comentário existente sobre a linha de campos. -->
+          <div class="linha"><!-- Div para agrupar campos na mesma linha. -->
+            <div class="campo"><!-- Div para o campo "Bairro". -->
+              <label for="bairro">Bairro:</label><!-- Rótulo para o campo de bairro. -->
+              <input type="text" id="bairro" name="bairro"
+                placeholder="Digite o seu bairro"><!-- Campo de texto para o bairro. -->
+            </div><!-- Fim do campo "Bairro". -->
 
-            <div class="campo">
-              <label for="numero">Número:</label>
-              <input type="text" id="numero" name="numero" placeholder="Nº">
-            </div>
-          </div>
+            <div class="campo"><!-- Div para o campo "Número". -->
+              <label for="numero">Número:</label><!-- Rótulo para o campo de número. -->
+              <input type="text" id="numero" name="numero"
+                placeholder="Nº"><!-- Campo de texto para o número da residência. -->
+            </div><!-- Fim do campo "Número". -->
+          </div><!-- Fim da linha de campos. -->
 
-          <label>Cidade:</label>
-          <input type="text" id="cidade" name="cidade">
+          <label>Cidade:</label><!-- Rótulo para o campo de cidade. -->
+          <input type="text" id="cidade" name="cidade"><!-- Campo de texto para a cidade. -->
 
-          <label>Estado:</label>
-          <input type="text" id="estado" name="estado">
+          <label>Estado:</label><!-- Rótulo para o campo de estado. -->
+          <input type="text" id="estado" name="estado"><!-- Campo de texto para o estado (UF). -->
 
-        </div>
-      </div>
-      <!-- Botão para enviar o formulário -->
-      <button type="submit" id="botao">Cadastrar</button>
+        </div><!-- Fim da coluna direita. -->
+      </div><!-- Fim do grid container. -->
+      <!-- Botão para enviar o formulário --> <!-- Comentário existente sobre o botão de cadastro. -->
+      <button type="submit" id="botao">Cadastrar</button><!-- Botão que aciona o envio do formulário. -->
 
-      <!-- Container para o logo no final do formulário -->
-      <div class="logo-container">
-        <img src="logo-oficial1.png" alt="Logo Tech para Todos">
-      </div>
-    </form>
-  </main>
+      <!-- Container para o logo no final do formulário --> <!-- Comentário existente sobre o container do logo. -->
+      <div class="logo-container"><!-- Container para exibir o logotipo no final. -->
+        <img src="logo-oficial1.png" alt="Logo Tech para Todos"><!-- Imagem do logotipo com texto alternativo. -->
+      </div><!-- Fim do container do logo. -->
+    </form><!-- Fim do formulário. -->
+  </main><!-- Fim do conteúdo principal. -->
 
-</body>
+</body><!-- Fim do corpo do documento. -->
 
-</html>
+</html><!-- Fim do documento HTML. -->

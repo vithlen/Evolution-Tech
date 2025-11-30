@@ -1,89 +1,89 @@
 /* Reset básico pra zerar as margens e paddings que os navegadores colocam por padrão */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  margin: 0; /* Remove a margem externa de todos os elementos */
+  padding: 0; /* Remove o preenchimento interno de todos os elementos */
+  box-sizing: border-box; /* Faz com que padding e border não aumentem a largura/altura final do elemento */
+  font-family: Arial, sans-serif; /* Define a família de fontes padrão para a página */
 }
 /* Estilos gerais do corpo da página */
 
 body {
-  background-color: #fff;
-  color: #000;
-  transition: 0.3s;
-  text-align: right;
+  background-color: #fff; /* Define a cor de fundo do corpo da página como branco */
+  color: #000; /* Define a cor padrão do texto como preto */
+  transition: 0.3s; /* Adiciona uma transição suave de 0.3s para mudanças de propriedades (ex: modo escuro) */
+  text-align: right; /* Alinha todo o texto do corpo à direita (incomum, pode ser um resquício) */
 }
 
 /* Estilo padrão para links */
 a {
-  color: white;
-  text-decoration: none;
+  color: white; /* Define a cor do texto dos links como branco */
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
 }
 
 h1 {
-  margin-top: 25px;
-  font-size: 30px;
-  letter-spacing: 2px;
-  color: white;
+  margin-top: 25px; /* Adiciona uma margem de 25px no topo dos títulos h1 */
+  font-size: 30px; /* Define o tamanho da fonte para 30 pixels */
+  letter-spacing: 2px; /* Aumenta o espaçamento entre as letras em 2 pixels */
+  color: white; /* Define a cor do texto dos h1 como branco */
 }
 
 /* Container que segura todos os cards de curso */
 .course-card {
-  width: 80%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  justify-content: center;
+  width: 80%; /* Define a largura do container para 80% da largura do seu elemento pai */
+  margin: auto; /* Centraliza o container horizontalmente */
+  display: grid; /* Usa o layout de grid para organizar os itens internos */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Cria colunas responsivas: cada uma tem no mínimo 280px e se ajustam para preencher o espaço */
+  gap: 2rem; /* Define um espaçamento de 2rem (aprox. 32px) entre os itens do grid */
+  justify-content: center; /* Centraliza os itens do grid no container quando há espaço sobrando */
 }
 
 /* Estilo de cada card individual (o <figure>) */
 .course-card figure {
-  background: white;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 1rem;
+  background: white; /* Define o fundo do card como branco */
+  overflow: hidden; /* Esconde qualquer conteúdo que transborde as bordas do card */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Adiciona uma sombra para dar profundidade ao card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Anima suavemente a transformação e a sombra ao passar o mouse */
+  padding: 1rem; /* Adiciona um preenchimento interno de 1rem (aprox. 16px) */
 }
 
 /* Efeito de 'levantar' o card quando passo o mouse por cima */
 .course-card figure:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+  transform: translateY(-10px) scale(1.03); /* Move o card 10px para cima e aumenta seu tamanho em 3% */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6); /* Aumenta a sombra para intensificar o efeito de elevação */
 }
 
 /* A imagem do curso dentro do card */
 .course-Icon {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  margin-bottom: 1rem;
+  width: 100%; /* Faz a imagem ocupar toda a largura do card */
+  height: 180px; /* Define uma altura fixa de 180px para a imagem */
+  object-fit: cover; /* Redimensiona a imagem para cobrir o espaço, cortando o excesso se necessário */
+  margin-bottom: 1rem; /* Adiciona uma margem inferior de 1rem para separar a imagem do texto */
 }
 /* Estilo do texto (título e duração) dentro do card */
 /* Texto */
 .texto {
-  text-align: left;
-  display: block;
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin: 0.8rem 0;
-  color: black;
+  text-align: left; /* Alinha o texto à esquerda */
+  display: block; /* Garante que o elemento ocupe toda a largura disponível */
+  font-size: 1.1rem; /* Define o tamanho da fonte como 1.1rem (aprox. 17.6px) */
+  font-weight: 500; /* Define o peso da fonte como semi-negrito */
+  margin: 0.8rem 0; /* Adiciona margem vertical de 0.8rem */
+  color: black; /* Define a cor do texto como preto */
 }
 
 /* Estilização do cabeçalho */
 header {
-  background-color: #f57c00;
-  color: white;
+  background-color: #f57c00; /* Define a cor de fundo do cabeçalho */
+  color: white; /* Define a cor do texto padrão dentro do cabeçalho como branco */
   padding: 15px 0; /* Aumenta o padding vertical do header */
 }
 
 .header-top {
   padding: 0 20px; /* Padding vertical mínimo para o header */
-  box-sizing: border-box;
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
   position: relative; /* Mantém a referência para itens posicionados dentro */
   display: flex; /* Alinha itens lado a lado */
   align-items: center; /* Alinha verticalmente */
-  width: 100%;
+  width: 100%; /* Ocupa toda a largura */
 }
 
 header h1 {
@@ -94,10 +94,10 @@ header h1 {
 
 /* Área central do cabeçalho com o título e os links de navegação */
 .center-area {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-grow: 1; /* Faz esta área ocupar todo o espaço disponível entre os logos */
+  display: flex; /* Habilita o layout flexbox */
+  flex-direction: column; /* Empilha os itens verticalmente */
+  align-items: center; /* Centraliza os itens horizontalmente */
   position: relative; /* Permite o ajuste fino da posição */
   left: -3px; /* Desloca o bloco para a direita. Ajuste o valor. */
 }
@@ -105,121 +105,121 @@ header h1 {
 /* Container dos links de navegação */
 .sub-nav-links {
   display: flex;
-  justify-content: center; /* Centraliza os links da navegação */
-  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os links horizontalmente */
+  flex-wrap: wrap; /* Permite que os links quebrem para a próxima linha se não houver espaço */
 }
 
 .sub-nav-links a {
-  color: white;
+  color: white; /* Cor do texto do link */
   margin: 0 15px; /* Aumenta o espaçamento entre os links */
-  text-decoration: none;
+  text-decoration: none; /* Remove o sublinhado */
   font-size: 18px; /* Aumenta o tamanho da fonte dos links */
-  padding: 5px 0;
+  padding: 5px 0; /* Adiciona padding vertical */
   font-weight: 500; /* Deixa a fonte um pouco mais encorpada */
 }
 
 .sub-nav-links a:hover {
   /* Efeito de sublinhar ao passar o mouse */
-  text-decoration: underline;
+  text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
 }
 
 /* --- SEÇÃO DO LOGO ESQUERDO DO CABEÇALHO --- */
 .logo-esq {
   width: 120px; /* Logo menor para o novo layout */
-  flex-shrink: 0; /* Impede que o logo encolha */
+  flex-shrink: 0; /* Impede que o logo encolha se o espaço for limitado */
 }
 
 .logo-esq img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100%; /* A imagem ocupa 100% da largura do seu container (.logo-esq) */
+  height: auto; /* A altura é ajustada automaticamente para manter a proporção */
+  display: block; /* Remove espaços extras abaixo da imagem */
 }
 
 /* Logo da direita (se houver) */
 .logo-dir img {
   display: block; /* mostrar no desktop */
-  width: auto;
+  width: auto; /* Largura automática */
   max-width: 140px; /* ajusta conforme necessidade */
-  max-height: 72px;
-  height: auto;
-  object-fit: contain;
+  max-height: 72px; /* Altura máxima de 72px */
+  height: auto; /* Altura automática para manter proporção */
+  object-fit: contain; /* Garante que a imagem inteira seja visível, sem cortes */
 }
 
 /* Container dos botões da direita (cadastro, login) */
 .header-btns {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: nowrap;
-  flex-shrink: 0;
+  display: flex; /* Alinha os botões em linha */
+  gap: 10px; /* Espaçamento de 10px entre os botões */
+  align-items: center; /* Alinha os botões verticalmente ao centro */
+  flex-wrap: nowrap; /* Impede que os botões quebrem para a linha de baixo */
+  flex-shrink: 0; /* Impede que o container dos botões encolha */
 }
 
 /* Estilo geral dos botões do cabeçalho */
 .btn-header {
-  padding: 4px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  font-weight: bold;
-  line-height: 1;
-  background-color: #f57c00;
-  color: white;
-  border: 2px solid #f57c00;
-  white-space: normal;
-  display: flex;
-  flex-wrap: unset;
+  padding: 4px 8px; /* Preenchimento interno do botão */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Mostra o cursor de mão ao passar o mouse */
+  text-decoration: none; /* Remove sublinhado */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Animação suave para cor de fundo, cor do texto e cor da borda */
+  font-weight: bold; /* Texto em negrito */
+  line-height: 1; /* Altura da linha normal */
+  background-color: #f57c00; /* Cor de fundo laranja */
+  color: white; /* Cor do texto branca */
+  border: 2px solid #f57c00; /* Borda laranja */
+  white-space: normal; /* Permite que o texto do botão quebre a linha */
+  display: flex; /* Usa flexbox para alinhamento interno */
+  flex-wrap: unset; /* Não permite que o conteúdo interno quebre a linha */
 }
 
 /* Efeito hover para os botões do cabeçalho */
 .btn-header:hover {
-  background-color: white;
-  color: #f57c00;
-  border-color: white;
+  background-color: white; /* Fundo branco ao passar o mouse */
+  color: #f57c00; /* Texto laranja ao passar o mouse */
+  border-color: white; /* Borda branca ao passar o mouse */
 }
 
 .btn-aluno {
-  background-color: transparent;
-  border-color: white;
-  color: white;
+  background-color: transparent; /* Fundo transparente */
+  border-color: white; /* Borda branca */
+  color: white; /* Texto branco */
 }
 
 /* Efeito hover para o botão de aluno */
 .btn-aluno:hover {
-  background-color: white;
-  color: #f57c00;
-  border-color: white;
+  background-color: white; /* Fundo branco ao passar o mouse */
+  color: #f57c00; /* Texto laranja ao passar o mouse */
+  border-color: white; /* Borda branca ao passar o mouse */
 }
 
 .imagem-header {
   height: 350px; /* Altura reduzida para os cards ficarem mais visíveis */
-  width: 100%;
+  width: 100%; /* Largura total */
   overflow: hidden; /* Esconde as partes da imagem que são cortadas */
 }
 
 .imagem-header img {
-  width: 100%;
-  height: 100%;
-  display: block;
+  width: 100%; /* Imagem com 100% da largura do container */
+  height: 100%; /* Imagem com 100% da altura do container */
+  display: block; /* Remove espaços extras abaixo da imagem */
   object-fit: cover; /* Preenche o espaço, mantendo a proporção e cortando o excesso */
   object-position: center 25%; /* Centraliza a imagem um pouco abaixo do topo, mantendo o rosto visível */
 }
 
 /* === AJUSTES DE RESPONSIVIDADE PARA TABLETS === */
 @media (max-width: 992px) {
-  .header-top {
-    flex-direction: column;
-    gap: 15px;
+  .header-top { /* Para telas com largura máxima de 992px */
+    flex-direction: column; /* Empilha os itens do cabeçalho verticalmente */
+    gap: 15px; /* Adiciona um espaço de 15px entre os itens empilhados */
   }
   .logo-dir,
   .header-btns {
-    position: static !important;
-    top: auto !important;
-    right: auto !important;
-    left: auto !important;
-    transform: none !important;
-    width: 100%;
-    max-width: none;
+    position: static !important; /* Reseta o posicionamento para o padrão (ignora 'top', 'left', etc.) */
+    top: auto !important; /* Reseta a propriedade 'top' */
+    right: auto !important; /* Reseta a propriedade 'right' */
+    left: auto !important; /* Reseta a propriedade 'left' */
+    transform: none !important; /* Remove qualquer transformação (como 'translate') */
+    width: 100%; /* Faz o elemento ocupar 100% da largura */
+    max-width: none; /* Remove qualquer largura máxima definida anteriormente */
   }
 
   .logo-esq {
@@ -229,19 +229,19 @@ header h1 {
   }
 
   header h1 {
-    font-size: 2em;
-    margin: 10px 0;
-    order: 2;
+    font-size: 2em; /* Aumenta um pouco a fonte do título */
+    margin: 10px 0; /* Adiciona margem vertical */
+    order: 2; /* Muda a ordem de exibição, colocando o h1 como segundo item no flex container */
   }
 
   .header-btns {
-    margin-top: 15px;
-    order: 3;
+    margin-top: 15px; /* Adiciona margem no topo */
+    order: 3; /* Coloca os botões como terceiro item */
   }
 
   /* Navegação (agora .sub-nav-links) */
   .sub-nav-links {
-    order: 4;
+    order: 4; /* Coloca a navegação como quarto e último item */
   }
 }
 
@@ -249,19 +249,19 @@ header h1 {
 .menu-toggle {
   display: none;
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  color: white;
-  font-size: 1.4rem;
-  padding: 6px 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  z-index: 20;
+  border: 2px solid rgba(255, 255, 255, 0.15); /* Borda semi-transparente */
+  color: white; /* Cor do ícone */
+  font-size: 1.4rem; /* Tamanho do ícone */
+  padding: 6px 10px; /* Preenchimento */
+  border-radius: 6px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de mão */
+  z-index: 20; /* Garante que o botão fique acima de outros elementos */
 }
 
 /* Navegação padrão para desktop */
 nav {
-  display: flex;
-  gap: 10px;
+  display: flex; /* Usa flexbox para alinhar os itens de navegação */
+  gap: 10px; /* Espaço entre os itens de navegação */
 }
 
 /* AJUSTES DE RESPONSIVIDADE PARA CELULARES */
@@ -270,13 +270,13 @@ nav {
   /* removemos posicionamentos absolutos */
   .logo-dir,
   .header-btns {
-    position: static !important;
-    transform: none !important;
-    top: auto !important;
-    right: auto !important;
-    left: auto !important;
-    width: 100%;
-    max-width: none;
+    position: static !important; /* Reseta o posicionamento */
+    transform: none !important; /* Remove transformações */
+    top: auto !important; /* Reseta 'top' */
+    right: auto !important; /* Reseta 'right' */
+    left: auto !important; /* Reseta 'left' */
+    width: 100%; /* Largura total */
+    max-width: none; /* Remove largura máxima */
   }
 
   /* Mostra o botão hamburguer */
@@ -284,37 +284,37 @@ nav {
     display: inline-block;
     position: absolute;
     left: 16px; /* ajustar conforme layout */
-    top: 18px;
-    color: #fff;
+    top: 18px; /* Posição a partir do topo */
+    color: #fff; /* Cor do ícone */
   }
 
   /* Layout do header no mobile */
   header {
-    padding: 12px;
-    align-items: center;
+    padding: 12px; /* Reduz o padding do cabeçalho */
+    align-items: center; /* Centraliza itens verticalmente */
   }
 
   /* h1 menor no mobile */
   header h1 {
-    font-size: 1.1rem;
-    margin: 8px 0 10px 0;
-    text-align: center;
+    font-size: 1.1rem; /* Reduz o tamanho da fonte do título */
+    margin: 8px 0 10px 0; /* Ajusta a margem vertical */
+    text-align: center; /* Centraliza o texto do título */
     padding-left: 44px; /* evita ficar embaixo do botão */
-    padding-right: 44px;
+    padding-right: 44px; /* Adiciona padding para não sobrepor o botão de menu/outros itens */
   }
 
   /* Links de navegação ficam escondidos por padrão no mobile */
   .sub-nav-links {
-    display: none;
-    width: 100%;
-    margin-top: 10px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: none; /* Esconde o menu de navegação por padrão */
+    width: 100%; /* Ocupa toda a largura */
+    margin-top: 10px; /* Espaço acima do menu */
+    flex-direction: column; /* Empilha os links verticalmente */
+    align-items: center; /* Centraliza os links horizontalmente */
+    text-align: center; /* Centraliza o texto dos links */
     background-color: rgba(245, 124, 0, 0.95); /* mesma cor do header */
-    padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-    z-index: 15;
+    padding: 10px 0; /* Padding vertical */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* Sombra suave */
+    z-index: 15; /* Garante que o menu fique acima do conteúdo da página */
   }
 
   /* Estilo do menu de navegação no modo escuro */
@@ -323,15 +323,15 @@ nav {
   }
 
   .sub-nav-links a {
-    width: 90%;
-    padding: 12px 10px;
-    margin: 6px 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    width: 90%; /* Largura de 90% do container */
+    padding: 12px 10px; /* Padding para aumentar a área de clique */
+    margin: 6px 10px; /* Margem entre os links */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Linha separadora sutil */
   }
 
   /* Quando o menu estiver aberto (classe adicionada via JS), os links aparecem */
   body.menu-aberto .sub-nav-links {
-    display: flex;
+    display: flex; /* Mostra o menu quando o body tem a classe 'menu-aberto' */
   }
 
   /* empurra o conteúdo principal para não ficar escondido atrás do header */
@@ -341,24 +341,24 @@ nav {
 
   /* garante que a imagem hero não seja coberta: reduz sua altura máxima */
   .imagem-header img {
-    max-height: 260px;
-    object-fit: cover;
+    max-height: 260px; /* Limita a altura da imagem do cabeçalho */
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
   }
 
   /* garante que os logos apareçam (se estavam com display:none) */
   .logo-dir img {
-    display: block;
+    display: block; /* Garante que a imagem seja exibida */
     max-width: 140px; /* Mantém a limitação apenas para o logo da direita */
-    height: auto;
+    height: auto; /* Altura automática */
   }
 
   /* header buttons ficam em linha/baixo do h1 em mobile */
   .header-btns {
-    margin-top: 8px;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin-top: 8px; /* Margem acima dos botões */
+    display: flex; /* Alinha em linha */
+    gap: 8px; /* Espaço entre os botões */
+    flex-wrap: wrap; /* Permite quebrar a linha se não couber */
+    justify-content: center; /* Centraliza os botões */
   }
 }
 
@@ -370,58 +370,58 @@ nav {
 
 /* Esconde o checkbox */
 #toggle {
-  display: none;
+  display: none; /* O checkbox real fica invisível */
 }
 
 /* Trilho */
 .trilho {
-  width: 45px;
-  height: 22px;
-  background: #ccc;
-  border-radius: 25px;
-  position: relative;
-  margin-left: 7px;
-  cursor: pointer;
-  transition: background 0.3s;
+  width: 45px; /* Largura do trilho */
+  height: 22px; /* Altura do trilho */
+  background: #ccc; /* Cor do trilho inativo */
+  border-radius: 25px; /* Bordas arredondadas para formar uma pílula */
+  position: relative; /* Necessário para posicionar a bolinha dentro dele */
+  margin-left: 7px; /* Espaço à esquerda do trilho */
+  cursor: pointer; /* Cursor de mão */
+  transition: background 0.3s; /* Animação suave da cor de fundo */
 }
 
 /* Bolinha */
 .bola {
-  width: 18px;
-  height: 18px;
-  background: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  transition: transform 0.3s;
+  width: 18px; /* Largura da bolinha */
+  height: 18px; /* Altura da bolinha */
+  background: white; /* Cor da bolinha */
+  border-radius: 50%; /* Deixa a bolinha perfeitamente redonda */
+  position: absolute; /* Posicionada em relação ao trilho */
+  top: 2px; /* Posição a partir do topo do trilho */
+  left: 2px; /* Posição a partir da esquerda do trilho */
+  transition: transform 0.3s; /* Animação suave do movimento */
 }
 
 /* Quando ativo */
 #toggle:checked + .trilho {
-  background: #4ea8ff;
+  background: #4ea8ff; /* Muda a cor do trilho quando o checkbox está marcado */
 }
 
 #toggle:checked + .trilho .bola {
-  transform: translateX(23px);
+  transform: translateX(23px); /* Move a bolinha para a direita */
 }
 
 /* --- ESTILOS DO MODO ESCURO --- */
 body.escuro {
   /* Regras aplicadas quando o body tem a classe 'escuro' */
-  background-color: #303030;
-  color: #f1f1f1;
+  background-color: #303030; /* Fundo cinza escuro */
+  color: #f1f1f1; /* Cor do texto clara */
 }
 /* Ajusta cores no modo escuro */
 body.escuro header {
-  background-color: #121215;
+  background-color: #121215; /* Cor de fundo do cabeçalho mais escura */
 }
 
 body.escuro .btn-header,
 body.escuro .btn {
-  background-color: #303030;
-  color: #fff;
-  border-color: #000000;
+  background-color: #303030; /* Cor de fundo dos botões */
+  color: #fff; /* Cor do texto dos botões */
+  border-color: #000000; /* Cor da borda dos botões */
 }
 /* Card no modo escuro */
 body.escuro figure {
@@ -430,29 +430,29 @@ body.escuro figure {
 
 /* Botão dentro do card no modo escuro */
 body.escuro .button {
-  background: #303030;
+  background: #303030; /* Cor de fundo do botão no card */
 }
 
 /* Texto dentro do card no modo escuro */
 body.escuro .texto {
-  color: white;
+  color: white; /* Cor do texto no card */
 }
 body.escuro .card {
-  background-color: #000000;
-  color: #ddd;
+  background-color: #000000; /* Cor de fundo (se houver uma classe .card) */
+  color: #ddd; /* Cor do texto (se houver uma classe .card) */
 }
 
 body.escuro footer {
-  background-color: #121215;
+  background-color: #121215; /* Cor de fundo do rodapé */
 }
 .h2 {
-  color: #fff;
+  color: #fff; /* Define a cor de qualquer elemento com a classe .h2 como branco */
 }
 
 /* Estilos para os links de redes sociais no rodapé */
 .social-link {
   display: inline-flex; /* Alinha o ícone e o texto na mesma linha */
-  align-items: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza verticalmente o ícone e o texto */
   gap: 8px; /* Espaço entre o ícone e o texto */
   text-decoration: none; /* Remove o sublinhado do link */
   color: white;
@@ -463,18 +463,18 @@ body.escuro footer {
 }
 
 .social-media img {
-  width: 30px; /* Tamanho do ícone */
-  height: 30px;
+  width: 30px; /* Largura do ícone */
+  height: 30px; /* Altura do ícone */
   vertical-align: middle; /* Alinha o ícone com o texto */
 }
 
 /* === MAIS AJUSTES DE RESPONSIVIDADE (REPETIDOS, MAS VOU DEIXAR) === */
 @media (max-width: 992px) {
   header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+    flex-direction: column; /* Empilha os itens do cabeçalho */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Adiciona padding */
   }
 
   .logo-esq {
@@ -484,24 +484,24 @@ body.escuro footer {
   }
 
   nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 20px;
+    flex-wrap: wrap; /* Permite que os links quebrem a linha */
+    justify-content: center; /* Centraliza os links */
+    padding-top: 20px; /* Espaço acima da navegação */
   }
 
   nav a {
-    padding-top: 0;
-    font-size: 15px;
+    padding-top: 0; /* Remove o padding do topo */
+    font-size: 15px; /* Reduz o tamanho da fonte */
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 24px; /* Reduz o tamanho da fonte do h1 */
   }
 }
 
 @media (max-width: 600px) {
   header {
-    padding: 15px;
+    padding: 15px; /* Reduz o padding do cabeçalho */
   }
 
   .logo-esq img {
@@ -509,29 +509,29 @@ body.escuro footer {
   }
 
   h1 {
-    font-size: 20px;
-    text-align: center;
-    margin-top: 15px;
+    font-size: 20px; /* Reduz ainda mais o tamanho do h1 */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 15px; /* Adiciona margem no topo */
   }
 
   nav a {
-    font-size: 14px;
-    margin: 5px;
+    font-size: 14px; /* Reduz o tamanho da fonte da navegação */
+    margin: 5px; /* Ajusta a margem */
   }
 
   .course-card {
-    width: 95%;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    width: 95%; /* Aumenta a largura do container dos cards */
+    grid-template-columns: 1fr; /* Faz com que haja apenas uma coluna de cards */
+    gap: 1rem; /* Reduz o espaço entre os cards */
   }
 
   .course-card figure {
-    padding: 0.8rem;
+    padding: 0.8rem; /* Reduz o padding interno do card */
   }
 
   footer {
-    font-size: 14px;
-    padding: 20px;
+    font-size: 14px; /* Reduz o tamanho da fonte do rodapé */
+    padding: 20px; /* Ajusta o padding do rodapé */
   }
 }
 /* Reset básico */
@@ -539,14 +539,14 @@ body.escuro footer {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* OBS: Bloco de reset repetido */
 }
 
 /* Estilização do cabeçalho (repetido) */
 header {
   background-color: #f57c00;
   color: white;
-  padding: 10px 0;
+  padding: 10px 0; /* OBS: Estilo de header repetido, pode causar conflitos */
   text-align: center;
   position: relative;
   display: flex;
@@ -556,15 +556,15 @@ header {
 }
 
 a {
-  color: white;
-  text-decoration: none;
+  color: white; /* OBS: Estilo de link repetido */
+  text-decoration: none; /* OBS: Estilo de link repetido */
 }
 
 h1 {
   margin-top: 25px;
   font-size: 30px;
   letter-spacing: 2px;
-  color: white;
+  color: white; /* OBS: Estilo de h1 repetido */
 }
 
 /* Container dos cards (repetido) */
@@ -574,7 +574,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  justify-content: center;
+  justify-content: center; /* OBS: Estilo de .course-card repetido */
 }
 
 /* Estilo de cada card (repetido) */
@@ -583,12 +583,12 @@ h1 {
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 1rem;
+  padding: 1rem; /* OBS: Estilo de card repetido */
 }
 
 .course-card figure:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6); /* OBS: Estilo de hover do card repetido */
 }
 
 /* Imagem do curso (repetido) */
@@ -597,7 +597,7 @@ h1 {
   height: 180px;
   object-fit: cover;
   margin-bottom: 1rem;
-}
+} /* OBS: Estilo de imagem do card repetido */
 /* Estilo do texto (repetido) */
 /* Texto */
 .texto {
@@ -607,31 +607,31 @@ h1 {
   font-weight: 500;
   margin: 0.8rem 0;
   color: black;
-}
+} /* OBS: Estilo de texto do card repetido */
 
 /* Estilo do botão dentro do card (repetido) */
 button {
-  background: none;
-  border: none;
-  margin-top: 0.5rem;
+  background: none; /* Remove o fundo padrão do botão */
+  border: none; /* Remove a borda padrão do botão */
+  margin-top: 0.5rem; /* Adiciona margem no topo */
 }
 
 button a {
-  display: inline-block;
-  text-decoration: none;
-  background: #f57c00;
-  color: white;
-  font-weight: bold;
-  padding: 0.6rem 1.2rem;
-  border-radius: 30px;
-  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block; /* Permite definir padding e outras propriedades de bloco */
+  text-decoration: none; /* Remove sublinhado */
+  background: #f57c00; /* Cor de fundo laranja */
+  color: white; /* Cor do texto branca */
+  font-weight: bold; /* Texto em negrito */
+  padding: 0.6rem 1.2rem; /* Preenchimento interno */
+  border-radius: 30px; /* Bordas bem arredondadas */
+  transition: background 0.3s ease, transform 0.2s ease; /* Animação suave */
 }
 
 button a:hover {
-  background: #ff8c00;
-  transform: scale(1.05);
+  background: #ff8c00; /* Cor de fundo mais clara ao passar o mouse */
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho ao passar o mouse */
 }
-
+/* OBS: Este estilo para `button a` é mais específico que o `a` geral e provavelmente se aplica aos botões "Saiba Mais" nos cards. */
 /* Estilização do rodapé */
 footer {
   position: relative; /* necessário para posicionamento absoluto interno */
@@ -640,25 +640,25 @@ footer {
   text-align: center;
   padding: 30px;
   width: 100%;
-  box-sizing: border-box;
-  justify-content: space-between;
-  align-items: center;
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+  justify-content: space-between; /* (Não tem efeito aqui, pois display não é flex/grid) */
+  align-items: center; /* (Não tem efeito aqui, pois display não é flex/grid) */
 }
 
 /* Instagram no canto inferior esquerdo */
 footer .social-media {
-  position: absolute;
-  left: 16px;
-  bottom: 25px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  position: absolute; /* Posicionamento absoluto em relação ao footer */
+  left: 16px; /* 16px da borda esquerda */
+  bottom: 25px; /* 25px da borda inferior */
+  display: flex; /* Alinha itens internos em linha */
+  align-items: center; /* Centraliza verticalmente os itens */
+  gap: 8px; /* Espaço entre os itens */
 }
 
 /* garante que o link e ícone fiquem alinhados */
 footer .social-media .social-link {
-  color: white;
-  text-decoration: none;
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Sem sublinhado */
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -667,22 +667,22 @@ footer .social-media .social-link {
 /* tamanho do ícone do instagram */
 footer .social-media img {
   width: 30px;
-  height: 30px;
-  display: block;
+  height: 30px; /* Tamanho do ícone */
+  display: block; /* Remove espaços extras */
 }
 
 /* Logo da empresa no canto inferior direito */
 footer .footer-logo {
-  position: absolute;
-  right: 16px;
-  bottom: 25px;
-  display: flex;
-  align-items: center;
+  position: absolute; /* Posicionamento absoluto em relação ao footer */
+  right: 16px; /* 16px da borda direita */
+  bottom: 25px; /* 25px da borda inferior */
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Alinha itens verticalmente */
 }
 
 /* tamanho da logo da empresa */
 footer .footer-logo img {
-  width: 120px;
+  width: 120px; /* Largura da logo */
   height: auto;
   display: block;
 }
@@ -691,13 +691,13 @@ footer .footer-logo img {
 @media (max-width: 480px) {
   footer .social-media,
   footer .footer-logo {
-    position: static;
-    margin: 8px 0;
-    justify-content: center;
+    position: static; /* Remove o posicionamento absoluto */
+    margin: 8px 0; /* Adiciona margem vertical e centraliza */
+    justify-content: center; /* Centraliza o conteúdo (ícone/logo) */
   }
 
   footer {
-    padding-bottom: 18px;
+    padding-bottom: 18px; /* Reduz o padding inferior */
   }
 
   /* reduz a logo da empresa em telas muito pequenas */
@@ -708,59 +708,59 @@ footer .footer-logo img {
 /* === MAIS RESPONSIVIDADE (REPETIDO) === */
 @media (max-width: 992px) {
   header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+    flex-direction: column; /* OBS: Media query repetida */
+    align-items: center; /* OBS: Media query repetida */
+    text-align: center; /* OBS: Media query repetida */
+    padding: 20px; /* OBS: Media query repetida */
   }
 
   .logo-esq {
-    position: static;
-    transform: none;
-    margin-bottom: 10px;
+    position: static; /* OBS: Media query repetida */
+    transform: none; /* OBS: Media query repetida */
+    margin-bottom: 10px; /* OBS: Media query repetida */
   }
 
   .header-btns {
-    position: static;
-    transform: none;
-    margin-top: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
+    position: static; /* OBS: Media query repetida */
+    transform: none; /* OBS: Media query repetida */
+    margin-top: 10px; /* OBS: Media query repetida */
+    flex-wrap: wrap; /* OBS: Media query repetida */
+    justify-content: center; /* OBS: Media query repetida */
   }
 
   nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 20px;
+    flex-wrap: wrap; /* OBS: Media query repetida */
+    justify-content: center; /* OBS: Media query repetida */
+    padding-top: 20px; /* OBS: Media query repetida */
   }
 
   nav a {
-    font-size: 15px;
+    font-size: 15px; /* OBS: Media query repetida */
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 24px; /* OBS: Media query repetida */
   }
 }
 
 @media (max-width: 600px) {
   header {
-    padding: 15px;
+    padding: 15px; /* OBS: Media query repetida */
   }
 
   .logo-esq img {
-    width: 120px;
+    width: 120px; /* OBS: Media query repetida */
   }
 
   h1 {
-    font-size: 20px;
-    text-align: center;
-    margin-top: 15px;
+    font-size: 20px; /* OBS: Media query repetida */
+    text-align: center; /* OBS: Media query repetida */
+    margin-top: 15px; /* OBS: Media query repetida */
   }
 
   nav a {
-    font-size: 14px;
-    margin: 5px;
+    font-size: 14px; /* OBS: Media query repetida */
+    margin: 5px; /* OBS: Media query repetida */
   }
 
   .course-card {
@@ -770,7 +770,7 @@ footer .footer-logo img {
   }
 
   .course-card figure {
-    padding: 0.8rem;
+    padding: 0.8rem; /* OBS: Media query repetida */
   }
 }
 
@@ -778,7 +778,7 @@ footer .footer-logo img {
 
 header {
   background-color: #f57c00;
-  color: white;
+  color: white; /* OBS: Estilo de header repetido */
   padding: 15px 0; /* Aumenta o padding vertical do header */
 }
 
@@ -792,14 +792,14 @@ header {
 }
 
 header h1 {
-  font-size: 1.8em; /* Título maior para mais destaque */
+  font-size: 1.8em; /* Título maior para mais destaque */ /* OBS: Estilo de h1 repetido */
   margin: 0; /* Remove margens padrão */
   margin-bottom: 5px; /* Adiciona um pequeno espaço abaixo do título */
 }
 
 .sub-nav-links {
   display: flex;
-  justify-content: center; /* Centraliza os links da navegação */
+  justify-content: center; /* Centraliza os links da navegação */ /* OBS: Estilo repetido */
   flex-wrap: wrap;
 }
 
@@ -813,7 +813,7 @@ header h1 {
 }
 
 .sub-nav-links a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* OBS: Estilo repetido */
 }
 
 /* --- SEÇÃO DO LOGO ESQUERDO DO CABEÇALHO --- */
@@ -846,7 +846,7 @@ header h1 {
 }
 
 .btn-header {
-  padding: 4px 8px;
+  padding: 4px 8px; /* OBS: Estilo repetido */
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
@@ -862,21 +862,21 @@ header h1 {
 }
 
 .btn-header:hover {
-  background-color: white;
-  color: #f57c00;
-  border-color: white;
+  background-color: white; /* OBS: Estilo repetido */
+  color: #f57c00; /* OBS: Estilo repetido */
+  border-color: white; /* OBS: Estilo repetido */
 }
 
 .btn-aluno {
-  background-color: transparent;
-  border-color: white;
-  color: white;
+  background-color: transparent; /* OBS: Estilo repetido */
+  border-color: white; /* OBS: Estilo repetido */
+  color: white; /* OBS: Estilo repetido */
 }
 
 .btn-aluno:hover {
-  background-color: white;
-  color: #f57c00;
-  border-color: white;
+  background-color: white; /* OBS: Estilo repetido */
+  color: #f57c00; /* OBS: Estilo repetido */
+  border-color: white; /* OBS: Estilo repetido */
 }
 
 /* === SEÇÃO DO TIME (DA PÁGINA 'SOBRE NÓS') === */
@@ -888,76 +888,76 @@ header h1 {
 
 .team-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px 80px;
-  max-width: 1100px;
-  width: 100%;
+  grid-template-columns: repeat(3, 1fr); /* Cria um grid com 3 colunas de larguras iguais */
+  gap: 50px 80px; /* 50px de espaço vertical, 80px de espaço horizontal entre os membros */
+  max-width: 1100px; /* Largura máxima do container do time */
+  width: 100%; /* Ocupa toda a largura disponível até o máximo */
 }
 
 .team-member {
-  background: #ffe0b2;
-  border-radius: 14px;
-  text-align: center;
-  padding: 25px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffe0b2; /* Cor de fundo do card do membro */
+  border-radius: 14px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza o texto */
+  padding: 25px; /* Preenchimento interno */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
 }
 
 .team-member:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Move o card para cima ao passar o mouse */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
 }
 
 .team-member img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #ff8c00;
-  margin-bottom: 15px;
+  width: 120px; /* Largura da imagem */
+  height: 120px; /* Altura da imagem */
+  border-radius: 50%; /* Deixa a imagem redonda */
+  object-fit: cover; /* Garante que a imagem preencha o círculo, cortando excesso */
+  border: 4px solid #ff8c00; /* Borda laranja ao redor da imagem */
+  margin-bottom: 15px; /* Espaço abaixo da imagem */
 }
 
 .team-member h3 {
-  margin: 10px 0 5px;
-  color: #e65100;
-  font-size: 1.1rem;
+  margin: 10px 0 5px; /* Margem para o nome */
+  color: #e65100; /* Cor do nome */
+  font-size: 1.1rem; /* Tamanho da fonte do nome */
 }
 
 .team-member p {
-  font-size: 0.95rem;
-  color: #5d4037;
+  font-size: 0.95rem; /* Tamanho da fonte da descrição/cargo */
+  color: #5d4037; /* Cor do texto da descrição/cargo */
 }
 
 body.escuro h3 {
-  color: #f1f1f1;
+  color: #f1f1f1; /* Cor do nome no modo escuro */
 }
 
 body.escuro .team-member {
-  background-color: #121215;
-  color: #f1f1f1;
+  background-color: #121215; /* Fundo do card do membro no modo escuro */
+  color: #f1f1f1; /* Cor do texto geral no modo escuro */
 }
 
 body.escuro .team-member p {
-  background-color: #121215;
-  color: #f1f1f1;
+  background-color: #121215; /* Fundo do parágrafo (geralmente desnecessário se o pai já tem) */
+  color: #f1f1f1; /* Cor do texto do parágrafo no modo escuro */
 }
 
 body.escuro .team-member img {
-  border: 4px solid #303030;
+  border: 4px solid #303030; /* Cor da borda da imagem no modo escuro */
 }
 
 /* === RESPONSIVIDADE PARA A SEÇÃO DO TIME === */
 @media (max-width: 900px) {
   .team-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 40px; /* Em telas menores, mostra 2 membros por linha e ajusta o espaçamento */
   }
 }
 
 @media (max-width: 600px) {
   .team-container {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 30px; /* Em telas de celular, mostra 1 membro por linha */
   }
 }
 
@@ -966,7 +966,7 @@ body.escuro .team-member img {
   display: flex;
   justify-content: center;
   padding: 60px 20px 100px;
-  background-color: #fff3e0;
+  background-color: #fff3e0; /* OBS: Estilo repetido, define uma cor de fundo clara para a seção */
 }
 
 .team-container {
@@ -974,7 +974,7 @@ body.escuro .team-member img {
   grid-template-columns: repeat(3, 1fr);
   gap: 50px 80px;
   max-width: 1100px;
-  width: 100%;
+  width: 100%; /* OBS: Estilo repetido */
 }
 
 .team-member {
@@ -983,12 +983,12 @@ body.escuro .team-member img {
   text-align: center;
   padding: 25px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* OBS: Estilo repetido */
 }
 
 .team-member:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* OBS: Estilo repetido */
 }
 
 .team-member img {
@@ -998,8 +998,8 @@ body.escuro .team-member img {
   object-fit: cover;
   border: 4px solid #ff8c00;
   margin-bottom: 15px;
-}
+} /* OBS: Estilo repetido */
 
 body.escuro .team-section {
-  background-color: #303030;
+  background-color: #303030; /* Cor de fundo da seção do time no modo escuro */
 }

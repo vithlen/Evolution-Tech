@@ -1,321 +1,330 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0; /* Remove a margem externa padrão de todos os elementos */
+  padding: 0; /* Remove o preenchimento interno padrão de todos os elementos */
+  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho final do elemento */
+  font-family: Arial, sans-serif; /* Define a família de fontes padrão para todos os elementos */
 }
 
 body {
-    background-color: #fff;
-    color: #000;
-    transition: 0.3s;
-    text-align: right;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+  background-color: #fff; /* Define a cor de fundo do corpo como branco */
+  color: #000; /* Define a cor do texto padrão como preto */
+  transition: 0.3s; /* Adiciona uma transição suave para mudanças de propriedades */
+  text-align: right; /* Alinha o texto à direita (pode ser sobrescrito por elementos filhos) */
+  font-family: Arial, sans-serif; /* Define a família de fontes para o corpo */
+  margin: 0; /* Remove a margem do corpo */
+  padding: 0; /* Remove o preenchimento do corpo */
+  display: flex; /* Ativa o layout flexbox para o corpo */
+  flex-direction: column; /* Organiza os elementos filhos (header, main, footer) em uma coluna */
 }
 
 header {
-    background-color: #f57c00;
-    color: white;
-    padding: 15px 0; /* Aumenta o padding vertical do header */
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  background-color: #f57c00; /* Define a cor de fundo do cabeçalho como laranja */
+  color: white; /* Define a cor do texto no cabeçalho como branco */
+  padding: 15px 0; /* Aumenta o padding vertical do header */
+  text-align: center; /* Centraliza o texto dentro do cabeçalho */
+  position: relative; /* Permite o posicionamento de elementos filhos absolutos em relação a ele */
+  display: flex; /* Ativa o layout flexbox para o cabeçalho */
+  flex-direction: column; /* Organiza os itens do cabeçalho em coluna */
+  align-items: center; /* Centraliza os itens do flexbox horizontalmente */
+  width: 100%; /* Faz o cabeçalho ocupar 100% da largura da tela */
 }
 
 .header-top {
   padding: 0 20px; /* Padding vertical mínimo para o header */
-  box-sizing: border-box;
+  box-sizing: border-box; /* Garante que o padding não afete a largura total */
   position: relative; /* Mantém a referência para itens posicionados dentro */
   display: flex; /* Alinha itens lado a lado */
   align-items: center; /* Alinha verticalmente */
-  width: 100%;
+  width: 100%; /* Ocupa 100% da largura do pai (header) */
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white; /* Define a cor dos links como branco */
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
 }
 
 h1 {
-    font-size: 30px;
-    letter-spacing: 2px;
-    color: white;
-    margin-top: 10px;
+  font-size: 30px; /* Define o tamanho da fonte para o título principal */
+  letter-spacing: 2px; /* Aumenta o espaçamento entre as letras */
+  color: white; /* Define a cor do texto do h1 como branco */
+  margin-top: 10px; /* Adiciona uma margem no topo do h1 */
 }
 
 .center-area {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-grow: 1; /* Faz esta área crescer para ocupar o espaço disponível */
+  display: flex; /* Ativa o layout flexbox */
+  flex-direction: column; /* Organiza os itens internos em coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
   position: relative; /* Permite o ajuste fino da posição */
   left: 1px; /* Desloca o bloco para a direita. Ajuste o valor. */
 }
 
 /* Botão hamburguer padrão: escondido */
 .menu-toggle {
-  display: none;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  color: white;
-  font-size: 1.4rem;
-  padding: 6px 10px;
-  border-radius: 60px;
-  cursor: pointer;
-  z-index: 20;
+  display: none; /* Esconde o botão por padrão */
+  background: transparent; /* Fundo transparente */
+  border: 2px solid rgba(255, 255, 255, 0.15); /* Borda branca semitransparente */
+  color: white; /* Cor do ícone (texto) branco */
+  font-size: 1.4rem; /* Tamanho do ícone */
+  padding: 6px 10px; /* Preenchimento interno */
+  border-radius: 60px; /* Bordas arredondadas */
+  cursor: pointer; /* Mostra o cursor de mão ao passar por cima */
+  z-index: 20; /* Garante que o botão fique acima de outros elementos */
 }
 
 /* Mostra o botão apenas em telas pequenas */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: inline-block;
-    position: absolute;
-    left: 16px;
-    top: 18px;
-    color: #fff;
+    display: inline-block; /* Mostra o botão em telas menores que 768px */
+    position: absolute; /* Posicionamento absoluto em relação ao header */
+    left: 16px; /* Distância de 16px da esquerda */
+    top: 18px; /* Distância de 18px do topo */
+    color: #fff; /* Cor do ícone branca */
   }
 
   /* Oculta os links quando o menu está fechado */
   .sub-nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background: #ff8c00;
-    position: absolute;
-    z-index: 9999;          /* POR CIMA DE TUDO */
+    display: none; /* Esconde a lista de links por padrão */
+    flex-direction: column; /* Organiza os links em coluna */
+    align-items: center; /* Centraliza os links horizontalmente */
+    background: #ff8c00; /* Cor de fundo laranja escuro */
+    position: absolute; /* Posicionamento absoluto para sobrepor o conteúdo */
+    z-index: 9999; /* POR CIMA DE TUDO */
     top: 70px; /* abaixo do cabeçalho */
-    left: 0;
-    right: 0;
-    padding: 15px 0;
-    gap: 10px;
-    border-top: 1px solid rgba(255,255,255,0.2);
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita, ocupando a largura toda */
+    padding: 15px 0; /* Preenchimento vertical */
+    gap: 10px; /* Espaçamento entre os links */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Linha sutil no topo */
   }
 
   /* Quando o menu está aberto, mostra os links */
   body.menu-aberto .sub-nav-links {
-    display: flex;
+    display: flex; /* Mostra os links quando a classe 'menu-aberto' está no body */
   }
 
   .sub-nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
   }
 
   .sub-nav-links a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
   }
 }
 
 /* Em telas grandes: os links ficam sempre visíveis e centralizados */
 @media (min-width: 769px) {
   .sub-nav-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: flex; /* Mostra os links como flex container */
+    justify-content: center; /* Centraliza os links horizontalmente */
+    flex-wrap: wrap; /* Permite que os links quebrem para a próxima linha se não houver espaço */
     gap: 40px; /* separa mais os links */
     margin-top: 5px; /* desce um pouco da logo/título */
   }
 }
 
 .course-Icon {
-    width: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
+  width: 50%; /* Define a largura do ícone do curso como 50% do seu contêiner */
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+  margin-bottom: 1rem; /* Adiciona uma margem inferior */
 }
 
 button {
-    background: none;
-    border: none;
-    margin-top: 0.5rem;
+  background: none; /* Remove o fundo padrão do botão */
+  border: none; /* Remove a borda padrão do botão */
+  margin-top: 0.5rem; /* Adiciona uma margem no topo */
 }
 
 header h1,
 header nav {
-    max-width: 1800px;
-    width: 100%;
-    padding: 5px 20px;
-    box-sizing: border-box;
+  max-width: 1800px; /* Define uma largura máxima para o conteúdo do header */
+  width: 100%; /* Ocupa 100% da largura disponível até o máximo */
+  padding: 5px 20px; /* Adiciona preenchimento interno */
+  box-sizing: border-box; /* Garante que o padding não afete a largura */
 }
 
 .logo-esq {
-    position: absolute;
-    top: 280%;
-    transform: translateY(-50%);
-    left: 60px;
-    width: 150px;
-    margin-top: 65px;
+  position: absolute; /* Posicionamento absoluto em relação ao elemento pai posicionado (header) */
+  top: 280%; /* Posição a partir do topo (valor parece muito alto, pode ser um erro) */
+  transform: translateY(
+    -50%
+  ); /* Centraliza verticalmente em relação à sua posição 'top' */
+  left: 60px; /* Distância de 60px da esquerda */
+  width: 150px; /* Largura da logo */
+  margin-top: 65px; /* Margem superior adicional */
 }
 
 .logo-esq img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%; /* A imagem da logo ocupa 100% da largura do seu contêiner (.logo-esq) */
+  height: auto; /* A altura é ajustada automaticamente para manter a proporção */
+  display: block; /* Remove espaços extras abaixo da imagem */
 }
 
 .btn-header {
-    padding: 8px 12px;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    font-weight: bold;
-    line-height: 1;
-    background-color: #f57c00;
-    color: white;
-    border: 2px solid #f57c00;
-    white-space: nowrap;
+  padding: 8px 12px; /* Preenchimento interno do botão */
+  font-size: 14px; /* Tamanho da fonte */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de mão ao passar por cima */
+  text-decoration: none; /* Remove sublinhado (se for um link) */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transição suave para hover */
+  font-weight: bold; /* Texto em negrito */
+  line-height: 1; /* Altura da linha */
+  background-color: #f57c00; /* Cor de fundo laranja */
+  color: white; /* Cor do texto branca */
+  border: 2px solid #f57c00; /* Borda laranja */
+  white-space: nowrap; /* Impede que o texto do botão quebre em várias linhas */
 }
 
 /* ========== ESTILO GERAL ========== */
 
 body {
-    margin: 0;
-    padding: 0;
-    transition: background 0.3s ease, color 0.3s ease;
-    font-family: Arial, sans-serif;
+  margin: 0; /* Zera a margem (redundante, já definido antes) */
+  padding: 0; /* Zera o preenchimento (redundante, já definido antes) */
+  transition: background 0.3s ease, color 0.3s ease; /* Transição suave para fundo e cor */
+  font-family: Arial, sans-serif; /* Define a fonte (redundante, já definido antes) */
 }
 
 /* ===== LIGHT MODE ===== */
 body.light {
-    background: #ffffff;
-    color: #000000;
+  background: #ffffff; /* Fundo branco para o modo claro */
+  color: #000000; /* Texto preto para o modo claro */
 }
 
 /* ===== DARK MODE (estilo da primeira imagem) ===== */
 body.dark {
-    background: #2f2f2f;             /* fundo cinza escuro */
-    color: #e6e6e6;                  /* texto claro */
+  background: #2f2f2f; /* fundo cinza escuro */
+  color: #e6e6e6; /* texto claro */
 }
 
 /* ========== TOGGLE DO MODO NOTURNO ========== */
 
 .toggle {
-    width: 70px;
-    height: 30px;
-    border-radius: 50px;
-    background: #f68a42;
-    cursor: pointer;
-    transition: background 0.4s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    user-select: none;
-    position: relative;
-    overflow: hidden;
+  width: 70px; /* Largura do botão de alternância */
+  height: 30px; /* Altura do botão de alternância */
+  border-radius: 50px; /* Bordas totalmente arredondadas */
+  background: #f68a42; /* Cor de fundo laranja para o modo claro */
+  cursor: pointer; /* Cursor de mão */
+  transition: background 0.4s ease; /* Transição suave da cor de fundo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+  user-select: none; /* Impede que o usuário selecione o texto/ícone dentro */
+  position: relative; /* Necessário para posicionar o slider e os ícones dentro */
+  overflow: hidden; /* Esconde partes dos ícones que saem para fora */
 }
 
 /* cor do botão no DARK MODE */
 .toggle.dark {
-    background: #1370ff; /* azul igual ao contorno dos cards */
+  background: #1370ff; /* azul igual ao contorno dos cards */
 }
 
 /* ícones */
 .mode-icon {
-    position: absolute;
-    width: 25px;
-    transition: transform 0.35s ease;
-    pointer-events: none;
-    top: 50%;
-    transform: translateY(-50%);
-
+  position: absolute; /* Posicionamento absoluto dentro do .toggle */
+  width: 25px; /* Largura do ícone */
+  transition: transform 0.35s ease; /* Transição suave para o movimento */
+  pointer-events: none; /* Impede que os ícones capturem cliques do mouse */
+  top: 50%; /* Posiciona na metade da altura */
+  transform: translateY(-50%); /* Centraliza verticalmente */
 }
 
 #final-score,
 .question-text,
 .answer-text * {
-  color: #000000 !important;   /* ou outra cor que você quiser */
+  color: #000000 !important; /* ou outra cor que você quiser */
 }
 
 /* bolinha deslizante */
 .slider {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: white;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    transition: transform 0.35s ease;
-    z-index: 5;
+  position: absolute; /* Posicionamento absoluto dentro do .toggle */
+  width: 24px; /* Largura da bolinha */
+  height: 24px; /* Altura da bolinha */
+  border-radius: 50%; /* Deixa a bolinha redonda */
+  background: white; /* Cor da bolinha */
+  top: 50%; /* Posiciona na metade da altura */
+  left: 5px; /* Posição inicial à esquerda */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  transition: transform 0.35s ease; /* Animação de movimento */
+  z-index: 5; /* Garante que a bolinha fique acima dos ícones */
 }
 
 /* slider movendo no modo escuro */
 .toggle.dark .slider {
-    transform: translate(35px, -50%);
+  transform: translate(
+    35px,
+    -50%
+  ); /* Move a bolinha para a direita no modo escuro */
 }
-
 
 /* ========== ESTILOS DOS CARDS NO DARK MODE ========== */
 
 /* card do quiz */
 body.dark .quiz-card {
-    background: #0f0f0f;                     /* preto suave */
-    border-radius: 22px;
-    border: 4px solid rgba(19,112,255,0.35);  /* azul igual ao site */
-    box-shadow: 0 18px 30px rgba(0,0,0,0.6);
-    color: #e6e6e6;
+  background: #0f0f0f; /* preto suave */
+  border-radius: 22px; /* Bordas arredondadas */
+  border: 4px solid rgba(19, 112, 255, 0.35); /* azul igual ao site */
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.6); /* Sombra forte para profundidade */
+  color: #e6e6e6; /* Cor do texto clara */
 }
 /* menu hamburguer */
 
 @media (max-width: 1024px) {
-    body.dark .sub-nav-links {
-        background: #000000;
-        border-radius: 22px;
-        border: 4px solid rgba(19,112,255,0.35);
-        box-shadow: 0 18px 30px rgba(0,0,0,0.6);
-        color: #e6e6e6;
-    }
+  body.dark .sub-nav-links {
+    background: #000000; /* Fundo preto para o menu hamburguer no modo escuro */
+    border-radius: 22px; /* Bordas arredondadas */
+    border: 4px solid rgba(19, 112, 255, 0.35); /* Borda azul semitransparente */
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.6); /* Sombra */
+    color: #e6e6e6; /* Cor do texto clara */
+  }
 }
 
 /* DESKTOP — NÃO mostra a borda azul */
 @media (min-width: 1025px) {
-    body.dark .sub-nav-links {
-        background: none;
-        border: none;
-        box-shadow: none;
-    }
+  body.dark .sub-nav-links {
+    background: none; /* Remove o fundo no desktop */
+    border: none; /* Remove a borda no desktop */
+    box-shadow: none; /* Remove a sombra no desktop */
+  }
 }
 
 /* opções */
 body.dark .quiz-option {
-    background: linear-gradient(180deg, #111111, #0b0b0b);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.6);
-    border: 2px solid rgba(255,255,255,0.05);
+  background: linear-gradient(
+    180deg,
+    #111111,
+    #0b0b0b
+  ); /* Gradiente de fundo escuro */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6); /* Sombra */
+  border: 2px solid rgba(255, 255, 255, 0.05); /* Borda branca muito sutil */
 }
 
 /* texto das opções */
 body.dark .quiz-option button {
-    color: #d1d1d1;
+  color: #d1d1d1; /* Cor do texto clara para os botões de opção */
 }
 
 /* hover */
 body.dark .quiz-option:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.6),
-                0 0 0 4px rgba(19,112,255,0.06);
+  transform: translateY(-2px); /* Efeito de levantar ao passar o mouse */
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6), 0 0 0 4px rgba(19, 112, 255, 0.06); /* Adiciona uma sombra externa azul sutil */
 }
 
 /* duração (12h, 20h etc) */
 body.dark .duration {
-    color: #bdbdbd;
+  color: #bdbdbd; /* Cor do texto de duração no modo escuro */
 }
 
 /* badge flutuante (mascote) */
 body.dark .floating-badge {
-    background: linear-gradient(180deg, #06203a, #071224);
-    border: 4px solid rgba(19,112,255,0.3);
-    box-shadow: 0 6px 30px rgba(19,112,255,0.15),
-                0 18px 36px rgba(0,0,0,0.6);
+  background: linear-gradient(
+    180deg,
+    #06203a,
+    #071224
+  ); /* Gradiente de fundo azul escuro */
+  border: 4px solid rgba(19, 112, 255, 0.3); /* Borda azul semitransparente */
+  box-shadow: 0 6px 30px rgba(19, 112, 255, 0.15),
+    0 18px 36px rgba(0, 0, 0, 0.6); /* Múltiplas sombras para efeito de brilho e profundidade */
 }
-
 
 /* ===========================================
    DARK MODE GLOBAL
@@ -323,15 +332,14 @@ body.dark .floating-badge {
 
 /* 🌙 DARK MODE aplicado ao quiz-container */
 .toggle.dark .quiz-container {
-    background: #000 !important;   /* container preto */
-   
+  background: #000 !important; /* container preto */
 }
 
 /* mantém corretas e erradas intactas */
 .toggle.dark .quiz-container .option.correct {
-    background: #00ff6a !important;
-    color: #000 !important;
-    border: 2px solid #00ff6a !important;
+  background: #00ff6a !important; /* Fundo verde para resposta correta, !important para sobrescrever outros estilos */
+  color: #000 !important; /* Cor do texto preta */
+  border: 2px solid #00ff6a !important; /* Borda verde */
 }
 
 /* ===========================================
@@ -339,7 +347,7 @@ body.dark .floating-badge {
    =========================================== */
 
 body.dark header {
-    background: #13161d; /* preto suavemente acinzentado */
+  background: #13161d; /* preto suavemente acinzentado */
 }
 
 /* ===========================================
@@ -347,42 +355,44 @@ body.dark header {
    =========================================== */
 
 .card {
-    background: #ffffff; /* modo claro */
-    transition: 0.4s;
+  background: #ffffff; /* Fundo branco no modo claro */
+  transition: 0.4s; /* Transição suave */
 }
 
 body.dark .card {
-    background: #1b1e26; /* CINZA ESCURO bonito */
-    border: 1px solid #272b33;
+  background: #1b1e26; /* Fundo cinza escuro bonito */
+  border: 1px solid #272b33; /* Borda sutil um pouco mais clara */
 }
 
 body.dark .card:hover {
-    background: #22262f; /* fica um pouco mais claro no hover */
+  background: #22262f; /* Fica um pouco mais claro ao passar o mouse */
 }
 
 /* Evitar que imagens do card escureçam */
 .card img {
-    filter: none !important;
+  filter: none !important; /* Garante que nenhum filtro (como de escurecimento) seja aplicado às imagens */
 }
 
 /* ===========================================
    BOTÕES
    =========================================== */
 
-button, .btn-header, .option {
-    transition: 0.3s;
+button,
+.btn-header,
+.option {
+  transition: 0.3s; /* Transição suave para todos os botões */
 }
 
 body.dark button,
 body.dark .btn-header {
-    background: #20242d;
-    border-color: #303540;
-    color: white;
+  background: #20242d; /* Fundo cinza escuro para botões */
+  border-color: #303540; /* Cor da borda um pouco mais clara */
+  color: white; /* Cor do texto branca */
 }
 
 body.dark button:hover,
 body.dark .btn-header:hover {
-    background: #2a2f3a;
+  background: #2a2f3a; /* Cor de fundo mais clara ao passar o mouse */
 }
 
 /* ===========================================
@@ -391,28 +401,28 @@ body.dark .btn-header:hover {
 
 /* Verde do acerto */
 .option.correct {
-    background: #00ff6a !important;
-    color: #000 !important;
-    border: 2px solid #00ff6a !important;
-    box-shadow: 0 0 20px #00ff6a, 0 0 40px #00ff6a !important;
+  background: #00ff6a !important; /* Fundo verde brilhante para resposta correta */
+  color: #000 !important; /* Cor do texto preta para legibilidade */
+  border: 2px solid #00ff6a !important; /* Borda da mesma cor */
+  box-shadow: 0 0 20px #00ff6a, 0 0 40px #00ff6a !important; /* Efeito de brilho (glow) */
 }
 
 /* Vermelho do erro */
 .option.wrong {
-    background: #ff4d4d !important;
-    color: #000 !important;
-    border: 2px solid #ff4d4d !important;
-    box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d !important;
+  background: #ff4d4d !important; /* Fundo vermelho para resposta errada */
+  color: #000 !important; /* Cor do texto preta */
+  border: 2px solid #ff4d4d !important; /* Borda da mesma cor */
+  box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d !important; /* Efeito de brilho (glow) */
 }
 
 /* Ícone do sol/lua NÃO deve ser afetado */
 .mode-icon {
-    filter: none !important;
+  filter: none !important; /* Garante que os ícones de modo não recebam filtros de cor/brilho */
 }
 
 /* A bolinha do dark mode */
 body.dark .slider {
-    background: white !important;
+  background: white !important; /* Garante que a bolinha do slider seja sempre branca */
 }
 
 /* ===========================================
@@ -423,336 +433,343 @@ body.dark h1,
 body.dark h3,
 body.dark p,
 body.dark a {
-    color: white;
+  color: white; /* Define a cor de títulos, parágrafos e links como branco no modo escuro */
 }
 
-    .header-btns {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.header-btns {
+  display: flex; /* Alinha os botões do cabeçalho em linha */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 15px; /* Espaçamento entre os botões */
 
-    position: absolute;
-    right: 40px;
-    bottom: 90px;
+  position: absolute; /* Posicionamento absoluto em relação ao header */
+  right: 40px; /* Distância de 40px da direita */
+  bottom: 90px; /* Distância de 90px da base do header */
 }
 
 @media (max-width: 768px) {
-    .header-btns {
-        position: static; /* não perde layout no mobile */
-        margin-top: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
+  .header-btns {
+    position: static; /* não perde layout no mobile */
+    margin-top: 20px; /* Adiciona margem superior em telas pequenas */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite que quebrem a linha */
+    gap: 12px; /* Reduz o espaçamento */
+  }
 
-    .toggle {
-        transform: scale(0.9); /* diminui um pouco no celular */
-    }
+  .toggle {
+    transform: scale(0.9); /* diminui um pouco no celular */
+  }
 }
 
 .btn-header:hover {
-    background-color: white;
-    color: #f57c00;
-    border-color: white;
+  background-color: white; /* Fundo branco ao passar o mouse */
+  color: #f57c00; /* Texto laranja ao passar o mouse */
+  border-color: white; /* Borda branca ao passar o mouse */
 }
 
- footer {
-      background-color: #000000da;
-      color: white;
-      text-align: center;
-      padding: 35px;
-      width: 100%;
-      margin-top: 40px;
-    }
+footer {
+  background-color: #000000da; /* Fundo do rodapé preto semitransparente */
+  color: white; /* Cor do texto branca */
+  text-align: center; /* Alinhamento do texto centralizado */
+  padding: 35px; /* Preenchimento interno */
+  width: 100%; /* Largura total */
+  margin-top: 40px; /* Margem superior para separar do conteúdo */
+}
 /* Instagram no canto inferior esquerdo */
 footer .social-media {
-  position: static;
-  left: 16px;
-  margin-top: -45px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  position: static; /* Posição estática, fluxo normal do documento */
+  left: 16px; /* (Não tem efeito com position: static) */
+  margin-top: -45px; /* Margem negativa para "puxar" o elemento para cima */
+  display: flex; /* Ativa o flexbox */
+  align-items: center; /* Alinha itens verticalmente */
+  gap: 8px; /* Espaçamento entre os itens */
 }
 
 /* garante que o link e ícone fiquem alinhados */
 footer .social-media .social-link {
-  color: white;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  color: white; /* Cor do texto branca */
+  text-decoration: none; /* Remove sublinhado */
+  display: inline-flex; /* Permite alinhamento flex sem ocupar a linha toda */
+  align-items: center; /* Alinha o ícone e o texto verticalmente */
+  gap: 8px; /* Espaçamento entre ícone e texto */
 }
 
 /* tamanho do ícone do instagram */
 footer .social-media img {
-  width: 60px;
-  height: 60px;
-  display: block;
+  width: 60px; /* Largura do ícone */
+  height: 60px; /* Altura do ícone */
+  display: block; /* Remove espaços extras */
 }
 
 /* Logo da empresa no canto inferior direito */
 footer .footer-logo {
-  position: relative;
-  right: 16px;
-  margin-left: 1400px;
-  bottom: -45px;
-  display: flex;
-  align-items: center;
+  position: relative; /* Posição relativa ao seu local original */
+  right: 16px; /* Desloca 16px para a esquerda (a partir da direita) */
+  margin-left: 1400px; /* Margem esquerda grande para empurrar para a direita */
+  bottom: -45px; /* Puxa o elemento para baixo */
+  display: flex; /* Ativa flexbox */
+  align-items: center; /* Alinha verticalmente */
 }
 
 /* tamanho da logo da empresa */
 footer .footer-logo img {
-  width: 200px;
-  height: auto;
-  display: block;
+  width: 200px; /* Largura da logo */
+  height: auto; /* Altura automática para manter proporção */
+  display: block; /* Remove espaços extras */
 }
 
 /* evita sobreposição em telas pequenas: empilha tudo e centraliza */
 @media (max-width: 480px) {
   footer .social-media,
   footer .footer-logo {
-    position: static;
-    margin: 8px 0;
-    justify-content: center;
+    position: static; /* Remove posicionamentos especiais */
+    margin: 8px 0; /* Adiciona margem vertical para separar os elementos */
+    justify-content: center; /* Centraliza o conteúdo (logo, social media) */
   }
 
   footer {
-    padding-bottom: 18px;
+    padding-bottom: 18px; /* Reduz o preenchimento inferior */
   }
 
   /* reduz a logo da empresa em telas muito pequenas */
   footer .footer-logo img {
-    width: 96px;
+    width: 96px; /* Reduz o tamanho da logo */
   }
 }
-    .footer-logo img {
+.footer-logo img {
   width: 200px; /* Ajuste o tamanho da logo conforme necessário */
-  height: auto;
+  height: auto; /* Altura automática para manter proporção */
 }
 footer p {
-  margin: 0;
+  margin: 0; /* Remove a margem padrão de parágrafos dentro do footer */
 }
 
 /* === RESPONSIVIDADE === */
 @media (max-width: 992px) {
-   .header-top {
-    flex-direction: column;
-    gap: 15px;
+  .header-top {
+    flex-direction: column; /* Empilha os itens do topo do header */
+    gap: 15px; /* Espaçamento entre eles */
   }
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-    }
+  header {
+    flex-direction: column; /* Empilha os itens do header */
+    align-items: center; /* Centraliza-os */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Ajusta o preenchimento */
+  }
 
-    .logo-esq {
-        position: static;
-        transform: none;
-        margin-bottom: 10px;
-    }
-      .header-btns {
-        position: static;
-        transform: none;
-        margin-top: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .logo-esq {
+    position: static; /* Remove o posicionamento absoluto */
+    transform: none; /* Remove a transformação */
+    margin-bottom: 10px; /* Adiciona margem inferior */
+  }
+  .header-btns {
+    position: static; /* Remove o posicionamento absoluto */
+    transform: none; /* Remove a transformação */
+    margin-top: 10px; /* Adiciona margem superior */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center; /* Centraliza os botões */
+  }
 
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-top: 20px;
-    }
+  nav {
+    flex-wrap: wrap; /* Permite quebra de linha para os links de navegação */
+    justify-content: center; /* Centraliza os links */
+    padding-top: 20px; /* Adiciona preenchimento superior */
+  }
 
-    nav a {
-        padding-top: 0;
-        font-size: 15px;
-    }
+  nav a {
+    padding-top: 0; /* Remove preenchimento superior específico */
+    font-size: 15px; /* Reduz o tamanho da fonte */
+  }
 
-    h1 {
-        font-size: 24px;
-    }
+  h1 {
+    font-size: 24px; /* Reduz o tamanho da fonte do título principal */
+  }
 }
 
 @media (max-width: 600px) {
-    header {
-        padding: 15px;
-    }
+  header {
+    padding: 15px; /* Reduz o preenchimento do header em telas muito pequenas */
+  }
 
-    .logo-esq img {
-        width: 120px;
-    }
+  .logo-esq img {
+    width: 120px; /* Reduz o tamanho da logo */
+  }
 
-    h1 {
-        font-size: 20px;
-        text-align: center;
-        margin-top: 15px;
-    }
+  h1 {
+    font-size: 20px; /* Reduz ainda mais o tamanho do título */
+    text-align: center; /* Garante o alinhamento central */
+    margin-top: 15px; /* Ajusta a margem superior */
+  }
 
-    nav a {
-        font-size: 14px;
-        margin: 5px;
-    }
+  nav a {
+    font-size: 14px; /* Reduz o tamanho da fonte dos links */
+    margin: 5px; /* Adiciona uma pequena margem ao redor dos links */
+  }
 
-    footer {
-        font-size: 14px;
-        padding: 20px;
-    }
+  footer {
+    font-size: 14px; /* Reduz o tamanho da fonte no rodapé */
+    padding: 20px; /* Reduz o preenchimento do rodapé */
+  }
 }
 
- footer {
-      background-color: #000000cb;
-      color: white;
-      text-align: center;
-      padding: 35px;
-      width: 100%;
-      margin-top: 40px;
-    }
+footer {
+  background-color: #000000cb; /* Fundo do rodapé preto semitransparente */
+  color: white; /* Cor do texto branca */
+  text-align: center; /* Alinhamento do texto centralizado */
+  padding: 35px; /* Preenchimento interno */
+  width: 100%; /* Largura total */
+  margin-top: 40px; /* Margem superior para separar do conteúdo */
+}
 
-    body {
-      background: linear-gradient(135deg, white, white);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      color: #FCAF45;
-    }
+body {
+  background: linear-gradient(
+    135deg,
+    white,
+    white
+  ); /* Fundo gradiente (branco para branco, efeito sutil) */
+  min-height: 100vh; /* Altura mínima de 100% da altura da tela */
+  display: flex; /* Ativa flexbox (redundante) */
+  flex-direction: column; /* Organiza em coluna (redundante) */
+  justify-content: space-between; /* Distribui o espaço entre os itens (header, main, footer) */
+  align-items: center; /* Centraliza os itens horizontalmente (redundante) */
+  color: #fcaf45; /* Cor de texto laranja (provavelmente sobrescrito) */
+}
 
-    .quiz-container {
-      width: 100%;
-      max-width: 700px;
-      font-size: 1.5rem;
-      background: #ffffff; 
-      border-radius: 30px;
-      padding: 50px 40px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); 
-      text-align: center;
-      color: #DD2A7B; 
-      border: 5px solid #E1306C; 
-      margin: 40px auto;
-    }
+.quiz-container {
+  width: 100%; /* Largura total */
+  max-width: 700px; /* Largura máxima de 700px */
+  font-size: 1.5rem; /* Tamanho da fonte base dentro do quiz */
+  background: #ffffff;
+  border-radius: 30px; /* Bordas bem arredondadas */
+  padding: 50px 40px; /* Preenchimento interno (vertical e horizontal) */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  text-align: center; /* Centraliza todo o texto */
+  color: #dd2a7b;
+  border: 5px solid #e1306c;
+  margin: 40px auto; /* Margem superior/inferior e centralização horizontal */
+}
 
-    .quiz-title {
-      font-size: 2.5rem;
-      color: #E1306C;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
-    }
+.quiz-title {
+  font-size: 2.5rem; /* Tamanho da fonte do título do quiz */
+  color: #e1306c; /* Cor do título (rosa do Instagram) */
+  margin-bottom: 30px; /* Margem inferior */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Sombra no texto para dar profundidade */
+}
 
-    .quiz-container img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 30px;
-      border: 5px solid  #E1306C;
-      box-shadow: 0 0 20px rgba(0,120,215,0.6);
-    }
+.quiz-container img {
+  width: 180px; /* Largura da imagem do quiz */
+  height: 180px; /* Altura da imagem do quiz */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  border-radius: 50%; /* Deixa a imagem redonda */
+  margin-bottom: 30px; /* Margem inferior */
+  border: 5px solid #e1306c;
+  box-shadow: 0 0 20px rgba(0, 120, 215, 0.6); /* Efeito de brilho azul (pode ser ajustado para as cores do Instagram) */
+}
 
-    .option {
-      background: white; 
-      padding: 18px 25px;
-      margin: 12px 0;
-      border-radius: 12px; 
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-size: 2rem;
-      border: 2px solid #F77737; 
-      color: #333;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
-    }
+.option {
+  background: white;
+  padding: 18px 25px; /* Preenchimento interno */
+  margin: 12px 0; /* Margem vertical entre as opções */
+  border-radius: 12px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de mão */
+  transition: all 0.3s ease; /* Transição suave para todas as propriedades */
+  font-size: 2rem; /* Tamanho da fonte grande */
+  border: 2px solid #f77737;
+  color: #333; /* Cor do texto escura */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
 
-    .option:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
+.option:hover {
+  transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
+}
 
-    .option.correct {
-      background: #00ff6a;
-      color: #000;
-      border: 2px solid #00ff6a;
-      box-shadow: 0 0 20px #00ff6a, 0 0 40px #00ff6a;
-      transform: scale(1.05);
-    }
+.option.correct {
+  background: #00ff6a; /* Fundo verde para resposta correta */
+  color: #000; /* Cor do texto preta */
+  border: 2px solid #00ff6a; /* Borda da mesma cor */
+  box-shadow: 0 0 20px #00ff6a, 0 0 40px #00ff6a; /* Efeito de brilho */
+  transform: scale(1.05); /* Aumenta um pouco o tamanho */
+}
 
-    .option.wrong {
-      background: #ff4d4d;
-      color: #000;
-      border: 2px solid #ff4d4d;
-      box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d;
-      transform: scale(1.05);
-    }
+.option.wrong {
+  background: #ff4d4d; /* Fundo vermelho para resposta errada */
+  color: #000; /* Cor do texto preta */
+  border: 2px solid #ff4d4d; /* Borda da mesma cor */
+  box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d; /* Efeito de brilho */
+  transform: scale(1.05); /* Aumenta um pouco o tamanho */
+}
 
-    .feedback {
-      margin-top: 25px;
-      font-size: 1.6rem;
-      font-weight: bold;
-      color: #DD2A7B; 
-    }
+.feedback {
+  margin-top: 25px; /* Margem superior */
+  font-size: 1.6rem; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  color: #dd2a7b;
+}
 
-    .question {
-      display: none;
-      opacity: 0;
-      transform: translateY(60px);
-      transition: all 0.5s ease;
-    }
+.question {
+  display: none; /* Esconde a questão por padrão */
+  opacity: 0; /* Começa totalmente transparente */
+  transform: translateY(60px); /* Começa deslocada para baixo */
+  transition: all 0.5s ease; /* Animação de entrada suave */
+}
 
-    .question.active {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
+.question.active {
+  display: block; /* Mostra a questão ativa */
+  opacity: 1; /* Torna-a totalmente visível */
+  transform: translateY(0); /* Move para a posição original */
+}
 
-    .end h2 {
-      font-size: 2.4rem;
-      color: #FCAF45; 
-      animation: pulse 1.2s infinite alternate;
-    }
+.end h2 {
+  font-size: 2.4rem; /* Tamanho da fonte do título final */
+  color: #fcaf45;
+  animation: pulse 1.2s infinite alternate; /* Aplica a animação 'pulse' */
+}
 
-    @keyframes pulse {
-      from { transform: scale(1); }
-      to { transform: scale(1.05); }
-    }
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  } /* Estado inicial da animação */
+  to {
+    transform: scale(1.05);
+  } /* Estado final da animação (aumenta o tamanho) */
+}
 
-    .mascote-container {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      cursor: pointer;
-      z-index: 1000; 
-    }
+.mascote-container {
+  position: fixed; /* Posição fixa na tela */
+  bottom: 20px; /* 20px da parte inferior */
+  right: 20px; /* 20px da direita */
+  cursor: pointer; /* Cursor de mão */
+  z-index: 1000;
+}
 
-    .mascote {
-      width: 120px;
-      transition: transform 0.2s;
-    }
+.mascote {
+  width: 120px; /* Largura da imagem do mascote */
+  transition: transform 0.2s; /* Transição suave para o hover */
+}
 
-    .mascote:hover {
-      transform: scale(1.05);
-    }
-    /*IMPORTANTE*/
-    .fala {
-      position: absolute;
-      bottom: 140px; 
-      right: 0;
-      width: 450px;
-      height: 350px; 
-      background-image: url('../Mascote-IMG/fala.png'); 
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      display: none;
-      padding: 110px; 
-      box-sizing: border-box;
-    }
+.mascote:hover {
+  transform: scale(1.05); /* Aumenta um pouco o tamanho ao passar o mouse */
+}
+/*IMPORTANTE*/
+.fala {
+  position: absolute; /* Posição absoluta em relação ao .mascote-container */
+  bottom: 140px;
+  right: 0; /* Alinhado à direita do contêiner */
+  width: 450px; /* Largura do balão de fala */
+  height: 350px; /* Altura do balão de fala */
+  background-image: url("../Mascote-IMG/fala.png");
+  background-size: contain; /* Ajusta a imagem de fundo para caber dentro do elemento */
+  background-repeat: no-repeat; /* Impede que a imagem de fundo se repita */
+  background-position: center; /* Centraliza a imagem de fundo */
+  display: none; /* Esconde o balão por padrão */
+  padding: 110px; /* Preenchimento interno para posicionar o texto dentro do balão */
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
 
-    .texto-fala {
-      display: block;
-      text-align: center;  
-      font-size: 20px;
-      color: rgb(0, 0, 0);
-      overflow-wrap: break-word; 
-    }
- 
+.texto-fala {
+  display: block; /* Faz o span se comportar como um bloco */
+  text-align: center; /* Centraliza o texto */
+  font-size: 20px; /* Tamanho da fonte */
+  color: rgb(0, 0, 0); /* Cor do texto preta */
+  overflow-wrap: break-word; /* Permite que palavras longas quebrem para a próxima linha */
+}

@@ -1,85 +1,99 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR"> <!-- Inicia o documento HTML e define o idioma principal como Português do Brasil -->
 
-<head>
-  <meta charset="UTF-8">
+<head> <!-- Seção de metadados e links do documento -->
+  <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 para suportar acentos e símbolos -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configura a viewport para que o site seja responsivo em dispositivos móveis -->
   <!-- Links para as fontes do Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Pré-conecta ao servidor de fontes do Google para otimizar o carregamento -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Pré-conecta ao servidor de arquivos estáticos de fontes, permitindo requisições de origem cruzada -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Importa a fonte 'Poppins' com diferentes pesos -->
   <link rel="icon" type="image/png" sizes="32x32" href="../logo-oficial1.png">
-  <title>Quiz Instagram</title>
+  <!-- Define o ícone (favicon) da página -->
+  <title>Quiz Instagram</title> <!-- Define o título que aparece na aba do navegador -->
   <link rel="stylesheet" href="quiz-instagram.css">
+  <!-- Linka a folha de estilos CSS externa para estilizar a página -->
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-</head>
+  <!-- Importa a biblioteca de confetes para a celebração no final do quiz -->
+</head> <!-- Fim da seção de metadados -->
 
-<body>
+<body> <!-- Início do corpo do documento, onde o conteúdo visível fica -->
 
   <audio id="hover-sound" src="../som/hover.mp3" preload="auto"></audio>
+  <!-- Elemento de áudio para o som ao passar o mouse, pré-carregado -->
   <audio id="correct-sound" src="../som/Check mark sound effect [v-aqBz6C4D4].mp3" preload="auto"></audio>
+  <!-- Áudio para resposta correta -->
   <audio id="wrong-sound" src="../som/Resposta errada Efeito sonoro [_VPhOMVr13c].mp3" preload="auto"></audio>
+  <!-- Áudio para resposta errada -->
   <audio id="celebration-sound" src="../som/FNAF_ Kids Cheering - Gaming Sound Effect (HD) [9bnUWuAO0oU].mp3"
-    preload="auto"></audio>
+    preload="auto"></audio> <!-- O atributo preload="auto" sugere ao navegador que carregue o áudio inteiro -->
   <audio id="failed-sound" src="../som/Sad Trombone - Sound Effect (HD) [CQeezCdF4mk].mp3" preload="auto"></audio>
+  <!-- Áudio de falha para baixa pontuação -->
 
-  <header>
-    <div class="header-top">
+  <header> <!-- Seção do cabeçalho da página -->
+    <div class="header-top"> <!-- Div para a parte superior do cabeçalho -->
       <!-- botão hamburguer (esquerda) -->
-      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button> <!-- Botão para o menu responsivo (hambúrguer) -->
 
 
-      <div class="logo-esq">
+      <div class="logo-esq"> <!-- Contêiner para o logo no lado esquerdo -->
         <img src="../img/tech-para-todos.png" alt="Logo Tech Para Todos" style="height:140px;">
+        <!-- Imagem do logo com estilo inline para altura -->
       </div>
     </div>
-    <br>
-    <div class="center-area">
-      <h1>Cursos de Informática Básica Para melhor Idade</h1>
-      <br>
-      <div class="sub-nav-links">
-        <a href="../../../index.html">Início</a>
-        <a href="../../../sobrenos.html">Sobre Nós</a>
-        <a href="../../../cursos/index.html">Nossos Cursos</a>
-        <a href="../../../contato.html">Contato</a>
+    <br> <!-- Quebra de linha para espaçamento vertical -->
+    <div class="center-area"> <!-- Área central do cabeçalho -->
+      <h1>Cursos de Informática Básica Para melhor Idade</h1> <!-- Título principal da página -->
+      <br> <!-- Quebra de linha -->
+      <div class="sub-nav-links"> <!-- Contêiner para os links de navegação -->
+        <a href="../../../index.html">Início</a> <!-- Link para a página inicial -->
+        <a href="../../../sobrenos.html">Sobre Nós</a> <!-- Link para a página "Sobre Nós" -->
+        <a href="../../../cursos/index.html">Nossos Cursos</a> <!-- Link para a página de cursos -->
+        <a href="../../../contato.html">Contato</a> <!-- Link para a página de contato -->
 
       </div>
     </div>
-    <br>
-    <div class="header-btns">
-      <div id="modeBtn" class="toggle light">
-        <div class="slider"></div>
+    <br> <!-- Quebra de linha -->
+    <div class="header-btns"> <!-- Contêiner para os botões do cabeçalho (modo noturno, cadastro, login) -->
+      <div id="modeBtn" class="toggle light"> <!-- Botão para alternar entre modo claro e escuro -->
+        <div class="slider"></div> <!-- Elemento visual deslizante do botão toggle -->
       </div>
-      <a href="../../../cadastro.html" class="btn-header">CADASTRE-SE</a>
+      <a href="../../../cadastro.html" class="btn-header">CADASTRE-SE</a> <!-- Botão/link para a página de cadastro -->
       <a href="../../../login.html" class="btn-header btn-acao">JÁ SOU ALUNO(A)</a>
+      <!-- Botão/link para a página de login -->
 
     </div>
-  </header>
+  </header> <!-- Fim do cabeçalho -->
 
-  <div class="quiz-container">
-    <h2 class="quiz-title">INSTAGRAM</h2>
+  <div class="quiz-container"> <!-- Contêiner principal do quiz -->
+    <h2 class="quiz-title">INSTAGRAM</h2> <!-- Título do quiz -->
 
     <!-- Pergunta 1 -->
-    <div class="question active">
-      <img src="../img/instagram.jpg">
-      <h2>Qual é a principal função do Instagram?</h2>
+    <div class="question active"> <!-- Contêiner da primeira pergunta, 'active' a torna visível -->
+      <img src="../img/instagram.jpg"> <!-- Imagem relacionada à pergunta -->
+      <h2>Qual é a principal função do Instagram?</h2> <!-- O texto da pergunta -->
       <div class="option" data-correct="true">Compartilhar fotos e vídeos</div>
-      <div class="option" data-correct="false">Enviar e-mails</div>
-      <div class="option" data-correct="false">Fazer planilhas</div>
-      <div class="option" data-correct="false">Criar apresentações</div>
-      <div class="feedback"></div>
+      <!-- Opção de resposta. 'data-correct="true"' indica que esta é a resposta certa -->
+      <div class="option" data-correct="false">Enviar e-mails</div> <!-- Opção de resposta errada -->
+      <div class="option" data-correct="false">Fazer planilhas</div> <!-- Opção de resposta errada -->
+      <div class="option" data-correct="false">Criar apresentações</div> <!-- Opção de resposta errada -->
+      <div class="feedback"></div> <!-- Elemento para exibir o feedback (Correto/Errado) -->
     </div>
 
     <!-- Pergunta 2 -->
-    <div class="question">
-      <img src="../img/instagram.jpg">
-      <h2>O que é um “Story” no Instagram?</h2>
-      <div class="option" data-correct="false">Um post fixo no perfil</div>
-      <div class="option" data-correct="true">Uma publicação temporária de 24 horas</div>
-      <div class="option" data-correct="false">Um tipo de mensagem direta</div>
-      <div class="option" data-correct="false">Uma lista de seguidores</div>
-      <div class="feedback"></div>
+    <div class="question"> <!-- Contêiner da segunda pergunta -->
+      <img src="../img/instagram.jpg"> <!-- Imagem da pergunta -->
+      <h2>O que é um “Story” no Instagram?</h2> <!-- Texto da pergunta -->
+      <div class="option" data-correct="false">Um post fixo no perfil</div> <!-- Opção errada -->
+      <div class="option" data-correct="true">Uma publicação temporária de 24 horas</div> <!-- Opção correta -->
+      <div class="option" data-correct="false">Um tipo de mensagem direta</div> <!-- Opção errada -->
+      <div class="option" data-correct="false">Uma lista de seguidores</div> <!-- Opção errada -->
+      <div class="feedback"></div> <!-- Elemento para feedback -->
     </div>
 
     <!-- Pergunta 3 -->
@@ -171,38 +185,40 @@
     </div>
 
     <!-- Mascote de ajuda -->
-    <div class="mascote-container" id="mascote">
+    <div class="mascote-container" id="mascote"> <!-- Contêiner do mascote de ajuda -->
       <img src="../Mascote-IMG/imagem_2025-10-21_143653426-removebg-preview.png" alt="Mascote" class="mascote">
-      <div class="fala" id="fala">
-        <span class="texto-fala" id="texto-fala"></span>
+      <!-- Imagem do mascote -->
+      <div class="fala" id="fala"> <!-- Contêiner para o balão de fala do mascote -->
+        <span class="texto-fala" id="texto-fala"></span> <!-- O texto que aparecerá dentro do balão de fala -->
       </div>
     </div>
 
 
     <!-- Tela final -->
-    <div class="question end">
-      <img src="../img/Captura de tela 2025-09-26 163624.png">
-      <h2>🎉 Fim do Quiz! 🎉</h2>
-      <p id="final-score"></p>
+    <div class="question end"> <!-- Contêiner para a tela de finalização do quiz -->
+      <img src="../img/Captura de tela 2025-09-26 163624.png"> <!-- Imagem de celebração -->
+      <h2>🎉 Fim do Quiz! 🎉</h2> <!-- Título da tela final -->
+      <p id="final-score"></p> <!-- Parágrafo onde a pontuação final será exibida pelo JavaScript -->
     </div>
 
-  </div>
+  </div> <!-- Fim do contêiner do quiz -->
 
-  <footer>
-    <div class="footer-logo">
-      <img src="../../../logotipo empresa (2).png" alt="Logo da Empresa">
+  <footer> <!-- Seção do rodapé da página -->
+    <div class="footer-logo"> <!-- Contêiner para o logo no rodapé -->
+      <img src="../../../logotipo empresa (2).png" alt="Logo da Empresa"> <!-- Imagem do logo da empresa -->
     </div>
     <h1>&copy; 2025 Tech Para Todos - Evolution Tech. Todos os direitos reservados.</h1>
-    <div class="social-media">
+    <!-- Texto de direitos autorais -->
+    <div class="social-media"> <!-- Contêiner para links de mídias sociais -->
       <a href="https://www.instagram.com/evolutiontech__/" target="_blank" rel="noopener noreferrer"
         title="Siga-nos no Instagram" class="social-link">
-        <img src="../img/instagram-convertido.png" alt="Ícone do Instagram">
-        <span><strong>evolutiontech_</strong></span>
+        <img src="../img/instagram-convertido.png" alt="Ícone do Instagram"> <!-- Ícone do Instagram -->
+        <span><strong>evolutiontech_</strong></span> <!-- Nome de usuário do Instagram -->
       </a>
     </div>
-  </footer>
+  </footer> <!-- Fim do rodapé -->
 
-  <script src="quiz-instagram.js"></script>
-</body>
+  <script src="quiz-instagram.js"></script> <!-- Linka o arquivo JavaScript que controla a lógica do quiz -->
+</body> <!-- Fim do corpo do documento -->
 
-</html>
+</html> <!-- Fim do documento HTML -->

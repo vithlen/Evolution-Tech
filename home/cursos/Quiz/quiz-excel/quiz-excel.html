@@ -1,213 +1,236 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR"> <!-- Define o idioma principal do documento como Português do Brasil -->
 
-<head>
-  <meta charset="UTF-8">
+<head> <!-- Contém metadados e links para recursos externos -->
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, que suporta a maioria dos caracteres -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configura a viewport para que o site seja responsivo em dispositivos móveis -->
   <!-- Links para as fontes do Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Pré-conecta ao servidor de fontes do Google para um carregamento mais rápido -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Pré-conecta ao servidor de arquivos estáticos de fontes do Google -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Importa a fonte Poppins com diferentes pesos -->
   <link rel="icon" type="image/png" sizes="32x32" href="../logo-oficial1.png">
+  <!-- Define o ícone (favicon) da aba do navegador -->
   <!-- Links para as fontes do Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- (Redundante) Pré-conecta ao servidor de fontes do Google -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- (Redundante) Pré-conecta ao servidor de arquivos estáticos de fontes do Google -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- (Redundante) Importa a fonte Poppins -->
   <link rel="icon" type="image/png" sizes="32x32" href="../logo-oficial1.png">
-  <title>Quiz Excel</title>
-  <link rel="stylesheet" href="quiz-excel.css">
+  <!-- (Redundante) Define o ícone da aba -->
+  <title>Quiz Excel</title> <!-- Define o título que aparece na aba do navegador -->
+  <link rel="stylesheet" href="quiz-excel.css"> <!-- Linka o arquivo de folha de estilos CSS externo -->
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- Importa a biblioteca de confetes para animações -->
 </head>
 
-<body>
+<body> <!-- Contém todo o conteúdo visível da página web -->
 
   <audio id="hover-sound" src="../som/hover.mp3" preload="auto"></audio>
+  <!-- Elemento de áudio para o som de passar o mouse, pré-carregado -->
   <audio id="correct-sound" src="../som/Check mark sound effect [v-aqBz6C4D4].mp3" preload="auto"></audio>
+  <!-- Áudio para resposta correta -->
   <audio id="wrong-sound" src="../som/Resposta errada Efeito sonoro [_VPhOMVr13c].mp3" preload="auto"></audio>
+  <!-- Áudio para resposta errada -->
   <audio id="celebration-sound" src="../som/FNAF_ Kids Cheering - Gaming Sound Effect (HD) [9bnUWuAO0oU].mp3"
-    preload="auto"></audio>
+    preload="auto"></audio> <!-- Áudio de celebração ao final do quiz -->
   <audio id="failed-sound" src="../som/Sad Trombone - Sound Effect (HD) [CQeezCdF4mk].mp3" preload="auto"></audio>
+  <!-- Áudio de falha ao final do quiz -->
 
-  <header>
-    <div class="header-top">
+  <header> <!-- Seção do cabeçalho da página -->
+    <div class="header-top"> <!-- Contêiner para a parte superior do cabeçalho -->
       <!-- botão hamburguer (esquerda) -->
       <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+      <!-- Botão para abrir/fechar o menu de navegação em telas pequenas -->
 
 
-      <div class="logo-esq">
+      <div class="logo-esq"> <!-- Contêiner para a logo do lado esquerdo -->
         <img src="../img/tech-para-todos.png" alt="Logo Tech Para Todos" style="height:140px;">
+        <!-- Imagem da logo com texto alternativo e estilo inline -->
       </div>
     </div>
-    <br>
-    <div class="center-area">
-      <h1>Cursos de Informática Básica Para melhor Idade</h1>
-      <br>
-      <div class="sub-nav-links">
-        <a href="../../../index.html">Início</a>
-        <a href="../../../sobrenos.html">Sobre Nós</a>
-        <a href="../../../cursos/index.html">Nossos Cursos</a>
-        <a href="../../../contato.html">Contato</a>
+    <br> <!-- Quebra de linha para criar um espaçamento vertical -->
+    <div class="center-area"> <!-- Contêiner para a área central do cabeçalho -->
+      <h1>Cursos de Informática Básica Para melhor Idade</h1> <!-- Título principal da página -->
+      <br> <!-- Quebra de linha -->
+      <div class="sub-nav-links"> <!-- Contêiner para os links de navegação secundários -->
+        <a href="../../../index.html">Início</a> <!-- Link para a página inicial -->
+        <a href="../../../sobrenos.html">Sobre Nós</a> <!-- Link para a página "Sobre Nós" -->
+        <a href="../../../cursos/index.html">Nossos Cursos</a> <!-- Link para a página de cursos -->
+        <a href="../../../contato.html">Contato</a> <!-- Link para a página de contato -->
 
       </div>
     </div>
-    <br>
-    <div class="header-btns">
-      <div id="modeBtn" class="toggle light">
-        <div class="slider"></div>
+    <br> <!-- Quebra de linha -->
+    <div class="header-btns"> <!-- Contêiner para os botões do cabeçalho -->
+      <div id="modeBtn" class="toggle light"> <!-- Botão para alternar entre modo claro e escuro -->
+        <div class="slider"></div> <!-- Elemento visual deslizante do botão de alternância -->
       </div>
-      <a href="../../../cadastro.html" class="btn-header">CADASTRE-SE</a>
+      <a href="../../../cadastro.html" class="btn-header">CADASTRE-SE</a> <!-- Botão/link para a página de cadastro -->
       <a href="../../../login.html" class="btn-header btn-acao">JÁ SOU ALUNO(A)</a>
+      <!-- Botão/link para a página de login -->
 
     </div>
   </header>
 
-  <div class="quiz-container">
-    <h2 class="quiz-title">EXCEL</h2>
+  <div class="quiz-container"> <!-- Contêiner principal para todo o conteúdo do quiz -->
+    <h2 class="quiz-title">EXCEL</h2> <!-- Título do quiz -->
 
     <!-- Pergunta 1 -->
-    <div class="question active">
-      <img src="../img/excel.png">
+    <div class="question active"> <!-- Contêiner para a primeira pergunta, 'active' a torna visível -->
+      <img src="../img/excel.png"> <!-- Imagem relacionada à pergunta -->
       <h2>Qual recurso do Excel permite revisar e acompanhar modificações feitas em uma planilha?</h2>
+      <!-- O texto da pergunta -->
       <div class="option" data-correct="false">Classificação</div>
-      <div class="option" data-correct="false">Filtro</div>
-      <div class="option" data-correct="true">Controlar Alterações</div>
-      <div class="option" data-correct="false">Macro</div>
-      <div class="feedback"></div>
+      <!-- Opção de resposta. 'data-correct' indica se é a correta -->
+      <div class="option" data-correct="false">Filtro</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="true">Controlar Alterações</div> <!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">Macro</div> <!-- Opção de resposta -->
+      <div class="feedback"></div> <!-- Elemento para exibir feedback (certo/errado) -->
     </div>
 
     <!-- Pergunta 2 -->
-    <div class="question">
-      <img src="../img/excel.png">
+    <div class="question"> <!-- Contêiner para a segunda pergunta -->
+      <img src="../img/excel.png"> <!-- Imagem da pergunta -->
       <h2>Qual recurso do Excel permite revisar e visualizar alterações feitas em uma planilha?</h2>
-      <div class="option" data-correct="false">Classificação</div>
-      <div class="option" data-correct="true">Controlar Alterações</div>
-      <div class="option" data-correct="false">Filtro</div>
-      <div class="option" data-correct="false">Macro</div>
-      <div class="feedback"></div>
+      <!-- Texto da pergunta -->
+      <div class="option" data-correct="false">Classificação</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="true">Controlar Alterações</div> <!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">Filtro</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="false">Macro</div> <!-- Opção de resposta -->
+      <div class="feedback"></div> <!-- Elemento para feedback -->
     </div>
 
     <!-- Pergunta 3 -->
-    <div class="question">
-      <img src="../img/excel.png">
-      <h2>Qual atalho salva rapidamente uma planilha no Excel?</h2>
-      <div class="option" data-correct="false">Ctrl + P</div>
-      <div class="option" data-correct="false">Ctrl + C</div>
-      <div class="option" data-correct="false">Ctrl + X</div>
-      <div class="option" data-correct="true">Ctrl + S</div>
-      <div class="feedback"></div>
+    <div class="question"> <!-- Contêiner para a terceira pergunta -->
+      <img src="../img/excel.png"> <!-- Imagem da pergunta -->
+      <h2>Qual atalho salva rapidamente uma planilha no Excel?</h2> <!-- Texto da pergunta -->
+      <div class="option" data-correct="false">Ctrl + P</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="false">Ctrl + C</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="false">Ctrl + X</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="true">Ctrl + S</div> <!-- Opção de resposta correta -->
+      <div class="feedback"></div> <!-- Elemento para feedback -->
     </div>
 
     <!-- Pergunta 4 -->
-    <div class="question">
-      <img src="../img/excel.png">
-      <h2>Qual recurso do Excel permite visualizar alterações feitas em uma planilha?</h2>
-      <div class="option" data-correct="true">Controlar Alterações</div>
-      <div class="option" data-correct="false">Classificação</div>
-      <div class="option" data-correct="false">Filtro</div>
-      <div class="option" data-correct="false">Macro</div>
-      <div class="feedback"></div>
+    <div class="question"> <!-- Contêiner para a quarta pergunta -->
+      <img src="../img/excel.png"> <!-- Imagem da pergunta -->
+      <h2>Qual recurso do Excel permite visualizar alterações feitas em uma planilha?</h2> <!-- Texto da pergunta -->
+      <div class="option" data-correct="true">Controlar Alterações</div> <!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">Classificação</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="false">Filtro</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="false">Macro</div> <!-- Opção de resposta -->
+      <div class="feedback"></div> <!-- Elemento para feedback -->
     </div>
 
     <!-- Pergunta 5 -->
-    <div class="question">
-      <img src="../img/excel.png">
-      <h2>Qual função do Excel permite somar um conjunto de valores?</h2>
-      <div class="option" data-correct="false">MÉDIA()</div>
-      <div class="option" data-correct="true">SOMA()</div>
-      <div class="option" data-correct="false">MÁXIMO()</div>
-      <div class="option" data-correct="false">CONT.SE()</div>
-      <div class="feedback"></div>
+    <div class="question"> <!-- Contêiner para a quinta pergunta -->
+      <img src="../img/excel.png"> <!-- Imagem da pergunta -->
+      <h2>Qual função do Excel permite somar um conjunto de valores?</h2> <!-- Texto da pergunta -->
+      <div class="option" data-correct="false">MÉDIA()</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="true">SOMA()</div> <!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">MÁXIMO()</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="false">CONT.SE()</div> <!-- Opção de resposta -->
+      <div class="feedback"></div> <!-- Elemento para feedback -->
     </div>
 
     <!-- Pergunta 6 -->
-    <div class="question">
-      <img src="../img/excel.png">
-      <h2>Como inserir gráficos em uma planilha do Excel?</h2>
-      <div class="option" data-correct="true">Inserir → Gráfico</div>
-      <div class="option" data-correct="false">Página Inicial → Fonte</div>
-      <div class="option" data-correct="false">Fórmulas → Funções</div>
-      <div class="option" data-correct="false">Revisão → Comentário</div>
-      <div class="feedback"></div>
+    <div class="question"> <!-- Contêiner para a sexta pergunta -->
+      <img src="../img/excel.png"> <!-- Imagem da pergunta -->
+      <h2>Como inserir gráficos em uma planilha do Excel?</h2> <!-- Texto da pergunta -->
+      <div class="option" data-correct="true">Inserir → Gráfico</div> <!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">Página Inicial → Fonte</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="false">Fórmulas → Funções</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="false">Revisão → Comentário</div> <!-- Opção de resposta -->
+      <div class="feedback"></div> <!-- Elemento para feedback -->
     </div>
 
     <!-- Pergunta 7 -->
-    <div class="question">
-      <img src="img/excel.png">
-      <h2>Qual guia contém opções de formatação como fonte, cor e tamanho do texto?</h2>
-      <div class="option" data-correct="false">Inserir</div>
-      <div class="option" data-correct="false">Fórmulas</div>
-      <div class="option" data-correct="true">Página Inicial</div>
-      <div class="option" data-correct="false">Revisão</div>
-      <div class="feedback"></div>
+    <div class="question"> <!-- Contêiner para a sétima pergunta -->
+      <img src="img/excel.png"> <!-- Imagem da pergunta (caminho parece diferente dos outros) -->
+      <h2>Qual guia contém opções de formatação como fonte, cor e tamanho do texto?</h2> <!-- Texto da pergunta -->
+      <div class="option" data-correct="false">Inserir</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="false">Fórmulas</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="true">Página Inicial</div> <!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">Revisão</div> <!-- Opção de resposta -->
+      <div class="feedback"></div> <!-- Elemento para feedback -->
     </div>
 
     <!-- Pergunta 8 -->
-    <div class="question">
-      <img src="../img/excel.png">
-      <h2>Como inserir cabeçalhos e rodapés em uma planilha?</h2>
-      <div class="option" data-correct="false">Revisão → Ortografia</div>
-      <div class="option" data-correct="true">Inserir → Cabeçalho/Rodapé</div>
-      <div class="option" data-correct="false">Página Inicial → Estilo</div>
-      <div class="option" data-correct="false">Exibir → Zoom</div>
-      <div class="feedback"></div>
+    <div class="question"> <!-- Contêiner para a oitava pergunta -->
+      <img src="../img/excel.png"> <!-- Imagem da pergunta -->
+      <h2>Como inserir cabeçalhos e rodapés em uma planilha?</h2> <!-- Texto da pergunta -->
+      <div class="option" data-correct="false">Revisão → Ortografia</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="true">Inserir → Cabeçalho/Rodapé</div> <!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">Página Inicial → Estilo</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="false">Exibir → Zoom</div> <!-- Opção de resposta -->
+      <div class="feedback"></div> <!-- Elemento para feedback -->
     </div>
 
     <!-- Pergunta 9 -->
-    <div class="question">
-      <img src="../img/excel.png">
-      <h2>Qual recurso permite verificar e corrigir erros de digitação no Excel?</h2>
-      <div class="option" data-correct="false">Classificação</div>
-      <div class="option" data-correct="false">Gráficos</div>
-      <div class="option" data-correct="false">Colunas</div>
-      <div class="option" data-correct="true">Verificação ortográfica</div>
-      <div class="feedback"></div>
+    <div class="question"> <!-- Contêiner para a nona pergunta -->
+      <img src="../img/excel.png"> <!-- Imagem da pergunta -->
+      <h2>Qual recurso permite verificar e corrigir erros de digitação no Excel?</h2> <!-- Texto da pergunta -->
+      <div class="option" data-correct="false">Classificação</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="false">Gráficos</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="false">Colunas</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="true">Verificação ortográfica</div> <!-- Opção de resposta correta -->
+      <div class="feedback"></div> <!-- Elemento para feedback -->
     </div>
 
     <!-- Pergunta 10 -->
-    <div class="question">
-      <img src="../img/excel.png">
-      <h2>Qual atalho copia o conteúdo de uma célula selecionada?</h2>
-      <div class="option" data-correct="false">Ctrl + S</div>
-      <div class="option" data-correct="false">Ctrl + X</div>
-      <div class="option" data-correct="true">Ctrl + C</div>
-      <div class="option" data-correct="false">Ctrl + V</div>
-      <div class="feedback"></div>
+    <div class="question"> <!-- Contêiner para a décima pergunta -->
+      <img src="../img/excel.png"> <!-- Imagem da pergunta -->
+      <h2>Qual atalho copia o conteúdo de uma célula selecionada?</h2> <!-- Texto da pergunta -->
+      <div class="option" data-correct="false">Ctrl + S</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="false">Ctrl + X</div> <!-- Opção de resposta -->
+      <div class="option" data-correct="true">Ctrl + C</div> <!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">Ctrl + V</div> <!-- Opção de resposta -->
+      <div class="feedback"></div> <!-- Elemento para feedback -->
     </div>
 
     <!-- Mascote de ajuda -->
-    <div class="mascote-container" id="mascote">
+    <div class="mascote-container" id="mascote"> <!-- Contêiner para o mascote de ajuda -->
       <img src="../Mascote-IMG/imagem_2025-10-21_143653426-removebg-preview.png" alt="Mascote" class="mascote">
-      <div class="fala" id="fala">
+      <!-- Imagem do mascote -->
+      <div class="fala" id="fala"> <!-- Contêiner para o balão de fala do mascote -->
         <span class="texto-fala" id="texto-fala"></span>
+        <!-- Onde o texto da fala do mascote será inserido via JavaScript -->
       </div>
     </div>
 
 
     <!-- Tela final -->
-    <div class="question end">
-      <img src="../img/Captura de tela 2025-09-26 163624.png">
-      <h2>🎉 Fim do Quiz! 🎉</h2>
-      <p id="final-score"></p>
+    <div class="question end"> <!-- Contêiner para a tela de finalização do quiz -->
+      <img src="../img/Captura de tela 2025-09-26 163624.png"> <!-- Imagem de celebração -->
+      <h2>🎉 Fim do Quiz! 🎉</h2> <!-- Título de finalização -->
+      <p id="final-score"></p> <!-- Parágrafo onde a pontuação final será exibida -->
     </div>
 
   </div>
 
-  <footer>
-    <div class="footer-logo">
-      <img src="../../../logotipo empresa (2).png" alt="Logo da Empresa">
+  <footer> <!-- Seção do rodapé da página -->
+    <div class="footer-logo"> <!-- Contêiner para a logo no rodapé -->
+      <img src="../../../logotipo empresa (2).png" alt="Logo da Empresa"> <!-- Imagem da logo da empresa -->
     </div>
     <h1>&copy; 2025 Tech Para Todos - Evolution Tech. Todos os direitos reservados.</h1>
-    <div class="social-media">
+    <!-- Texto de direitos autorais -->
+    <div class="social-media"> <!-- Contêiner para os links de mídia social -->
       <a href="https://www.instagram.com/evolutiontech__/" target="_blank" rel="noopener noreferrer"
-        title="Siga-nos no Instagram" class="social-link">
-        <img src="../img/instagram-convertido.png" alt="Ícone do Instagram">
-        <span><strong>evolutiontech_</strong></span>
+        title="Siga-nos no Instagram" class="social-link"> <!-- Link para o Instagram que abre em uma nova aba -->
+        <img src="../img/instagram-convertido.png" alt="Ícone do Instagram"> <!-- Ícone do Instagram -->
+        <span><strong>evolutiontech_</strong></span> <!-- Nome de usuário do Instagram -->
       </a>
     </div>
   </footer>
 
-  <script src="quiz-excel.js"></script>
+  <script src="quiz-excel.js"></script> <!-- Linka o arquivo JavaScript externo que controla a lógica do quiz -->
 </body>
 
 </html>

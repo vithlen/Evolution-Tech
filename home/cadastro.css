@@ -1,93 +1,97 @@
 body {
   /* Aplica o degradê radial */
   background-image: radial-gradient(
-    circle at center,
+    /* Define um gradiente de cor radial como imagem de fundo. */ circle at
+      center,
     #ff8c2b 0%,
     /* Laranja vibrante no centro*/ #ffc499 50%,
     /* Laranja mais claro na metade (para uma transição)*/ #ffffff 100%
       /* Branco nas bordas */
   );
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Centraliza o conteúdo (main) no meio da tela */
-  min-height: 100vh;
-  margin: 0;
+  font-family: Arial, sans-serif; /* Define a família de fontes padrão para o corpo do documento. */
+  display: flex; /* Ativa o layout flexbox para o corpo. */
+  justify-content: center; /* Centraliza o conteúdo principal horizontalmente. */
+  align-items: center; /* Centraliza o conteúdo (main) no meio da tela */ /* Centraliza o conteúdo principal verticalmente. */
+  min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da tela. */
+  margin: 0; /* Remove a margem padrão do corpo. */
 }
 
 main {
-  background: #ffffffd8;
+  background: #ffffffd8; /* Define um fundo branco com 85% de opacidade (d8 em hexadecimal). */
   border-radius: 20px; /* cantos arrendodados*/
-  box-shadow: 0 0 10px #7c7b7a;
-  width: 90%;
-  max-width: 900px;
-  padding: 30px;
-  box-sizing: border-box;
+  box-shadow: 0 0 10px #7c7b7a; /* Adiciona uma sombra sutil ao redor do elemento. */
+  width: 90%; /* Define a largura como 90% do elemento pai. */
+  max-width: 900px; /* Define a largura máxima como 900 pixels. */
+  padding: 30px; /* Adiciona um preenchimento interno de 30 pixels. */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total do elemento. */
   position: relative; /* Torna este o contexto para o posicionamento do botão */
 }
 
 h2 {
-  text-align: center;
-  margin-bottom: 10px;
-  color: #000;
+  text-align: center; /* Centraliza o texto do título. */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10 pixels. */
+  color: #000; /* Define a cor do texto como preto. */
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  display: flex; /* Ativa o layout flexbox para o formulário. */
+  flex-direction: column; /* Organiza os elementos filhos em uma coluna. */
+  gap: 30px; /* Cria um espaçamento de 30 pixels entre os elementos filhos. */
 }
 
 .grid-container {
   display: grid; /*grades */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Cria colunas responsivas com largura mínima de 250px. */
+  gap: 20px; /* Cria um espaçamento de 20 pixels entre as células do grid. */
 }
 
 .coluna {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: flex; /* Ativa o layout flexbox para a coluna. */
+  flex-direction: column; /* Organiza os elementos filhos em uma coluna. */
+  gap: 10px; /* Cria um espaçamento de 10 pixels entre os elementos filhos. */
 }
 /* class para colocar o campo bairro e numero na mesma linha */
 .linha {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: flex; /* Ativa o layout flexbox para a linha. */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço. */
+  gap: 10px; /* Cria um espaçamento de 10 pixels entre os itens. */
 }
 
 .campo {
-  flex: 1;
+  flex: 1; /* Faz o campo crescer para ocupar o espaço disponível na linha flex. */
 }
 /* nome dos campos mais destacado */
 label {
-  font-weight: bold;
-  color: #000;
+  font-weight: bold; /* Deixa o texto do rótulo em negrito. */
+  color: #000; /* Define a cor do texto como preto. */
 }
 
 input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  box-sizing: border-box;
+  padding: 8px; /* Adiciona um preenchimento interno de 8 pixels. */
+  border: 1px solid #ccc; /* Define uma borda cinza clara de 1 pixel. */
+  border-radius: 5px; /* Arredonda os cantos do campo de entrada. */
+  width: 100%; /* Faz o campo ocupar 100% da largura do seu contêiner. */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total. */
 }
 
 button {
-  align-self: center;
-  padding: 10px 30px;
-  border: none;
-  background: #ea7121;
-  color: white;
-  border-radius: 8px;
+  align-self: center; /* Centraliza o botão no eixo transversal do contêiner flex. */
+  padding: 10px 30px; /* Adiciona preenchimento interno (10px vertical, 30px horizontal). */
+  border: none; /* Remove a borda do botão. */
+  background: #ea7121; /* Define a cor de fundo como laranja. */
+  color: white; /* Define a cor do texto como branco. */
+  border-radius: 8px; /* Arredonda os cantos do botão. */
   cursor: pointer; /*cursor muda */
-  font-size: 16px;
-  transition: 0.3s;
+  font-size: 16px; /* Define o tamanho da fonte do texto do botão. */
+  transition: 0.3s; /* Adiciona uma animação suave de 0.3 segundos para transições. */
 }
 
 .logo-container {
-  margin-top: 20px;
-  text-align: center;
+  margin-top: 20px; /* Adiciona uma margem superior de 20 pixels. */
+  text-align: center; /* Centraliza o conteúdo (a logo) horizontalmente. */
 }
 
 .logo-container img {
@@ -97,13 +101,13 @@ button {
 
 /*quando passa o cursor em cima aparece a cor preta */
 button:hover {
-  background: #000;
+  background: #000; /* Muda a cor de fundo para preto quando o mouse está sobre o botão. */
 }
 
 .links-rodape {
-  margin-top: 25px;
-  text-align: center;
-  font-size: 14px;
+  margin-top: 25px; /* Adiciona uma margem superior de 25 pixels. */
+  text-align: center; /* Centraliza o texto. */
+  font-size: 14px; /* Define o tamanho da fonte como 14 pixels. */
 }
 
 /*ESTILOS MODO ESCURO*/

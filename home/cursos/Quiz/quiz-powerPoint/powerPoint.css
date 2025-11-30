@@ -1,112 +1,112 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0; /* Remove a margem padrão de todos os elementos */
+  padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+  box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura e altura total */
+  font-family: Arial, sans-serif; /* Define a família de fontes padrão */
 }
 
 body {
-    background-color: #fff;
-    color: #000;
-    transition: 0.3s;
-    text-align: right;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+  background-color: #fff; /* Define a cor de fundo do corpo como branco */
+  color: #000; /* Define a cor do texto do corpo como preto */
+  transition: 0.3s; /* Adiciona uma transição suave para mudanças de propriedade */
+  text-align: right; /* Alinha o texto à direita */
+  font-family: Arial, sans-serif; /* Define a família de fontes para o corpo */
+  margin: 0; /* Remove a margem do corpo */
+  padding: 0; /* Remove o preenchimento do corpo */
+  display: flex; /* Habilita o layout flexbox */
+  flex-direction: column; /* Organiza os itens filhos em uma coluna */
 }
 
 header {
-    background-color: #f57c00;
-    color: white;
-    padding: 15px 0; /* Aumenta o padding vertical do header */
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  background-color: #f57c00; /* Define a cor de fundo do cabeçalho como laranja */
+  color: white; /* Define a cor do texto do cabeçalho como branco */
+  padding: 15px 0; /* Aumenta o padding vertical do header */
+  text-align: center; /* Centraliza o texto dentro do cabeçalho */
+  position: relative; /* Define um contexto de posicionamento para elementos filhos */
+  display: flex; /* Habilita o layout flexbox */
+  flex-direction: column; /* Organiza os itens filhos em uma coluna */
+  align-items: center; /* Centraliza os itens filhos horizontalmente */
+  width: 100%; /* Faz o cabeçalho ocupar 100% da largura */
 }
 
 .header-top {
   padding: 0 20px; /* Padding vertical mínimo para o header */
-  box-sizing: border-box;
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
   position: relative; /* Mantém a referência para itens posicionados dentro */
   display: flex; /* Alinha itens lado a lado */
   align-items: center; /* Alinha verticalmente */
-  width: 100%;
+  width: 100%; /* Ocupa 100% da largura do pai */
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white; /* Define a cor dos links como branco */
+  text-decoration: none; /* Remove o sublinhado dos links */
 }
 
 h1 {
-    font-size: 30px;
-    letter-spacing: 2px;
-    color: white;
-    margin-top: 10px;
+  font-size: 30px; /* Define o tamanho da fonte para 30 pixels */
+  letter-spacing: 2px; /* Aumenta o espaçamento entre as letras */
+  color: white; /* Define a cor do texto como branco */
+  margin-top: 10px; /* Adiciona uma margem no topo */
 }
 
 .center-area {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-grow: 1; /* Permite que a área central cresça para ocupar o espaço disponível */
+  display: flex; /* Habilita o layout flexbox */
+  flex-direction: column; /* Organiza os itens filhos em uma coluna */
+  align-items: center; /* Centraliza os itens filhos horizontalmente */
   position: relative; /* Permite o ajuste fino da posição */
   left: 1px; /* Desloca o bloco para a direita. Ajuste o valor. */
 }
 
 /* Botão hamburguer padrão: escondido */
 .menu-toggle {
-  display: none;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  color: white;
-  font-size: 1.4rem;
-  padding: 6px 10px;
-  border-radius: 60px;
-  cursor: pointer;
-  z-index: 20;
+  display: none; /* Esconde o botão por padrão */
+  background: transparent; /* Define o fundo como transparente */
+  border: 2px solid rgba(255, 255, 255, 0.15); /* Adiciona uma borda branca semitransparente */
+  color: white; /* Define a cor do ícone como branco */
+  font-size: 1.4rem; /* Define o tamanho da fonte */
+  padding: 6px 10px; /* Adiciona preenchimento interno */
+  border-radius: 60px; /* Arredonda as bordas */
+  cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
+  z-index: 20; /* Garante que o botão fique acima de outros elementos */
 }
 
 /* Mostra o botão apenas em telas pequenas */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: inline-block;
-    position: absolute;
-    left: 16px;
-    top: 18px;
-    color: #fff;
+    display: inline-block; /* Mostra o botão */
+    position: absolute; /* Posiciona o botão de forma absoluta em relação ao pai */
+    left: 16px; /* Distância da esquerda */
+    top: 18px; /* Distância do topo */
+    color: #fff; /* Cor do ícone */
   }
 
   /* Oculta os links quando o menu está fechado */
   .sub-nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background: #ff8c00;
-    position: absolute;
-    z-index: 9999;          /* POR CIMA DE TUDO */
+    display: none; /* Esconde os links por padrão */
+    flex-direction: column; /* Organiza os links em coluna */
+    align-items: center; /* Centraliza os links horizontalmente */
+    background: #ff8c00; /* Cor de fundo do menu */
+    position: absolute; /* Posicionamento absoluto */
+    z-index: 9999; /* POR CIMA DE TUDO */
     top: 70px; /* abaixo do cabeçalho */
-    left: 0;
-    right: 0;
-    padding: 15px 0;
-    gap: 10px;
-    border-top: 1px solid rgba(255,255,255,0.2);
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    padding: 15px 0; /* Preenchimento vertical */
+    gap: 10px; /* Espaçamento entre os links */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Borda superior semitransparente */
   }
 
   /* Quando o menu está aberto, mostra os links */
   body.menu-aberto .sub-nav-links {
-    display: flex;
+    display: flex; /* Mostra os links */
   }
 
   .sub-nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
   }
 
   .sub-nav-links a:hover {
@@ -117,210 +117,207 @@ h1 {
 /* Em telas grandes: os links ficam sempre visíveis e centralizados */
 @media (min-width: 769px) {
   .sub-nav-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: flex; /* Mostra os links como flex container */
+    justify-content: center; /* Centraliza os links horizontalmente */
+    flex-wrap: wrap; /* Permite que os links quebrem para a próxima linha */
     gap: 40px; /* separa mais os links */
     margin-top: 5px; /* desce um pouco da logo/título */
   }
 }
 
 .course-Icon {
-    width: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
+  width: 50%; /* Define a largura como 50% do contêiner pai */
+  object-fit: cover; /* Garante que a imagem cubra a área designada sem distorcer */
+  margin-bottom: 1rem; /* Adiciona uma margem inferior */
 }
 
 button {
-    background: none;
-    border: none;
-    margin-top: 0.5rem;
+  background: none; /* Remove o fundo padrão do botão */
+  border: none; /* Remove a borda padrão do botão */
+  margin-top: 0.5rem; /* Adiciona uma margem no topo */
 }
 
 header h1,
 header nav {
-    max-width: 1800px;
-    width: 100%;
-    padding: 5px 20px;
-    box-sizing: border-box;
+  max-width: 1800px; /* Define uma largura máxima */
+  width: 100%; /* Ocupa 100% da largura disponível */
+  padding: 5px 20px; /* Adiciona preenchimento interno */
+  box-sizing: border-box; /* Inclui padding na largura total */
 }
 
 .logo-esq {
-    position: absolute;
-    top: 280%;
-    transform: translateY(-50%);
-    left: 60px;
-    width: 150px;
-    margin-top: 65px;
+  position: absolute; /* Posicionamento absoluto */
+  top: 280%; /* Posição a partir do topo */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  left: 60px; /* Posição a partir da esquerda */
+  width: 150px; /* Largura do logo */
+  margin-top: 65px; /* Margem no topo */
 }
 
 .logo-esq img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%; /* A imagem ocupa 100% da largura do contêiner */
+  height: auto; /* A altura é ajustada automaticamente para manter a proporção */
+  display: block; /* Remove espaços extras abaixo da imagem */
 }
 
 .btn-header {
-    padding: 8px 12px;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    font-weight: bold;
-    line-height: 1;
-    background-color: #f57c00;
-    color: white;
-    border: 2px solid #f57c00;
-    white-space: nowrap;
+  padding: 8px 12px; /* Preenchimento interno */
+  font-size: 14px; /* Tamanho da fonte */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de mão ao passar por cima */
+  text-decoration: none; /* Sem sublinhado */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transição suave para várias propriedades */
+  font-weight: bold; /* Texto em negrito */
+  line-height: 1; /* Altura da linha */
+  background-color: #f57c00; /* Cor de fundo laranja */
+  color: white; /* Cor do texto branco */
+  border: 2px solid #f57c00; /* Borda laranja */
+  white-space: nowrap; /* Impede a quebra de linha do texto */
 }
 
 /* ========== ESTILO GERAL ========== */
 
 body {
-    margin: 0;
-    padding: 0;
-    transition: background 0.3s ease, color 0.3s ease;
-    font-family: Arial, sans-serif;
+  margin: 0; /* Remove margem */
+  padding: 0; /* Remove preenchimento */
+  transition: background 0.3s ease, color 0.3s ease; /* Transição suave para fundo e cor */
+  font-family: Arial, sans-serif; /* Família de fontes */
 }
 
 /* ===== LIGHT MODE ===== */
 body.light {
-    background: #ffffff;
-    color: #000000;
+  background: #ffffff; /* Fundo branco */
+  color: #000000; /* Texto preto */
 }
 
 /* ===== DARK MODE (estilo da primeira imagem) ===== */
 body.dark {
-    background: #2f2f2f;             /* fundo cinza escuro */
-    color: #e6e6e6;                  /* texto claro */
+  background: #2f2f2f; /* fundo cinza escuro */
+  color: #e6e6e6; /* texto claro */
 }
 
 /* ========== TOGGLE DO MODO NOTURNO ========== */
 
 .toggle {
-    width: 70px;
-    height: 30px;
-    border-radius: 50px;
-    background: #f68a42;
-    cursor: pointer;
-    transition: background 0.4s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    user-select: none;
-    position: relative;
-    overflow: hidden;
+  width: 70px; /* Largura do botão de alternância */
+  height: 30px; /* Altura do botão */
+  border-radius: 50px; /* Bordas totalmente arredondadas */
+  background: #f68a42; /* Cor de fundo laranja */
+  cursor: pointer; /* Cursor de mão */
+  transition: background 0.4s ease; /* Transição suave para a cor de fundo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+  user-select: none; /* Impede a seleção de texto dentro do botão */
+  position: relative; /* Contexto de posicionamento para elementos filhos */
+  overflow: hidden; /* Esconde partes dos filhos que saem dos limites */
 }
 
 /* cor do botão no DARK MODE */
 .toggle.dark {
-    background: #1370ff; /* azul igual ao contorno dos cards */
+  background: #1370ff; /* azul igual ao contorno dos cards */
 }
 
 /* ícones */
 .mode-icon {
-    position: absolute;
-    width: 25px;
-    transition: transform 0.35s ease;
-    pointer-events: none;
-    top: 50%;
-    transform: translateY(-50%);
-
+  position: absolute; /* Posicionamento absoluto */
+  width: 25px; /* Largura do ícone */
+  transition: transform 0.35s ease; /* Transição suave para a transformação */
+  pointer-events: none; /* O ícone não interfere com cliques do mouse */
+  top: 50%; /* Posiciona na metade da altura */
+  transform: translateY(-50%); /* Centraliza verticalmente */
 }
-
-
 
 #final-score,
 .question-text,
 .answer-text * {
-  color: #000000 !important;   /* ou outra cor que você quiser */
+  color: #000000 !important; /* ou outra cor que você quiser */
 }
 
 /* lua à esquerda no modo escuro */
 
-
 /* bolinha deslizante */
 .slider {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: white;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    transition: transform 0.35s ease;
-    z-index: 5;
+  position: absolute; /* Posicionamento absoluto */
+  width: 24px; /* Largura da bolinha */
+  height: 24px; /* Altura da bolinha */
+  border-radius: 50%; /* Deixa a bolinha redonda */
+  background: white; /* Cor de fundo branca */
+  top: 50%; /* Posiciona na metade da altura */
+  left: 5px; /* Posição inicial a partir da esquerda */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  transition: transform 0.35s ease; /* Transição suave para o movimento */
+  z-index: 5; /* Garante que a bolinha fique acima dos ícones */
 }
 
 /* slider movendo no modo escuro */
 .toggle.dark .slider {
-    transform: translate(35px, -50%);
+  transform: translate(35px, -50%);
 }
-
 
 /* ========== ESTILOS DOS CARDS NO DARK MODE ========== */
 
 /* card do quiz */
 body.dark .quiz-card {
-    background: #0f0f0f;                     /* preto suave */
-    border-radius: 22px;
-    border: 4px solid rgba(19,112,255,0.35);  /* azul igual ao site */
-    box-shadow: 0 18px 30px rgba(0,0,0,0.6);
-    color: #e6e6e6;
+  background: #0f0f0f; /* preto suave */
+  border-radius: 22px; /* Bordas arredondadas */
+  border: 4px solid rgba(19, 112, 255, 0.35); /* azul igual ao site */
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.6); /* Sombra forte para profundidade */
+  color: #e6e6e6; /* Cor do texto clara */
 }
 /* menu hamburguer */
 
 @media (max-width: 1024px) {
-    body.dark .sub-nav-links {
-        background: #000000;
-        border-radius: 22px;
-        border: 4px solid rgba(19,112,255,0.35);
-        box-shadow: 0 18px 30px rgba(0,0,0,0.6);
-        color: #e6e6e6;
-    }
+  body.dark .sub-nav-links {
+    background: #000000; /* Fundo preto */
+    border-radius: 22px; /* Bordas arredondadas */
+    border: 4px solid rgba(19, 112, 255, 0.35); /* Borda azul semitransparente */
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.6); /* Sombra */
+    color: #e6e6e6; /* Cor do texto clara */
+  }
 }
 
 /* DESKTOP — NÃO mostra a borda azul */
 @media (min-width: 1025px) {
-    body.dark .sub-nav-links {
-        background: none;
-        border: none;
-        box-shadow: none;
-    }
+  body.dark .sub-nav-links {
+    background: none; /* Sem cor de fundo */
+    border: none; /* Sem borda */
+    box-shadow: none; /* Sem sombra */
+  }
 }
 
 /* opções */
 body.dark .quiz-option {
-    background: linear-gradient(180deg, #111111, #0b0b0b);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.6);
-    border: 2px solid rgba(255,255,255,0.05);
+  background: linear-gradient(
+    180deg,
+    #111111,
+    #0b0b0b
+  ); /* Gradiente de fundo escuro */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6); /* Sombra */
+  border: 2px solid rgba(255, 255, 255, 0.05); /* Borda branca muito sutil */
 }
 
 /* texto das opções */
 body.dark .quiz-option button {
-    color: #d1d1d1;
+  color: #d1d1d1; /* Cor do texto clara */
 }
 
 /* hover */
 body.dark .quiz-option:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.6),
-                0 0 0 4px rgba(19,112,255,0.06);
+  transform: translateY(-2px); /* Move a opção para cima ao passar o mouse */
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6), 0 0 0 4px rgba(19, 112, 255, 0.06);
 }
 
 /* duração (12h, 20h etc) */
 body.dark .duration {
-    color: #bdbdbd;
+  color: #bdbdbd; /* Cor cinza clara para o texto de duração */
 }
 
 /* badge flutuante (mascote) */
 body.dark .floating-badge {
-    background: linear-gradient(180deg, #06203a, #071224);
-    border: 4px solid rgba(19,112,255,0.3);
-    box-shadow: 0 6px 30px rgba(19,112,255,0.15),
-                0 18px 36px rgba(0,0,0,0.6);
+  background: linear-gradient(180deg, #06203a, #071224);
+  border: 4px solid rgba(19, 112, 255, 0.3);
+  box-shadow: 0 6px 30px rgba(19, 112, 255, 0.15),
+    0 18px 36px rgba(0, 0, 0, 0.6);
 }
-
 
 /* ===========================================
    DARK MODE GLOBAL
@@ -328,15 +325,14 @@ body.dark .floating-badge {
 
 /* 🌙 DARK MODE aplicado ao quiz-container */
 .toggle.dark .quiz-container {
-    background: #000 !important;   /* container preto */
-   
+  background: #000 !important; /* container preto */
 }
 
 /* mantém corretas e erradas intactas */
 .toggle.dark .quiz-container .option.correct {
-    background: #00ff6a !important;
-    color: #000 !important;
-    border: 2px solid #00ff6a !important;
+  background: #00ff6a !important;
+  color: #000 !important;
+  border: 2px solid #00ff6a !important;
 }
 
 /* ===========================================
@@ -344,7 +340,7 @@ body.dark .floating-badge {
    =========================================== */
 
 body.dark header {
-    background: #13161d; /* preto suavemente acinzentado */
+  background: #13161d; /* preto suavemente acinzentado */
 }
 
 /* ===========================================
@@ -352,42 +348,44 @@ body.dark header {
    =========================================== */
 
 .card {
-    background: #ffffff; /* modo claro */
-    transition: 0.4s;
+  background: #ffffff; /* fundo branco no modo claro */
+  transition: 0.4s; /* Transição suave */
 }
 
 body.dark .card {
-    background: #1b1e26; /* CINZA ESCURO bonito */
-    border: 1px solid #272b33;
+  background: #1b1e26; /* CINZA ESCURO bonito */
+  border: 1px solid #272b33; /* Borda sutil */
 }
 
 body.dark .card:hover {
-    background: #22262f; /* fica um pouco mais claro no hover */
+  background: #22262f; /* fica um pouco mais claro no hover */
 }
 
 /* Evitar que imagens do card escureçam */
 .card img {
-    filter: none !important;
+  filter: none !important; /* Garante que nenhum filtro seja aplicado à imagem */
 }
 
 /* ===========================================
    BOTÕES
    =========================================== */
 
-button, .btn-header, .option {
-    transition: 0.3s;
+button,
+.btn-header,
+.option {
+  transition: 0.3s; /* Transição suave para todos os botões e opções */
 }
 
 body.dark button,
 body.dark .btn-header {
-    background: #20242d;
-    border-color: #303540;
-    color: white;
+  background: #20242d; /* Fundo cinza escuro */
+  border-color: #303540; /* Cor da borda mais escura */
+  color: white; /* Cor do texto branca */
 }
 
 body.dark button:hover,
 body.dark .btn-header:hover {
-    background: #2a2f3a;
+  background: #2a2f3a; /* Fundo um pouco mais claro ao passar o mouse */
 }
 
 /* ===========================================
@@ -396,28 +394,28 @@ body.dark .btn-header:hover {
 
 /* Verde do acerto */
 .option.correct {
-    background: #00ff6a !important;
-    color: #000 !important;
-    border: 2px solid #00ff6a !important;
-    box-shadow: 0 0 20px #00ff6a, 0 0 40px #00ff6a !important;
+  background: #00ff6a !important; /* Fundo verde brilhante, !important para sobrescrever */
+  color: #000 !important; /* Texto preto */
+  border: 2px solid #00ff6a !important; /* Borda verde */
+  box-shadow: 0 0 20px #00ff6a, 0 0 40px #00ff6a !important; /* Efeito de brilho */
 }
 
 /* Vermelho do erro */
 .option.wrong {
-    background: #ff4d4d !important;
-    color: #000 !important;
-    border: 2px solid #ff4d4d !important;
-    box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d !important;
+  background: #ff4d4d !important; /* Fundo vermelho, !important para sobrescrever */
+  color: #000 !important; /* Texto preto */
+  border: 2px solid #ff4d4d !important; /* Borda vermelha */
+  box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d !important; /* Efeito de brilho */
 }
 
 /* Ícone do sol/lua NÃO deve ser afetado */
 .mode-icon {
-    filter: none !important;
+  filter: none !important; /* Garante que nenhum filtro seja aplicado */
 }
 
 /* A bolinha do dark mode */
 body.dark .slider {
-    background: white !important;
+  background: white !important; /* Garante que a bolinha permaneça branca */
 }
 
 /* ===========================================
@@ -428,335 +426,342 @@ body.dark h1,
 body.dark h3,
 body.dark p,
 body.dark a {
-    color: white;
+  color: white; /* Define a cor do texto para branco no modo escuro */
 }
 
-    .header-btns {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.header-btns {
+  display: flex; /* Habilita flexbox */
+  align-items: center; /* Alinha itens verticalmente */
+  gap: 15px; /* Espaçamento entre os botões */
 
-    position: absolute;
-    right: 40px;
-    bottom: 90px;
+  position: absolute; /* Posicionamento absoluto */
+  right: 40px; /* Distância da direita */
+  bottom: 90px; /* Distância de baixo */
 }
 
 @media (max-width: 768px) {
-    .header-btns {
-        position: static; /* não perde layout no mobile */
-        margin-top: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
+  .header-btns {
+    position: static; /* não perde layout no mobile */
+    margin-top: 20px; /* Margem superior */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 12px; /* Espaçamento entre os botões */
+  }
 
-    .toggle {
-        transform: scale(0.9); /* diminui um pouco no celular */
-    }
+  .toggle {
+    transform: scale(0.9); /* diminui um pouco no celular */
+  }
 }
 
 .btn-header:hover {
-    background-color: white;
-    color: #f57c00;
-    border-color: white;
+  background-color: white; /* Fundo branco ao passar o mouse */
+  color: #f57c00; /* Texto laranja */
+  border-color: white; /* Borda branca */
 }
 
- footer {
-      background-color: #000000da;
-      color: white;
-      text-align: center;
-      padding: 35px;
-      width: 100%;
-      margin-top: 40px;
-    }
+footer {
+  background-color: #000000da; /* Fundo preto semitransparente */
+  color: white; /* Texto branco */
+  text-align: center; /* Texto centralizado */
+  padding: 35px; /* Preenchimento interno */
+  width: 100%; /* Largura total */
+  margin-top: 40px; /* Margem superior */
+}
 /* Instagram no canto inferior esquerdo */
 footer .social-media {
-  position: static;
-  left: 16px;
-  margin-top: -45px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  position: static; /* Posição estática no fluxo normal */
+  left: 16px; /* Distância da esquerda (não se aplica com position: static) */
+  margin-top: -45px; /* Margem superior negativa para subir um pouco */
+  display: flex; /* Habilita flexbox */
+  align-items: center; /* Alinha itens verticalmente */
+  gap: 8px; /* Espaçamento entre os itens */
 }
 
 /* garante que o link e ícone fiquem alinhados */
 footer .social-media .social-link {
-  color: white;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  color: white; /* Cor do texto branca */
+  text-decoration: none; /* Sem sublinhado */
+  display: inline-flex; /* Permite alinhamento flex sem ocupar a linha toda */
+  align-items: center; /* Alinha itens verticalmente */
+  gap: 8px; /* Espaçamento entre ícone e texto */
 }
 
 /* tamanho do ícone do instagram */
 footer .social-media img {
-  width: 60px;
-  height: 60px;
-  display: block;
+  width: 60px; /* Largura do ícone */
+  height: 60px; /* Altura do ícone */
+  display: block; /* Remove espaços extras */
 }
 
 /* Logo da empresa no canto inferior direito */
 footer .footer-logo {
-  position: relative;
-  right: 16px;
-  margin-left: 1400px;
-  bottom: -45px;
-  display: flex;
-  align-items: center;
+  position: relative; /* Posicionamento relativo */
+  right: 16px; /* Distância da direita */
+  margin-left: 1400px; /* Margem esquerda grande para empurrar para a direita */
+  bottom: -45px; /* Posição a partir de baixo */
+  display: flex; /* Habilita flexbox */
+  align-items: center; /* Alinha itens verticalmente */
 }
 
 /* tamanho da logo da empresa */
 footer .footer-logo img {
-  width: 200px;
-  height: auto;
-  display: block;
+  width: 200px; /* Largura do logo */
+  height: auto; /* Altura automática */
+  display: block; /* Remove espaços extras */
 }
 
 /* evita sobreposição em telas pequenas: empilha tudo e centraliza */
 @media (max-width: 480px) {
   footer .social-media,
   footer .footer-logo {
-    position: static;
-    margin: 8px 0;
-    justify-content: center;
+    position: static; /* Posição estática */
+    margin: 8px 0; /* Margem vertical */
+    justify-content: center; /* Centraliza o conteúdo */
   }
 
   footer {
-    padding-bottom: 18px;
+    padding-bottom: 18px; /* Reduz o preenchimento inferior */
   }
 
   /* reduz a logo da empresa em telas muito pequenas */
   footer .footer-logo img {
-    width: 96px;
+    width: 96px; /* Largura menor para o logo */
   }
 }
-    .footer-logo img {
+.footer-logo img {
   width: 200px; /* Ajuste o tamanho da logo conforme necessário */
-  height: auto;
+  height: auto; /* Altura automática */
 }
 footer p {
-  margin: 0;
+  margin: 0; /* Remove margem do parágrafo */
 }
 
 /* === RESPONSIVIDADE === */
 @media (max-width: 992px) {
-   .header-top {
-    flex-direction: column;
-    gap: 15px;
+  .header-top {
+    flex-direction: column; /* Itens em coluna */
+    gap: 15px; /* Espaçamento entre itens */
   }
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-    }
+  header {
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza texto */
+    padding: 20px; /* Preenchimento */
+  }
 
-    .logo-esq {
-        position: static;
-        transform: none;
-        margin-bottom: 10px;
-    }
-      .header-btns {
-        position: static;
-        transform: none;
-        margin-top: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .logo-esq {
+    position: static; /* Posição estática */
+    transform: none; /* Remove transformação */
+    margin-bottom: 10px; /* Margem inferior */
+  }
+  .header-btns {
+    position: static; /* Posição estática */
+    transform: none; /* Remove transformação */
+    margin-top: 10px; /* Margem superior */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center; /* Centraliza */
+  }
 
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-top: 20px;
-    }
+  nav {
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center; /* Centraliza */
+    padding-top: 20px; /* Preenchimento superior */
+  }
 
-    nav a {
-        padding-top: 0;
-        font-size: 15px;
-    }
+  nav a {
+    padding-top: 0; /* Remove preenchimento superior */
+    font-size: 15px; /* Tamanho da fonte */
+  }
 
-    h1 {
-        font-size: 24px;
-    }
+  h1 {
+    font-size: 24px; /* Tamanho da fonte */
+  }
 }
 
 @media (max-width: 600px) {
-    header {
-        padding: 15px;
-    }
+  header {
+    padding: 15px; /* Preenchimento */
+  }
 
-    .logo-esq img {
-        width: 120px;
-    }
+  .logo-esq img {
+    width: 120px; /* Largura do logo */
+  }
 
-    h1 {
-        font-size: 20px;
-        text-align: center;
-        margin-top: 15px;
-    }
+  h1 {
+    font-size: 20px; /* Tamanho da fonte */
+    text-align: center; /* Texto centralizado */
+    margin-top: 15px; /* Margem superior */
+  }
 
-    nav a {
-        font-size: 14px;
-        margin: 5px;
-    }
+  nav a {
+    font-size: 14px; /* Tamanho da fonte */
+    margin: 5px; /* Margem */
+  }
 
-    footer {
-        font-size: 14px;
-        padding: 20px;
-    }
+  footer {
+    font-size: 14px; /* Tamanho da fonte */
+    padding: 20px; /* Preenchimento */
+  }
 }
 
- footer {
-      background-color: #000000cb;
-      color: white;
-      text-align: center;
-      padding: 35px;
-      width: 100%;
-      margin-top: 40px;
-    }
+footer {
+  background-color: #000000cb; /* Fundo preto semitransparente */
+  color: white; /* Texto branco */
+  text-align: center; /* Texto centralizado */
+  padding: 35px; /* Preenchimento */
+  width: 100%; /* Largura total */
+  margin-top: 40px; /* Margem superior */
+}
 
-    body {
-  background: linear-gradient(135deg, white, white);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  color: red;
+body {
+  background: linear-gradient(
+    135deg,
+    white,
+    white
+  ); /* Fundo gradiente branco */
+  min-height: 100vh; /* Altura mínima de 100% da altura da tela */
+  display: flex; /* Habilita flexbox */
+  flex-direction: column; /* Itens em coluna */
+  justify-content: space-between; /* Distribui espaço entre os itens */
+  align-items: center; /* Centraliza horizontalmente */
+  color: red; /* Cor do texto vermelha */
 }
 
 .quiz-container {
-  width: 100%;
-  max-width: 700px;
-  font-size: 1.5rem;
-  background: #ffffff; 
-  border-radius: 30px;
-  padding: 50px 40px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); 
-  text-align: center;
-  color: #cc0000; 
-  border: 5px solid #ff0000; 
-  margin: 40px auto;
+  width: 100%; /* Largura total */
+  max-width: 700px; /* Largura máxima */
+  font-size: 1.5rem; /* Tamanho da fonte */
+  background: #ffffff;
+  border-radius: 30px; /* Bordas arredondadas */
+  padding: 50px 40px; /* Preenchimento interno */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  text-align: center; /* Texto centralizado */
+  color: #cc0000;
+  border: 5px solid #ff0000;
+  margin: 40px auto; /* Margem vertical e centralização horizontal */
 }
 
 .quiz-title {
-  font-size: 2.5rem;
-  color: red;
-  margin-bottom: 30px;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  font-size: 2.5rem; /* Tamanho da fonte do título */
+  color: red; /* Cor do texto vermelha */
+  margin-bottom: 30px; /* Margem inferior */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Sombra no texto */
 }
 
 .quiz-container img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 30px;
-  border: 5px solid #ff0000;
-  box-shadow: 0 0 20px rgba(255,0,0,0.6);
+  width: 180px; /* Largura da imagem */
+  height: 180px; /* Altura da imagem */
+  object-fit: cover; /* Cobre a área sem distorcer */
+  border-radius: 50%; /* Imagem redonda */
+  margin-bottom: 30px; /* Margem inferior */
+  border: 5px solid #ff0000; /* Borda vermelha */
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); /* Efeito de brilho vermelho */
 }
 
 .option {
-  background: white; 
-  padding: 18px 25px;
-  margin: 12px 0;
-  border-radius: 12px; 
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 2rem;
-  border: 2px solid red; 
-  color: #333;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+  background: white;
+  padding: 18px 25px; /* Preenchimento interno */
+  margin: 12px 0; /* Margem vertical */
+  border-radius: 12px;
+  cursor: pointer; /* Cursor de mão */
+  transition: all 0.3s ease; /* Transição suave para todas as propriedades */
+  font-size: 2rem; /* Tamanho da fonte */
+  border: 2px solid red;
+  color: #333; /* Cor do texto cinza escuro */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .option:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transform: translateY(-5px); /* Move para cima ao passar o mouse */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
 }
 
 .option.correct {
-  background: #00ff6a;
-  color: #000;
-  border: 2px solid #00ff6a;
-  box-shadow: 0 0 20px #00ff6a, 0 0 40px #00ff6a;
-  transform: scale(1.05);
+  background: #00ff6a; /* Fundo verde */
+  color: #000; /* Texto preto */
+  border: 2px solid #00ff6a; /* Borda verde */
+  box-shadow: 0 0 20px #00ff6a, 0 0 40px #00ff6a; /* Efeito de brilho */
+  transform: scale(1.05); /* Aumenta o tamanho */
 }
 
 .option.wrong {
-  background: #ff4d4d;
-  color: #000;
-  border: 2px solid #ff4d4d;
-  box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d;
-  transform: scale(1.05);
+  background: #ff4d4d; /* Fundo vermelho */
+  color: #000; /* Texto preto */
+  border: 2px solid #ff4d4d; /* Borda vermelha */
+  box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d; /* Efeito de brilho */
+  transform: scale(1.05); /* Aumenta o tamanho */
 }
 
 .feedback {
-  margin-top: 25px;
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #ff0000; 
+  margin-top: 25px; /* Margem superior */
+  font-size: 1.6rem; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  color: #ff0000;
 }
 
 .question {
-  display: none;
-  opacity: 0;
-  transform: translateY(60px);
-  transition: all 0.5s ease;
+  display: none; /* Escondido por padrão */
+  opacity: 0; /* Totalmente transparente */
+  transform: translateY(60px); /* Deslocado para baixo */
+  transition: all 0.5s ease; /* Transição suave */
 }
 
 .question.active {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
+  display: block; /* Mostra a questão */
+  opacity: 1; /* Totalmente visível */
+  transform: translateY(0); /* Volta à posição original */
 }
 
 .end h2 {
-  font-size: 2.4rem;
-  color: #ff0000; 
-  animation: pulse 1.2s infinite alternate;
+  font-size: 2.4rem; /* Tamanho da fonte */
+  color: #ff0000;
+  animation: pulse 1.2s infinite alternate; /* Aplica a animação 'pulse' */
 }
-    @keyframes pulse {
-      from { transform: scale(1); }
-      to { transform: scale(1.05); }
-    }
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  } /* Estado inicial da animação (tamanho normal) */
+  to {
+    transform: scale(1.05);
+  } /* Estado final da animação (um pouco maior) */
+}
 
-    .mascote-container {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      cursor: pointer;
-      z-index: 1000; 
-    }
+.mascote-container {
+  position: fixed; /* Posição fixa na tela */
+  bottom: 20px; /* Distância de baixo */
+  right: 20px; /* Distância da direita */
+  cursor: pointer; /* Cursor de mão */
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+}
 
-    .mascote {
-      width: 120px;
-      transition: transform 0.2s;
-    }
+.mascote {
+  width: 120px; /* Largura do mascote */
+  transition: transform 0.2s; /* Transição suave para a transformação */
+}
 
-    .mascote:hover {
-      transform: scale(1.05);
-    }
-    /*IMPORTANTE*/
-    .fala {
-      position: absolute;
-      bottom: 140px; 
-      right: 0;
-      width: 450px;
-      height: 350px; 
-      background-image: url('../Mascote-IMG/fala.png'); 
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      display: none;
-      padding: 110px; 
-      box-sizing: border-box;
-    }
+.mascote:hover {
+  transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+}
+/*IMPORTANTE*/
+.fala {
+  position: absolute; /* Posicionamento absoluto */
+  bottom: 140px;
+  right: 0; /* Alinhado à direita do contêiner pai */
+  width: 450px; /* Largura do balão de fala */
+  height: 350px; /* Altura do balão de fala */
+  background-image: url("../Mascote-IMG/fala.png");
+  background-size: contain; /* Ajusta a imagem para caber no contêiner */
+  background-repeat: no-repeat; /* Não repete a imagem de fundo */
+  background-position: center; /* Centraliza a imagem de fundo */
+  display: none; /* Escondido por padrão */
+  padding: 110px;
+  box-sizing: border-box; /* Inclui padding na largura/altura total */
+}
 
-    .texto-fala {
-      display: block;
-      text-align: center;  
-      font-size: 20px;
-      color: rgb(0, 0, 0);
-      overflow-wrap: break-word; 
-    }
- 
+.texto-fala {
+  display: block; /* Ocupa a largura total do pai */
+  text-align: center; /* Texto centralizado */
+  font-size: 20px; /* Tamanho da fonte */
+  color: rgb(0, 0, 0); /* Cor do texto preta */
+  overflow-wrap: break-word; /* Permite a quebra de palavras longas */
+}

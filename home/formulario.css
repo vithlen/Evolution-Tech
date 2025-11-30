@@ -1,222 +1,223 @@
 /* Estilos gerais para a página do formulário. */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff; /* Cor de fundo de fallback */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
-  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Define a família da fonte para o texto. */
+  background-color: #ffffff; /* Cor de fundo de fallback, caso o gradiente não carregue. */
+  display: flex; /* Ativa o layout flexbox para o corpo. */
+  justify-content: center; /* Centraliza o conteúdo principal horizontalmente. */
+  align-items: flex-start; /* Alinha o conteúdo no topo do contêiner. */
+  padding: 20px; /* Adiciona um espaçamento interno de 20px ao redor do corpo. */
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho total do corpo. */
   background-image: radial-gradient(
-    circle at center,
+    /* Define uma imagem de fundo como um gradiente radial. */ circle at center,
     #ff8c2b 0%,
-    #ffc499 50%,
-    #ffffff 100%
+    /* Cor inicial laranja no centro. */ #ffc499 50%,
+    /* Cor intermediária laranja claro no meio. */ #ffffff 100%
+      /* Cor final branca nas bordas. */
   );
-  min-height: 100vh;
-  margin: 0;
+  min-height: 100vh; /* Define a altura mínima como 100% da altura da viewport (tela). */
+  margin: 0; /* Remove a margem padrão do corpo. */
 }
 
 /*FORMULÁRIO*/
 /* Container principal que envolve todo o formulário. */
 .form-container {
-  max-width: 800px;
-  width: 100%;
-  margin: 20px auto;
-  background-color: #f6f6f6;
-  border: 1px solid #f28705;
-  padding: 15px;
-  border-radius: 10px;
+  max-width: 800px; /* Define a largura máxima do contêiner. */
+  width: 100%; /* Faz o contêiner ocupar 100% da largura disponível. */
+  margin: 20px auto; /* Adiciona margem vertical e centraliza horizontalmente. */
+  background-color: #f6f6f6; /* Define a cor de fundo como um cinza claro. */
+  border: 1px solid #f28705; /* Adiciona uma borda laranja de 1px. */
+  padding: 15px; /* Adiciona um espaçamento interno de 15px. */
+  border-radius: 10px; /* Arredonda os cantos do contêiner. */
 }
 
 /* Cabeçalho do formulário, com logo e título. */
 .form-header {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f6f6f6;
-  padding: 10px;
-  margin: -15px -15px 15px -15px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  text-align: center; /* Centraliza o texto dentro do cabeçalho. */
+  display: flex; /* Ativa o layout flexbox. */
+  flex-direction: column; /* Organiza os itens filhos em uma coluna. */
+  align-items: center; /* Centraliza os itens filhos horizontalmente. */
+  background-color: #f6f6f6; /* Define a cor de fundo como cinza claro. */
+  padding: 10px; /* Adiciona espaçamento interno. */
+  margin: -15px -15px 15px -15px; /* Margem negativa para colar nas bordas do contêiner pai. */
+  border-top-left-radius: 10px; /* Arredonda o canto superior esquerdo. */
+  border-top-right-radius: 10px; /* Arredonda o canto superior direito. */
 }
 
 /* Área que agrupa o logo e o título para alinhamento. */
 .header-title-area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 5px;
+  display: flex; /* Ativa o layout flexbox. */
+  align-items: center; /* Alinha os itens verticalmente ao centro. */
+  justify-content: center; /* Centraliza os itens horizontalmente. */
+  gap: 15px; /* Cria um espaçamento de 15px entre os itens. */
+  margin-bottom: 5px; /* Adiciona uma margem inferior de 5px. */
 }
 
 /* Logo que aparece no cabeçalho do formulário. */
 .form-logo {
-  width: 80px;
-  height: auto;
+  width: 80px; /* Define a largura do logo. */
+  height: auto; /* Ajusta a altura automaticamente para manter a proporção. */
 }
 
 /* Título principal do formulário. */
 .form-header h1 {
-  font-weight: 300;
-  color: #f28705;
-  margin: 0;
-  font-size: 2em;
+  font-weight: 300; /* Define o peso da fonte como mais leve. */
+  color: #f28705; /* Define a cor do texto como laranja. */
+  margin: 0; /* Remove a margem padrão do título. */
+  font-size: 2em; /* Define o tamanho da fonte como o dobro do padrão. */
 }
 
 /* Linha do formulário, para agrupar campos lado a lado. */
 .form-row {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  display: flex; /* Ativa o layout flexbox. */
+  gap: 15px; /* Cria um espaçamento de 15px entre os campos. */
+  flex-wrap: wrap; /* Permite que os campos quebrem para a próxima linha se não houver espaço. */
 }
 
 .form-row .form-group {
-  flex: 1;
-  min-width: 200px;
-  margin-bottom: 0;
+  flex: 1; /* Permite que o grupo de campo cresça para ocupar o espaço disponível. */
+  min-width: 200px; /* Define a largura mínima para cada grupo de campo. */
+  margin-bottom: 0; /* Remove a margem inferior padrão. */
 }
 
 /* Grupo de formulário: um rótulo (label) e um campo (input). */
 .form-group {
-  margin-bottom: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  margin-bottom: 15px; /* Adiciona uma margem inferior de 15px. */
+  display: flex; /* Ativa o layout flexbox. */
+  flex-wrap: wrap; /* Permite que os itens internos quebrem a linha. */
+  align-items: center; /* Alinha os itens verticalmente ao centro. */
 }
 
 /* Rótulo (label) de cada campo. */
 .form-group label {
-  flex-basis: 100%;
-  margin-bottom: 5px;
-  color: #c05e00;
+  flex-basis: 100%; /* Faz o rótulo ocupar 100% da largura da linha. */
+  margin-bottom: 5px; /* Adiciona uma margem inferior de 5px. */
+  color: #c05e00; /* Define a cor do texto como um tom de laranja escuro. */
 }
 
 /* Estilo padrão para todos os campos de entrada de dados. */
 .form-group input,
 .form-group textarea,
 .form-group select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #f28705;
-  box-sizing: border-box;
+  width: 100%; /* Faz o campo ocupar 100% da largura do contêiner. */
+  padding: 8px; /* Adiciona um espaçamento interno de 8px. */
+  border: 1px solid #f28705; /* Adiciona uma borda laranja de 1px. */
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho total do campo. */
 }
 
 /* Estilo específico para a área de texto, impedindo que o usuário redimensione. */
 .form-group textarea {
-  resize: none;
+  resize: none; /* Impede que o usuário redimensione a área de texto. */
 }
 
 /* Mensagem de erro para validação dos campos. */
 .error-message {
-  color: red;
-  font-size: 0.8em;
-  width: 100%;
-  margin-top: 2px;
-  min-height: 1em;
+  color: red; /* Define a cor do texto como vermelho. */
+  font-size: 0.8em; /* Define o tamanho da fonte como 80% do padrão. */
+  width: 100%; /* Faz a mensagem ocupar 100% da largura. */
+  margin-top: 2px; /* Adiciona uma pequena margem superior. */
+  min-height: 1em; /* Define uma altura mínima para evitar que o layout "pule". */
 }
 
 /* Rodapé do formulário, onde ficam os botões. */
 .form-footer {
-  text-align: center;
-  background-color: #f6f6f6;
-  padding: 10px;
-  margin: 15px -15px -15px -15px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  text-align: center; /* Centraliza o conteúdo (botões) horizontalmente. */
+  background-color: #f6f6f6; /* Define a cor de fundo como cinza claro. */
+  padding: 10px; /* Adiciona espaçamento interno. */
+  margin: 15px -15px -15px -15px; /* Margem negativa para colar nas bordas do contêiner pai. */
+  border-bottom-left-radius: 10px; /* Arredonda o canto inferior esquerdo. */
+  border-bottom-right-radius: 10px; /* Arredonda o canto inferior direito. */
 }
 
 /* Estilo base para os botões de Enviar e Limpar. */
 #btnEnviar,
 #btnLimpar {
-  padding: 10px 20px;
-  border: 1px solid #f28705;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: 0.3s ease;
+  padding: 10px 20px; /* Adiciona espaçamento interno (10px vertical, 20px horizontal). */
+  border: 1px solid #f28705; /* Adiciona uma borda laranja de 1px. */
+  border-radius: 5px; /* Arredonda os cantos do botão. */
+  cursor: pointer; /* Muda o cursor para uma "mãozinha" para indicar que é clicável. */
+  font-size: 16px; /* Define o tamanho da fonte do texto do botão. */
+  transition: 0.3s ease; /* Adiciona uma animação suave de 0.3s para transições. */
 }
 
 /* Estilo específico para o botão de Enviar (principal). */
 #btnEnviar {
-  background-color: #f28705;
-  color: white;
+  background-color: #f28705; /* Define a cor de fundo como laranja. */
+  color: white; /* Define a cor do texto como branco. */
 }
 
 /* Efeito ao passar o mouse sobre o botão Enviar. */
 #btnEnviar:hover {
-  background-color: #e65100;
+  background-color: #e65100; /* Escurece a cor de fundo quando o mouse está sobre o botão. */
 }
 
 /* Estilo específico para o botão de Limpar (secundário). */
 #btnLimpar {
-  background-color: transparent;
-  color: #f28705;
+  background-color: transparent; /* Deixa o fundo do botão transparente. */
+  color: #f28705; /* Define a cor do texto como laranja. */
 }
 
 /* Efeito ao passar o mouse sobre o botão Limpar. */
 #btnLimpar:hover {
-  background-color: #f28705;
-  color: white;
+  background-color: #f28705; /* Muda o fundo para laranja quando o mouse está sobre o botão. */
+  color: white; /* Muda a cor do texto para branco. */
 }
 
 /* Container geral do rodapé da página. */
 .footer {
-  width: 100%;
-  padding: 20px;
-  background-color: #232323;
-  color: #fff;
+  width: 100%; /* Faz o rodapé ocupar 100% da largura. */
+  padding: 20px; /* Adiciona espaçamento interno. */
+  background-color: #232323; /* Define a cor de fundo como um cinza escuro. */
+  color: #fff; /* Define a cor do texto como branco. */
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  display: flex; /* Ativa o layout flexbox. */
+  justify-content: space-between; /* Distribui os itens com espaço máximo entre eles. */
+  align-items: center; /* Alinha os itens verticalmente ao centro. */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha. */
 
-  box-sizing: border-box;
-  gap: 20px;
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho total. */
+  gap: 20px; /* Cria um espaçamento de 20px entre os itens. */
 }
 
 /*Instagram*/
 /* Lado esquerdo do rodapé, para o link do Instagram. */
 .footer-left {
-  display: flex;
-  align-items: center;
+  display: flex; /* Ativa o layout flexbox. */
+  align-items: center; /* Alinha os itens verticalmente ao centro. */
 }
 
 /* Link da rede social, incluindo ícone e texto. */
 .footer-left .social-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
+  display: flex; /* Ativa o layout flexbox. */
+  align-items: center; /* Alinha os itens verticalmente ao centro. */
+  gap: 8px; /* Cria um espaçamento de 8px entre o ícone e o texto. */
+  text-decoration: none; /* Remove o sublinhado padrão dos links. */
+  color: white; /* Define a cor do texto como branco. */
+  transition: 0.3s; /* Adiciona uma animação suave para transições. */
 }
 
 /* Efeito de opacidade ao passar o mouse no link. */
 .footer-left .social-link:hover {
-  opacity: 0.7;
+  opacity: 0.7; /* Reduz a opacidade para 70% quando o mouse está sobre o link. */
 }
 
 /* Ícone da rede social. O !important garante que o tamanho seja fixo. */
 .footer-left img {
-  width: 32px !important;
-  height: 32px !important;
-  object-fit: contain;
+  width: 32px !important; /* Define a largura do ícone como 32px (importante para sobrescrever outras regras). */
+  height: 32px !important; /* Define a altura do ícone como 32px (importante). */
+  object-fit: contain; /* Garante que a imagem inteira seja visível, sem cortes. */
 }
 
 /*Texto Central*/
 .footer-center p {
-  margin: 0;
-  font-size: 14px;
+  margin: 0; /* Remove a margem padrão do parágrafo. */
+  font-size: 14px; /* Define o tamanho da fonte como 14px. */
 }
 
 /*Logo Direita*/
 /* Logo da empresa no lado direito do rodapé. */
 .footer-right img {
-  height: 55px;
-  width: auto;
+  height: 55px; /* Define a altura do logo. */
+  width: auto; /* Ajusta a largura automaticamente para manter a proporção. */
 }
 
 /*RESPONSIVO*/
@@ -224,416 +225,415 @@ body {
 @media (max-width: 768px) {
   /* Faz o rodapé empilhar os itens verticalmente. */
   .footer {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; /* Organiza os itens do rodapé em uma coluna. */
+    text-align: center; /* Centraliza o texto. */
   }
   /* Reduz um pouco o tamanho da logo no rodapé em telas pequenas. */
   .footer-right img {
-    height: 45px;
+    height: 45px; /* Reduz a altura do logo para 45px. */
   }
 }
 
 /* --- Reset básico para remover margens e paddings padrão dos navegadores --- */
 html,
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0; /* Remove a margem padrão. */
+  padding: 0; /* Remove o espaçamento interno padrão. */
+  box-sizing: border-box; /* Altera o cálculo do tamanho total do elemento. */
 }
 
 /* --- Estilos gerais do corpo da página --- */
 body {
-    font-family: 'Lato', sans-serif;
-    background-color: #f4f4f9;
+  font-family: "Lato", sans-serif; /* Define a família da fonte. */
+  background-color: #f4f4f9; /* Define uma cor de fundo de fallback. */
 
-    /* Remove qualquer espaço extra */
-    margin: 0;
-    padding: 0;
+  /* Remove qualquer espaço extra */
+  margin: 0; /* Remove a margem. */
+  padding: 0; /* Remove o espaçamento interno. */
 
-    /* Fundo com gradiente radial */
-    background-image: radial-gradient(circle at center,
-            #ff8c2b 0%,
-            #ffc499 50%,
-            #ffffff 100%);
+  /* Fundo com gradiente radial */
+  background-image: radial-gradient(
+    circle at center,
+    /* Define um gradiente radial. */ #ff8c2b 0%,
+    /* Cor inicial laranja. */ #ffc499 50%,
+    /* Cor intermediária laranja claro. */ #ffffff 100%
+  ); /* Cor final branca. */
 }
-
 
 /* --- Estilos do Cabeçalho --- */
 header {
-    background-color: #f57c00;
-    color: white;
-    padding: 2px 0;
-    width: 100%;
-    margin: 0;
-    /* Evita espaço em cima */
-    border: 0;
+  background-color: #f57c00; /* Define a cor de fundo como laranja. */
+  color: white; /* Define a cor do texto como branco. */
+  padding: 2px 0; /* Adiciona espaçamento interno vertical. */
+  width: 100%; /* Faz o cabeçalho ocupar 100% da largura. */
+  margin: 0; /* Remove a margem. */
+  /* Evita espaço em cima */
+  border: 0; /* Remove a borda. */
 }
 
 /* Container superior do cabeçalho */
 /* Organiza logo, título e botões em uma linha */
 .header-top {
-    padding: 5px 20px;
-    margin: 0;
-    /* remove espaço acima */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 5px 20px; /* Adiciona espaçamento interno. */
+  margin: 0; /* Remove a margem. */
+  /* remove espaço acima */
+  display: flex; /* Ativa o layout flexbox. */
+  justify-content: space-between; /* Distribui os itens com espaço entre eles. */
+  align-items: center; /* Alinha os itens verticalmente ao centro. */
 }
 
 /* Logo no canto esquerdo */
 .logo-esq img {
-    height: 100px;
-    /* Diminui a altura do logo */
-    width: auto;
-    object-fit: contain;
+  height: 100px; /* Define a altura do logo. */
+  /* Diminui a altura do logo */
+  width: auto; /* Ajusta a largura automaticamente. */
+  object-fit: contain; /* Garante que a imagem caiba sem distorcer. */
 }
 
 /* Ajuste de posição do título no cabeçalho */
 .center-area h1 {
-    /* Para mover o título para a direita, aumente o valor abaixo. */
-    /* Exemplo: margin-left: 40px; */
-    margin-left: 90px;
+  /* Para mover o título para a direita, aumente o valor abaixo. */
+  /* Exemplo: margin-left: 40px; */
+  margin-left: 90px; /* Adiciona uma margem esquerda de 90px. */
 }
 
 /* --- Estilos do Formulário de Contato --- */
 
 .form-logo {
-    height: 60px;
-    width: auto;
-    margin-bottom: 10px;
+  height: 60px; /* Define a altura do logo. */
+  width: auto; /* Ajusta a largura automaticamente. */
+  margin-bottom: 10px; /* Adiciona uma margem inferior. */
 }
 
 /* Container principal do formulário */
 .form-container {
-    max-width: 800px;
-    /* Largura máxima do formulário */
-    margin: 20px auto;
-    /* antes 40px (criava espaço embaixo do footer) */
-    background-color: #fff;
-    border: 2px solid #ff9900;
-    border-radius: 8px;
+  max-width: 800px; /* Define a largura máxima. */
+  /* Largura máxima do formulário */
+  margin: 20px auto; /* Adiciona margem vertical e centraliza horizontalmente. */
+  /* antes 40px (criava espaço embaixo do footer) */
+  background-color: #fff; /* Define a cor de fundo como branco. */
+  border: 2px solid #ff9900; /* Adiciona uma borda laranja de 2px. */
+  border-radius: 8px; /* Arredonda os cantos. */
 }
 
 /* Cabeçalho do formulário com imagem de fundo */
 .form-header {
-    background-image: url('formulario-contato.png');
-    background-size: cover;
-    background-position: center;
-    padding: 10px 20px;
-    border-radius: 6px 6px 0 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  background-image: url("formulario-contato.png"); /* Define a imagem de fundo. */
+  background-size: cover; /* Faz a imagem cobrir todo o espaço. */
+  background-position: center; /* Centraliza a imagem de fundo. */
+  padding: 10px 20px; /* Adiciona espaçamento interno. */
+  border-radius: 6px 6px 0 0; /* Arredonda os cantos superiores. */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil. */
+  display: flex; /* Ativa o layout flexbox. */
+  flex-direction: column; /* Organiza os itens em uma coluna. */
+  align-items: center; /* Centraliza os itens horizontalmente. */
+  text-align: center; /* Centraliza o texto. */
 }
 
 /* Título e legenda do cabeçalho do formulário */
 .form-header h1,
 .form-header .form-legend {
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #fff; /* Define a cor do texto como branco. */
+  font-family: "Poppins", sans-serif; /* Define a família da fonte. */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao texto. */
 }
 
 /* Corpo do formulário onde ficam os campos */
 .form-body {
-    padding: 30px;
+  padding: 30px; /* Adiciona um espaçamento interno de 30px. */
 }
 
 /* Linha para agrupar campos lado a lado (ex: Nome e E-mail) */
 .form-row {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 20px;
+  display: flex; /* Ativa o layout flexbox. */
+  gap: 40px; /* Cria um espaçamento de 40px entre os campos. */
+  margin-bottom: 20px; /* Adiciona uma margem inferior. */
 }
 
 /* Grupo de campo (label + input) */
 .form-group {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  flex: 1; /* Permite que o grupo cresça para ocupar o espaço. */
+  display: flex; /* Ativa o layout flexbox. */
+  flex-direction: column; /* Organiza os itens em uma coluna. */
 }
 
 /* Rótulo (label) do campo */
 .form-group label {
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #f57c00;
+  margin-bottom: 8px; /* Adiciona uma margem inferior. */
+  font-weight: 600; /* Define o peso da fonte como semi-negrito. */
+  color: #f57c00; /* Define a cor do texto como laranja. */
 }
 
 /* Campos de entrada, seleção e área de texto */
 .form-group input,
 .form-group select,
 .form-group textarea {
-    width: 100%;
-    /* Ocupa toda a largura do contêiner pai (.form-group) */
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    resize: none;
+  width: 100%; /* Faz o campo ocupar 100% da largura. */
+  /* Ocupa toda a largura do contêiner pai (.form-group) */
+  padding: 12px; /* Adiciona espaçamento interno. */
+  border: 1px solid #ccc; /* Adiciona uma borda cinza. */
+  border-radius: 6px; /* Arredonda os cantos. */
+  font-size: 16px; /* Define o tamanho da fonte. */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Adiciona uma animação suave para transições. */
+  resize: none; /* Impede que o usuário redimensione a área de texto. */
 }
 
 /* Efeito de foco nos campos do formulário */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    outline: none;
-    border-color: #ff9900;
-    box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.25);
+  outline: none; /* Remove o contorno padrão do navegador. */
+  border-color: #ff9900; /* Muda a cor da borda para laranja ao focar. */
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.25); /* Adiciona um brilho laranja ao redor do campo. */
 }
 
 /* Rodapé do formulário com os botões */
 .form-footer {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-    /* Espaço acima dos botões */
+  display: flex; /* Ativa o layout flexbox. */
+  justify-content: center; /* Centraliza os botões horizontalmente. */
+  gap: 15px; /* Cria um espaçamento entre os botões. */
+  margin-top: 20px; /* Adiciona uma margem superior. */
+  /* Espaço acima dos botões */
 }
 
 /* Estilo geral dos botões do formulário */
 .form-footer button,
 .form-footer input[type="reset"] {
-    padding: 14px 28px;
-    border-radius: 6px;
-    cursor: pointer;
-    border: 1px solid #ff9900;
-    font-weight: bold;
-    font-size: 16px;
+  padding: 14px 28px; /* Adiciona espaçamento interno. */
+  border-radius: 6px; /* Arredonda os cantos. */
+  cursor: pointer; /* Muda o cursor para uma "mãozinha". */
+  border: 1px solid #ff9900; /* Adiciona uma borda laranja. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+  font-size: 16px; /* Define o tamanho da fonte. */
 }
 
 /* Botão de Enviar */
 #btnEnviar {
-    background-color: #ff9900;
-    color: white;
+  background-color: #ff9900; /* Define a cor de fundo como laranja. */
+  color: white; /* Define a cor do texto como branco. */
 }
 
 #btnEnviar:hover {
-    background-color: #e68a00;
-    transform: translateY(-2px);
+  background-color: #e68a00; /* Escurece a cor de fundo no hover. */
+  transform: translateY(-2px); /* Move o botão levemente para cima no hover. */
 }
 
 /* Botão de Limpar/Cancelar */
 #btnLimpar {
-    background-color: transparent;
-    color: #ff9900;
+  background-color: transparent; /* Deixa o fundo transparente. */
+  color: #ff9900; /* Define a cor do texto como laranja. */
 }
 
 /* --- Estilos do Rodapé --- */
 footer {
-    width: 100%;
-    margin: 0;
-    /* Remove espaço embaixo */
-    padding: 10px 20px;
-    background-color: #232323;
-    color: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+  width: 100%; /* Faz o rodapé ocupar 100% da largura. */
+  margin: 0; /* Remove a margem. */
+  /* Remove espaço embaixo */
+  padding: 10px 20px; /* Adiciona espaçamento interno. */
+  background-color: #232323; /* Define a cor de fundo como cinza escuro. */
+  color: #fff; /* Define a cor do texto como branco. */
+  display: flex; /* Ativa o layout flexbox. */
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha. */
+  justify-content: space-around; /* Distribui os itens com espaço ao redor. */
+  align-items: center; /* Alinha os itens verticalmente ao centro. */
 }
 
 /* Links de redes sociais no rodapé */
 .social-media a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    color: inherit;
-    font-weight: 500;
+  display: flex; /* Ativa o layout flexbox. */
+  align-items: center; /* Alinha os itens verticalmente ao centro. */
+  gap: 8px; /* Cria um espaçamento entre o ícone e o texto. */
+  text-decoration: none; /* Remove o sublinhado do link. */
+  color: inherit; /* Herda a cor do texto do elemento pai. */
+  font-weight: 500; /* Define o peso da fonte como semi-negrito. */
 }
 
 .social-media img {
-    width: 24px;
-    height: 24px;
+  width: 24px; /* Define a largura da imagem. */
+  height: 24px; /* Define a altura da imagem. */
 }
 
 /* Logo da empresa no rodapé */
 .footer-logo img {
-    width: 24px !important;
-    height: 24px !important;
-    object-fit: contain;
+  width: 24px !important; /* Define a largura do logo (importante para sobrescrever). */
+  height: 24px !important; /* Define a altura do logo (importante). */
+  object-fit: contain; /* Garante que a imagem caiba sem distorcer. */
 }
-
-
 
 /* --- Ajustes para Dispositivos Móveis (Responsividade) --- */
 @media (max-width: 768px) {
-    .form-container {
-        margin: 15px;
-    }
+  .form-container {
+    margin: 15px; /* Reduz a margem em telas menores. */
+  }
 
-    .form-header {
-        padding: 20px 15px;
-    }
+  .form-header {
+    padding: 20px 15px; /* Ajusta o espaçamento interno. */
+  }
 
-    .form-body {
-        padding: 20px;
-    }
+  .form-body {
+    padding: 20px; /* Ajusta o espaçamento interno. */
+  }
 
-    .form-row {
-        flex-direction: column;
-        gap: 20px;
-    }
+  .form-row {
+    flex-direction: column; /* Empilha os campos verticalmente. */
+    gap: 20px; /* Ajusta o espaçamento entre os campos. */
+  }
 
-    .form-footer {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .form-footer {
+    flex-direction: column; /* Empilha os botões verticalmente. */
+    gap: 10px; /* Ajusta o espaçamento entre os botões. */
+  }
 
-    footer {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
+  footer {
+    flex-direction: column; /* Empilha os itens do rodapé verticalmente. */
+    gap: 20px; /* Ajusta o espaçamento. */
+    text-align: center; /* Centraliza o texto. */
+  }
 }
 
 .footer-logo img {
-    height: 24px !important;
-    width: auto !important;
-    object-fit: contain;
+  height: 24px !important; /* Define a altura do logo (importante). */
+  width: auto !important; /* Ajusta a largura automaticamente (importante). */
+  object-fit: contain; /* Garante que a imagem caiba sem distorcer. */
 }
 
 /* --- Modo Escuro para o Formulário --- */
 body.escuro .form-container {
-    background-color: #2c2c2c;
-    /* Fundo escuro para o container */
-    border-color: #555;
+  background-color: #2c2c2c; /* Define um fundo cinza escuro para o formulário. */
+  /* Fundo escuro para o container */
+  border-color: #555; /* Define uma cor de borda mais escura. */
 }
 
 body.escuro .form-group label {
-    color: #f28705;
-    /* Laranja para os labels */
+  color: #f28705; /* Muda a cor do rótulo para laranja para contraste. */
+  /* Laranja para os labels */
 }
 
 body.escuro .form-group input,
 body.escuro .form-group select,
 body.escuro .form-group textarea {
-    background-color: #3a3a3a;
-    /* Fundo dos inputs */
-    color: #f0f0f0;
-    /* Texto dos inputs */
-    border-color: #555;
+  background-color: #3a3a3a; /* Define um fundo cinza escuro para os campos. */
+  /* Fundo dos inputs */
+  color: #f0f0f0; /* Define a cor do texto digitado como cinza claro. */
+  /* Texto dos inputs */
+  border-color: #555; /* Define uma cor de borda mais escura para os campos. */
 }
 
 /* Cor do placeholder no modo escuro */
 body.escuro .form-group input::placeholder,
 body.escuro .form-group textarea::placeholder {
-    color: #aaa;
+  color: #aaa; /* Define a cor do texto de placeholder como cinza claro. */
 }
 
 body.escuro #btnLimpar {
-    color: #f28705;
-    border-color: #f28705;
+  color: #f28705; /* Mantém a cor do texto do botão Limpar como laranja. */
+  border-color: #f28705; /* Mantém a cor da borda do botão Limpar como laranja. */
 }
 
 /* Estilo para o link de navegação ativo (página atual) */
 .sub-nav-links a.active {
-    background-color: white;
-    color: #f57c00;
-    /* Cor do texto laranja para contraste */
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: 600;
+  background-color: white; /* Define o fundo como branco. */
+  color: #f57c00; /* Define a cor do texto como laranja para contraste. */
+  /* Cor do texto laranja para contraste */
+  padding: 5px 10px; /* Adiciona espaçamento interno. */
+  border-radius: 5px; /* Arredonda os cantos. */
+  font-weight: 600; /* Deixa o texto em semi-negrito. */
 }
 
 /* --- Estilos do Menu Hambúrguer (para telas menores) --- */
 .sub-nav-links {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  display: flex; /* Ativa o layout flexbox. */
+  gap: 10px; /* Cria um espaçamento entre os links. */
+  align-items: center; /* Alinha os links verticalmente ao centro. */
 }
 
 @media (max-width: 768px) {
-    .sub-nav-links {
-        /* Estilos do menu quando está no modo "hambúrguer" */
-        display: none;
-        /* Escondido por padrão, ativado via JS */
-        flex-direction: column;
-        position: absolute;
-        top: 90px;
-        /* Ajuste conforme a altura do seu header */
-        left: 0;
-        width: 100%;
-        background-color: #f57c00;
-        /* Fundo laranja no modo claro */
-        padding: 20px 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
-        align-items: center;
-        gap: 10px;
-    }
+  .sub-nav-links {
+    /* Estilos do menu quando está no modo "hambúrguer" */
+    display: none; /* Esconde o menu por padrão em telas pequenas. */
+    /* Escondido por padrão, ativado via JS */
+    flex-direction: column; /* Organiza os links em uma coluna. */
+    position: absolute; /* Posicionamento absoluto em relação ao header. */
+    top: 90px; /* Distância do topo. */
+    /* Ajuste conforme a altura do seu header */
+    left: 0; /* Alinha à esquerda. */
+    width: 100%; /* Ocupa 100% da largura. */
+    background-color: #f57c00; /* Fundo laranja no modo claro. */
+    /* Fundo laranja no modo claro */
+    padding: 20px 0; /* Adiciona espaçamento interno vertical. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra. */
+    z-index: 1000; /* Garante que o menu fique sobre outros elementos. */
+    align-items: center; /* Centraliza os links horizontalmente. */
+    gap: 10px; /* Cria um espaçamento entre os links. */
+  }
 
-    .sub-nav-links a {
-        /* Estilos dos links dentro do menu mobile */
-        background-color: #f57c00;
-        /* Fundo laranja no modo claro */
-        color: #fff;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 20px;
-        width: 70%;
-        max-width: 300px;
-        transition: background-color 0.3s;
-    }
+  .sub-nav-links a {
+    /* Estilos dos links dentro do menu mobile */
+    background-color: #f57c00; /* Fundo laranja no modo claro. */
+    /* Fundo laranja no modo claro */
+    color: #fff; /* Cor do texto branca. */
+    padding: 10px 20px; /* Adiciona espaçamento interno. */
+    text-align: center; /* Centraliza o texto. */
+    text-decoration: none; /* Remove o sublinhado. */
+    border-radius: 20px; /* Arredonda os cantos. */
+    width: 70%; /* Define a largura como 70% do contêiner. */
+    max-width: 300px; /* Define uma largura máxima. */
+    transition: background-color 0.3s; /* Adiciona uma animação suave para a cor de fundo. */
+  }
 
-    /* Botão hambúrguer (ícone de três linhas) */
-    .menu-toggle {
-        display: block;
-        font-size: 2em;
-        background: none;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-    }
+  /* Botão hambúrguer (ícone de três linhas) */
+  .menu-toggle {
+    display: block; /* Torna o botão visível. */
+    font-size: 2em; /* Define o tamanho do ícone. */
+    background: none; /* Remove o fundo. */
+    border: none; /* Remove a borda. */
+    color: #fff; /* Define a cor do ícone como branco. */
+    cursor: pointer; /* Muda o cursor para uma "mãozinha". */
+  }
 
-    /* Estilos do modo escuro para o menu hambúrguer */
-    body.escuro .sub-nav-links {
-        background-color: #121215;
-        /* Fundo preto no modo escuro */
-    }
+  /* Estilos do modo escuro para o menu hambúrguer */
+  body.escuro .sub-nav-links {
+    background-color: #121215; /* Fundo cinza escuro no modo escuro. */
+    /* Fundo preto no modo escuro */
+  }
 
-    body.escuro .sub-nav-links a {
-        background-color: #121215;
-        /* Fundo preto no modo escuro */
-    }
+  body.escuro .sub-nav-links a {
+    background-color: #121215; /* Fundo cinza escuro no modo escuro. */
+    /* Fundo preto no modo escuro */
+  }
 }
 
 /* Esconde o botão hambúrguer em telas maiores (desktop), pois a navegação já é visível */
 @media (min-width: 769px) {
-    .menu-toggle {
-        display: none;
-    }
+  .menu-toggle {
+    display: none; /* Esconde o botão do menu. */
+  }
 }
 
 /* Ajuste de posição vertical da barra de navegação */
 .sub-nav-links {
-    /* Comando para subir a navegação em 20px */
-    margin-top: -30px;
+  /* Comando para subir a navegação em 20px */
+  margin-top: -30px; /* Move a barra de navegação 30px para cima. */
 }
 
 /* Ajuste de posição horizontal dos links de navegação */
 .nav-links-container {
-    /* Para mover os botões para a direita, aumente o valor de margin-left. */
-    /* Exemplo: margin-left: 40px; */
-    /* Para centralizar, remova ou comente a linha abaixo. */
-    margin-left: -190px;
+  /* Para mover os botões para a direita, aumente o valor de margin-left. */
+  /* Exemplo: margin-left: 40px; */
+  /* Para centralizar, remova ou comente a linha abaixo. */
+  margin-left: -190px; /* Move o contêiner dos links 190px para a esquerda. */
 }
 
 /* Ajuste de layout do cabeçalho em telas menores para organizar os elementos */
 @media (max-width: 768px) {
-    .center-area {
-        order: 3;
-        width: 100%;
-        align-items: flex-start;
-    }
+  .center-area {
+    order: 3; /* Muda a ordem de exibição do elemento. */
+    width: 100%; /* Faz ocupar 100% da largura. */
+    align-items: flex-start; /* Alinha os itens ao início (esquerda). */
+  }
 
-    .center-area h1 {
-        text-align: left;
-        padding-left: 20px;
-    }
+  .center-area h1 {
+    text-align: left; /* Alinha o texto à esquerda. */
+    padding-left: 20px; /* Adiciona um espaçamento à esquerda. */
+  }
 }

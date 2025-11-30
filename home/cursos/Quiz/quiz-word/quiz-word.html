@@ -1,208 +1,223 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR"><!-- Início do elemento HTML, definindo o idioma da página como português do Brasil -->
 
-<head>
-  <meta charset="UTF-8">
+<head><!-- Seção de cabeçalho, contém metadados e links para recursos externos -->
+  <meta charset="UTF-8"><!-- Define a codificação de caracteres para UTF-8, para suportar acentos e símbolos -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configura a viewport para design responsivo, ajustando a página a diferentes tamanhos de tela -->
   <!-- Links para as fontes do Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Pré-conecta ao servidor de fontes do Google para otimizar o carregamento -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Pré-conecta ao servidor de conteúdo estático das fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Importa a fonte 'Poppins' com diferentes pesos -->
   <link rel="icon" type="image/png" sizes="32x32" href="../logo-oficial1.png">
-  <title>Quiz Word</title>
-  <link rel="stylesheet" href="quiz-word.css">
+  <!-- Define o ícone (favicon) que aparece na aba do navegador -->
+  <title>Quiz Word</title><!-- Define o título da página -->
+  <link rel="stylesheet" href="quiz-word.css"><!-- Link para a folha de estilo CSS externa que estiliza esta página -->
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-</head>
+  <!-- Inclui um script externo para o efeito de confetes -->
+</head><!-- Fim da seção de cabeçalho -->
 
-<body>
+<body><!-- Início do corpo do documento, onde todo o conteúdo visível é colocado -->
 
-  <audio id="hover-sound" src="../som/hover.mp3" preload="auto"></audio>
-  <audio id="correct-sound" src="../som/Check mark sound effect [v-aqBz6C4D4].mp3" preload="auto"></audio>
-  <audio id="wrong-sound" src="../som/Resposta errada Efeito sonoro [_VPhOMVr13c].mp3" preload="auto"></audio>
+  <!-- Elementos de áudio para os efeitos sonoros do quiz -->
+  <audio id="hover-sound" src="../som/hover.mp3" preload="auto"></audio><!-- Som ao passar o mouse sobre uma opção -->
+  <audio id="correct-sound" src="../som/Check mark sound effect [v-aqBz6C4D4].mp3"
+    preload="auto"></audio><!-- Som para resposta correta -->
+  <audio id="wrong-sound" src="../som/Resposta errada Efeito sonoro [_VPhOMVr13c].mp3"
+    preload="auto"></audio><!-- Som para resposta errada -->
   <audio id="celebration-sound" src="../som/FNAF_ Kids Cheering - Gaming Sound Effect (HD) [9bnUWuAO0oU].mp3"
-    preload="auto"></audio>
-  <audio id="failed-sound" src="../som/Sad Trombone - Sound Effect (HD) [CQeezCdF4mk].mp3" preload="auto"></audio>
+    preload="auto"></audio><!-- Som de celebração ao final do quiz (se boa pontuação) -->
+  <audio id="failed-sound" src="../som/Sad Trombone - Sound Effect (HD) [CQeezCdF4mk].mp3"
+    preload="auto"></audio><!-- Som de falha ao final do quiz (se baixa pontuação) -->
 
-  <header>
-    <div class="header-top">
+  <header><!-- Seção do cabeçalho da página -->
+    <div class="header-top"><!-- Contêiner para os elementos do topo do cabeçalho -->
       <!-- botão hamburguer (esquerda) -->
-      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+      <button class="menu-toggle"
+        aria-label="Abrir menu">☰</button><!-- Botão de menu hambúrguer para telas pequenas -->
 
-      <div class="logo-esq">
-        <img src="../img/tech-para-todos.png" alt="Logo Tech Para Todos" style="height:140px;">
-      </div>
-    </div>
-    <br>
-    <div class="center-area">
-      <h1>Cursos de Informática Básica Para melhor Idade</h1>
-      <br>
-      <div class="sub-nav-links">
-        <a href="../../../index.html">Início</a>
-        <a href="../../../sobrenos.html">Sobre Nós</a>
-        <a href="../../../cursos/index.html">Nossos Cursos</a>
-        <a href="../../../contato.html">Contato</a>
-      </div>
-    </div>
-    <br>
-    <div class="header-btns">
-      <div id="modeBtn" class="toggle light">
-        <img id="modeIcon" class="mode-icon">
-        <div class="slider"></div>
-      </div>
-      <a href="../../../cadastro.html" class="btn-header">CADASTRE-SE</a>
-      <a href="../../../login.html" class="btn-header btn-acao">JÁ SOU ALUNO(A)</a>
+      <div class="logo-esq"><!-- Contêiner para o logotipo esquerdo -->
+        <img src="../img/tech-para-todos.png" alt="Logo Tech Para Todos"
+          style="height:140px;"><!-- Imagem do logotipo com estilo em linha para altura -->
+      </div><!-- Fim do contêiner do logotipo -->
+    </div><!-- Fim do header-top -->
+    <br><!-- Quebra de linha para espaçamento -->
+    <div class="center-area"><!-- Área central do cabeçalho -->
+      <h1>Cursos de Informática Básica Para melhor Idade</h1><!-- Título principal do site -->
+      <br><!-- Quebra de linha para espaçamento -->
+      <div class="sub-nav-links"><!-- Contêiner para os links de navegação -->
+        <a href="../../../index.html">Início</a><!-- Link para a página inicial -->
+        <a href="../../../sobrenos.html">Sobre Nós</a><!-- Link para a página "Sobre Nós" -->
+        <a href="../../../cursos/index.html">Nossos Cursos</a><!-- Link para a página de cursos -->
+        <a href="../../../contato.html">Contato</a><!-- Link para a página de contato -->
+      </div><!-- Fim do contêiner de navegação -->
+    </div><!-- Fim da área central -->
+    <br><!-- Quebra de linha para espaçamento -->
+    <div class="header-btns"><!-- Contêiner para os botões de ação do cabeçalho -->
+      <div id="modeBtn" class="toggle light"><!-- Botão para alternar o modo claro/escuro -->
+        <img id="modeIcon" class="mode-icon"><!-- Ícone que muda com o modo -->
+        <div class="slider"></div><!-- Elemento deslizante do botão de alternância -->
+      </div><!-- Fim do botão de modo -->
+      <a href="../../../cadastro.html" class="btn-header">CADASTRE-SE</a><!-- Botão/link para a página de cadastro -->
+      <a href="../../../login.html" class="btn-header btn-acao">JÁ SOU
+        ALUNO(A)</a><!-- Botão/link para a página de login -->
 
-    </div>
-  </header>
+    </div><!-- Fim do contêiner de botões -->
+  </header><!-- Fim do cabeçalho -->
 
-  <div class="quiz-container">
-    <h2 class="quiz-title">WORD</h2>
+  <div class="quiz-container"><!-- Contêiner principal para todo o conteúdo do quiz -->
+    <h2 class="quiz-title">WORD</h2><!-- Título do quiz -->
 
     <!-- Pergunta 1 -->
-    <div class="question active">
-      <img src="../img/word.png">
-      <h2>Qual programa é usado para escrever textos?</h2>
-      <div class="option" data-correct="true">Word</div>
-      <div class="option" data-correct="false">Excel</div>
-      <div class="option" data-correct="false">PowerPoint</div>
-      <div class="option" data-correct="false">Bloco de notas</div>
-      <div class="feedback"></div>
-    </div>
+    <div class="question active"><!-- Contêiner da primeira pergunta, 'active' a torna visível -->
+      <img src="../img/word.png"><!-- Imagem relacionada à pergunta -->
+      <h2>Qual programa é usado para escrever textos?</h2><!-- O texto da pergunta -->
+      <div class="option" data-correct="true">Word</div><!-- Opção de resposta correta (data-correct="true") -->
+      <div class="option" data-correct="false">Excel</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="false">PowerPoint</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="false">Bloco de notas</div><!-- Opção de resposta incorreta -->
+      <div class="feedback"></div><!-- Elemento para exibir o feedback (correto/incorreto) -->
+    </div><!-- Fim da Pergunta 1 -->
 
     <!-- Pergunta 2 -->
-    <div class="question">
-      <img src="../img/word.png">
-      <h2>Qual recurso do Word permite revisar alterações de um documento?</h2>
-      <div class="option" data-correct="false">Filtros</div>
-      <div class="option" data-correct="false">Gráficos</div>
-      <div class="option" data-correct="true">Controlar Alterações</div>
-      <div class="option" data-correct="false">Macro</div>
-      <div class="feedback"></div>
-    </div>
+    <div class="question"><!-- Contêiner da segunda pergunta -->
+      <img src="../img/word.png"><!-- Imagem relacionada à pergunta -->
+      <h2>Qual recurso do Word permite revisar alterações de um documento?</h2><!-- O texto da pergunta -->
+      <div class="option" data-correct="false">Filtros</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="false">Gráficos</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="true">Controlar Alterações</div><!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">Macro</div><!-- Opção de resposta incorreta -->
+      <div class="feedback"></div><!-- Elemento para feedback -->
+    </div><!-- Fim da Pergunta 2 -->
 
     <!-- Pergunta 3 -->
-    <div class="question">
-      <img src="../img/word.png">
-      <h2>Qual atalho salva rapidamente um documento no Word?</h2>
-      <div class="option" data-correct="false">Ctrl + P</div>
-      <div class="option" data-correct="true">Ctrl + S</div>
-      <div class="option" data-correct="false">Ctrl + C</div>
-      <div class="option" data-correct="false">Ctrl + X</div>
-      <div class="feedback"></div>
-    </div>
+    <div class="question"><!-- Contêiner da terceira pergunta -->
+      <img src="../img/word.png"><!-- Imagem relacionada à pergunta -->
+      <h2>Qual atalho salva rapidamente um documento no Word?</h2><!-- O texto da pergunta -->
+      <div class="option" data-correct="false">Ctrl + P</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="true">Ctrl + S</div><!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">Ctrl + C</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="false">Ctrl + X</div><!-- Opção de resposta incorreta -->
+      <div class="feedback"></div><!-- Elemento para feedback -->
+    </div><!-- Fim da Pergunta 3 -->
 
     <!-- Pergunta 4 -->
-    <div class="question">
-      <img src="../img/word.png">
-      <h2>Qual recurso permite criar listas numeradas e com marcadores?</h2>
-      <div class="option" data-correct="false">Gráficos</div>
-      <div class="option" data-correct="false">Tabelas</div>
-      <div class="option" data-correct="false">Cabeçalhos</div>
-      <div class="option" data-correct="true">Listas</div>
+    <div class="question"><!-- Contêiner da quarta pergunta -->
+      <img src="../img/word.png"><!-- Imagem relacionada à pergunta -->
+      <h2>Qual recurso permite criar listas numeradas e com marcadores?</h2><!-- O texto da pergunta -->
+      <div class="option" data-correct="false">Gráficos</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="false">Tabelas</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="false">Cabeçalhos</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="true">Listas</div><!-- Opção de resposta correta -->
 
-      <div class="feedback"></div>
-    </div>
+      <div class="feedback"></div><!-- Elemento para feedback -->
+    </div><!-- Fim da Pergunta 4 -->
 
     <!-- Pergunta 5 -->
-    <div class="question">
-      <img src="../img/word.png">
-      <h2>Qual função do Word permite organizar o texto em colunas?</h2>
-      <div class="option" data-correct="false">Tabelas</div>
-      <div class="option" data-correct="true">Colunas</div>
-      <div class="option" data-correct="false">Marcadores</div>
-      <div class="option" data-correct="false">Estilos</div>
-      <div class="feedback"></div>
-    </div>
+    <div class="question"><!-- Contêiner da quinta pergunta -->
+      <img src="../img/word.png"><!-- Imagem relacionada à pergunta -->
+      <h2>Qual função do Word permite organizar o texto em colunas?</h2><!-- O texto da pergunta -->
+      <div class="option" data-correct="false">Tabelas</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="true">Colunas</div><!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">Marcadores</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="false">Estilos</div><!-- Opção de resposta incorreta -->
+      <div class="feedback"></div><!-- Elemento para feedback -->
+    </div><!-- Fim da Pergunta 5 -->
 
     <!-- Pergunta 6 -->
-    <div class="question">
-      <img src="../img/word.png">
-      <h2>Como inserir imagens em um documento do Word?</h2>
-      <div class="option" data-correct="true">Inserir → Imagem</div>
-      <div class="option" data-correct="false">Formatar → Tabela</div>
-      <div class="option" data-correct="false">Revisão → Ortografia</div>
-      <div class="option" data-correct="false">Layout → Quebra de página</div>
-      <div class="feedback"></div>
-    </div>
+    <div class="question"><!-- Contêiner da sexta pergunta -->
+      <img src="../img/word.png"><!-- Imagem relacionada à pergunta -->
+      <h2>Como inserir imagens em um documento do Word?</h2><!-- O texto da pergunta -->
+      <div class="option" data-correct="true">Inserir → Imagem</div><!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">Formatar → Tabela</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="false">Revisão → Ortografia</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="false">Layout → Quebra de página</div><!-- Opção de resposta incorreta -->
+      <div class="feedback"></div><!-- Elemento para feedback -->
+    </div><!-- Fim da Pergunta 6 -->
 
     <!-- Pergunta 7 -->
-    <div class="question">
-      <img src="../img/word.png">
-      <h2>Qual guia contém opções de fontes, tamanhos e cores?</h2>
-      <div class="option" data-correct="false">Inserir</div>
-      <div class="option" data-correct="false">Referências</div>
-      <div class="option" data-correct="true">Página Inicial</div>
-      <div class="option" data-correct="false">Revisão</div>
-      <div class="feedback"></div>
-    </div>
+    <div class="question"><!-- Contêiner da sétima pergunta -->
+      <img src="../img/word.png"><!-- Imagem relacionada à pergunta -->
+      <h2>Qual guia contém opções de fontes, tamanhos e cores?</h2><!-- O texto da pergunta -->
+      <div class="option" data-correct="false">Inserir</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="false">Referências</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="true">Página Inicial</div><!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">Revisão</div><!-- Opção de resposta incorreta -->
+      <div class="feedback"></div><!-- Elemento para feedback -->
+    </div><!-- Fim da Pergunta 7 -->
 
     <!-- Pergunta 8 -->
-    <div class="question">
-      <img src="../img/word.png">
-      <h2>Como adicionar cabeçalhos e rodapés em um documento?</h2>
-      <div class="option" data-correct="false">Layout → Quebra de página</div>
-      <div class="option" data-correct="true">Inserir → Cabeçalho/Rodapé</div>
-      <div class="option" data-correct="false">Revisão → Comentário</div>
-      <div class="option" data-correct="false">Arquivo → Salvar Como</div>
-      <div class="feedback"></div>
-    </div>
+    <div class="question"><!-- Contêiner da oitava pergunta -->
+      <img src="../img/word.png"><!-- Imagem relacionada à pergunta -->
+      <h2>Como adicionar cabeçalhos e rodapés em um documento?</h2><!-- O texto da pergunta -->
+      <div class="option" data-correct="false">Layout → Quebra de página</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="true">Inserir → Cabeçalho/Rodapé</div><!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">Revisão → Comentário</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="false">Arquivo → Salvar Como</div><!-- Opção de resposta incorreta -->
+      <div class="feedback"></div><!-- Elemento para feedback -->
+    </div><!-- Fim da Pergunta 8 -->
 
     <!-- Pergunta 9 -->
-    <div class="question">
-      <img src="../img/word.png">
-      <h2>Qual recurso permite revisar a ortografia automaticamente?</h2>
-      <div class="option" data-correct="false">Tabelas</div>
-      <div class="option" data-correct="false">Listas</div>
-      <div class="option" data-correct="false">Colunas</div>
-      <div class="option" data-correct="true">Verificação ortográfica</div>
-      <div class="feedback"></div>
-    </div>
+    <div class="question"><!-- Contêiner da nona pergunta -->
+      <img src="../img/word.png"><!-- Imagem relacionada à pergunta -->
+      <h2>Qual recurso permite revisar a ortografia automaticamente?</h2><!-- O texto da pergunta -->
+      <div class="option" data-correct="false">Tabelas</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="false">Listas</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="false">Colunas</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="true">Verificação ortográfica</div><!-- Opção de resposta correta -->
+      <div class="feedback"></div><!-- Elemento para feedback -->
+    </div><!-- Fim da Pergunta 9 -->
 
     <!-- Pergunta 10 -->
-    <div class="question">
-      <img src="../img/word.png">
-      <h2>Qual atalho copia o texto selecionado?</h2>
-      <div class="option" data-correct="false">Ctrl + S</div>
-      <div class="option" data-correct="false">Ctrl + X</div>
-      <div class="option" data-correct="true">Ctrl + C</div>
-      <div class="option" data-correct="false">Ctrl + V</div>
-      <div class="feedback"></div>
-    </div>
+    <div class="question"><!-- Contêiner da décima pergunta -->
+      <img src="../img/word.png"><!-- Imagem relacionada à pergunta -->
+      <h2>Qual atalho copia o texto selecionado?</h2><!-- O texto da pergunta -->
+      <div class="option" data-correct="false">Ctrl + S</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="false">Ctrl + X</div><!-- Opção de resposta incorreta -->
+      <div class="option" data-correct="true">Ctrl + C</div><!-- Opção de resposta correta -->
+      <div class="option" data-correct="false">Ctrl + V</div><!-- Opção de resposta incorreta -->
+      <div class="feedback"></div><!-- Elemento para feedback -->
+    </div><!-- Fim da Pergunta 10 -->
 
     <!-- Mascote de ajuda -->
-    <div class="mascote-container" id="mascote">
-      <img src="../Mascote-IMG/imagem_2025-10-21_143653426-removebg-preview.png" alt="Mascote" class="mascote">
-      <div class="fala" id="fala">
-        <span class="texto-fala" id="texto-fala"></span>
-      </div>
-    </div>
+    <div class="mascote-container" id="mascote"><!-- Contêiner para o mascote de ajuda -->
+      <img src="../Mascote-IMG/imagem_2025-10-21_143653426-removebg-preview.png" alt="Mascote"
+        class="mascote"><!-- Imagem do mascote -->
+      <div class="fala" id="fala"><!-- Balão de fala do mascote -->
+        <span class="texto-fala" id="texto-fala"></span><!-- O texto que o mascote irá "falar" -->
+      </div><!-- Fim do balão de fala -->
+    </div><!-- Fim do contêiner do mascote -->
 
 
     <!-- Tela final -->
-    <div class="question end">
-      <img src="../img/Captura de tela 2025-09-26 163624.png">
-      <h2>🎉 Fim do Quiz! 🎉</h2>
-      <p id="final-score"></p>
-    </div>
+    <div class="question end"><!-- Contêiner para a tela de finalização do quiz -->
+      <img src="../img/Captura de tela 2025-09-26 163624.png"><!-- Imagem de celebração -->
+      <h2>🎉 Fim do Quiz! 🎉</h2><!-- Título de fim de quiz -->
+      <p id="final-score"></p><!-- Parágrafo para exibir a pontuação final -->
+    </div><!-- Fim da tela final -->
 
-  </div>
+  </div><!-- Fim do contêiner do quiz -->
 
-  <footer>
-    <div class="footer-logo">
-      <img src="../img/logotipo empresa (2).png" alt="Logo da Empresa">
-    </div>
+  <footer><!-- Seção do rodapé da página -->
+    <div class="footer-logo"><!-- Contêiner para o logotipo no rodapé -->
+      <img src="../img/logotipo empresa (2).png" alt="Logo da Empresa"><!-- Imagem do logotipo da empresa -->
+    </div><!-- Fim do contêiner do logotipo -->
     <h1>&copy; 2025 Tech Para Todos - Evolution Tech. Todos os direitos reservados.</h1>
-    <div class="social-media">
+    <!-- Texto de direitos autorais -->
+    <div class="social-media"><!-- Contêiner para as mídias sociais -->
       <a href="https://www.instagram.com/evolutiontech__/" target="_blank" rel="noopener noreferrer"
-        title="Siga-nos no Instagram" class="social-link">
-        <img src="../img/instagram-convertido.png" alt="Ícone do Instagram">
-        <span><strong>evolutiontech_</strong></span>
-      </a>
-    </div>
-  </footer>
+        title="Siga-nos no Instagram" class="social-link"><!-- Link para o Instagram -->
+        <img src="../img/instagram-convertido.png" alt="Ícone do Instagram"><!-- Ícone do Instagram -->
+        <span><strong>evolutiontech_</strong></span><!-- Nome de usuário do Instagram -->
+      </a><!-- Fim do link do Instagram -->
+    </div><!-- Fim do contêiner de mídias sociais -->
+  </footer><!-- Fim do rodapé -->
 
-  <script src="quiz-word.js"></script>
-</body>
+  <script src="quiz-word.js"></script><!-- Link para o arquivo JavaScript que controla a lógica do quiz -->
+</body><!-- Fim do corpo do documento -->
 
-</html>
+</html><!-- Fim do documento HTML -->
